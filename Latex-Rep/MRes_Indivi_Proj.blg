@@ -1,0 +1,52 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MRes_Indivi_Proj.aux
+The style file: plainnat.bst
+Database file #1: References.bib
+Warning--entry type for "Doe:2013:Online" isn't style-file defined
+--line 162 of file References.bib
+Warning--empty journal in qiunanohelices
+Warning--empty year in qiunanohelices
+Warning--empty year in qiunanohelices
+You've used 17 entries,
+            2773 wiz_defined-function locations,
+            706 strings with 8805 characters,
+and the built_in function-call counts, 10186 in all, are:
+= -- 875
+> -- 756
+< -- 7
++ -- 256
+- -- 237
+* -- 953
+:= -- 1575
+add.period$ -- 52
+call.type$ -- 17
+change.case$ -- 130
+chr.to.int$ -- 15
+cite$ -- 37
+duplicate$ -- 374
+empty$ -- 716
+format.name$ -- 256
+if$ -- 2084
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 16
+newline$ -- 92
+num.names$ -- 68
+pop$ -- 252
+preamble$ -- 1
+purify$ -- 113
+quote$ -- 0
+skip$ -- 304
+stack$ -- 0
+substring$ -- 455
+swap$ -- 42
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 187
+warning$ -- 3
+while$ -- 80
+width$ -- 0
+write$ -- 226
+(There were 4 warnings)

@@ -1,0 +1,36 @@
+\renewcommand {\cftchapleader }{\bfseries \cftdotfill {\cftdotsep }}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Acknowledgements}{i}
+\contentsline {chapter}{List of Figures}{iii}
+\contentsline {chapter}{List of Tables}{iv}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{v}
+\contentsline {chapter}{\numberline {1}Introduction}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {section}{\numberline {1.1}Problem}{1}
+\contentsline {section}{\numberline {1.2}Previous work}{1}
+\contentsline {chapter}{\numberline {2}Literature review}{2}
+\contentsline {section}{\numberline {2.1}Bioinspired microrobots}{2}
+\contentsline {paragraph}{Reynolds number}{2}
+\contentsline {subsection}{\numberline {2.1.1}Flagella style microrobots}{2}
+\contentsline {paragraph}{}{2}
+\contentsline {paragraph}{}{6}
+\contentsline {subsection}{\numberline {2.1.2}Plant-based microrobots}{7}
+\contentsline {subsection}{\numberline {2.1.3}Jellyfish style microrobots}{9}
+\contentsline {section}{\numberline {2.2}Fabrication methods}{9}
+\contentsline {chapter}{\numberline {3}Methods}{11}
+\contentsline {section}{\numberline {3.1}Microrobot structure}{11}
+\contentsline {section}{\numberline {3.2}Microrobot design}{11}
+\contentsline {subsection}{\numberline {3.2.1}Mathematical model}{11}
+\contentsline {subsubsection}{\numberline {3.2.1.1}Resistive force theory}{12}
+\contentsline {paragraph}{}{13}
+\contentsline {subsubsection}{\numberline {3.2.1.2}Regularized Stokeslet method}{14}
+\contentsline {subsubsection}{\numberline {3.2.1.3}Slender body theory}{16}
+\contentsline {section}{\numberline {3.3}Microrobot fabrication}{16}
+\contentsline {subsection}{\numberline {3.3.1}}{16}
+\contentsline {chapter}{\numberline {4}Simulation}{17}
+\contentsline {chapter}{\numberline {5}Experiments}{18}
+\contentsline {chapter}{\numberline {6}Results}{19}
+\contentsline {chapter}{\numberline {7}Discussion}{20}
+\contentsline {chapter}{\numberline {8}Conclusion and future work}{21}
+\contentsline {chapter}{References}{22}
+\contentsfinish 
