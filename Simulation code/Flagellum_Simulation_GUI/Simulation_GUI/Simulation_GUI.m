@@ -1,0 +1,849 @@
+function varargout = Simulation_GUI(varargin)
+% SIMULATION_GUI M-file for Simulation_GUI.fig
+%      SIMULATION_GUI, by itself, creates a new SIMULATION_GUI or raises the existing
+%      singleton*.
+%
+%      H = SIMULATION_GUI returns the handle to a new SIMULATION_GUI or the handle to
+%      the existing singleton*.
+%
+%      SIMULATION_GUI('CALLBACK',hObject,eventData,handles,...) calls the local
+%      function named CALLBACK in SIMULATION_GUI.M with the given input arguments.
+%
+%      SIMULATION_GUI('Property','Value',...) creates a new SIMULATION_GUI or raises the
+%      existing singleton*.  Starting from the left, property value pairs are
+%      applied to the GUI before Cross_Section_Gui_OpeningFunction gets called.  An
+%      unrecognized property name or invalid value makes property application
+%      stop.  All inputs are passed to Simulation_GUI_OpeningFcn via
+%      varargin.
+%
+%      *See GUI Options on GUIDE's Tools menu.  Choose "GUI allows only one
+%      instance to run (singleton)".
+%
+% See also: GUIDE, GUIDATA, GUIHANDLES
+
+% Edit the above text to modify the response to help Simulation_GUI
+
+% Last Modified by GUIDE v2.5 14-Mar-2011 15:39:34
+
+% Begin initialization code - DO NOT EDIT
+gui_Singleton = 1;
+gui_State = struct('gui_Name',       mfilename, ...
+                   'gui_Singleton',  gui_Singleton, ...
+                   'gui_OpeningFcn', @Simulation_GUI_OpeningFcn, ...
+                   'gui_OutputFcn',  @Simulation_GUI_OutputFcn, ...
+                   'gui_LayoutFcn',  [] , ...
+                   'gui_Callback',   []);
+if nargin && ischar(varargin{1})
+    gui_State.gui_Callback = str2func(varargin{1});
+end
+
+if nargout
+    [varargout{1:nargout}] = gui_mainfcn(gui_State, varargin{:});
+else
+    gui_mainfcn(gui_State, varargin{:});
+end
+% End initialization code - DO NOT EDIT
+
+
+% --- Executes just before Simulation_GUI is made visible.
+function Simulation_GUI_OpeningFcn(hObject, eventdata, handles, varargin)
+% This function has no output args, see OutputFcn.
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+% varargin   command line arguments to Simulation_GUI (see VARARGIN)
+
+% Choose default command line output for Simulation_GUI
+handles.output = hObject;
+
+% Update handles structure
+guidata(hObject, handles);
+
+% UIWAIT makes Simulation_GUI wait for user response (see UIRESUME)
+% uiwait(handles.figure1);
+
+
+% --- Outputs from this function are returned to the command line.
+function varargout = Simulation_GUI_OutputFcn(hObject, eventdata, handles) 
+% varargout  cell array for returning output args (see VARARGOUT);
+% hObject    handle to figure
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Get default command line output from handles structure
+varargout{1} = handles.output;
+
+
+
+% --- Executes on button press in simulate_forces.
+function simulate_forces_Callback(hObject, eventdata, handles)
+% hObject    handle to simulate_forces (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+%% Input arguments from the GUI
+%   -R the helical radius (single valued)
+%   -a the filament radius (vector)
+%   -lambda helical pitch or wavelength (vector)
+%   -L axial length of the helix (vector)
+
+%% Read variables %%
+R = str2double(get(handles.helical_radius,'String'));           
+a = str2double(get(handles.filament_radius_min,'String')): ...  % Read a as a vector as
+    str2double(get(handles.filament_radius_step,'String')): ... % [min:step:max]
+    str2double(get(handles.filament_radius_max,'String'));
+
+lambda = str2double(get(handles.lambda_min,'String')): ...      % Read lambda
+    str2double(get(handles.lambda_step,'String')): ...          % [min:step:max]
+    str2double(get(handles.lambda_max,'String'));	
+
+L = str2double(get(handles.length_min,'String')): ...           % Read L
+    str2double(get(handles.length_step,'String')): ...          % [min:step:max]
+    str2double(get(handles.length_max,'String'));  
+
+%% Read simulation type(s) and call simulation functions %%
+RSM_flag    = get(handles.sim_type_RegSM,'Value');
+LH_SBT_flag = get(handles.sim_type_LH_SBT,'Value');
+J_SBT_flag  = get(handles.sim_type_J_SBT,'Value');
+
+addpath SBT_Scripts
+addpath RSM_Scripts
+
+
+global force_RSM torque_RSM drag_RSM
+global force_LH torque_LH drag_LH
+global force_J torque_J drag_J
+% global force_GH_RFT torque_GH_RFT drag_GH_RFT
+% global force_LH_RFT torque_LH_RFT drag_LH_RFT
+global A
+
+if (RSM_flag == 1)
+    userchoice=input('Regularized Stokeslet simulations require large amounts of memory, sometimes in excess of 32 GB.  Do you want to proceed [y/n]: ', 's');
+    if userchoice=='y'
+        F_T_D_RSM(R, a, lambda, L)
+    else
+        return
+    end
+end
+    
+if (LH_SBT_flag == 1)
+    F_T_D_SBT_LH(R, a, lambda, L)
+end
+
+if (J_SBT_flag == 1)
+    F_T_D_SBT_Johnson(R, a, lambda, L)
+end
+
+%% Save data if selected in GUI %%
+if (get(handles.save_data,'Value')==1);    
+    filename = strcat(get(handles.data_filename,'String'), '.mat');
+%     filename = filename{1};   %Matlab decided to add quotes so this removes them
+   save(filename, 'R', 'a', 'lambda', 'L', ...
+     'RSM_flag', 'LH_SBT_flag', 'J_SBT_flag', ...
+     'force_RSM', 'torque_RSM', 'drag_RSM', ...
+     'force_LH', 'torque_LH', 'drag_LH',  ...
+     'force_J', 'torque_J', 'drag_J')
+ end
+
+%% Print data into GUI axes
+print_data(handles, R,a, lambda, L, ...
+    RSM_flag,LH_SBT_flag, J_SBT_flag, ...
+    force_RSM, torque_RSM, drag_RSM,...
+    force_LH, torque_LH, drag_LH,  ...
+    force_J, torque_J, drag_J)
+
+% --- Executes on button press in plot_data.
+function plot_data_Callback(hObject, eventdata, handles)
+% hObject    handle to plot_data (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+%% Plot saved data
+
+filename = strcat(get(handles.data_filename,'String'), '.mat');
+load(filename)
+
+print_data(handles, R,a, lambda, L, ...
+    RSM_flag, LH_SBT_flag, J_SBT_flag, ...
+    force_RSM, torque_RSM, drag_RSM,...
+    force_LH, torque_LH, drag_LH,  ...
+    force_J, torque_J, drag_J)
+     
+ 
+ 
+ 
+%% --- Print data from new simulations or loaded data
+function print_data(handles, R, a, lambda, L, ...
+    RSM_flag, LH_SBT_flag, J_SBT_flag, ...
+    force_RSM, torque_RSM, drag_RSM,...
+    force_LH, torque_LH, drag_LH,  ...
+    force_J, torque_J, drag_J)
+
+%% Calculate RFT values if selected
+RFT_flag = get(handles.add_RFT,'Value');
+if RFT_flag == 1; 
+    addpath RFT_Scripts
+    [force_GH_RFT, torque_GH_RFT, drag_GH_RFT,force_LH_RFT, torque_LH_RFT, drag_LH_RFT] = RFT_Calculations(R, a, lambda, L);
+end
+
+%% Allow selection of other parameters
+    a_to_plot = find(a == str2double(get(handles.a_to_plot,'String')));  
+        if(a_to_plot > 0); else disp('Selected filament radius value not found, using first in filament radius (a) vector.');end
+    lambda_to_plot = find(lambda == str2double(get(handles.lambda_to_plot,'String'))); 
+        if(lambda_to_plot>0); else disp('Selected lambda value not found, using first in lambda vector.');end
+    L_to_plot = find(L == str2double(get(handles.length_to_plot,'String')));
+        if(L_to_plot>0); else disp('Selected length value not found, using first in length (L) vector.');end
+        
+%%  Determine plot type, set x variable and dimensions of forces to plot %%
+if (get(handles.plot_type_a_dep,'Value') == 1)
+    x_var=a;
+    x_label = '$a/R$';
+    dim1 = [1:length(a)]; 
+    if(lambda_to_plot > 0); dim2=lambda_to_plot; else dim2=1; end
+    if(L_to_plot > 0); dim3=L_to_plot; else dim3=1; end
+    legend_location = 'NorthWest';
+elseif (get(handles.plot_type_lambda_dep,'Value') == 1)
+    x_var=lambda;
+    x_label = '$\lambda/R$';
+    if(a_to_plot > 0); dim1=a_to_plot; else dim1=1; end 
+    dim2 = [1:length(lambda)]; 
+    if(L_to_plot > 0); dim3=L_to_plot; else dim3=1; end 
+    legend_location = 'NorthEast';
+elseif (get(handles.plot_type_L_dep,'Value') == 1 )
+    x_var=L;
+    x_label = '$L/R$';
+    if(a_to_plot > 0); dim1=a_to_plot; else dim1=1; end 
+    if(lambda_to_plot > 0); dim2=lambda_to_plot; else dim2=1; end 
+    dim3 = [1:length(L)]; 
+    legend_location = 'NorthWest';
+end
+
+legend_text = {};  % Initialize legend labels variable
+
+%%  plot thrust %%
+ if (get(handles.plot_in_figure,'Value')==1);
+     figure; subplot(3,1,1); hold on
+ else
+    axes(handles.F_plot); cla reset; hold on
+ end
+    if (RSM_flag == 1); 
+        plot(x_var, squeeze(force_RSM(dim1, dim2, dim3)), 'k-', 'Linewidth', 2); 
+        ylim([0,max(1.1*force_RSM(dim1, dim2, dim3))])
+        legend_text = [legend_text, 'RSM'];
+    end
+
+    if (LH_SBT_flag == 1); 
+        plot(x_var,squeeze(force_LH(dim1,dim2,dim3)), 'b-', 'Linewidth', 2); 
+        ylim([0,max(1.1*force_LH(dim1, dim2, dim3))]) 
+        legend_text = [legend_text, 'LH SBT'];
+    end
+
+    if (J_SBT_flag == 1); 
+        plot(x_var, squeeze(force_J(dim1, dim2, dim3)), 'r-', 'Linewidth', 2); 
+        ylim([0,1.1*max(force_J(dim1, dim2, dim3))])
+        legend_text = [legend_text, 'J SBT'];
+    end
+    
+    if (RFT_flag == 1); 
+        plot(x_var, squeeze(force_GH_RFT(dim1, dim2, dim3)), 'g-', 'Linewidth', 2); 
+        ylim([0,1.1*max(force_GH_RFT(dim1, dim2, dim3))])
+        plot(x_var, squeeze(force_LH_RFT(dim1, dim2, dim3)), 'b--', 'Linewidth', 2); 
+        ylim([0,1.1*max(force_LH_RFT(dim1, dim2, dim3))])
+        legend_text = [legend_text, 'LH SBT', 'GH SBT'];
+    end
+    
+    if (get(handles.add_legend,'Value')==1)
+        legend(legend_text)
+        legend('Location', legend_location)
+        legend('boxoff')
+    end
+    
+xlim([0 1.1*max(x_var)]); set(gca,'XTickLabel',[]);
+ylabel('$F/(\mu \Omega R^2)$', 'Interpreter', 'Latex','Fontsize', 14)
+
+
+%%  plot torque %%
+    if (get(handles.plot_in_figure,'Value')==1);
+         subplot(3,1,2); hold on
+     else
+        axes(handles.T_plot); cla reset; hold on;
+     end
+
+    if (RSM_flag == 1); 
+        plot(x_var, squeeze(torque_RSM(dim1, dim2, dim3)), 'k-', 'Linewidth', 2); 
+        ylim([0,max(1.1*torque_RSM(dim1, dim2, dim3))])
+    end
+
+    if (LH_SBT_flag == 1); 
+        plot(x_var, squeeze(torque_LH(dim1, dim2, dim3)), 'b-', 'Linewidth', 2); 
+        ylim([0,max(1.1*torque_LH(dim1, dim2, dim3))]) 
+    end
+
+    if (J_SBT_flag == 1); 
+        plot(x_var, squeeze(torque_J(dim1, dim2, dim3)), 'r-', 'Linewidth', 2); 
+        ylim([0,1.1*max(torque_J(dim1, dim2, dim3))])
+    end
+    
+    if (RFT_flag == 1); 
+        plot(x_var, squeeze(torque_GH_RFT(dim1, dim2, dim3)), 'g-', 'Linewidth', 2); 
+        ylim([0,1.1*max(torque_GH_RFT(dim1, dim2, dim3))])
+        plot(x_var, squeeze(torque_LH_RFT(dim1, dim2, dim3)), 'b--', 'Linewidth', 2); 
+        ylim([0,1.1*max(torque_LH_RFT(dim1, dim2, dim3))])    
+    end
+    
+    if (get(handles.add_legend,'Value')==1)
+        legend(legend_text)
+        legend('Location', legend_location)
+        legend('boxoff')
+    end
+    
+xlim([0 1.1*max(x_var)]); set(gca, 'XTickLabel',[]);
+ylabel('$T/(\mu \Omega R^3)$', 'Interpreter', 'Latex','Fontsize', 14)
+
+%%  plot drag %%
+if (get(handles.plot_in_figure,'Value')==1);
+    subplot(3,1,3); hold on
+ else
+    axes(handles.D_plot); cla reset; hold on;
+end
+ 
+    if (RSM_flag == 1); 
+        plot(x_var, squeeze(drag_RSM(dim1, dim2, dim3)), 'k-', 'Linewidth', 2); 
+        ylim([0,1.1*max(drag_RSM(dim1, dim2, dim3))])
+    end
+
+    if (LH_SBT_flag == 1); 
+        plot(x_var, squeeze(drag_LH(dim1, dim2, dim3)), 'b-', 'Linewidth', 2); 
+        ylim([0,1.1*max(drag_LH(dim1, dim2, dim3))])
+    end
+
+    if (J_SBT_flag == 1); 
+        plot(x_var, squeeze(drag_J(dim1, dim2, dim3)), 'r-', 'Linewidth', 2); 
+        ylim([0,1.1*max(drag_J(dim1, dim2, dim3))])
+    end
+    
+    if (RFT_flag == 1); 
+        plot(x_var, squeeze(drag_GH_RFT(dim1, dim2, dim3)), 'g-', 'Linewidth', 2); 
+        ylim([0,1.1*max(drag_GH_RFT(dim1, dim2, dim3))])
+        plot(x_var, squeeze(drag_LH_RFT(dim1, dim2, dim3)), 'b--', 'Linewidth', 2); 
+        ylim([0,1.1*max(drag_LH_RFT(dim1, dim2, dim3))])
+    end
+    
+    if (get(handles.add_legend,'Value')==1)
+        legend(legend_text)
+        legend('Location', legend_location)
+        legend('boxoff')
+    end
+
+xlim([0 1.1*max(x_var)]); xlabel(x_label, 'Interpreter', 'Latex','Fontsize', 14);
+ylabel('$D/(\mu UR)$', 'Interpreter', 'Latex', 'Fontsize', 14)
+
+    
+
+function length_min_Callback(hObject, eventdata, handles)
+% hObject    handle to length_min (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of length_min as text
+%        str2double(get(hObject,'String')) returns contents of length_min as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function length_min_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to length_min (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function length_max_Callback(hObject, eventdata, handles)
+% hObject    handle to length_max (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of length_max as text
+%        str2double(get(hObject,'String')) returns contents of length_max as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function length_max_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to length_max (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+
+function lambda_min_Callback(hObject, eventdata, handles)
+% hObject    handle to lambda_min (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of lambda_min as text
+%        str2double(get(hObject,'String')) returns contents of lambda_min as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function lambda_min_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to lambda_min (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function lambda_max_Callback(hObject, eventdata, handles)
+% hObject    handle to lambda_max (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of lambda_max as text
+%        str2double(get(hObject,'String')) returns contents of lambda_max as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function lambda_max_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to lambda_max (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+function helical_radius_Callback(hObject, eventdata, handles)
+% hObject    handle to helical_radius (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of helical_radius as text
+%        str2double(get(hObject,'String')) returns contents of helical_radius as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function helical_radius_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to helical_radius (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function filament_radius_min_Callback(hObject, eventdata, handles)
+% hObject    handle to filament_radius_min (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of filament_radius_min as text
+%        str2double(get(hObject,'String')) returns contents of filament_radius_min as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function filament_radius_min_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to filament_radius_min (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function filament_radius_max_Callback(hObject, eventdata, handles)
+% hObject    handle to filament_radius_max (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of filament_radius_max as text
+%        str2double(get(hObject,'String')) returns contents of filament_radius_max as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function filament_radius_max_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to filament_radius_max (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in save_data.
+function save_data_Callback(hObject, eventdata, handles)
+% hObject    handle to save_data (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of save_data
+
+
+% --- Executes on button press in plot_in_figure.
+function plot_in_figure_Callback(hObject, eventdata, handles)
+% hObject    handle to plot_in_figure (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of plot_in_figure
+
+
+% --- Executes on selection change in plot_type.
+function plot_type_Callback(hObject, eventdata, handles)
+% hObject    handle to plot_type (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: contents = cellstr(get(hObject,'String')) returns plot_type contents as cell array
+%        contents{get(hObject,'Value')} returns selected item from plot_type
+
+
+% --- Executes during object creation, after setting all properties.
+function plot_type_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to plot_type (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: popupmenu controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end;
+
+
+
+% --- Executes on button press in sim_type_RegSM.
+function checkbox3_Callback(hObject, eventdata, handles)
+% hObject    handle to sim_type_RegSM (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of sim_type_RegSM
+
+
+% --- Executes on button press in sim_type_LH_SBT.
+function sim_type_LH_SBT_Callback(hObject, eventdata, handles)
+% hObject    handle to sim_type_LH_SBT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of sim_type_LH_SBT
+
+
+% --- Executes on button press in sim_type_J_SBT.
+function sim_type_J_SBT_Callback(hObject, eventdata, handles)
+% hObject    handle to sim_type_J_SBT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of sim_type_J_SBT
+
+
+% --- Executes on button press in sim_type_RegSM.
+function sim_type_RegSM_Callback(hObject, eventdata, handles)
+% hObject    handle to sim_type_RegSM (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of sim_type_RegSM
+
+
+function lambda_step_Callback(hObject, eventdata, handles)
+% hObject    handle to lambda_step (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of lambda_step as text
+%        str2double(get(hObject,'String')) returns contents of lambda_step as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function lambda_step_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to lambda_step (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+function length_step_Callback(hObject, eventdata, handles)
+% hObject    handle to length_step (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of length_step as text
+%        str2double(get(hObject,'String')) returns contents of length_step as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function length_step_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to length_step (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+function filament_radius_step_Callback(hObject, eventdata, handles)
+% hObject    handle to filament_radius_step (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of filament_radius_step as text
+%        str2double(get(hObject,'String')) returns contents of filament_radius_step as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function filament_radius_step_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to filament_radius_step (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function data_filename_Callback(hObject, eventdata, handles)
+% hObject    handle to data_filename (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of data_filename as text
+%        str2double(get(hObject,'String')) returns contents of data_filename as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function data_filename_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to data_filename (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+ 
+
+
+
+function lambda_to_plot_Callback(hObject, eventdata, handles)
+% hObject    handle to lambda_to_plot (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of lambda_to_plot as text
+%        str2double(get(hObject,'String')) returns contents of lambda_to_plot as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function lambda_to_plot_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to lambda_to_plot (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit54_Callback(hObject, eventdata, handles)
+% hObject    handle to edit54 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit54 as text
+%        str2double(get(hObject,'String')) returns contents of edit54 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit54_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit54 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function length_to_plot_Callback(hObject, eventdata, handles)
+% hObject    handle to length_to_plot (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of length_to_plot as text
+%        str2double(get(hObject,'String')) returns contents of length_to_plot as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function length_to_plot_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to length_to_plot (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit57_Callback(hObject, eventdata, handles)
+% hObject    handle to edit57 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit57 as text
+%        str2double(get(hObject,'String')) returns contents of edit57 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit57_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit57 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function a_to_plot_Callback(hObject, eventdata, handles)
+% hObject    handle to a_to_plot (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of a_to_plot as text
+%        str2double(get(hObject,'String')) returns contents of a_to_plot as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function a_to_plot_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to a_to_plot (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit59_Callback(hObject, eventdata, handles)
+% hObject    handle to edit59 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit59 as text
+%        str2double(get(hObject,'String')) returns contents of edit59 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit59_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit59 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit60_Callback(hObject, eventdata, handles)
+% hObject    handle to edit60 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit60 as text
+%        str2double(get(hObject,'String')) returns contents of edit60 as a double
+
+
+% --- Executes during object creation, after setting all properties.
+function edit60_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit60 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+% --- Executes on button press in add_RFT.
+function add_RFT_Callback(hObject, eventdata, handles)
+% hObject    handle to add_RFT (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of add_RFT
+
+
+% --- Executes on button press in add_legend.
+function add_legend_Callback(hObject, eventdata, handles)
+% hObject    handle to add_legend (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hint: get(hObject,'Value') returns toggle state of add_legend
