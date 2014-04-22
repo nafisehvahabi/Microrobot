@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MRes_IRP.aux
+The style file: plainnat.bst
+Database file #1: reference.bib
+Warning--empty journal in qiunanohelices
+Warning--empty year in qiunanohelices
+Warning--empty year in qiunanohelices
+You've used 11 entries,
+            2773 wiz_defined-function locations,
+            666 strings with 7455 characters,
+and the built_in function-call counts, 6936 in all, are:
+= -- 580
+> -- 564
+< -- 2
++ -- 190
+- -- 177
+* -- 674
+:= -- 1088
+add.period$ -- 33
+call.type$ -- 11
+change.case$ -- 92
+chr.to.int$ -- 9
+cite$ -- 25
+duplicate$ -- 242
+empty$ -- 457
+format.name$ -- 190
+if$ -- 1402
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 11
+newline$ -- 62
+num.names$ -- 44
+pop$ -- 176
+preamble$ -- 1
+purify$ -- 81
+quote$ -- 0
+skip$ -- 197
+stack$ -- 0
+substring$ -- 279
+swap$ -- 22
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 121
+warning$ -- 3
+while$ -- 51
+width$ -- 0
+write$ -- 147
+(There were 3 warnings)
