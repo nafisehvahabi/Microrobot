@@ -29,9 +29,13 @@
 \usepackage{amsmath}
 \usepackage[inference,shorthand]{semantic}
 \usepackage{bm}
+\usepackage{booktabs}
+\usepackage{array}
 
 
 
+\newcommand{\head}[1]{\textnormal{\textbf{#1}}}
+\newcommand{\normal}[1]{\multicolumn{1}{l}{#1}}
 \newcommand{\hilight}[1]{\colorbox{yellow}{#1}}	
 \addtocontents{toc}{\protect\renewcommand{\protect\cftchapleader}{\bfseries\protect\cftdotfill{\protect\cftdotsep}}}
 \newenvironment{cmd}{\fontfamily{ascii}\footnotesize\selectfont}{}
@@ -858,6 +862,43 @@ The lenght of the microrobots used by \citeauthor{qiu2014noncytotoxic}~\citep{qi
 $15.7 \mu m$ and its diameter was $5.3 \mu m$. 
 
 
+%--------------- Table of all design of the microrobots------------------------
+
+
+
+\begin{table}[!ht]
+
+\centering% used for centering table
+{\rowcolors{2}{gray!100!brown!70}{gray!50!yellow!30}
+\begin{tabular}{c c c c c c c c}% centered columns (8 columns)
+\toprule[2.0pt]
+
+
+
+\head{Author} & \head{Shape} & \head{Length} & \head{Pitch} & \head{Pitch-angle} & \head{Radius} & \head{Filament-radius} & \head{Speed}\\
+
+%heading
+\midrule
+%\hline% inserts single horizontal line
+Arcene 	& 	Dense    		  & 	1000		& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\% inserting body of the table
+Dexter 	& 	Sparse 		  & 	20000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\
+Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1ex]% [1ex] adds vertical space
+
+
+
+\bottomrule[2.0pt]
+\end{tabular}
+}
+\label{table:nonlin}% is used to refer this table in the text
+\caption{Microrobot\rq{}s design comparisons}\label{design}% title of Table
+\end{table}
+
+
+
+
+%-------------------------------------------------------------------------------------------
+
+
 
 
 
@@ -866,7 +907,7 @@ $15.7 \mu m$ and its diameter was $5.3 \mu m$.
 \section{Microrobot fabrication} \label{microFabric}
 \subsection{}
 
-
+%--------------- Table of all fabrication of the microrobots------------------------
 
 
 
