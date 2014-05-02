@@ -8,30 +8,30 @@
 \contentsline {paragraph}{}{1}
 \contentsline {section}{\numberline {1.1}Problem}{1}
 \contentsline {section}{\numberline {1.2}Previous work}{1}
-\contentsline {chapter}{\numberline {2}Literature review}{2}
-\contentsline {section}{\numberline {2.1}Bioinspired microrobots}{2}
-\contentsline {paragraph}{Reynolds number}{2}
-\contentsline {subsection}{\numberline {2.1.1}Flagella style microrobots}{2}
-\contentsline {paragraph}{}{2}
-\contentsline {paragraph}{}{6}
-\contentsline {subsection}{\numberline {2.1.2}Plant-based microrobots}{7}
-\contentsline {subsection}{\numberline {2.1.3}Jellyfish style microrobots}{9}
-\contentsline {section}{\numberline {2.2}Fabrication methods}{9}
-\contentsline {paragraph}{}{10}
-\contentsline {chapter}{\numberline {3}Methods}{12}
-\contentsline {section}{\numberline {3.1}Microrobot structure}{12}
-\contentsline {section}{\numberline {3.2}Microrobot design}{12}
-\contentsline {section}{\numberline {3.3}Microrobot fabrication}{12}
-\contentsline {subsection}{\numberline {3.3.1}}{12}
-\contentsline {chapter}{\numberline {4}Simulation}{13}
-\contentsline {section}{\numberline {4.1}Mathematical model}{13}
-\contentsline {subsection}{\numberline {4.1.1}Resistive force theory}{14}
-\contentsline {paragraph}{}{15}
-\contentsline {subsection}{\numberline {4.1.2}Regularized Stokeslet method}{16}
-\contentsline {subsection}{\numberline {4.1.3}Slender body theory}{18}
-\contentsline {chapter}{\numberline {5}Experiments}{19}
-\contentsline {chapter}{\numberline {6}Results}{20}
-\contentsline {chapter}{\numberline {7}Discussion}{21}
-\contentsline {chapter}{\numberline {8}Conclusion and future work}{22}
-\contentsline {chapter}{References}{23}
+\contentsline {chapter}{\numberline {2}Literature review}{3}
+\contentsline {section}{\numberline {2.1}Bioinspired microrobots}{3}
+\contentsline {paragraph}{Reynolds number}{3}
+\contentsline {subsection}{\numberline {2.1.1}Flagella style microrobots}{3}
+\contentsline {paragraph}{}{3}
+\contentsline {paragraph}{}{7}
+\contentsline {subsection}{\numberline {2.1.2}Plant-based microrobots}{8}
+\contentsline {subsection}{\numberline {2.1.3}Jellyfish style microrobots}{10}
+\contentsline {section}{\numberline {2.2}Fabrication methods}{10}
+\contentsline {paragraph}{}{11}
+\contentsline {chapter}{\numberline {3}Methods}{13}
+\contentsline {section}{\numberline {3.1}Microrobot structure}{13}
+\contentsline {section}{\numberline {3.2}Microrobot design}{13}
+\contentsline {section}{\numberline {3.3}Microrobot fabrication}{13}
+\contentsline {subsection}{\numberline {3.3.1}}{13}
+\contentsline {chapter}{\numberline {4}Simulation}{14}
+\contentsline {section}{\numberline {4.1}Mathematical model}{14}
+\contentsline {subsection}{\numberline {4.1.1}Resistive force theory}{15}
+\contentsline {paragraph}{}{16}
+\contentsline {subsection}{\numberline {4.1.2}Regularized Stokeslet method}{17}
+\contentsline {subsection}{\numberline {4.1.3}Slender body theory}{19}
+\contentsline {chapter}{\numberline {5}Experiments}{20}
+\contentsline {chapter}{\numberline {6}Results}{21}
+\contentsline {chapter}{\numberline {7}Discussion}{22}
+\contentsline {chapter}{\numberline {8}Conclusion and future work}{23}
+\contentsline {chapter}{References}{24}
 \contentsfinish 

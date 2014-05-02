@@ -31,7 +31,8 @@
 \usepackage{bm}
 \usepackage{booktabs}
 \usepackage{array}
-
+\usepackage{tikz}
+\usepackage[]{caption}
 
 
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}}
@@ -56,6 +57,73 @@
 \fancyfoot[C]{\thepage}
 \renewcommand{\headrulewidth}{0pt} 
 \renewcommand{\chaptername}{}
+
+\usetikzlibrary{shadows,arrows,positioning}
+% Define the layers to draw the diagram
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+% Define block styles
+\tikzstyle{materia}=[draw, fill=yellow!20, text width=10.0em, text centered,
+  minimum height=7.5em,drop shadow]
+\tikzstyle{practica} = [materia, text width=16em, minimum width=12em,
+  minimum height=3em, rounded corners, drop shadow]
+\tikzstyle{texto} = [above, text width=15em, text centered]
+\tikzstyle{linepart} = [draw, thick, color=black!60, -latex', dashed]
+\tikzstyle{line} = [draw, thick, color=black!50, -latex']
+\tikzstyle{ur}=[draw, text centered, minimum height=0.01em]
+\usetikzlibrary{fadings}
+\usetikzlibrary{decorations}
+\usepgflibrary{decorations.pathmorphing}
+
+\tikzfading[name=fade out, inner color=transparent!0,
+  outer color=transparent!100]
+
+% Define distances for bordering
+\newcommand{\blockdist}{1.3}
+\newcommand{\edgedist}{1.5}
+
+%\newcommand{\etape}[2]{node (p#1) [etape]
+ % {#2}}
+
+\newcommand{\Step}[2]{node (p#1) [practica]
+  {\\{ \Large\textit{#2}}}}
+
+% Draw background
+\newcommand{\background}[5]{%
+  \begin{pgfonlayer}{background}
+    % Left-top corner of the background rectangle
+    \path (#1.west |- #2.north)+(-0.3,0.5) node (a1) {};
+    % Right-bottom corner of the background rectanle
+    \path (#3.east |- #4.south)+(+0.3,-0.5) node (a2) {};
+
+
+    % Draw the background
+   \path[fill=blue!20,rounded corners, draw=black!50, dashed]
+     (-4,-5.2) rectangle (4,1);
+
+   \path[fill=pink ,rounded corners, draw=black!50, dashed]
+     (4.7,-5.2) rectangle (12.5,1);
+
+%%%%%%%%%%%%%
+% \fill[yellow!10!black] (-1,1) rectangle (6,3);
+    %\fill[yellow] (-4,-5.2) rectangle (4,1);
+   %\fill[inner color=blue!50!,outer color=blue!10!black] (4.7,-5.2) rectangle (12.5,1);
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ \path (a1.east |- a1.south)+(3.5,0.5) node (u1)[texto]
+      { \LARGE\textit{ #5}};
+
+      \path (#3.east |- #2.north)+(0,0.25)--(#1.west |- #2.north) node[midway] (#5-n) {};
+      \path (#3.east |- #2.south)+(0,-0.35)--(#1.west |- #2.south) node[midway] (#5-s) {};
+      \path (#3.east |- #2.north)+(0.7,0)--(#3.east |- #4.south) node[midway] (#5-w) {};
+  \end{pgfonlayer}}
+
+\newcommand{\transreceptor}[3]{%
+  \path [linepart] (#1.east) -- node [center]
+    {\large #2} (#3);}
+
 
 
 \begin{document}
@@ -227,6 +295,66 @@ For the purpose of this project different proposed structures of microrobots wer
  of the microswimmers. The fabrication of microswimmers will be by Nanoscribe facility using 3D laser
  lithography. After the microrobots are produced their characteristic will be analysed
  under the scanning electron microscope in order to identify further improvements in microrobot design. 
+
+
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=0.90,[every node/.style={font=\large,
+  minimum height=0.5cm,minimum width=0.5cm},]]
+
+  % Draw diagram elements
+  \path \Step{1}{Pre processing signals};
+  \path (p1.south)+(0.0,-1.5) \Step{2}{Feature extraction};
+  \path (p2.south)+(0.0,-1.3) \Step{3}{Translation algorithms};
+
+  \path (p1.east)+(5.0,0.0) \Step{4}{Design by Lego Mindstrom};
+  \path (p2.east)+(5.0,0.0) \Step{5}{Calculate forward and inverse kinematic};
+  \path (p3.east)+(5.0,0.0) \Step{6}{Design feedback control mechanics};
+
+  \path (p3.south)+(4.10,-2.0) \Step{7}{Integrating e-AR and robot};
+ % \path (p9.south)+(0.0,-1.5) \Step{10}{Laparoscopy Robot};
+
+
+  % Draw arrows between elements
+  \path [line] (p1.south) -- node [above] {} (p2);
+  \path [line] (p2.south) -- node [above] {} (p3);
+  %\path [line] (p1.east) -- node [above] {} (p4);
+
+  %\path [line] (p2.east) -- node [above] {} (p5);
+  %\path [line] (p3.east) -- node [above] {} (p6);
+ \path [line] (p6.south) -- node [above] {} (p7);
+
+  \path [line] (p4.south) -- node [above] {} (p5);
+  \path [line] (p3.south) -- node [above] {} (p7);
+ \path [line] (p5.south) -- node [above] {} (p6);
+
+
+
+   \background{p1}{p1}{p3}{p3}{Signal processing }
+  \background{p4}{p4}{p6}{p6}{Hardware design}
+  
+
+ % \path [line] (p5.south) -- node [above] {} (bk3-n);
+ % \path [line] (bk3-s) -- node [above] {} (p8);
+ % \path [line] (bk3-s) -- node [above] {} (p9);
+  %\path (bk1-e)+(+6.0,0) node (ur1)[ur] {};
+ % \path (bk2-w)+(+6.0,0) node (ur2)[ur] {};
+  %\path (bk3-w)+(+3.0,0) node (ur3)[ur] {};
+% \transreceptor{bk1-e}{pre processing}{ur1};
+ % \transreceptor{bk2-w}{Feature selection}{ur2};
+  %\transreceptor{bk3-w}{classification}{ur3};
+
+
+%%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
+\end{tikzpicture}									   %
+\caption{Project overwiew. }						   %
+\label{Overview}										   %
+\end{figure}										   %	
+												   %
+%%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
+
 
 \section{Problem}
 
@@ -689,32 +817,37 @@ developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and T
   \centering
 
 \setlength{\arrayrulewidth}{.6mm}
-\setlength{\tabcolsep}{5pt}
-\renewcommand{\arraystretch}{.8}
+\setlength{\tabcolsep}{1pt}
+\renewcommand{\arraystretch}{2.8}
 
 
-  \begin{tabular}{ c  m{3cm}  m{4.3cm} m{3cm} }
+  \begin{tabular}{ c m{2.5cm}  m{4.3cm} m{3cm} m{2cm}}
     \hline
 \rowcolor{lightgray}
-    Microrobot Image & Type  & Fabrication Method & Citation \\ \hline\hline
+    Microrobot Image & Design  & Fabrication Method & propulsion method	&Citation  \\ \hline\hline
+
+
+
     \begin{minipage}{.3\textwidth}
       \includegraphics[width=\linewidth, height=25mm]{screw_ta}
-    \end{minipage}
+    \end{minipage} 
     &
-    %\begin{minipage}[t]{5cm}
+    \begin{minipage}[t]{3cm}
       \begin{itemize}
         \item Helical Screw Shape
     
       \end{itemize}
-    %\end{minipage}
+    \end{minipage}
     & 
-    %\begin{minipage}{5cm}
+    \begin{minipage}{4cm}
       \begin{itemize}
         \item Direct Laser Writting (DLW)
 	\item Two-photon Polymerization
    
       \end{itemize}
-    %\end{minipage}
+    \end{minipage}
+	&
+
 	&
 	   \begin{itemize}
         \item \citep{peyer2013magnetic}
@@ -724,50 +857,120 @@ developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and T
 %%%%%%%%%% Second Row
 
  \begin{minipage}{.3\textwidth}
-      \includegraphics[width=\linewidth, height=25mm]{flagella_ta}
+      \includegraphics[width=\linewidth, height=25mm]{helical_rigid_tail}
     \end{minipage}
     &
-    %\begin{minipage}[t]{5cm}
+    \begin{minipage}[t]{3cm}
       \begin{itemize}
-        \item Flagella Shape
+        \item Helical rigid tail
       
       \end{itemize}
-    %\end{minipage}
+    \end{minipage}
     & 
-    %\begin{minipage}{5cm}
+    \begin{minipage}[t]{4cm}
       \begin{itemize}
+
         \item Direct Laser Writting (DLW)
 	\item Two-photon Polymerization
    
       \end{itemize}
-    %\end{minipage}
-&
+    \end{minipage}
+
+	&
+
+
+	&
 	   \begin{itemize}
         \item \citep{peyer2013bio}
    
       \end{itemize}
     \\ \hline
 
-%%%%%%%%% Third Row
+%%%%%%%%%%%%%%%% Third row
+
+\begin{minipage}{.3\textwidth}
+      \includegraphics[width=\linewidth, height=25mm]{Planar_flexible_tail}
+    \end{minipage}
+    &
+    \begin{minipage}[t]{3cm}
+      \begin{itemize}
+        \item Planar flexible tail
+     
+      \end{itemize}
+    \end{minipage}
+    & 
+    \begin{minipage}[t]{4cm}
+      \begin{itemize}
+        \item The EMA coil system
+     
+      \end{itemize}
+    \end{minipage}
+&
+
+
+	&
+	   \begin{itemize}
+        \item \citep{ko2012jellyfish}
+   
+      \end{itemize}
+    \\ \hline
+
+%%%%%%%%%%%%% Forth row
+
+\begin{minipage}{.3\textwidth}
+      \includegraphics[width=\linewidth, height=25mm]{cilia-shape}
+    \end{minipage}
+    &
+    \begin{minipage}[t]{3cm}
+      \begin{itemize}
+        \item Cilia
+     
+      \end{itemize}
+    \end{minipage}
+    & 
+    \begin{minipage}[t]{4cm}
+      \begin{itemize}
+        \item The EMA coil system
+     
+      \end{itemize}
+    \end{minipage}
+&
+
+
+&
+	   \begin{itemize}
+        \item \citep{ko2012jellyfish}
+   
+      \end{itemize}
+    \\ \hline
+
+
+
+%%%%%%%%% Fifth Row
  \begin{minipage}{.3\textwidth}
       \includegraphics[width=\linewidth, height=25mm]{tube_ta}
     \end{minipage}
     &
-    %\begin{minipage}[t]{5cm}
+    \begin{minipage}[t]{3cm}
       \begin{itemize}
         \item Nanotube
         
       \end{itemize}
-    %\end{minipage}
+    \end{minipage}
     & 
-    %\begin{minipage}{5cm}
+    \begin{minipage}{4cm}
       \begin{itemize}
         \item Molecular Beam Epitaxy (MBE)
 	   
 	   
     
       \end{itemize}
-    %\end{minipage}
+    \end{minipage}
+	&
+
+
+
+
 	&
 	   \begin{itemize}
         \item \citep{C2NR32798H}
@@ -775,28 +978,32 @@ developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and T
       \end{itemize}
     \\ \hline
 
-%%%%% Forth Row
+%%%%% Sixth Row
 
  \begin{minipage}{.3\textwidth}
       \includegraphics[width=\linewidth, height=25mm]{plant_ta}
     \end{minipage}
     &
-    %\begin{minipage}[t]{5cm}
+    \begin{minipage}[t]{3cm}
       \begin{itemize}
         \item Plant-based
       
       \end{itemize}
-    %\end{minipage}
+    \end{minipage}
     & 
-    %\begin{minipage}{5cm}
+    \begin{minipage}[t]{4cm}
       \begin{itemize}
         \item Macerating Plant\rq{}s Leaves
 	\item Seperating Spiral Vessels
 	\item Stretching spiral Vessels
-	\item Coating with Titanium
+	\item Coating with Ti
 
       \end{itemize}
-    %\end{minipage}
+    \end{minipage}
+	&
+
+
+
 	&
 	   \begin{itemize}
         \item \citep{gao2013bioinspired}
@@ -804,31 +1011,40 @@ developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and T
       \end{itemize}
     \\ \hline
 
-%%%%%% Fifth Row
+%%%%%% Seven Row
 
  \begin{minipage}{.3\textwidth}
       \includegraphics[width=\linewidth, height=25mm]{Jelly}
     \end{minipage}
     &
-    %\begin{minipage}[t]{5cm}
+    \begin{minipage}[t]{3cm}
       \begin{itemize}
         \item Jellyfish
      
       \end{itemize}
-    %\end{minipage}
+    \end{minipage}
     & 
-    %\begin{minipage}{5cm}
+    \begin{minipage}[t]{4cm}
       \begin{itemize}
         \item The EMA coil system
      
       \end{itemize}
-    %\end{minipage}
+    \end{minipage}
 &
+
+
+
+	&
 	   \begin{itemize}
         \item \citep{ko2012jellyfish}
    
       \end{itemize}
     \\ \hline
+
+
+
+
+
 
 
 
@@ -858,11 +1074,23 @@ to perform actuation task~\citep{qiu2014noncytotoxic}.
 %%%%%%%%%%%%%%%%%%% Design %%%%%%%%%%%%%%%
 \section{Microrobot design}
 
-The lenght of the microrobots used by \citeauthor{qiu2014noncytotoxic}~\citep{qiu2014noncytotoxic} was
-$15.7 \mu m$ and its diameter was $5.3 \mu m$. 
+%The lenght of the microrobots used by \citeauthor{qiu2014noncytotoxic}~\citep{qiu2014noncytotoxic} was
+%15.7 \mu m$ and its diameter was $5.3 \mu m$. 
 
 
 %--------------- Table of all design of the microrobots------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
