@@ -33,7 +33,7 @@
 \usepackage{array}
 \usepackage{tikz}
 \usepackage[]{caption}
-
+\usetikzlibrary{mindmap,trees}
 
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}}
 \newcommand{\normal}[1]{\multicolumn{1}{l}{#1}}
@@ -59,70 +59,6 @@
 \renewcommand{\chaptername}{}
 
 \usetikzlibrary{shadows,arrows,positioning}
-% Define the layers to draw the diagram
-\pgfdeclarelayer{background}
-\pgfdeclarelayer{foreground}
-\pgfsetlayers{background,main,foreground}
-
-% Define block styles
-\tikzstyle{materia}=[draw, fill=yellow!20, text width=10.0em, text centered,
-  minimum height=7.5em,drop shadow]
-\tikzstyle{practica} = [materia, text width=16em, minimum width=12em,
-  minimum height=3em, rounded corners, drop shadow]
-\tikzstyle{texto} = [above, text width=15em, text centered]
-\tikzstyle{linepart} = [draw, thick, color=black!60, -latex', dashed]
-\tikzstyle{line} = [draw, thick, color=black!50, -latex']
-\tikzstyle{ur}=[draw, text centered, minimum height=0.01em]
-\usetikzlibrary{fadings}
-\usetikzlibrary{decorations}
-\usepgflibrary{decorations.pathmorphing}
-
-\tikzfading[name=fade out, inner color=transparent!0,
-  outer color=transparent!100]
-
-% Define distances for bordering
-\newcommand{\blockdist}{1.3}
-\newcommand{\edgedist}{1.5}
-
-%\newcommand{\etape}[2]{node (p#1) [etape]
- % {#2}}
-
-\newcommand{\Step}[2]{node (p#1) [practica]
-  {\\{ \Large\textit{#2}}}}
-
-% Draw background
-\newcommand{\background}[5]{%
-  \begin{pgfonlayer}{background}
-    % Left-top corner of the background rectangle
-    \path (#1.west |- #2.north)+(-0.3,0.5) node (a1) {};
-    % Right-bottom corner of the background rectanle
-    \path (#3.east |- #4.south)+(+0.3,-0.5) node (a2) {};
-
-
-    % Draw the background
-   \path[fill=blue!20,rounded corners, draw=black!50, dashed]
-     (-4,-5.2) rectangle (4,1);
-
-   \path[fill=pink ,rounded corners, draw=black!50, dashed]
-     (4.7,-5.2) rectangle (12.5,1);
-
-%%%%%%%%%%%%%
-% \fill[yellow!10!black] (-1,1) rectangle (6,3);
-    %\fill[yellow] (-4,-5.2) rectangle (4,1);
-   %\fill[inner color=blue!50!,outer color=blue!10!black] (4.7,-5.2) rectangle (12.5,1);
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-
- \path (a1.east |- a1.south)+(3.5,0.5) node (u1)[texto]
-      { \LARGE\textit{ #5}};
-
-      \path (#3.east |- #2.north)+(0,0.25)--(#1.west |- #2.north) node[midway] (#5-n) {};
-      \path (#3.east |- #2.south)+(0,-0.35)--(#1.west |- #2.south) node[midway] (#5-s) {};
-      \path (#3.east |- #2.north)+(0.7,0)--(#3.east |- #4.south) node[midway] (#5-w) {};
-  \end{pgfonlayer}}
-
-\newcommand{\transreceptor}[3]{%
-  \path [linepart] (#1.east) -- node [center]
-    {\large #2} (#3);}
 
 
 
@@ -297,63 +233,34 @@ For the purpose of this project different proposed structures of microrobots wer
  under the scanning electron microscope in order to identify further improvements in microrobot design. 
 
 
-
-
 \begin{figure}
 \centering
-\begin{tikzpicture}[scale=0.90,[every node/.style={font=\large,
-  minimum height=0.5cm,minimum width=0.5cm},]]
+\pagestyle{empty}
+\begin{tikzpicture}
+  \path[mindmap,concept color=black,text=white]
+    node[concept] {Microrobot Navigation Platform}
+    [clockwise from=0]
+    child[concept color=green!50!black] {
+      node[concept] {Scanning Electron Microscope }
+      [clockwise from=90]
+      %child { node[concept] {algorithms} }
+      %child { node[concept] {data structures} }
+      %child { node[concept] {pro\-gramming languages} }
+      %child { node[concept] {software engineer\-ing} }
+    }  
+    child[concept color=blue] {
+      node[concept] {Fabrication}
+      [clockwise from=-30]
+      %child { node[concept] {databases} }
+      %child { node[concept] {WWW} }
+    }
+    child[concept color=red] { node[concept] {Simulation} }
+    child[concept color=orange] { node[concept] {Design} };
+\end{tikzpicture}
 
-  % Draw diagram elements
-  \path \Step{1}{Pre processing signals};
-  \path (p1.south)+(0.0,-1.5) \Step{2}{Feature extraction};
-  \path (p2.south)+(0.0,-1.3) \Step{3}{Translation algorithms};
-
-  \path (p1.east)+(5.0,0.0) \Step{4}{Design by Lego Mindstrom};
-  \path (p2.east)+(5.0,0.0) \Step{5}{Calculate forward and inverse kinematic};
-  \path (p3.east)+(5.0,0.0) \Step{6}{Design feedback control mechanics};
-
-  \path (p3.south)+(4.10,-2.0) \Step{7}{Integrating e-AR and robot};
- % \path (p9.south)+(0.0,-1.5) \Step{10}{Laparoscopy Robot};
-
-
-  % Draw arrows between elements
-  \path [line] (p1.south) -- node [above] {} (p2);
-  \path [line] (p2.south) -- node [above] {} (p3);
-  %\path [line] (p1.east) -- node [above] {} (p4);
-
-  %\path [line] (p2.east) -- node [above] {} (p5);
-  %\path [line] (p3.east) -- node [above] {} (p6);
- \path [line] (p6.south) -- node [above] {} (p7);
-
-  \path [line] (p4.south) -- node [above] {} (p5);
-  \path [line] (p3.south) -- node [above] {} (p7);
- \path [line] (p5.south) -- node [above] {} (p6);
-
-
-
-   \background{p1}{p1}{p3}{p3}{Signal processing }
-  \background{p4}{p4}{p6}{p6}{Hardware design}
-  
-
- % \path [line] (p5.south) -- node [above] {} (bk3-n);
- % \path [line] (bk3-s) -- node [above] {} (p8);
- % \path [line] (bk3-s) -- node [above] {} (p9);
-  %\path (bk1-e)+(+6.0,0) node (ur1)[ur] {};
- % \path (bk2-w)+(+6.0,0) node (ur2)[ur] {};
-  %\path (bk3-w)+(+3.0,0) node (ur3)[ur] {};
-% \transreceptor{bk1-e}{pre processing}{ur1};
- % \transreceptor{bk2-w}{Feature selection}{ur2};
-  %\transreceptor{bk3-w}{classification}{ur3};
-
-
-%%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
-\end{tikzpicture}									   %
-\caption{Project overwiew. }						   %
-\label{Overview}										   %
-\end{figure}										   %	
-												   %
-%%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
+\caption{Project overwiew. This diagram shows different aspects of the project.  }						   
+\label{Overview}										   
+\end{figure}
 
 
 \section{Problem}
@@ -1108,7 +1015,7 @@ to perform actuation task~\citep{qiu2014noncytotoxic}.
 %heading
 \midrule
 %\hline% inserts single horizontal line
-Arcene 	& 	Dense    		  & 	1000		& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\% inserting body of the table
+Arcene 	& 	    		  & 	1000		& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\% inserting body of the table
 Dexter 	& 	Sparse 		  & 	20000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\
 Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1ex]% [1ex] adds vertical space
 
