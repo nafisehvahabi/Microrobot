@@ -16,7 +16,8 @@
 \contentsline {paragraph}{}{7}
 \contentsline {subsection}{\numberline {2.1.2}Plant-based microrobots}{8}
 \contentsline {subsection}{\numberline {2.1.3}Jellyfish style microrobots}{10}
-\contentsline {section}{\numberline {2.2}Fabrication methods}{10}
+\contentsline {section}{\numberline {2.2}Actuation methods}{10}
+\contentsline {section}{\numberline {2.3}Fabrication methods}{10}
 \contentsline {paragraph}{}{11}
 \contentsline {chapter}{\numberline {3}Methods}{13}
 \contentsline {section}{\numberline {3.1}Microrobot structure}{13}
@@ -24,7 +25,7 @@
 \contentsline {section}{\numberline {3.3}Microrobot fabrication}{13}
 \contentsline {subsection}{\numberline {3.3.1}}{13}
 \contentsline {chapter}{\numberline {4}Simulation}{14}
-\contentsline {section}{\numberline {4.1}Mathematical model}{14}
+\contentsline {section}{\numberline {4.1}Modeling helical propulsion}{14}
 \contentsline {subsection}{\numberline {4.1.1}Resistive force theory}{15}
 \contentsline {paragraph}{}{16}
 \contentsline {subsection}{\numberline {4.1.2}Regularized Stokeslet method}{17}
