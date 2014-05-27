@@ -237,25 +237,30 @@ For the purpose of this project different proposed structures of microrobots wer
 \centering
 \pagestyle{empty}
 \begin{tikzpicture}
-  \path[mindmap,concept color=black,text=white]
-    node[concept] {Microrobot Navigation Platform}
+    \path[mindmap,concept color=black,text=white]
+    node[concept] {Platform for Microrobot Navigation}
     [clockwise from=0]
     child[concept color=green!50!black] {
-      node[concept] {Scanning Electron Microscope }
-      [clockwise from=90]
-      %child { node[concept] {algorithms} }
-      %child { node[concept] {data structures} }
-      %child { node[concept] {pro\-gramming languages} }
-      %child { node[concept] {software engineer\-ing} }
+      node[concept] {Actuation}
+      [clockwise from=60]
+      child { node[concept] {Energy\\supply} }
+      child { node[concept] {Locomo\\tion} }
+      child { node[concept] {Efficiency} }
+     % child { node[concept] {software engineer\-ing} }
     }  
     child[concept color=blue] {
-      node[concept] {Fabrication}
+      node[concept] {Control}
       [clockwise from=-30]
-      %child { node[concept] {databases} }
-      %child { node[concept] {WWW} }
+      child { node[concept] {Motion} }
+      child { node[concept] {Force\\ torque} }
+      child { node[concept] {Optimis\-\\ation} }
     }
-    child[concept color=red] { node[concept] {Simulation} }
+    child[concept color=red] { node[concept] {Fabrication} 
+    [clockwise from=200]
+      child { node[concept] {Material} }
+    }
     child[concept color=orange] { node[concept] {Design} };
+
 \end{tikzpicture}
 
 \caption{Project overwiew. The diagram shows different aspects of the project.  }						   
@@ -759,11 +764,19 @@ developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and T
     \end{minipage}
 	&
 
+  \begin{minipage}[t]{3cm}
+      \begin{itemize}
+        \item RFT
+    
+      \end{itemize}
+    \end{minipage}
 	&
+	 \begin{minipage}[t]{3cm}
 	   \begin{itemize}
         \item \citep{peyer2013magnetic}
    
       \end{itemize}
+	 \end{minipage}
     \\ \hline
 %%%%%%%%%% Second Row
 
@@ -788,13 +801,20 @@ developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and T
     \end{minipage}
 
 	&
-
+  \begin{minipage}[t]{3cm}
+      \begin{itemize}
+        \item RFT
+    
+      \end{itemize}
+    \end{minipage}
 
 	&
+
 	   \begin{itemize}
         \item \citep{peyer2013bio}
    
       \end{itemize}
+	
     \\ \hline
 
 %%%%%%%%%%%%%%%% Third row
@@ -816,12 +836,18 @@ developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and T
      
       \end{itemize}
     \end{minipage}
-&
-
+ &
+  \begin{minipage}[t]{3cm}
+      \begin{itemize}
+        \item BST
+	\item RFT
+     
+      \end{itemize}
+    \end{minipage}
 
 	&
 	   \begin{itemize}
-        \item \citep{ko2012jellyfish}
+        \item \citep{kim2013fabrication}
    
       \end{itemize}
     \\ \hline
@@ -839,20 +865,28 @@ developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and T
       \end{itemize}
     \end{minipage}
     & 
-    \begin{minipage}[t]{4cm}
+    \begin{minipage}[t]{3cm}
       \begin{itemize}
         \item The EMA coil system
      
       \end{itemize}
     \end{minipage}
 &
-
+  \begin{minipage}[t]{4cm}
+      \begin{itemize}
+        \item BST
+	
+     
+      \end{itemize}
+    \end{minipage}
 
 &
+	 \begin{minipage}[t]{3cm}
 	   \begin{itemize}
-        \item \citep{ko2012jellyfish}
+        \item \citep{kim2013fabrication}
    
       \end{itemize}
+   \end{minipage}
     \\ \hline
 
 
