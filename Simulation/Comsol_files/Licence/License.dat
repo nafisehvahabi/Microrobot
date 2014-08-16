@@ -1,0 +1,22 @@
+#------------------------------------------------------------------
+# COMSOL 4.4 CPU License No: 7075293 Windows/Mac
+# Visit www.comsol.com/install for latest installation instructions
+#------------------------------------------------------------------
+FEATURE SERIAL LMCOMSOL 4.4 permanent uncounted \
+	VENDOR_STRING=C,104101000000 HOSTID=ANY sort=100 SN=7075293 \
+	TS_OK SIGN=AAF20B5A3576
+FEATURE COMSOL LMCOMSOL 4.4 permanent uncounted HOSTID=e8393554bbd4 \
+	PLATFORMS="i86_n x64_n i86_mac x64_mac" SN=7075293 \
+	SIGN=DB9ECDFADC3C
+FEATURE ACDC LMCOMSOL 4.4 permanent uncounted HOSTID=e8393554bbd4 \
+	PLATFORMS="i86_n x64_n i86_mac x64_mac" SN=7075293 \
+	SIGN=D4AC0CA61500
+FEATURE CFD LMCOMSOL 4.4 permanent uncounted HOSTID=e8393554bbd4 \
+	PLATFORMS="i86_n x64_n i86_mac x64_mac" SN=7075293 \
+	SIGN=4E13FED85754
+FEATURE PARTICLETRACING LMCOMSOL 4.4 permanent uncounted \
+	HOSTID=e8393554bbd4 PLATFORMS="i86_n x64_n i86_mac x64_mac" \
+	SN=7075293 SIGN=C213CF6622C0
+FEATURE COMSOLGUI LMCOMSOL 4.4 permanent uncounted \
+	HOSTID=e8393554bbd4 PLATFORMS="i86_n x64_n i86_mac x64_mac" \
+	SN=7075293 SIGN=5ABA4AB00474
