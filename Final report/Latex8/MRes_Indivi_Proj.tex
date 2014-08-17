@@ -1563,37 +1563,155 @@ represented in the helix frame:
 \end{equation}
 
 Therefore the total fluidic torque and force of the helix can be figured out by integrating the small torques
-and forces that applied on the infinitestimally segments of the helix along the length of the helix:
+and forces that applied on the infinitestimally segments of the helix along the helix length:
 
-  \begin{equation}
+\begin{equation}
  \bm{f}_h = \int \; d\bm{f}_s  \qquad  \bm{\tau}_h = \int \; d\bm{\tau}_s 
 \label{total_force_torque}
 \end{equation} 
  
 The final torque and force can be obtained from the equations \ref{total_force_torque} by 
-integraling with respect to the polar angle $\phi$. As it can be seen in the figure \ref{RFT-6dof} the $ds$
+integraling with respect to the polar angle $\phi$. As it been seen in the figure \ref{RFT-6dof} the $ds$
 can be written with respect with the polar angle $\phi$ as follow:
 
 
-  \begin{equation}
+\begin{equation}
 ds = \frac{r_hd\phi}{\sin(\theta)}
 \label{polar_angle_theta}
 \end{equation} 
 
 after substitiuting the \ref{Final_force_related_RotationTranslation} into \ref{forceTorque_relation_helixFrame} and 
-replacing $ds$ with the eqation \ref{polar_angle_theta} we have:
+replacing $ds$ with the eqation \ref{polar_angle_theta} we have the following equations which is 
+integrating with respect with $\phi$ from $-\pi n$ to $\pi n$ for an $n$ turn helix;
 
-  \begin{equation}
-% ^{h}\bm{f}_h = \left (\frac{r_h}{\sin(\theta)} \int _{-\pi n}^{\pi n} \mathrm {^{h}\Xi(\phi)}\, d(\phi) \right){^{h}{\bm{V}}} 
-1 =1
-\label{total_force_torque}
-\end{equation} 
  
+\begin{multline}
+\qquad \qquad^{h}\bm{f}_h = \left (  \frac{r_h}{\sin(\theta)}  \int _{-\pi n}^{\pi n} \mathrm {^{h}\Xi(\phi)}\, d(\phi)  \right){^{h}{\bm{V}}} \\ 
++ \left ( \frac{r_h}{\sin(\theta)}  \int _{-\pi n}^{\pi n} \mathrm {^{h}\Xi(\phi)}  \Delta{\{^{h}\bm{P}(\phi)}\}^T    \, d(\phi)    \right){^{h}{\bm{\omega}}}
+\label{first_intergra_force}
+\end{multline} 
 
-  \begin{equation}
- \bm{f}_h = \int \; d\bm{f}_s  \qquad  \bm{\tau}_h = \int \; d\bm{\tau}_s 
-\label{total_force_torque}
+
+\begin{multline}
+\qquad \qquad ^{h}\bm{\tau}_h = \left (  \frac{r_h}{\sin(\theta)}  \int _{-\pi n}^{\pi n} \mathrm \Delta{\{^{h}\bm{P}(\phi)}\} {^{h}\Xi(\phi)}\, d(\phi) \right){^{h}{\bm{V}}} \\
+ + \left ( \frac{r_h}{\sin(\theta)} \int _{-\pi n}^{\pi n} \mathrm \Delta{\{^{h}\bm{P}(\phi)}\} {^{h}\Xi(\phi)} \Delta{\{^{h}\bm{P}(\phi)}\}^T \, d(\phi) \right){^{h}{\bm{\omega}}}
+\label{second_integral_torque}
+\end{multline} 
+
+Computing all four integrals in the eqations \ref{first_intergra_force} and \ref{second_integral_torque} will
+result in two eqations that is expressed force $(^{h}\bm{f}_h)$ and torque $(^{h}\bm{\tau}_h)$ in 
+terms of the anqular $(^{h}\bm{\omega})$ and translational velocity $(^{h}\bm{V})$: 
+
+
+\[
+\begin{bmatrix} ^{h}\bm{f}_h\\ 
+^{h}\bm{\tau}_h\end{bmatrix}  = \begin{bmatrix} ^{h}\bm{A}_h & ^{h}\bm{B}_h \\ 
+^{h}\bm{C}_h & ^{h}\bm{D}_h \end{bmatrix}  \begin{bmatrix} ^{h}\bm{V}_h
+ \\ ^{h}\bm{\omega}
+\end{bmatrix}
+\]
+
+
+Where $^{h}\bm{A}_h$, $^{h}\bm{B}_h$ and $^{h}\bm{C}_h$ are:
+
+\begin{equation}
+ ^{h}\bm{A}_h = \begin{bmatrix}
+       a_{h11}  & 0 		 & 0           \\[0.3em]
+       0		 & a_{h22}           & 0\\[0.3em]
+       0           	& 0 		& a_{h22}
+     \end{bmatrix}
+\label{Amatrix}
+\end{equation}
+
+
+\begin{equation}
+ ^{h}\bm{B}_h = \begin{bmatrix}
+       b_{h11}  & 0 		 & b_{h13}          \\[0.3em]
+       0		 & b_{h22}           & 0\\[0.3em]
+       0           	& 0 		& b_{h33}
+     \end{bmatrix}
+\label{Bmatrix}
+\end{equation}
+
+
+
+\begin{equation}
+ ^{h}\bm{C}_h = \begin{bmatrix}
+       c_{h11}  & 0 		 & c_{h13}            \\[0.3em]
+       0		 & c_{h22}           & 0\\[0.3em]
+       c_{h13}            	& 0 		& c_{h33} 
+     \end{bmatrix}
+\label{Cmatrix}
+\end{equation}
+
+
+and each matrix element will calculate by following eqations:
+
+
+
+\begin{equation}
+a_{h11} = \frac{2\pi n r_h (\xi_{\parallel} \cos^2(\theta) + \xi_{\perp} \sin^2(\theta))}{\sin(\theta) }
+\label{ah11}
 \end{equation} 
+
+\begin{equation}
+a_{h11} = \frac{\pi n r_h (\xi_{\perp} + \xi_{\perp} \cos^2(\theta) + \xi_{\parallel} \sin^2(\theta))}{\sin(\theta) }
+\label{ah22}
+\end{equation} 
+
+\begin{equation}
+b_{h11} = 2\pi n {r_h}^2 (\xi_{\parallel} - \xi_{\perp})\cos(\theta)
+\label{bh11}
+\end{equation} 
+
+
+\begin{equation}
+a_{h13} = \frac{-2 \pi n {r_h}^2 (\xi_{\parallel} - \xi_{\perp})\cos(\theta)}{\tan(\theta) }
+\label{bh13}
+\end{equation} 
+
+
+\begin{equation}
+a_{h22} = \frac{-3 \pi n {r_h}^2 (\xi_{\parallel} - \xi_{\perp})\cos(\theta)}{2}
+\label{bh22}
+\end{equation} 
+
+
+\begin{equation}
+a_{h33} = \frac{- \pi n {r_h}^2 (\xi_{\parallel} - \xi_{\perp})\cos(\theta)}{2}
+\label{bh33}
+\end{equation} 
+
+
+
+\begin{equation}
+c_{h11} = \frac{2\pi n {r_h}^3 (\xi_{\perp} \cos^2(\theta) + \xi_{\parallel} \sin^2(\theta))}{\sin(\theta) }
+\label{ch11}
+\end{equation} 
+
+
+\begin{equation}
+c_{h11} = \frac{-2\pi n {r_h}^3 (\xi_{\perp} \cos^2(\theta) + \xi_{\parallel} \sin^2(\theta))}{\sin(\theta) \tan(\theta)}
+\label{ch13}
+\end{equation}
+
+
+\begin{multline}
+c_{h22} = \frac{2\pi n {r_h}^3 (\xi_{\parallel} \cos^2(\theta) + \xi_{\perp} \sin^2(\theta) - \xi_{\perp}/2)}{\sin(\theta) } \\
++ \frac{\pi n {r_h}^3 (\xi_{\parallel} \cos^2(\theta) - \xi_{\perp} \sin^2(\theta) - \xi_{\perp})}{2{\tan^2(\theta)}\sin(\theta)}\\
++ \frac{(\pi n {r_h})^3 (\xi_{\parallel} \cos^2(\theta) - \xi_{\perp} \sin^2(\theta) + \xi_{\perp})}{3{\tan^2(\theta)}\sin(\theta)}
+\label{ch22}
+\end{multline}
+
+
+
+\begin{multline}
+c_{h33} = \frac{\pi n {r_h}^3 \xi_{\perp} }{\sin(\theta) }- \frac{\pi n {r_h}^3 (\xi_{\perp} \cos^2(\theta) + \xi_{\parallel} \sin^2(\theta) - \xi_{\perp})}{2{\tan^2(\theta)}\sin(\theta)}\\
++ \frac{(\pi n {r_h})^3 (\xi_{\perp} \cos^2(\theta) + \xi_{\parallel} \sin^2(\theta) + \xi_{\perp})}{3{\tan^2(\theta)}\sin(\theta)}
+\label{ch33}
+\end{multline}
+
+
 
 
 
