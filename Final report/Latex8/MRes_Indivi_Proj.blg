@@ -8,45 +8,45 @@ Warning--entry type for "Doe:2013:Online" isn't style-file defined
 Warning--empty journal in qiunanohelices
 Warning--empty year in qiunanohelices
 Warning--empty year in qiunanohelices
-You've used 19 entries,
+You've used 22 entries,
             2773 wiz_defined-function locations,
-            718 strings with 9253 characters,
-and the built_in function-call counts, 11309 in all, are:
-= -- 967
-> -- 852
-< -- 7
-+ -- 289
-- -- 267
-* -- 1063
-:= -- 1755
-add.period$ -- 58
-call.type$ -- 19
-change.case$ -- 146
-chr.to.int$ -- 16
-cite$ -- 41
-duplicate$ -- 415
-empty$ -- 788
-format.name$ -- 288
-if$ -- 2308
-int.to.chr$ -- 4
+            735 strings with 9838 characters,
+and the built_in function-call counts, 13089 in all, are:
+= -- 1109
+> -- 1005
+< -- 9
++ -- 341
+- -- 315
+* -- 1237
+:= -- 2039
+add.period$ -- 67
+call.type$ -- 22
+change.case$ -- 170
+chr.to.int$ -- 18
+cite$ -- 47
+duplicate$ -- 477
+empty$ -- 903
+format.name$ -- 341
+if$ -- 2665
+int.to.chr$ -- 5
 int.to.str$ -- 1
-missing$ -- 18
-newline$ -- 102
-num.names$ -- 76
-pop$ -- 282
+missing$ -- 22
+newline$ -- 117
+num.names$ -- 88
+pop$ -- 330
 preamble$ -- 1
-purify$ -- 127
+purify$ -- 149
 quote$ -- 0
-skip$ -- 335
+skip$ -- 386
 stack$ -- 0
-substring$ -- 484
-swap$ -- 46
-text.length$ -- 3
+substring$ -- 539
+swap$ -- 52
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 209
+type$ -- 237
 warning$ -- 3
-while$ -- 88
+while$ -- 100
 width$ -- 0
-write$ -- 251
+write$ -- 290
 (There were 4 warnings)

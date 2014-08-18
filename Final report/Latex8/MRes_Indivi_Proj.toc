@@ -26,15 +26,15 @@
 \contentsline {subsubsection}{\numberline {2.4.1.1}Resistive force theory}{15}
 \contentsline {paragraph}{}{16}
 \contentsline {subsubsection}{\numberline {2.4.1.2}Resistive force theory for six degree of freedom}{17}
-\contentsline {subsubsection}{\numberline {2.4.1.3}Regularized Stokeslet method}{22}
-\contentsline {subsubsection}{\numberline {2.4.1.4}Slender body theory}{24}
-\contentsline {subsection}{\numberline {2.4.2}Microrobot actutation}{24}
-\contentsline {subsubsection}{\numberline {2.4.2.1}Force driven microrobot}{24}
-\contentsline {subsubsection}{\numberline {2.4.2.2}Torque driven microrobot}{24}
-\contentsline {chapter}{\numberline {3}Results}{25}
-\contentsline {section}{\numberline {3.1}Propulsion result}{25}
-\contentsline {section}{\numberline {3.2}Microrobot fabrication}{25}
-\contentsline {chapter}{\numberline {4}Discussion}{26}
-\contentsline {chapter}{\numberline {5}Conclusion and future work}{27}
-\contentsline {chapter}{References}{28}
+\contentsline {subsubsection}{\numberline {2.4.1.3}Regularized Stokeslet method}{23}
+\contentsline {subsubsection}{\numberline {2.4.1.4}Slender body theory}{25}
+\contentsline {subsection}{\numberline {2.4.2}Microrobot actutation}{25}
+\contentsline {subsubsection}{\numberline {2.4.2.1}Force driven microrobot}{25}
+\contentsline {subsubsection}{\numberline {2.4.2.2}Torque driven microrobot}{25}
+\contentsline {chapter}{\numberline {3}Results}{27}
+\contentsline {section}{\numberline {3.1}Propulsion result}{27}
+\contentsline {section}{\numberline {3.2}Microrobot fabrication}{27}
+\contentsline {chapter}{\numberline {4}Discussion}{28}
+\contentsline {chapter}{\numberline {5}Conclusion and future work}{29}
+\contentsline {chapter}{References}{30}
 \contentsfinish 
