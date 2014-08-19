@@ -2073,16 +2073,89 @@ Then by applying the similar transformation to other component \ref{Dmatrix}, \r
 \label{first_lineOf_ propulsion method5}  
 \end{equation}
 
+ To obtain ${^{h}\bm{R}_w}$ the orientation of the microrobot is required to be detected 
+whilst it is rotating during propulsion around the axis which is difficult. For that reason, the equation
+\ref{first_lineOf_ propulsion method4} is expressed in such way that it does not require to know the
+microrobot orientation whilst rotating about its central axis. Since the microrobot is torque driven and the only 
+nonfoluidic force is involved in equation \ref{first_lineOf_ propulsion method} is its weight $(m \bm{g})$. The 
+velocity of microrobot can be decomposed to vertical and horizantal components:
+
+ \begin{equation}
+\bm{V}_{ver} = (\bm{V . \hat{g}})\bm{\hat {g}}
+\label{vertical_velo}
+\end{equation}
+
+
+\begin{equation}
+\bm{V}_{hor} = \bm{V} - \bm{V}_{ver}  
+\label{horiantal_velo}
+\end{equation}
+
+Two options can be considered for the ${\| \bm {{V}_{hor}}\|}$:
+
+
+\begin{equation}
+ {\| \bm {{V}_{hor}}\|}  = 0 \qquad ,  \qquad  {\| \bm{{V}_{hor}}\|} \neq 0
+\label{total_force_torque}
+\end{equation}
+
+The first option is a trival case, because when the microrobot is being commanded with
+$ {\| \bm {{V}_{hor}}\|}  = 0$, that means the microrobot only swim vertically in either 
+directions according to the equasion \ref{horiantal_velo}. This is the spacial case when the six degree of
+freedom microrobot will effevtively become the microrobot with two degree of freedom which is pointing
+in the direction of the gravity acceleration and its angular velocity can be found directly from the eqation
+\ref{first_lineOf_ propulsion method4}:
+
+
+\begin{equation}
+ \bm {\Omega}  = \frac{{\| \bm{V}\|}+ d_{11}\| \bm{f}\|}{e_{11}}  \qquad ,  \qquad  \tilde{\bm{X}} = -\hat{\bm{g}}
+\label{angular_velo_horiVelo=0}
+\end{equation}
+
+The second option ${\| \bm{{V}_{hor}}\|} \neq 0$ is more challenging, because it is required to set 
+the coordinate frame for microrobot which does not rotate when the it is rotating around the central axis.
+The ideal coordinate frame can be constructed by using $\hat{\bm{g}}$ and based on the eigenvectors
+\footnote{If we have a set of data point, the set can be deconstructed into eigenvector and eigenvalue
+where eigenvector is the direction that data spread out and eigenvalue is the variance of the data in that
+direction. The principle component is the eigen vector with the largest eigenvalue \citep{Doe:2013Oct:Online}.} of 
+$^{w}\bm{D}$ or $^{w}\bm{E}$. This coordinate system is denoted by $p$ and can be defined as :
+
+
+\begin{equation}
+ \bm{x}_p = \frac{(\bm{{x}_h . V)x_h}}{|\bm{x_h .V}|}
+\label{x_pAxis}
+\end{equation}
 
 
 
+\begin{equation}
+ \bm{y}_p = \frac{(\bm{{x}_p \times g)}}{\| \bm{x_p \times g}\|} 
+\label{y_pAxis}
+\end{equation}
 
 
+\begin{equation}
+ \bm{z}_p = \bm{{x}_p \times {y}_p}
+\label{z_pAxis}
+\end{equation}
 
 
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+%  \begin{center}
+    \includegraphics[width=1.0\textwidth]{horiz_verti_velocity}
+  \caption{(a) The principle coordinate frame based on the gravity and principle componets
+of the matrices in equations \ref{Ematrix} and \ref{Dmatrix}. (b) Construction details of 
+direction of the microswimmer ($\bm{\tilde{X}}$)~\citep{mahoney2011velocity}.}
+  \label{horiz_verti_velocity}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
 
-
-
+The new (principle) coordinate system will solve the problem because it is invariant to the rotation
+ of the microswimer around its central axis. Therefore the equation \ref{first_lineOf_ propulsion method4} can
+be expressed in terms of the principle coordinate frame.
 
 
 

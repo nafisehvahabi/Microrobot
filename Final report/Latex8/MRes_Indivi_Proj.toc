@@ -31,10 +31,10 @@
 \contentsline {subsection}{\numberline {2.4.2}Microrobot actutation}{25}
 \contentsline {subsubsection}{\numberline {2.4.2.1}Force driven microrobot}{25}
 \contentsline {subsubsection}{\numberline {2.4.2.2}Torque driven microrobot}{25}
-\contentsline {chapter}{\numberline {3}Results}{27}
-\contentsline {section}{\numberline {3.1}Propulsion result}{27}
-\contentsline {section}{\numberline {3.2}Microrobot fabrication}{27}
-\contentsline {chapter}{\numberline {4}Discussion}{28}
-\contentsline {chapter}{\numberline {5}Conclusion and future work}{29}
-\contentsline {chapter}{References}{30}
+\contentsline {chapter}{\numberline {3}Results}{29}
+\contentsline {section}{\numberline {3.1}Propulsion result}{29}
+\contentsline {section}{\numberline {3.2}Microrobot fabrication}{29}
+\contentsline {chapter}{\numberline {4}Discussion}{30}
+\contentsline {chapter}{\numberline {5}Conclusion and future work}{31}
+\contentsline {chapter}{References}{32}
 \contentsfinish 

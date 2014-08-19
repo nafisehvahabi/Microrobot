@@ -1,9 +1,17 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Dallas(2013)]{Doe:2013Oct:Online}
+George Dallas.
+\newblock Principal component analysis 4 dummies: Eigenvectors, eigenvalues and
+  dimension reduction {@ONLINE}, October 2013.
+\newblock URL
+  \url{http://georgemdallas.wordpress.com/2013/10/30/principal-component
+  -analysis-4-dummies-eigenvectors-eigenvalues-and-dimension-reduction/}.
 
 \bibitem[Edd et~al.(2003)Edd, Payen, Rubinsky, Stoller, and
   Sitti]{edd2003biomimetic}
