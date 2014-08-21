@@ -2235,28 +2235,99 @@ By replacing equations \ref{E_W} and \ref{force_principle_Components} in equatio
 \end{equation}
 
 Therefore, non of the component of the velocity will be change when microrobot rotates around the central
-axis.
+axis. 
+
+Since ${\| \bm{{V}_{hor}}\|} \neq 0$, as it is shown in the Fig \ref{horiz_verti_velocity} we can define 
+the angle $\alpha$ between the vector $\bm{v}$ and the vertical axis in the world frame.
+
+
+
+\begin{equation}
+\alpha = {\tan}^{-1} ({\| \bm{V}_{hor} \|} / {\| \bm{V}_{ver} \|})
+\label{alpha_velocity}  
+\end{equation}
+
+The microrobot requires to be position above the desired velocity vector (upward) with the angle $\psi$ 
+ to compensate for the gravity vector. If we project the the desired velocity equation (\ref{velocity_based_principle})
+into principle coordinate axis then we have:
+
+
+\begin{equation}
+(\bm{V} . \bm{x}_p) = d_{11} \left ({\bm{f} . {\bm{x}}_p   }  \right) + e_{11} \Omega 
+\label{Xp_velocity}  
+\end{equation}
 
 
 
 
+\begin{equation}
+(\bm{V} . \bm{z}_p) = d_{22} \left ({\bm{f} . {\bm{z}}_p   }  \right)
+\label{Xz_velocity}  
+\end{equation}
+
+As it can be seen in the Fig \ref{horiz_verti_velocity}, the both side of the 
+equation \ref{Xz_velocity} can be replaced by its equivalents:
+
+
+\begin{equation}
+(\bm{V} . \bm{z}_p) = - {\| \bm{V} \|} \sin(\psi)
+\label{Xz_velocity_equival}  
+\end{equation}
+
+
+\begin{equation}
+(\bm{f} . \bm{z}_p) = {\| \bm{f} \|} \sin(\psi - \alpha)
+\label{Xz_velocity_equivali}  
+\end{equation}
+
+
+
+Thus, the replacing will lead to the following:
+
+
+\begin{equation}
+ - {\| \bm{V} \|} \sin(\psi) = d_{22} {\| \bm{f} \|} \sin(\psi - \alpha)
+\label{finding_psi}  
+\end{equation}
+
+by applying the subtraction law for $ \sin(\psi - \alpha)$ \footnote{$\sin(\psi - \alpha) = 
+\sin(\psi) \cos(\alpha) - \cos(\psi) \sin(\alpha)$},
+ the angle $\psi$ can be optained from the following
+equation:
+
+
+\begin{equation}
+  {\psi} ={{\tan}^{-1}} 
+\frac{\left( d_{22} {\| \bm{f} \|} \sin(\alpha) \right)}{ \| {\bm{V} \| + d_{22} \| {\bm{f}} \|} \cos(\alpha) }
+\label{psi}  
+\end{equation}
+
+
+All the parameters in the above equation are known and the direction point ($\tilde{\bm{X}}$) of the microrobot
+ can be reconstructed by using angles $\alpha$ and $\psi$ and defining a dummy vector $\tilde{\bm{V}}$ such
+that $\tilde{\bm{V}} = {\tilde{\bm{V}}}_{ver} + {\tilde{\bm{V}}}_{hor} $ where 
+${\tilde{\bm{V}}}_{ver} = - \| {\tilde{\bm{V}}}_{hor} \| \tan(\pi /2 - \alpha + \psi) \hat{\bm{g}}$ and 
+${\tilde{\bm{V}}}_{hor}  = {{\bm{V}}}_{hor}$. Therefore the final solution for the direction point is:
+
+
+
+\begin{equation}
+ \tilde{\bm{X} }  = \frac{\tilde{\bm{V}}}{\| {\tilde{\bm{V}}} \|}
+\label{direction_point}  
+\end{equation}
+
+Therefore the angular velocity ($\Omega$) will be derived from equation \ref{Xp_velocity}, considering that
+$(\bm{V} . \bm{x}_p) = \| {\bm{V}} \|  \cos({\psi})$ and $({\bm{f} . {\bm{x}}_p  }) = - \| {\bm{f}} \| \cos(\psi - \alpha) $ :
 
 
 
 
+\begin{equation}
+ \Omega  = \frac{\| {\tilde{\bm{V}} \|  \cos(\psi) }   + d_{11}  \| \bm{f} \| \cos(\psi - \alpha)}{e_{11}}
+\label{FinalAngular_velo}  
+\end{equation}
 
-
-
-
-
-
-
-
-
-
-
-
-
+And at this point the actuation algorithm is completed.
 
 \begin{comment}
 %%%%%%%%%
