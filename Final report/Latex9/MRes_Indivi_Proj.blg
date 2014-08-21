@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2011)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: MRes_Indivi_Proj.aux
+The style file: plainnat.bst
+Database file #1: References.bib
+Warning--entry type for "Doe:2013:Online" isn't style-file defined
+--line 162 of file References.bib
+Warning--entry type for "Doe:2013Oct:Online" isn't style-file defined
+--line 295 of file References.bib
+Warning--entry type for "Doe:2013Nov:Online" isn't style-file defined
+--line 304 of file References.bib
+Warning--entry type for "Doe:2014Aug:Online" isn't style-file defined
+--line 312 of file References.bib
+Warning--empty journal in qiunanohelices
+Warning--empty year in qiunanohelices
+Warning--empty year in qiunanohelices
+You've used 25 entries,
+            2773 wiz_defined-function locations,
+            750 strings with 10398 characters,
+and the built_in function-call counts, 13986 in all, are:
+= -- 1187
+> -- 1035
+< -- 12
++ -- 353
+- -- 324
+* -- 1288
+:= -- 2174
+add.period$ -- 76
+call.type$ -- 25
+change.case$ -- 182
+chr.to.int$ -- 21
+cite$ -- 53
+duplicate$ -- 522
+empty$ -- 999
+format.name$ -- 353
+if$ -- 2857
+int.to.chr$ -- 5
+int.to.str$ -- 1
+missing$ -- 22
+newline$ -- 132
+num.names$ -- 100
+pop$ -- 366
+preamble$ -- 1
+purify$ -- 158
+quote$ -- 0
+skip$ -- 425
+stack$ -- 0
+substring$ -- 545
+swap$ -- 58
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 270
+warning$ -- 3
+while$ -- 109
+width$ -- 0
+write$ -- 326
+(There were 7 warnings)

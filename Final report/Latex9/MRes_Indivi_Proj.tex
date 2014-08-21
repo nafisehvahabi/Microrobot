@@ -2215,17 +2215,27 @@ the transformation matrix we can write the force based on the principle componen
    
 
 
+\begin{multline}
+\qquad \qquad     \qquad   {^{w}\bm{D}} {^{w}\bm{f}} = {^{w}\bm{D}} {^{w}\bm{f}}_{\parallel h} + {^{w}\bm{D}} {^{w}\bm{f}}_{\perp h}
+= d_{11} {^{w}\bm{f}}_{\parallel h} + d_{22}  {^{w}\bm{f}}_{\perp h}\\ 
+= d_{11} \left ({\bm{f} . {\bm{x}}_p   }  \right) {^{w}\bm{x}}_p + 
+ d_{22} \left ({\bm{f} . {\bm{z}}_p   }  \right) {^{w}\bm{z}}_p  \qquad \qquad
+\label{force_principle_Components}
+\end{multline} 
+
+Both components  of the desired velocity are written on the basis of the principle components.
+By replacing equations \ref{E_W} and \ref{force_principle_Components} in equation \ref{first_lineOf_ propulsion method4} we have:
 
 
 
 \begin{equation}
-   
-Df = D
-  
-\label{f_principle component}
+^{w}\bm{V}  =   d_{11} \left ({\bm{f} . {\bm{x}}_p   }  \right) {^{w}\bm{x}}_p + 
+ d_{22} \left ({\bm{f} . {\bm{z}}_p   }  \right) {^{w}\bm{z}}_p + e_{11} \Omega {^{w}{\bm{x}_p}}
+\label{velocity_based_principle}  
 \end{equation}
 
-
+Therefore, non of the component of the velocity will be change when microrobot rotates around the central
+axis.
 
 
 
