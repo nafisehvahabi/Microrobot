@@ -189,8 +189,11 @@ I would like to thank
 \begin{acronym}
 \addcontentsline{toc}{chapter}{\numberline{}List of Acronyms}
 \acro{BST}{Body Slender Theory}
+\acro{gwl}{General Writting Language}
 \acro{RFT}{Resistive Force Theory}
 \acro{RSM}{Regularized Stokeslet Method}
+\acro{SEM}{Scanning Electron Microscope}
+\acro{stl}{STereoLithography}
 
 \end{acronym}
 
@@ -208,13 +211,17 @@ modelling micro swimmers locomotion method in low Reynolds number regime. Micror
 demonstrated precise and controllable movements under low strength magnetic field. A system with 
 a size of bacteria, capable to swim in viscous fluid in a controllable manner was satisfied basic principles
  for performing delicate tasks such as targeted drug delivery in medical application. Furthermore 
-microrobots were advantaged from fabrications technology to make them biocompatible. We review 
-a range of bio mimetic microrobots and their fabrication methods and reproduce helical micro 
-swimmers by analysing their mathematical propulsion methods. The definitive microrobots designs 
-were simulated and printed by Nanoscribe technology. Finally,  
+microrobots were advantaged from fabrications technology to make them biocompatible. 
+We reviewed a range of bio mimetic microrobots in terms of their design, fabrication, propulsion 
+method in the fluid environment and their fabrication mechanism. 
+The key characteristics of the helical shape microswimmers were optimised and the new design of helical
+ microrobot is presented. The new design is demonstrated the microrobot with the variable pitch that is
+ satisfied the fabrication requirement. 
 
-
-
+Three propulsion methods; Resistive Force Theory, Regularised Stokeslet Method 
+and Body Slender Theory were implemented. The last two methods have not used before
+ for remotely controlled microrobots. We provide the simulation platform for the 
+swimming microrobot in a high viscose fluid.
 
 
 
@@ -238,35 +245,54 @@ were simulated and printed by Nanoscribe technology. Finally,
 
 
 The potential use of microrobots in medical applications such as minimally invasive surgery 
-has attracted scientists to work on designing microrobots ~\citep{edd2003biomimetic}. research into swimming 
+has attracted scientists to work on designing microrobots ~\citep{edd2003biomimetic}. Research into swimming 
 microrobots showed two primary difficulties are the power source and finding suitable locomotion methods, as
- there are many cells, proteins and fibres in biofluids that prevent the motion of the microrobots~\citep{peyer2013bio}. 
+ there are many cells, proteins and fibres in biofluid that prevent the motion of the microrobots~\citep{peyer2013bio}. 
 
-Artificial bacteria flagella is most popular microrobots were inspired by nature~\citep{qiu2014noncytotoxic}. 
-They have helical shape, are composed of magnetic material and are capable to mimick three dimentional 
+Artificial bacteria flagella is most popular microrobot was inspired by nature~\citep{qiu2014noncytotoxic}. 
+They have helical shape, are composed of magnetic material and are capable to mimic three-dimensional 
 motion of the bacteria in a high viscous fluid.
 
 Magnetically actuated helical micromachines can be used
  in a variety of biomedical applications such as cell characterisation, targeted drug delivery and in vivo 
-diagnosis ~\citep{peyer2013magnetic}. However, the issue of biocompatibility and the materrial 
+diagnosis ~\citep{peyer2013magnetic}. However, the issue of biocompatibility and the material 
 used to make a microrobot needs to be considered carefully for in vivo application\citep{qiu2014noncytotoxic}. 
-Section \ref{fabrication} presents a prief histery of fabrication techniques and section \ref{microFabric} describes
- the fabrication method is applyed in this study.     
-In addition, the extremely small size of the microrobots and the
+Section \ref{fabrication} present a brief history of fabrication techniques and section \ref{microFabric}
+ describes the fabrication method is applied in this study. Moreover, the use of the 3D laser lithography, the state
+ of the art fabrication method and \ac*{SEM} for analysing the picture of the structures is explained in
+Sections \ref{nanoscribe} and \ref{sem} respectively.
+
+\paragraph{}
+In addition, extremely small size of the microrobots and the
 complex biofluid environment make the design aspect very challenging. 
+The design of microrobots depends on their application and the desired task. An overview of the main
+ microrobot designs are summerised in the table \ref{Micro}. A few numbers of parameters 
+has a key role on designing the helical shape microswimmer. Section \ref{microDesign} will demonstrated 
+the details of the these effective parameters and optimise them to characterise the new design for 
+helix shape microrobot. 
+
+The major part of this project is simulation which is described in section \ref{simulation} in chapter 2. The simulation
+challenge can be divided into main part; propulsion mechanism of the microrobot and actuation method. The
+popular method called \ac*{RFT} witch is decribed the motion of the helix object in the low number regime 
+is used in almost all papers\citep{qiu2014noncytotoxic} were written about a helical microswimmers. In this
+study, we implemented two more propulsion methods for the helical microswimmers which are controlled 
+remotely by the dynamic magnetic field. An actution method of magnetic microrobot can be either force driven or
+torque driven. The mechanism of both methods are explained in the section \ref{microActuation}. 
 
 
 \paragraph{}
-The design of microrobots depends on their application and the desired task. An overview of the different
- microrobot designs, their structures and fabrication methods are discussed in the chapter 2, literature review, .
-
-\paragraph{}
-For the purpose of this project different proposed structures of microrobots were studied
- and analysed. This will enable helical microswimmers to be reproduced. Once reproduced, the aim of this project will be to compare
- the efficiency, power, motion velocity and cost-efficiency of various microrobot designs for mass production
- of the microswimmers. The fabrication of microswimmers will be by Nanoscribe facility using 3D laser
- lithography. After the microrobots are produced their characteristic will be analysed
- under the scanning electron microscope in order to identify further improvements in microrobot design. 
+In summery, the part of algorithms were developed for the propulsion mechanism of the microswimmers
+and actuation technique is based on \citeauthor{mahoney2011velocity}\rq{}s research. The two new 
+propulsion methods for the helical microswimmers were used in the \citeauthor{rodenborn2013propulsion}\rq{}s
+work which a reversible speed-variable motor such as micro metal gear motor helps to rotate 
+microswimmer. In this study, applying those two propulsion mechanism on the microswimmers that 
+are controlled remotely with magnetic field. Therefore, the algorithm is taken the desired translational
+velocity as an input and produce the rotational velocity as an output. By knowing the rotational velocity, 
+we will be able to compute the electric current is required to produce the desired translational velocity.
+We run the simulation for the helical microrobot whilst changing different parameters in helix. 
+In addition, the new design is developed and printed for the helix which shows using variable pitch
+ in helix design rather that constant pitch to obtimised the fabrication process. The result of all simulation is
+represented in the result chapter\ref{result}.
 
 
 
@@ -321,7 +347,8 @@ For the purpose of this project different proposed structures of microrobots wer
 \subsection{Bioinspired microrobots}
 
 One of the most challenging aspects of designing a robot on a very small scale such 
-as a nanorobot is simplicity. The reason is, integration will become unfeasible on that
+as a nanorobot is simplicity. The reason is, integration between components
+will become unfeasible on that
  scale if the design is complex. Hence the development of the nanorobot or even microrobot
  should be based on the essential functionality, avoiding any unnecessary components~\citep{gao2013bioinspired}.
 By learning from nature and mimicking the structure of live organisms, the successful  
@@ -1031,6 +1058,7 @@ developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and T
 
 
   \end{tabular}
+  
   \caption{Different types of microrobots and their fabrication method.}\label{Micro}
 \end{table}
 
@@ -1054,7 +1082,7 @@ to perform actuation task~\citep{qiu2014noncytotoxic}.
 
 
 %%%%%%%%%%%%%%%%%%% Design %%%%%%%%%%%%%%%
-\section{Microrobot design}
+\section{Microrobot design} \label{microDesign}
 
 Novel part of design using microrobot with the variable pitch to enable it vertically fabricated.
 
@@ -1112,20 +1140,97 @@ Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1e
 
 
 
-
-
-
 %%%%%%%%%%%%%%%%%% Fabrication %%%%%%%%%%%%%
 \section{Microrobot fabrication} \label{microFabric}
-\subsection{Nanoscribe}
 
-%--------------- Table of all fabrication of the microrobots------------------------
+The main challenge of the fabrication process is not just fabricating the extremely small object. 
+There are number of other factors that need to be considered to select an appropriate approach for 
+fabricating helical shape mincrorobot. An ideal fabrication approach should have control over design 
+parameters and in particular it should be suitable for applying magnetic material
+ for the actuation purpose \citep{peyer2013bio}.
+
+The complete fabrication process is summarised in the diagram ???.
+The process started by importing the structure files into the software called (??????) for 
+the pre-processing purpose. The structures file contains all the microrobots that is designed by the 
+software called Solidwork. The next stage is writing the structure using nanoscribe facility, which is 
+done in the clean room. After few hours, the structures will be ready and they can be seen under 
+the \ac*{SEM}. However, the structure made of polymer and the pictures of non-metal object under 
+the \ac*{SEM} is not perfect. Thus the polymer made microrobot were coated with the layer of 
+metal (usually gold) first, this process called sputtering coating process.  At this stage, the 
+picture of microrobot were analysed under the \ac*{SEM} and if they are satisfactory, they will go t
+o the final stage which is magnetization process. However, we never try the magnetization stage 
+in this project because the aim was to optimise the structures in terms of design and fabrication and 
+there was no plan to run an experiment within the short period of time. The pictures were encountered 
+to have a problem were sent to the design stage for further optimisation process. In the following 
+two sections, we will explain the mechanism of the two photon lithography technique and \ac*{SEM} in
+ more details.   
+
+
+%%%%%%%%%%%% Overview Diagram of the fabrication process %%%%%%%%%%%%% 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Nanoscribe}\label{nanoscribe}
+
+Nanoscribe is the company provide sophisticated system and device for true 3D
+ micro and nanofabrication. Their system is based on the laser lithography and it 
+used two-photo polymerization technique for the fabrication. The fabrication device combines 
+two modes for writing; the high-speed galvo-mode and an ultra-precise piezo-mode. The former 
+is for fastest fabrication and it makes the structure in a layer-by-layer process. The latter is mainly for
+ printing arbitrary 3D trajectories~\citep{nanoscribe:2014Aug:Online}. 
+
+\paragraph{}
+The whole process of fabrication is formed of three stages; preparation, production and post-processing. 
+In the first stage, the \ac*{stl} file that contains the design of structures will import into the software tool
+ called DeScribe. In this software, each design will go though three steps for fixing the mesh, slicing and
+ hatching. By completing these three steps, the result will be the \ac*{gwl} format file that is ready for the 
+production stage.   
+The production is the stage for controlling the print job that has been done by user-friendly
+ graphical interface software, NanoWrite. This software controls different aspect of the lithography 
+system such as autofocus, exposure dose and substrate positioning.  
+The final stage is removing the excess resin to improving the visual quality~\citep{nanoscribe:2014Aug:Online}. 
+
+
+\begin{figure}
+  \centering
+    \includegraphics[width=0.9\textwidth]{nanoscribeWorkflow}
+  \caption{nanoscribe workflow. The stages are inveolved in  3D micro-printing with nanoscribe
+ device is shown in the diagram.}~\citep{nanoscribe:2014Aug:Online}
+  \label{nanoscribeWorkflow}
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\subsection{Scanning Electron Microscope (\ac*{SEM})}\label{sem}
+
+
 
 
 
 
 %%%%%%%%%%%%%%%%%% Simulation %%%%%%%%%%%%%
-\section{Simulation}
+\section{Simulation}\label{simulation}
 
 Analysing fluid dynamic phenomena on microorganism is a fundamental approach to model microorganism
  locomotion~\citep{smith2009boundary}.
@@ -1975,7 +2080,7 @@ Where
 \subsubsection{Slender body theory}\label{method1}
 
 
-\subsection{Microrobot actutation}
+\subsection{Microrobot actutation}\label{microActuation}
 
 \subsubsection{Force driven microrobot}
 
@@ -2349,7 +2454,7 @@ The step out frequency increases with the strength of the magnetic field. the ma
 %%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Results %%%%%%%%%%%%%
 %%%%%%%%%
-\chapter{Results}
+\chapter{Results}\label{result}
 
 \section{Propulsion result}
 
