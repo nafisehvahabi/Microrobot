@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{28}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -8,8 +8,8 @@
 \bibitem[College(2013)]{Doe:2013Nov:Online}
 Harvey~Mudd College.
 \newblock Eigenvectors and eigenvalues {@ONLINE}, November 2013.
-\newblock URL
-  \url{https://www.math.hmc.edu/calculus/tutorials/eigenstuff/eigenstuff.pdf}.
+\newblock URL \url{https://www.math.hmc.edu/calculus/tutorials/eigenstuff
+  /eigenstuff.pdf}.
 
 \bibitem[Dallas(2013)]{Doe:2013Oct:Online}
 George Dallas.
@@ -65,9 +65,9 @@ Arthur~W Mahoney, John~C Sarrazin, Eberhard Bamberg, and Jake~J Abbott.
   microswimmers.
 \newblock \emph{Advanced Robotics}, 25\penalty0 (8):\penalty0 1007--1028, 2011.
 
-\bibitem[McFadden(2014)]{nanoscribe:2014Aug:Online}
+\bibitem[McFadden(2014)]{Doe:2014April:Online}
 Roger McFadden.
-\newblock A basic introduction to clean rooms {@ONLINE}, September 2014.
+\newblock A basic introduction to clean rooms {@ONLINE}, 2014.
 \newblock URL \url{http://www.coastwidelabs.com/}.
 
 \bibitem[Mestel(2013)]{Doe:2013:Online}
@@ -75,6 +75,11 @@ A~J Mestel.
 \newblock Biofluids lecture 3: Flagellar swimming, resistive force theory
   {@ONLINE}, January 2013.
 \newblock URL \url{http://www2.imperial.ac.uk/~ajm8/BioFluids/}.
+
+\bibitem[nanoscribe(2014)]{Doe:2014Feb:Online}
+nanoscribe.
+\newblock nanoscribe {@ONLINE}, February 2014.
+\newblock URL \url{http://www.nanoscribe.de/en/}.
 
 \bibitem[Peyer et~al.(2013{\natexlab{a}})Peyer, Siringil, Zhang, Suter, and
   Nelson]{peyer2013bacteria}
@@ -157,6 +162,11 @@ Soichiro Tottori, Li~Zhang, Famin Qiu, Krzysztof~K Krawczyk, Alfredo
 \newblock Magnetic helical micromachines: fabrication, controlled swimming, and
   cargo transport.
 \newblock \emph{Advanced materials}, 24\penalty0 (6):\penalty0 811--816, 2012.
+
+\bibitem[University(2014)]{Doe:2014Jan:Online}
+Purdue University.
+\newblock Scanning electron microscope {@ONLINE}, January 2014.
+\newblock URL \url{http://www.purdue.edu/ehps/rem/rs/sem.htm}.
 
 \bibitem[Weisstein(2014)]{Doe:2014Aug:Online}
 Eric Weisstein.

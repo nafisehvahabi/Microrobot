@@ -9,14 +9,15 @@
 \contentsline {figure}{\numberline {1.7}{\ignorespaces The prototype of microhelical device. (a) Scanning electron microscopic image of the micro polymer composite with the 2 vol.\% nanoparticle fill factor and (b) 4 vol.\% of nanoparticle fill factor. (c) The CAD model shows all the parameters required for the microhelical design \nobreakspace {}\citep {peyer2013bacteria}.\relax }}{8}
 \contentsline {figure}{\numberline {1.9}{\ignorespaces The shape of the Xylem in differnt plants .\nobreakspace {}\citep {mahoney2011velocity}.\relax }}{9}
 \contentsline {figure}{\numberline {1.10}{\ignorespaces (A) The stages were required to make a plant-based microrobot. (B) A microscopic image of the a xylem helical structure. \nobreakspace {}\citep {gao2013bioinspired}.\relax }}{9}
-\contentsline {figure}{\numberline {1.11}{\ignorespaces DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and Ti. \nobreakspace {}\citep {qiu2014artificial}.\relax }}{11}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and Ti. \nobreakspace {}\citep {qiu2014artificial}.\relax }}{10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces nanoscribe workflow. The stages are inveolved in 3D micro-printing with nanoscribe device is shown in the diagram\nobreakspace {}\citep {nanoscribe:2014Aug:Online}.\relax }}{15}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces The essential helix parameters to design a helical microrobot\nobreakspace {}\citep {rodenborn2013propulsion}.\relax }}{16}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces A motion of an arbitary filament\nobreakspace {}\citep {edd2003biomimetic}.\relax }}{17}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces \nobreakspace {}\citep {edd2003biomimetic}.\relax }}{17}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Three dimention configration for the helical microrobot with a magnetic spherical head. The origin of the helix coordinate is denoted with $\bm {O}_h$ and $\bm {x}_{h}$ is the central axis of the helix\nobreakspace {}\citep {mahoney2011velocity}.\relax }}{19}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces (a) The principle coordinate frame based on the gravity and principle componets of the matrices in equations 2.75\hbox {} and 2.74\hbox {}. (b) Construction details of direction of the microswimmer ($\bm {\mathaccentV {tilde}07E{X}}$)\nobreakspace {}\citep {mahoney2011velocity}.\relax }}{29}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces nanoscribe workflow. The stages are inveolved in 3D micro-printing with nanoscribe device is shown in the diagram\nobreakspace {}\citep {Doe:2014Feb:Online}.\relax }}{15}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Scanning Electron Microscop. The components of the \ac *{SEM} is shown in the diagram\nobreakspace {}\citep {Doe:2014Jan:Online}.\relax }}{16}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces The essential helix parameters to design a helical microrobot\nobreakspace {}\citep {rodenborn2013propulsion}.\relax }}{17}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces A motion of an arbitary filament\nobreakspace {}\citep {edd2003biomimetic}.\relax }}{18}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces \nobreakspace {}\citep {edd2003biomimetic}.\relax }}{18}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Three dimention configration for the helical microrobot with a magnetic spherical head. The origin of the helix coordinate is denoted with $\bm {O}_h$ and $\bm {x}_{h}$ is the central axis of the helix\nobreakspace {}\citep {mahoney2011velocity}.\relax }}{20}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces (a) The principle coordinate frame based on the gravity and principle componets of the matrices in equations 2.75\hbox {} and 2.74\hbox {}. (b) Construction details of direction of the microswimmer ($\bm {\mathaccentV {tilde}07E{X}}$)\nobreakspace {}\citep {mahoney2011velocity}.\relax }}{30}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

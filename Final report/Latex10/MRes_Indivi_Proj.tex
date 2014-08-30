@@ -760,8 +760,23 @@ microrobot can be covered with a thin layer of titanium. In addition, the micror
 nickel for the purpose of magnetic actuation.
 
 \citeauthor{qiu2014artificial}~\citep{qiu2014artificial} reported a successful application of helical microrobots
-for drug delivery were known as \lq\lq{}smart\rq\rq{} drug carriers. They used DLW for the fabrication method which 
-was consisted of three steps as shown in the Figure \ref{tempreture}. 
+for drug delivery were known as \lq\lq{}smart\rq\rq{} drug carriers. Again, they used DLW for the fabrication method 
+as shown in the Figure \ref{tempreture}. 
+
+
+
+
+%\begin{figure}
+%  \centering
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{tempreture}
+  \caption{DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were 
+developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and Ti. ~\citep{qiu2014artificial}.}
+  \label{tempreture}
+\end{center}
+\end{wrapfigure}
+%\end{figure}
 
 
 
@@ -780,19 +795,35 @@ with surface decomposition methods, however Ni and Co are cytotoxic and pure iro
 ORMOCOMP helical swimmers were coated onto a thin layer of Fe ($25 nm$) using electron beam decomposition.
   
 
-%\begin{figure}
-%  \centering
-\begin{wrapfigure}{r}{0.5\textwidth}
-  \begin{center}
-    \includegraphics[width=0.5\textwidth]{tempreture}
-  \caption{DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were 
-developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and Ti. ~\citep{qiu2014artificial}.}
-  \label{tempreture}
-\end{center}
-\end{wrapfigure}
-%\end{figure}
+
+The review of all the fabrication methods used for the micrordevice is represented in the table\ref{fabrication_table}.
+
+\begin{table}[!ht]
+
+\centering% used for centering table
+{\rowcolors{2}{gray!100!brown!70}{gray!50!yellow!30}
+\begin{tabular}{c c c c c c c c}% centered columns (8 columns)
+\toprule[2.0pt]
 
 
+
+\head{Author} & \head{Shape} & \head{Length} & \head{Pitch} & \head{Pitch-angle} & \head{Radius} & \head{Filament-radius} & \head{Speed}\\
+
+%heading
+\midrule
+%\hline% inserts single horizontal line
+Arcene 	& 	    		  & 	1000		& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\% inserting body of the table
+Dexter 	& 	Sparse 		  & 	20000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\
+Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1ex]% [1ex] adds vertical space
+
+
+
+\bottomrule[2.0pt]
+\end{tabular}
+}
+\label{fabrication_table}% is used to refer this table in the text
+\caption{Microrobot\rq{}s fabrication methods}\label{fabrication table}% title of Table
+\end{table}
 
 
 
@@ -1184,7 +1215,7 @@ Nanoscribe is the company provide sophisticated system and device for true 3D
 used two-photo polymerization technique for the fabrication. The fabrication device combines 
 two modes for writing; the high-speed galvo-mode and an ultra-precise piezo-mode. The former 
 is for fastest fabrication and it makes the structure in a layer-by-layer process. The latter is mainly for
- printing arbitrary 3D trajectories~\citep{nanoscribe:2014Aug:Online}. The complete nanoscribe 
+ printing arbitrary 3D trajectories~\citep{Doe:2014Feb:Online}. The complete nanoscribe 
 package made of three components, Photonic Professional GT, the software and IP Photoresists. 
 Photosensitive material is used in both modes for structuring arbitrary 3D patterns in a high-resolution. 
 The properties of the photosensitive material, the laser power and the size of the spot in the material are
@@ -1193,7 +1224,7 @@ a high numerical aperture. The fabrication process in each mode is based on movi
  the sample. The galvo mode approach is called \ac*{MBFS} which the laser beam is scanned 
 galvanometric mirrors and piezo-actuators will control the vertical movement. However in 
 piezo-mode, piezo actuators is moving the substrate in all three dimensions to achieve highly 
-precise focus trajectory. This type of implementation is know as \ac*{FBMS}~\citep{nanoscribe:2014Aug:Online}.
+precise focus trajectory. This type of implementation is know as \ac*{FBMS}~\citep{Doe:2014Feb:Online}.
 
 
 
@@ -1202,7 +1233,7 @@ precise focus trajectory. This type of implementation is know as \ac*{FBMS}~\cit
   \centering
     \includegraphics[width=0.9\textwidth]{nanoscribeWorkflow}
   \caption{nanoscribe workflow. The stages are inveolved in  3D micro-printing with nanoscribe
- device is shown in the diagram~\citep{nanoscribe:2014Aug:Online}.}
+ device is shown in the diagram~\citep{Doe:2014Feb:Online}.}
   \label{nanoscribeWorkflow}
 \end{figure}
 
@@ -1217,23 +1248,23 @@ production stage.
 The production is the stage for controlling the print job that has been done by user-friendly
  graphical interface software, NanoWrite. This software controls different aspect of the lithography 
 system such as autofocus, exposure dose and substrate positioning.  
-The final stage is removing the excess resin to improving the visual quality~\citep{nanoscribe:2014Aug:Online}. 
+The final stage is removing the excess resin to improving the visual quality~\citep{Doe:2014Feb:Online}. 
 
 IP Photoresists is a high viscose fluid that comes as part of nanoscribe package. It is
  used to maximise the performance of the multiphoton polymerization process. It has high 
-mechanical stability and stick to different substrate very well~\citep{nanoscribe:2014Aug:Online}. A wide
+mechanical stability and stick to different substrate very well~\citep{Doe:2014Feb:Online}. A wide
  range of material with different mechanical, optical or chemical properties can be used for the substrate 
 in direct laser writing. The choice of the substrate material is an application dependent. For example in 
 optical applications the transparent material such as glass is more appropriate. In the latter application 
 substrate is mainly for supporting to the polymer structures. Also, we can use pre-structured substrates 
 such as transparent micro-fluidic chip that polymer structure can be printed on the substrate. In that
  case, the functionality of multiphoton lithography can be improved by combining the mechanical parts 
-with substarte~\citep{nanoscribe:2014Aug:Online}.  
+with substarte~\citep{Doe:2014Feb:Online}.  
 
 \paragraph{}
 In this project we used nanoscribe device to print microswimmers using the galvo-mode of the machine. 
 The whole printing unit is located in the clean room\footnote{Clean room is an environment with controlled
-  concentration of airborne particle to make it suitable for product manufacturing~\citep{cleanroom:2014Sep:Online}. }. 
+  concentration of airborne particle to make it suitable for product manufacturing~\citep{Doe:2014April:Online}. }. 
 The fabricated structures were observed under the 
 \ac*{SEM} and all the images result will be presented and discussed in the result \ref{result} and discussion
 chapters \ref{discussion} respectively.
@@ -1244,22 +1275,55 @@ chapters \ref{discussion} respectively.
 \ac*{SEM} is a powerful device for obtaining high magnification images to analyse and examine
  the material or individual features. \ac*{SEM} is invented 50 years ago and it is used extensively 
 in diverse scientific fields such as biology, medicine or metallurgy,  to name just a few. The \ac*{SEM} can 
-provide images with the high-resolution dawn to 25 Angstroms \footnote{$1 ~\ Angstrom =
-1.0 \times 10^{-10} Metres$}. 
+provide images with the high-resolution dawn to $25$ Angstroms.\footnote{$1 ~\ Angstrom =
+1.0 \times 10^{-10} Metres$}%~\citep{Doe:2013Dec:Online}.
+
+\ac*{SEM} generates a range of signals at the surface of solid specimens by using a focused beam
+ of high-energy electrons. The process is started from producing electron beam by the electron gun 
+at the top of the microscope and then travels into the microscope. The microscope is placed in the
+ vacuum. Then the beam focused down into the specimen by passing through the electromagnetic
+ fields and lenses. Once the focused electron beam interacts with the specimen, electrons are revealed 
+from the specimen. At this point, the back-scattered electrons are collected by the detectors and were 
+converted into variety of signals. Ultimately, generated signals sent to the screen to form the final image 
+of the specimen\citep{Doe:2014Jan:Online}. 
 
 
+%\begin{figure}
+%  \centering
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{SEM}
+  \caption{Scanning Electron Microscop. The components of the \ac*{SEM} is shown 
+in the diagram~\citep{Doe:2014Jan:Online}.}
+  \label{SEM}
+\end{center}
+\end{wrapfigure}
+%\end{figure}
 
+The key advantages of using \ac*{SEM} over traditional microscope is having a large depth of
+ field and also higher resolution. In addition, researchers has more control over the degree of 
+magnification because \ac*{SEM} uses electromagnets\citep{Doe:2014Jan:Online}.
 
+We need to prepared samples before using the \ac{SEM} because it using the electron in the
+ vacuum condition. That means sample should not contain any water otherwise the water will 
+vaporise in the vacuum. This is high-vacuum \ac*{SEM}. If we require an image of a wet sample such 
+as biological specimen we can use the low-vacuum \ac*{SEM}. In that case, the specimen chamber
+ contains air that avoid dehydrating of samples.
+Because the produced images are based on the electron-sample interaction, if the sample is made
+ of non-metal material, the final image is not very clear. Thus, they need to be covered by a metal to
+ make it conductive. The process of covering the sample with metal is called sputter coating\citep{Doe:2014Jan:Online}.
 
+\paragraph{sputter coating}
+In the sputter coater, there is small chamber in the vacuum to place the sample in. An electric field 
+and argon gas used in order to release the electron from the argon and convert it into positive charged 
+atom. Then, argon ions and negatively charged gold foil are attracted to each other and as a result gold 
+atoms fall from the surface of the gold and settle onto the surface of the specimen. Therefore a thin gold 
+layer covers the surface of the sample and make it conductive for \ac*{SEM} machine\citep{Doe:2014Jan:Online}.
 
-
-
-
-
-
-
-
-
+In this project, the microrobot structure is made of polymer and we made them conductive by applying the 
+sputter coating process and then analysed them under \ac*{SEM}. The images of the microrobot structures 
+before and after coating is presented in the result section \ref{result}. In the following section, the simulation of 
+microrbot is demonestareted in detail.
 
 
 
@@ -2489,10 +2553,40 @@ The step out frequency increases with the strength of the magnetic field. the ma
 %%%%%%%%%%%%%%%%%%%% Results %%%%%%%%%%%%%
 %%%%%%%%%
 \chapter{Results}\label{result}
+In this chapter all the result will be presented under two sections. In the following section the result of implementing
+three propulsion methods is demonstrated.
 
-\section{Propulsion result}
 
-\section{Microrobot fabrication}
+\section{Design and propulsion methods}
+
+\section{Design and fabrication}
+
+The design of microrobot has been done by the software design c
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Discussion %%%%%%%%%%%%%

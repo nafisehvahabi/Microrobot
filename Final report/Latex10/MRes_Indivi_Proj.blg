@@ -8,54 +8,59 @@ Warning--entry type for "Doe:2013:Online" isn't style-file defined
 Warning--entry type for "Doe:2013Oct:Online" isn't style-file defined
 --line 295 of file References.bib
 Warning--entry type for "Doe:2013Nov:Online" isn't style-file defined
---line 304 of file References.bib
-Warning--entry type for "nanoscribe:2014Aug:Online" isn't style-file defined
 --line 312 of file References.bib
+Warning--entry type for "Doe:2014April:Online" isn't style-file defined
+--line 321 of file References.bib
+Warning--string name "april" is undefined
+--line 324 of file References.bib
 Warning--entry type for "Doe:2014Aug:Online" isn't style-file defined
---line 320 of file References.bib
-Warning--I didn't find a database entry for "cleanroom:2014Sep:Online"
+--line 329 of file References.bib
+Warning--entry type for "Doe:2014Feb:Online" isn't style-file defined
+--line 337 of file References.bib
+Warning--entry type for "Doe:2014Jan:Online" isn't style-file defined
+--line 345 of file References.bib
 Warning--empty journal in qiunanohelices
 Warning--empty year in qiunanohelices
 Warning--empty year in qiunanohelices
-You've used 26 entries,
+You've used 28 entries,
             2773 wiz_defined-function locations,
-            757 strings with 10584 characters,
-and the built_in function-call counts, 14285 in all, are:
-= -- 1213
-> -- 1045
-< -- 13
-+ -- 357
-- -- 327
-* -- 1305
-:= -- 2219
-add.period$ -- 79
-call.type$ -- 26
-change.case$ -- 186
-chr.to.int$ -- 22
-cite$ -- 55
-duplicate$ -- 537
-empty$ -- 1031
-format.name$ -- 357
-if$ -- 2921
+            765 strings with 10753 characters,
+and the built_in function-call counts, 14881 in all, are:
+= -- 1265
+> -- 1065
+< -- 15
++ -- 365
+- -- 333
+* -- 1337
+:= -- 2309
+add.period$ -- 85
+call.type$ -- 28
+change.case$ -- 194
+chr.to.int$ -- 24
+cite$ -- 59
+duplicate$ -- 567
+empty$ -- 1095
+format.name$ -- 365
+if$ -- 3049
 int.to.chr$ -- 5
 int.to.str$ -- 1
 missing$ -- 22
-newline$ -- 137
-num.names$ -- 104
-pop$ -- 378
+newline$ -- 147
+num.names$ -- 112
+pop$ -- 402
 preamble$ -- 1
-purify$ -- 161
+purify$ -- 167
 quote$ -- 0
-skip$ -- 438
+skip$ -- 465
 stack$ -- 0
-substring$ -- 547
-swap$ -- 60
+substring$ -- 551
+swap$ -- 63
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 281
+type$ -- 303
 warning$ -- 3
-while$ -- 112
+while$ -- 118
 width$ -- 0
-write$ -- 338
-(There were 9 warnings)
+write$ -- 362
+(There were 11 warnings)
