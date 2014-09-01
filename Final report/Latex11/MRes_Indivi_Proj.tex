@@ -347,6 +347,7 @@ I would like to thank
 \acro{BST}{Body Slender Theory}
 \acro{FBMS}{Fixed-beam Moving-sample}
 \acro{gwl}{General Writting Language}
+\acro{MPC}{Magnetic Polymer Composite}
 \acro{MBFS}{Moving-beam Fixed-sample}
 \acro{RFT}{Resistive Force Theory}
 \acro{RSM}{Regularized Stokeslet Method}
@@ -508,7 +509,7 @@ overcomed by fabrication methods such as 3D laser lithograph. Section \ref{fabri
 %%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
 \end{tikzpicture}									   %
 \caption{System Architecture.  }						   %
-\label{System Architecture.}										   %
+\label{System Architecture}										   %
 \end{figure}										   %	
 												   %
 %%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
@@ -527,7 +528,8 @@ velocity as an input and produce the rotational velocity as an output. By knowin
 we will be able to compute the electric current is required to produce the desired translational velocity. 
 In addition, the new design is developed and printed for the helix which shows using variable pitch
  in helix design rather than constant pitch to satisfy the fabrication process. The result of all simulation is
-represented in the result chapter \ref{result}. The overview diagram represent the different part of the project.
+represented in the result chapter \ref{result}. Diagram \ref{System Architecture} represents
+ the structure of the project.
 
 
 
@@ -550,13 +552,13 @@ represented in the result chapter \ref{result}. The overview diagram represent t
 \subsection{Bioinspired microrobots}
 
 One of the most challenging aspects of designing a robot on a very small scale such 
-as a nanorobot is simplicity. The reason is, integration between components
+as a nanorobot is simplicity. The reason is, integration between various components
 will become unfeasible on that
  scale if the design is complex. Hence the development of the nanorobot or even microrobot
  should be based on the essential functionality, avoiding any unnecessary components~\citep{gao2013bioinspired}.
 By learning from nature and mimicking the structure of live organisms, the successful  
 scientific applications were created~\citep{qiunanohelices}. In the following section a
- few examples of microrobots that were imitated from nature will describe. 
+ few examples of swimming microrobots that were imitated from nature will describe. 
  
 
 
@@ -595,12 +597,7 @@ structures.~\citep{peyer2013bio}.}
   \label{cilia}
 \end{figure}
 
-In 2007, Bell ~\citep{gao2013bioinspired} presented the first artificial bacteria flagellum microrobots and then
- Zhang characterised them in 2009 ~\citep{gao2013bioinspired}. This microrobot was formed of two 
-components; a rigid helical tail and a soft magnetic metal head. The head diameter 
-was $2.8 \mu  m$ and its length was $30-100 \mu m$. Since then, other scientists proposed a slightly different design 
-structure, that all have the rigid helical tail structure. However, in some cases the magnetic
- materials is used in the device tail rather than the head ~\citep{gao2013bioinspired}. 
+
  
 \paragraph{}
 
@@ -609,23 +606,34 @@ structure, that all have the rigid helical tail structure. However, in some case
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{10}
-  \caption{ The structure of the smooth flagellum and a mastigonemes flagellum.~\citep{gao2013bioinspired}.}
+  \caption{ The propulsion mechanism of the smooth flagellum and a mastigonemes flagellum.
+The propulsion direction of smooth flagellum (top design) is opposite of flagella\rq{}s propagation 
+wave (second from the top). Their artificial design (blue structures) is based on 
+their locomotion mechanism~\citep{gao2013bioinspired}.}
   \label{10}
 \end{center}
 \end{wrapfigure}
 %\end{figure}
 
+In 2007, Bell~\citep{gao2013bioinspired} presented the first artificial bacteria flagellum microrobots and then
+ Zhang characterised them in 2009~\citep{gao2013bioinspired}. This microrobot was formed of two 
+components; a rigid helical tail and a soft magnetic metal head. The head diameter 
+was $2.8 \mu  m$ and its length was $30-100 \mu m$. Since then, other scientists proposed a slightly different design 
+, that mostly have the rigid helical tail shape. However, in some cases the magnetic
+ materials is used in the device tail rather than the head~\citep{gao2013bioinspired}. 
+
+
 The helical rotation of flagella and the travelling wave beat of cilia are two non-reciprocal propulsion
  mechanisms in microorganisms. Mimicking a rotating flagellum at low Reynolds number to generate an 
 adequate torque to overpower the high viscous drag requires two main elements; a rotary motor and a
- power source ~\citep{qiunanohelices}. 
+ power source~\citep{qiunanohelices}. 
 An electromagnetic rotary motor can be used in designing a helical flagella style microrobot that 
 requires a considerable current. However piezoelectric rotary motors are an alternative option 
 that are appropriate for miniaturisation but necessitate high input voltage.  Hence, designing a microrobot with a 
-combination of an onboard power source and a motor is a challenging task ~\citep{qiunanohelices}.
+combination of an onboard power source and a motor is a challenging task~\citep{qiunanohelices}.
 
-Another design of microswimmers was inspired by the function of magtigonemes in nature ~\citep{tottori2013artificial}.
- A smooth flagellum moves against the direction of the propagation of the flagella wave. However, 
+Another design of microswimmers was inspired by the function of magtigonemes in nature~\citep{tottori2013artificial}.
+ A smooth flagellum propels against the direction of the flagella\rq{}s propagation wave. However, 
 the flagellum covered by magtigoneme propels in the same direction as the flagellum wave (Figure~\ref{10}). Mimicking 
 the structure of flagellum and using 3D lithography and electron beam evaporation formed the fabrication 
 method in these microswimmers.
@@ -634,16 +642,35 @@ Flagella movement in the opposite direction of the flagella wave is because the
 viscous drag coefficient perpendicular to the flagella is greater than the viscous drag coefficient parallel to 
 the flagella~\citep{tottori2013artificial}. 
 
+
+
+%\begin{figure}
+%\begin{SCfigure}
+  %\centering
+\begin{wrapfigure}{l}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{HelixShapes}
+  \caption{Three design of helical microswimmers~\citep{peyer2013magnetic}.}
+  \label{HelixShapes}
+  \end{center}
+\end{wrapfigure}
+%\end{SCfigure}
+%\end{figure}
+
+
+
+The artificial smooth flagellum powered by an external magnetic field. 
  The rotating field, i.e. rotational frequency, field strength and angles that 
-defined the rotational axis can be controlled by the current in the external coil. The helical microrobots rotate 
-synchronously with the rotation of the magnetic field and move forward and backward accordingly ~\citep{tottori2013artificial}. 
+defined the rotational axis is controlled by the current in the external coil. The helical microrobots rotate 
+synchronously with the rotation of the magnetic field and move forward and backward accordingly~\citep{tottori2013artificial}. 
 The displacement of the microswimmer along the rotational axis can be measured and the result 
 used to calculate the average velocity of the swimmers. There is a linear relationship between an input 
-field frequency and swimming speed. According to their result ~\citep{tottori2013artificial}, a propulsive force generated by 
+field frequency and swimming speed. According to their result~\citep{tottori2013artificial}, a propulsive force generated by 
 the mastigoneme is in opposite direction of the force generated by the main helical filament. 
 However, this velocity is only valid if the external force is zero. The proposed 
-design ~\citep{tottori2013artificial} is rigid and an external stimulus may be used to regulate the swimming
+design~\citep{tottori2013artificial} is rigid and an external stimulus may be used to regulate the swimming
  speed and direction if the swimmer can fold and unfold their structure. 
+
 
 
 There are three common shapes of microrobots 
@@ -653,20 +680,6 @@ design would be more appropriate. The rotational motion of helical micro
  swimmers is one of the most effective propulsion methods in the low Reynolds number scenarios 
 because it leads to translational motion. Microrobots with the microspheres structure perform similarly 
 to the helical swimmers and are capable of swimming in the flowing liquid within the microfluidic channel~\citep{kim2013fabrication}. 
-
-
-%\begin{figure}
-%\begin{SCfigure}
-  %\centering
-\begin{wrapfigure}{r}{0.5\textwidth}
-  \begin{center}
-    \includegraphics[width=0.4\textwidth]{HelixShapes}
-  \caption{Three design of helical microswimmers.~\citep{peyer2013magnetic}.}
-  \label{HelixShapes}
-  \end{center}
-\end{wrapfigure}
-%\end{SCfigure}
-%\end{figure}
 
 
 
@@ -691,16 +704,6 @@ rotation speed is calculated to achieve the commanded velocity (Figure~\ref{11})
 \end{figure}
 
 
-The mathematic model below describes the microrobot translational movement;
-
-\begin{equation}
-  \overrightarrow{F_m }+ \overrightarrow{F_r} - \overrightarrow{F_g} = M(\overrightarrow{dv}/dt)
-\label{eq:4}
-\end{equation}
-
-Where $F_m$, $F_r$ and $F_g$ are a magnetic force, overall resistive force and gravitational force respectively. 
-$M$ is a mass and $v$ is a translational velocity of the microrobot~\citep{kim2013fabrication}. 
-
 A magnetic field can be used for controlling teams of microrobots as well as a single 
 one. \citeauthor{kim2013fabrication} proposed a method that used a combination of two magnetic materials to 
 attain on/off magnetization of each microrobot. The overall control of the group of microrobots 
@@ -721,23 +724,25 @@ design (device with the microholder) is capable of transporting a microobject ac
 target ~\citep{tottori2012magnetic}.\hilight{size and weight of the object}
 
 
+In ~\citeauthor{tottori2012magnetic}\rq{}s study eight designs of microrobots were proposed and tested. 
+The uniform static magnetic field was used to explore the magnetic shape anisotropy and the 
+magnetic actuation was monitored in the rotating magnetic field. In the static magnetic field the 
+set of microrobots had helical angles $\theta$ ranging from ${45^{\circ}}$ to ${70^{\circ}}$ when suspended in the deionised water. 
+
+
+
 %\begin{figure}
   %\centering
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{7}
   \caption{(a) The misalignment of helical angle$\alpha$ with differnt helix angle (b) the oscillation behaviour
-of the microswimmer with the high and low frequencies ~\citep{tottori2012magnetic}.}
+of the microswimmer with the high and low frequencies~\citep{tottori2012magnetic}.}
   \label{ref7}
 \end{center}
 \end{wrapfigure}
 %\end{figure}
 
-
-In ~\citeauthor{tottori2012magnetic}\rq{}s study eight designs of microrobots were proposed and tested. 
-The uniform static magnetic field was used to explore the magnetic shape anisotropy and the 
-magnetic actuation was monitored in the rotating magnetic field. In the static magnetic field the 
-set of microrobots had helical angles $\theta$ ranging from ${45^{\circ}}$ to ${70^{\circ}}$ when suspended in the deionised water. 
 
 This showed (Figure~\ref{ref7}) that a smaller helix angle $\theta$ results in a less misalignment 
 angle $\alpha$ because microrobots longest axes will be aligned to the direction of the external magnetic field. 
@@ -767,8 +772,8 @@ the helix ~\citep{tottori2012magnetic}.
 
 \paragraph{}
 The important role of helix angle in the magnetization structure of helical micro swimmers 
-was confirmed by \citeauthor{peyer2013bacteria} \citep{peyer2013bacteria}, who used direct laser writing (DLW) as a fabrication method but 
-applied (DLW) on a magnetic polymer composite (MPC). The MPC are non-cytotoxic and showed 
+was confirmed by \citeauthor{peyer2013bacteria} \citep{peyer2013bacteria}, who used direct laser writing (DLW) as a fabrication method 
+ on a \ac*{MPC}. The \ac*{MPC} are non-cytotoxic and showed 
 super paramagnetic characteristic because magnetic material was already included in the polymer. 
 
 The relationship between the torque $T$, the drag force $F$, the object\rq{}s velocity $\nu$ and rotational 
@@ -794,7 +799,6 @@ There are few methods in use to model the resistance matrices and low Reynolds f
 method of regularized stokeslets, the boundary element method and the method of fundamental solution
 . In designing a microrobot the main parameters required to concentrate on are the helicity angle $\psi$, 
 the helix radius $R$, the pitch $p$ and the filament radius $r$ as illustrated in Figure~\ref{ref8} part (c). 
-The details of above methods will discuss in section \ref{maths} (Mathematical model).
 
 \begin{figure}
   \centering
@@ -805,32 +809,9 @@ shows all the parameters required for the microhelical design ~\citep{peyer2013b
   \label{ref8}
 \end{figure}
 
-Magnetic actuated microrobot is divided into two categories; torque driven microrobot and force
- driven microrobots.
-The micro robot using the torque-driven method is more favourable than the force-driven method 
-because their rotation is based on applying torque rather than a force to pull the device ~\citep{peyer2013bacteria}.
 
 
 
-
-
-
-
-
-
-
-
-
-
-Another approach for powering a micro robot is using the catalytic conversion of chemical energy
- into mechanical energy (Figure~\ref{nanotube}). In this method, the catalyst accelerates the consumption of hydrogen peroxide
- and helps the self-propulsion of micro robot to pump the fluid to transport cells and colloidal 
-particles ~\citep{C2NR32798H}.
-
-The catalytic tube is fabricated with a sub micrometer diameter.
- This technique is not applicable for the minimally invasive surgery (MIS) yet because the catalytic
- material used in the fabrication process of nanotubes is toxic. Hence, biocompatible fuel is required to be developed in order to 
-apply this technique in a live cell environment~\citep{C2NR32798H}.
 
 
 %\begin{figure}
@@ -844,6 +825,26 @@ apply this technique in a live cell environment~\citep{C2NR32798H}.
 \end{center}
 \end{wrapfigure}
 %\end{figure}
+
+
+
+Magnetic actuated microrobot is divided into two categories; torque driven microrobot and force
+ driven microrobots.
+The micro robot using the torque-driven method is more favourable than the force-driven method 
+because their rotation is based on applying torque rather than a force to pull the device ~\citep{peyer2013bacteria}.
+
+
+
+Another approach for powering a micro robot is using the catalytic conversion of chemical energy
+ into mechanical energy (Figure~\ref{nanotube}). In this method, the catalyst accelerates the consumption of hydrogen peroxide
+ and helps the self-propulsion of micro robot to pump the fluid to transport cells and colloidal 
+particles ~\citep{C2NR32798H}. The catalytic tube is fabricated with a sub micrometer diameter.
+ This technique is not applicable for the minimally invasive surgery (MIS) yet because the catalytic
+ material used in the fabrication process of nanotubes is toxic. Hence, biocompatible fuel is required to be developed in order to 
+apply this technique in a live cell environment~\citep{C2NR32798H}.
+
+
+
 
 Alternatively, the micro driller can be powered and controlled by using an external magnetic field 
 such that changes in the frequency of the rotating magnetic field switch the rotational orientation of the 
@@ -882,10 +883,7 @@ Use of plant material in this method enables simple three-dimensional microswimm
 and biocompatibility. In addition, the magnetic cover helps to ensure accurate directional control and 
 high-speed propulsion. Therefore the fabrication processes were extremely simplified as the main 
 component of the helical microswimmers is from nature and more than a million individual micro helicals 
-can be made from a very small section of the plant stalk ~\citep{mahoney2011velocity}. 
-
-
-Using mechanical stretching can control geometric variables of the helical vessels such as the pitch and
+can be made from a very small section of the plant stalk ~\citep{mahoney2011velocity}. Using mechanical stretching can control geometric variables of the helical vessels such as the pitch and
  helix angle and hence plenty of helical microswimmers can be reproduced. The final shape of the 
 helical microswimmer is determined mainly by the initial diameter of the unstretched spiral vessel. The
  process of stretching helical plant structure was performed via plastic deformation so that the number 
@@ -898,7 +896,7 @@ of helical turns are constant and tensile stretching of the plant fibre stretchi
   \begin{center}
     \includegraphics[width=0.5\textwidth]{plants2}
   \caption{(A) The stages were required to make a plant-based microrobot. (B) A microscopic image of the 
-a xylem helical structure. ~\citep{gao2013bioinspired}.}
+a xylem helical structure~\citep{gao2013bioinspired}.}
   \label{plants2}
 \end{center}
 \end{wrapfigure}
@@ -919,13 +917,8 @@ advantage of this microdevice over the common microrobots%\hilight{WHY}.
 
 
 
-\subsubsection{Jellyfish style microrobots}
-For the purpose of this project different proposed structures of microrobots were studied
- and analysed. This will enable helical microswimmers to be reproduced. Once reproduced, the aim of this project will be to compare
- the efficiency, power, motion velocity and cost-efficiency of various microrobot designs for mass production
- of the microswimmers. The fabrication of microswimmers will be by Nanoscribe facility using 3D laser
- lithography. After the microrobots are produced their characteristic will be analysed
- under the scanning electron microscope in order to identify further improvements in microrobot design. 
+%\subsubsection{Jellyfish style microrobots}
+
 
 
 \subsection{Actuation methods} \label{actuation}
@@ -954,6 +947,22 @@ three-axis Helmholtz setup.
 
 
 
+
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+ % \begin{center}
+    \includegraphics[width=0.7\textwidth]{tempreture}
+  \caption{DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were 
+developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and Ti. ~\citep{qiu2014artificial}.}
+  \label{tempreture}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
+
+
+
+
 To improve biocompatibility for in-vivo applications, the 
 microrobot can be covered with a thin layer of titanium. In addition, the microrobot\rq{}s structure was layered with 
 nickel for the purpose of magnetic actuation.
@@ -961,21 +970,6 @@ nickel for the purpose of magnetic actuation.
 \citeauthor{qiu2014artificial}~\citep{qiu2014artificial} reported a successful application of helical microrobots
 for drug delivery were known as \lq\lq{}smart\rq\rq{} drug carriers. Again, they used DLW for the fabrication method 
 as shown in the Figure \ref{tempreture}. 
-
-
-
-
-%\begin{figure}
-%  \centering
-\begin{wrapfigure}{r}{0.5\textwidth}
-  \begin{center}
-    \includegraphics[width=0.5\textwidth]{tempreture}
-  \caption{DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were 
-developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and Ti. ~\citep{qiu2014artificial}.}
-  \label{tempreture}
-\end{center}
-\end{wrapfigure}
-%\end{figure}
 
 
 
@@ -994,6 +988,10 @@ with surface decomposition methods, however Ni and Co are cytotoxic and pure iro
 ORMOCOMP helical swimmers were coated onto a thin layer of Fe ($25 nm$) using electron beam decomposition.
   
 
+
+
+
+\begin{comment}
 
 The review of all the fabrication methods used for the micrordevice is represented in the table\ref{fabrication_table}.
 
@@ -1024,7 +1022,7 @@ Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1e
 \caption{Microrobot\rq{}s fabrication methods}\label{fabrication table}% title of Table
 \end{table}
 
-
+\end{comment}
 
 %%%%%%%%%%%%%%% Table %%%%%%%%%%%%%%
 \begin{table}[h!]
@@ -1304,7 +1302,7 @@ Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1e
 \chapter{Methods}
 
 %%%%%%%%%%%%%%%%%% Structure %%%%%%%%%%%%%
-\section{Microrobot structure}
+\section{Microrobot structure( \hilight{INCOMPLETE})}
 
 One of the main requirement of the magnetic microrobot is using magnetic material in their structure 
 to perform actuation task~\citep{qiu2014noncytotoxic}. 
@@ -1316,7 +1314,7 @@ to perform actuation task~\citep{qiu2014noncytotoxic}.
 
 
 %%%%%%%%%%%%%%%%%%% Design %%%%%%%%%%%%%%%
-\section{Microrobot design} \label{microDesign}
+\section{Microrobot design( \hilight{INCOMPLETE})} \label{microDesign}
 
 Novel part of design using microrobot with the variable pitch to enable it vertically fabricated.
 
@@ -1383,8 +1381,8 @@ fabricating helical shape mincrorobot. An ideal fabrication approach should have
 parameters and in particular it should be suitable for applying magnetic material
  for the actuation purpose \citep{peyer2013bio}.
 
-The complete fabrication process is summarised in the diagram \ref{fabrication_diagram}.
-The process started by importing the structure files into the software called (??????) for 
+The complete fabrication process is summarised in the diagram \ref{Fabrication diagram}.
+The process started by importing the structure files into the software called Describe for 
 the pre-processing purpose. The structures file contains all the microrobots that is designed by the 
 software called Solidwork. The next stage is writing the structure using nanoscribe facility, which is 
 done in the clean room. After few hours, the structures will be ready and they can be seen under 
@@ -1533,20 +1531,6 @@ chapters \ref{discussion} respectively.
 
 \subsection{Scanning Electron Microscope (\ac*{SEM})}\label{sem}
 
-\ac*{SEM} is a powerful device for obtaining high magnification images to analyse and examine
- the material or individual features. \ac*{SEM} is invented 50 years ago and it is used extensively 
-in diverse scientific fields such as biology, medicine or metallurgy,  to name just a few. The \ac*{SEM} can 
-provide images with the high-resolution dawn to $25$ Angstroms.\footnote{$1 ~\ Angstrom =
-1.0 \times 10^{-10} Metres$}%~\citep{Doe:2013Dec:Online}.
-
-\ac*{SEM} generates a range of signals at the surface of solid specimens by using a focused beam
- of high-energy electrons. The process is started from producing electron beam by the electron gun 
-at the top of the microscope and then travels into the microscope. The microscope is placed in the
- vacuum. Then the beam focused down into the specimen by passing through the electromagnetic
- fields and lenses. Once the focused electron beam interacts with the specimen, electrons are revealed 
-from the specimen. At this point, the back-scattered electrons are collected by the detectors and were 
-converted into variety of signals. Ultimately, generated signals sent to the screen to form the final image 
-of the specimen\citep{Doe:2014Jan:Online}. 
 
 
 %\begin{figure}
@@ -1560,6 +1544,26 @@ in the diagram~\citep{Doe:2014Jan:Online}.}
 \end{center}
 \end{wrapfigure}
 %\end{figure}
+
+
+\ac*{SEM} is a powerful device for obtaining high magnification images to analyse and examine
+ the material or individual features. \ac*{SEM} is invented 50 years ago and it is used extensively 
+in diverse scientific fields such as biology, medicine or metallurgy,  to name just a few. The \ac*{SEM} can 
+provide images with the high-resolution dawn to $25$ Angstroms.\footnote{$1 ~\ Angstrom =
+1.0 \times 10^{-10} Metres$}%~\citep{Doe:2013Dec:Online}.
+
+
+
+\ac*{SEM} generates a range of signals at the surface of solid specimens by using a focused beam
+ of high-energy electrons. The process is started from producing electron beam by the electron gun 
+at the top of the microscope and then travels into the microscope. The microscope is placed in the
+ vacuum. Then the beam focused down into the specimen by passing through the electromagnetic
+ fields and lenses. Once the focused electron beam interacts with the specimen, electrons are revealed 
+from the specimen. At this point, the back-scattered electrons are collected by the detectors and were 
+converted into variety of signals. Ultimately, generated signals sent to the screen to form the final image 
+of the specimen\citep{Doe:2014Jan:Online}. 
+
+
 
 The key advantages of using \ac*{SEM} over traditional microscope is having a large depth of
  field and also higher resolution. In addition, researchers has more control over the degree of 
@@ -1594,7 +1598,7 @@ The simulation of the microrobot is formed by two main components; helical micro
  and actuation method. The complete algorithm that describes the implementation of the simulation
 system is represented in the diagram \ref{Simulation algorithm}. In this algorithm, the desired velocity is given to the system
 and the required electric current to make the dynamic magnetic field will be an output. The pseudocode of
-the algorithm ?????? is provided more details in each step of the implementation and the complete computation
+the algorithm \ref{PSuedocode} is provided more details in each step of the implementation and the complete computation
 is explained in section \ref{RFT_sixDegree} and section \ref{microActuation}.    
 
 
@@ -1670,6 +1674,7 @@ the diagram.}
  Compute Electric current $i$ from $|\bm{B}| = (\frac{b^2}{(b^2+l^2)^{3/2}}){\mu}_0 i$
  }
  \caption{Simulation algorithm}
+\label{PSuedocode}
 \end{algorithm}
 
 
@@ -1689,16 +1694,6 @@ Analysing fluid dynamic phenomena on microorganism is a fundamental approach to 
  locomotion~\citep{smith2009boundary}.
 
 
-%\begin{figure}
-%  \centering
-\begin{wrapfigure}{r}{0.5\textwidth}
-  \begin{center}
-    \includegraphics[width=0.5\textwidth]{parameters}
-  \caption{The essential helix parameters to design a helical microrobot~\citep{rodenborn2013propulsion}.}
-  \label{parameters}
-\end{center}
-\end{wrapfigure}
-%\end{figure}
 
 A helical bacterial flagellum can be uesed as a reference to model a helical microrobot. The 
 essential parameters to model a helix are, helix length ($L$), pitch ($\lambda$), pitch angle ($\theta$), 
@@ -1710,6 +1705,16 @@ $11R$, ($2R < \lambda < 11R$). Also the helix length ($L$) varies from $3\lambda
 
 
 
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+  %\begin{center}
+    \includegraphics[width=0.7\textwidth]{parameters}
+  \caption{The essential helix parameters to design a helical microrobot~\citep{rodenborn2013propulsion}.}
+  \label{parameters}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
 
 
 
@@ -1727,6 +1732,7 @@ govern by the Stokes equations (\ref{stokes_1}) in the low Reynolds regime;
 Where $\eta$ and $p$ are fluid dynamic velocity and pressure respectively. Therefore thrust ($F$) and 
 torque ($T$) are linearly related to the $\nu$ and $\omega$ as there are no derivation of time in 
 the equations \ref{stokes_1}. Thses linear relationship can be defined as follow;
+
 
 
 \begin{equation}
@@ -1763,22 +1769,8 @@ resistive force theory, slender body theory and regularized Stokeslet theory whi
 \ref{method1} and \ref{method2} respectively. 
 
 
-
-
-
 \subsubsection{Resistive force theory for microrobot with two degree of freedom}\label{method3}
 
-
-%\begin{figure}
-%  \centering
-\begin{wrapfigure}{r}{0.5\textwidth}
-  \begin{center}
-    \includegraphics[width=0.5\textwidth]{filament}
-  \caption{A motion of an arbitary filament~\citep{edd2003biomimetic}.}
-  \label{filament}
-\end{center}
-\end{wrapfigure}
-%\end{figure}
 
 
 %\begin{figure}
@@ -1799,13 +1791,29 @@ The force exerted on the fluid by micro swimmer were calculated initially and th
 movement if the force is not zero~\citep{Doe:2013:Online}. Furthermore, the swimming velocity will decrease if the helical
 body attached to the innert head. Figure \ref{filament} shows an arbitary filament motion which is defined by $s(l,t)$. 
 A direction of the helix velocity ($U$) is along x-axis and its rotation is symetric about the x-axis. 
-The following assumption has been made in order to use the RFT. The geometry
+The following assumption has been made in order to use the RFT. 
+
+%\begin{figure}
+%  \centering
+\begin{wrapfigure}{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.5\textwidth]{filament}
+  \caption{A motion of an arbitary filament~\citep{edd2003biomimetic}.}
+  \label{filament}
+\end{center}
+\end{wrapfigure}
+%\end{figure}
+
+
+The geometry
 of the helix is on the yz-plane and it always attached to the robot body (can be a sphere). The 
 filament motion is periodic and filament length is constant at all the time. Acceleration can be neglected as the
 system is in the low Re number fluid. Hence, the equations \ref{thrust_1} and \ref{torque_1} will describe the force balance and 
 the moment balance in the x-axis direction. The thrust and torque will be determined by integrating over the 
 first term of the force balance and moment balance equations (\ref{thrust_1} and \ref{torque_1}) 
  respectively ~\citep{edd2003biomimetic}.
+
+
 
 
 
