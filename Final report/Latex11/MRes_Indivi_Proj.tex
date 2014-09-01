@@ -77,8 +77,11 @@
 \renewcommand{\headrulewidth}{1.2pt} 
 %\renewcommand{\chaptername}{}
 
+%___________________________________________________________________________%%%%
+\begin{comment}
 
-%%%%%%%%%%%%% Preparing Oerview Diagrams %%%%%%%%
+%%%%%%%%%%%%% Preparing Oerview Diagrams %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%
 
 \usetikzlibrary{shadows,arrows,positioning}
 
@@ -151,13 +154,87 @@
     {\large #2} (#3);}
 
 
+\end{comment}
+
+%___________________________________________________________________________%%%%
+
+\usetikzlibrary{shadows,arrows,positioning}
+% Define the layers to draw the diagram
+\pgfdeclarelayer{background}
+\pgfdeclarelayer{foreground}
+\pgfsetlayers{background,main,foreground}
+
+% Define block styles
+\tikzstyle{materia}=[draw, fill=yellow!40, text width=10.0em, text centered,
+  minimum height=7.5em,drop shadow]
+\tikzstyle{practica} = [materia, text width=8em, minimum width=6em,
+  minimum height=4em, rounded corners, drop shadow]
+\tikzstyle{texto} = [above, text width=10em, text centered]
+\tikzstyle{linepart} = [draw, thick, color=black!60, -latex', dashed]
+\tikzstyle{line} = [draw, thick, color=black!50, -latex']
+\tikzstyle{ur}=[draw, thick, text centered, minimum height=0.01em]
+\usetikzlibrary{fadings}
+\usetikzlibrary{decorations}
+\usepgflibrary{decorations.pathmorphing}
+
+\tikzfading[name=fade out, inner color=transparent!0,
+  outer color=transparent!100]
+
+% Define distances for bordering
+\newcommand{\blockdist}{1.3}
+\newcommand{\edgedist}{1.5}
+
+
+
+%++++++++++++++++++++++++++++++++++++++++
+%\newcommand{\practica}[2]{node (p#1) [practica]
+  %{Pr\'actica #1\\{\scriptsize\textit{#2}}}}
+
+\newcommand{\Step}[2]{node (p#1) [practica]
+  {\\{ \Large\textit{#2}}}}
+
+%++++++++++++++++++++++++++++++++++++++++
+
+
+% Draw background
+\newcommand{\background}[5]{%
+  \begin{pgfonlayer}{background}
+    % Left-top corner of the background rectangle
+    \path (#1.west |- #2.north)+(-0.3,0.9) node (a1) {};
+    % Right-bottom corner of the background rectanle
+    \path (#3.east |- #4.south)+(+0.5,-0.35) node (a2) {};
+
+%++++++++++++++++++++Two backgrounds++++++++++++++++++++
+
+    % Draw the background
+    \path[fill=gray!20,rounded corners, draw=black!50, dashed]
+      (a1) rectangle (a2);
+
+     %  \path[fill=blue!20,rounded corners, draw=black!50, dashed]
+     %(-4,-5.2) rectangle (4,1);
+
+%++++++++++++++++++++++++++++++++++++++++
+
+
+
+ \path (a1.east |- a1.south)+(1.9,-0.57) node (u1)[texto]%place of the text above the diagram
+      {\Large\textit{ #5}};
+
+      \path (#3.east |- #2.north)+(0,0.25)--(#1.west |- #2.north) node[midway] (#5-n) {};
+      \path (#3.east |- #2.south)+(0,-0.35)--(#1.west |- #2.south) node[midway] (#5-s) {};
+      \path (#3.east |- #2.north)+(0.7,0)--(#3.east |- #4.south) node[midway] (#5-w) {};
+  \end{pgfonlayer}}
+
+\newcommand{\transreceptor}[3]{%
+  \path [linepart] (#1.east) -- node [above]
+    {\scriptsize #2} (#3);}
 
 
 
 
 
 
-%%%%%%%%%%%%%%%%%% BEGING DIAGRAM %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%% BEGING Document %%%%%%%%%%%
 
 \begin{document}
 
@@ -295,8 +372,8 @@ demonstrated precise and controllable movements under low strength magnetic fiel
 a size of bacteria, capable to swim in viscous fluid in a controllable manner was satisfied basic principles
  for performing delicate tasks such as targeted drug delivery in medical application. Furthermore 
 microrobots were advantaged from fabrications technology to make them biocompatible. 
-We reviewed a range of bio mimetic microrobots in terms of their design, fabrication, propulsion 
-method in the fluid environment and their fabrication mechanism. 
+In this study we reviewed a range of bio mimetic microrobots in terms of their design, fabrication, propulsion 
+method in the fluid environment. 
 The key characteristics of the helical shape microswimmers were optimised and the new design of helical
  microrobot is presented. The new design is demonstrated the microrobot with the variable pitch that is
  satisfied the fabrication requirement. 
@@ -304,7 +381,8 @@ The key characteristics of the helical shape microswimmers were optimised and th
 Three propulsion methods; Resistive Force Theory, Regularised Stokeslet Method 
 and Body Slender Theory were implemented. The last two methods have not used before
  for remotely controlled microrobots. We provide the simulation platform for the 
-swimming microrobot in a high viscose fluid.
+swimming microrobot in a high viscose fluid. The simulation algorithm takes a desired velocity of microrobot
+and calculate the electric current is required to generate a dynamic magnetic field.
 
 
 
@@ -329,7 +407,7 @@ swimming microrobot in a high viscose fluid.
 
 The potential use of microrobots in medical applications such as minimally invasive surgery 
 has attracted scientists to work on designing microrobots ~\citep{edd2003biomimetic}. Research into swimming 
-microrobots showed two primary difficulties are the power source and finding suitable locomotion methods, as
+microrobots showed two primary difficulties are the power source and suitable locomotion method, as
  there are many cells, proteins and fibres in biofluid that prevent the motion of the microrobots~\citep{peyer2013bio}. 
 
 Artificial bacteria flagella is most popular microrobot was inspired by nature~\citep{qiu2014noncytotoxic}. 
@@ -340,10 +418,7 @@ Magnetically actuated helical micromachines can be used
  in a variety of biomedical applications such as cell characterisation, targeted drug delivery and in vivo 
 diagnosis ~\citep{peyer2013magnetic}. However, the issue of biocompatibility and the material 
 used to make a microrobot needs to be considered carefully for in vivo application\citep{qiu2014noncytotoxic}. 
-Section \ref{fabrication} present a brief history of fabrication techniques and section \ref{microFabric}
- describes the fabrication method is applied in this study. Moreover, the use of the 3D laser lithography, the state
- of the art fabrication method and \ac*{SEM} for analysing the picture of the structures is explained in
-Sections \ref{nanoscribe} and \ref{sem} respectively.
+
 
 \paragraph{}
 In addition, extremely small size of the microrobots and the
@@ -354,13 +429,91 @@ has a key role on designing the helical shape microswimmer. Section \ref{microDe
 the details of the these effective parameters and optimise them to characterise the new design for 
 helix shape microrobot. 
 
-The major part of this project is simulation which is described in section \ref{simulation} in chapter 2. The simulation
+
+The motivation for developing a simulation platform for microroswimers navigation is raised to analyse
+ their characteristic and behaviour under low magnetic field.
+Therefore, the major part of this project formed by analysing and implementing simulation methods
+ which is described in section \ref{simulation}. The simulation
 challenge can be divided into main part; propulsion mechanism of the microrobot and actuation method. The
-popular method called \ac*{RFT} witch is decribed the motion of the helix object in the low number regime 
-is used in almost all papers\citep{qiu2014noncytotoxic} were written about a helical microswimmers. In this
-study, we implemented two more propulsion methods for the helical microswimmers which are controlled 
-remotely by the dynamic magnetic field. An actution method of magnetic microrobot can be either force driven or
-torque driven. The mechanism of both methods are explained in the section \ref{microActuation}. 
+popular method, \ac*{RFT}, describes the motion of the helix object in the low number regime 
+is applied by most helical microswimmers\rq{}s algorithms\citep{qiu2014noncytotoxic}. In this
+study, we implemented two more propulsion methods for the remotely controlled helical microswimmers
+ in dynamic magnetic field. An actution method of magnetic microrobot can be either force driven or
+torque driven~\citep{qiunanohelices}. Whilst the mechanism of both methods are explained in the section \ref{microActuation}, we
+just implemented the torque driven actuation method in this study. 
+
+Fabrication of microdevice was a considerable challenge for a while ~\citep{qiunanohelices} that has been
+overcomed by fabrication methods such as 3D laser lithograph. Section \ref{fabrication} present a
+ brief history of fabrication techniques and section \ref{microFabric}
+ describes the fabrication method is applied in this study. 
+
+
+%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% OVERVIEW DIAGRAM %%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%
+
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=1.25,transform shape]
+
+  % Draw diagram elements
+  \path \Step{1}{Propulsion Algorithm};
+  \path (p1.south)+(0.0,-2.0) \Step{2}{Actuation Algorithm};
+
+  \path (p2.south)+(0.0,-3.5) \Step{3}{Nanoscribe};
+  \path (p3.south)+(0.0,-2.0) \Step{4}{SEM};
+   \path (p4.east)+(3.0,5.5) \Step{6}{Optimisation};
+  \path (p6.west)+(-8.0,0.00) \Step{5}{Design};
+
+
+  %\path (p4.east)+(5.0,0.0) \practica{7}{Calculate forward and inverse kinematic};
+  %\path (p5.east)+(5.0,0.0) \practica{8}{Design feedback control mechanics};
+
+  %\path (p5.south)+(3.5,-2.0) \practica{9}{Integrating e-AR and robot};
+  %\path (p9.south)+(0.0,-1.5) \practica{10}{Laparoscopy Robot};
+
+
+  % Draw arrows between elements
+  \path [line] (p1.south) -- node [above] {} (p2);
+  \path [line] (p3.south) -- node [above] {} (p4);
+ \path [line] (p5.north) -- node [above] {} (p1);
+  \path [line] (p5.south) -- node [above] {} (p3);
+
+ \path [line] (p4.east) -- node [above] {} (p6);
+  \path [line] (p2.east) -- node [above] {} (p6);
+
+  %\path [line] (p5.south) -- node [above] {} (p9);
+  %\path [line] (p8.south) -- node [above] {} (p9);
+ % \path [line] (p9.south) -- node [above] {} (p10);
+
+
+
+  \background{p1}{p1}{p2}{p2}{Simulation }
+  \background{p3}{p3}{p4}{p4}{Fabrication}
+
+  
+
+ % \path [line] (p5.south) -- node [above] {} (bk3-n);
+ % \path [line] (bk3-s) -- node [above] {} (p8);
+ % \path [line] (bk3-s) -- node [above] {} (p9);
+  %\path (bk1-e)+(+6.0,0) node (ur1)[ur] {};
+ % \path (bk2-w)+(+6.0,0) node (ur2)[ur] {};
+  %\path (bk3-w)+(+3.0,0) node (ur3)[ur] {};
+% \transreceptor{bk1-e}{pre processing}{ur1};
+ % \transreceptor{bk2-w}{Feature selection}{ur2};
+  %\transreceptor{bk3-w}{classification}{ur3};
+
+
+%%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
+\end{tikzpicture}									   %
+\caption{System Architecture.  }						   %
+\label{System Architecture.}										   %
+\end{figure}										   %	
+												   %
+%%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
+
+
 
 
 \paragraph{}
@@ -371,15 +524,18 @@ work which a reversible speed-variable motor such as micro metal gear motor help
 microswimmer. In this study, applying those two propulsion mechanism on the microswimmers that 
 are controlled remotely with magnetic field. Therefore, the algorithm is taken the desired translational
 velocity as an input and produce the rotational velocity as an output. By knowing the rotational velocity, 
-we will be able to compute the electric current is required to produce the desired translational velocity.
-We run the simulation for the helical microrobot whilst changing different parameters in helix. 
+we will be able to compute the electric current is required to produce the desired translational velocity. 
 In addition, the new design is developed and printed for the helix which shows using variable pitch
- in helix design rather that constant pitch to obtimised the fabrication process. The result of all simulation is
-represented in the result chapter\ref{result}.
+ in helix design rather than constant pitch to satisfy the fabrication process. The result of all simulation is
+represented in the result chapter \ref{result}. The overview diagram represent the different part of the project.
 
-%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%% OVERVIEW DIAGRAM %%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%
+
+
+
+
+
+
+
 
 
 %%%%%%%%%
@@ -1248,45 +1404,42 @@ two sections, we will explain the mechanism of the two photon lithography techni
 
 %%%%%%%%%%%% Overview Diagram of the fabrication process %%%%%%%%%%%%% 
 
-
 \begin{figure}
 \centering
-\begin{tikzpicture}[scale=0.90,[every node/.style={font=\large,
-  minimum height=0.5cm,minimum width=0.5cm},]]
+\begin{tikzpicture}[scale=1.10,transform shape]
 
   % Draw diagram elements
   \path \Step{1}{Preparing};
-  \path (p1.south)+(0.0,-2.0) \Step{2}{Production};
-  \path (p2.south)+(0.0,-2.3) \Step{3}{Post-processing};
+  \path (p1.south)+(0.0,-1.5) \Step{2}{Production};
 
-  \path (p3.east)+(4.0,0.0) \Step{4}{Sputter Coating};
-  \path (p4.south)+(0.0,-2.0) \Step{5}{Image Analysis};
+  \path (p2.south)+(0.0,-1.5) \Step{3}{Post-processing};
+  \path (p3.east)+(3.0,0.0) \Step{4}{Sputter Coating};
+  \path (p4.south)+(0.0,-1.50) \Step{5}{Image Ananlysis};
+
+ \path (p5.east)+(3.0,0.0) \Step{6}{Coating Magnetic Material};
+  %\path (p4.east)+(5.0,0.0) \practica{7}{Calculate forward and inverse kinematic};
+  %\path (p5.east)+(5.0,0.0) \practica{8}{Design feedback control mechanics};
+
+  %\path (p5.south)+(3.5,-2.0) \practica{9}{Integrating e-AR and robot};
+  %\path (p9.south)+(0.0,-1.5) \practica{10}{Laparoscopy Robot};
 
 
-  \path (p5.east)+(4.0,0.0) \Step{6}{  Coating Magnetic Material};
-
- 
-
-%%%%% % Draw arrows between elements
-
-
+  % Draw arrows between elements
   \path [line] (p1.south) -- node [above] {} (p2);
   \path [line] (p2.south) -- node [above] {} (p3);
- 
+  \path [line] (p3.east) -- node [above] {} (p4);
+  \path [line] (p4.south) -- node [above] {} (p5);
 
- \path [line] (p3.east) -- node [above] {} (p4);
- \path [line] (p4.south) -- node [above] {} (p5);
+ \path [line] (p5.east) -- node [above] {} (p6);
+%  \path [line] (p7.south) -- node [above] {} (p8);
 
-  \path [line] (p5.east) -- node [above] {} (p6);
- %\path [line] (p6.south) -- node [above] {} (p7);
+  %\path [line] (p5.south) -- node [above] {} (p9);
+  %\path [line] (p8.south) -- node [above] {} (p9);
+ % \path [line] (p9.south) -- node [above] {} (p10);
 
- % \path [line] (p4.south) -- node [above] {} (p5);
-%  \path [line] (p3.south) -- node [above] {} (p7);
- %\path [line] (p5.south) -- node [above] {} (p6);
 
-%%%%% % Draw big background box
 
-   \background{p1}{p1}{p3}{p3}{Nanoscribe }
+  \background{p1}{p1}{p3}{p3}{Nanoscribe }
   \background{p4}{p4}{p5}{p5}{SEM}
   
 
@@ -1301,11 +1454,12 @@ two sections, we will explain the mechanism of the two photon lithography techni
   %\transreceptor{bk3-w}{classification}{ur3};
 
 
+%%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
 \end{tikzpicture}									   %
-\caption{Fabrication and Image anlysis. The diagram shows stages of the fabrication (Nanoscribe)
-and image analysis (\ac*{SEM}) of this project. The final step (the yellow block in the third column)
-has not tried in this project}.					  %
-\label{fabrication_diagram}							   %
+\caption{Fabrication diagram. The nanoscribe technology is employed
+for the fabrication process and it followed by analysing structure under SEM. 
+The final stage (yellow block in third column) has not been tried in this project. }						   %
+\label{Fabrication diagram}										   %
 \end{figure}										   %	
 												   %
 %%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
@@ -1444,9 +1598,11 @@ the algorithm ?????? is provided more details in each step of the implementation
 is explained in section \ref{RFT_sixDegree} and section \ref{microActuation}.    
 
 
+%\begin{comment}
+
 \begin{figure}
 \centering
-\begin{tikzpicture}[scale=0.90,[every node/.style={font=\large,
+\begin{tikzpicture}[scale=1.30,[every node/.style={font=\large,
   minimum height=1.5cm,minimum width=0.8cm},]]
 
   % Draw diagram elements
@@ -1482,6 +1638,11 @@ the diagram.}
 \end{figure}										   %	
 												   %
 %%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
+
+
+
+%\end{comment}
+
 
 %%%%%%%%%%%%%%%%%%%Pseudocode%%%%%%%%%%%%%
 

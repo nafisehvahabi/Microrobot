@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.19)  31 AUG 2014 16:05
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.19)  1 SEP 2014 03:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -932,18 +932,18 @@ LaTeX Warning: Label `total_force_torque' multiply defined.
 )
 \openout1 = `MRes_Indivi_Proj.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 162.
-LaTeX Font Info:    ... okay on input line 162.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 239.
+LaTeX Font Info:    ... okay on input line 239.
  (/usr/local/texlive/2011/texmf-dist/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
 )
@@ -1068,7 +1068,7 @@ Package caption Info: End \AtBeginDocument code.
 <logo.jpg, id=22, 564.60938pt x 148.30406pt>
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 180.
+Package pdftex.def Info: logo.jpg used on input line 257.
 (pdftex.def)             Requested size: 182.09485pt x 47.82938pt.
  [1
 
@@ -1107,484 +1107,423 @@ although it is yet undefined on input line 26.
 ] [6]
 Chapter 1.
 Package acronym Info: Label `acro:RFT' newly defined as it shall be overridden
-although it is yet undefined on input line 359.
+although it is yet undefined on input line 438.
+
+Overfull \hbox (20.79776pt too wide) in paragraph at lines 509--510
+ [][] 
+ []
+
 [1
 
 ]
-Overfull \hbox (6.03658pt too wide) in paragraph at lines 429--431
+Overfull \hbox (6.03658pt too wide) in paragraph at lines 585--587
 \T1/cmr/m/n/12 func-tion-al-ity em-ployed for mo-tion gen-er-a-tion in ar-ti-fi
--cial mi-cro-robots (Fig-ure 1.1[])  [[]]. 
+-cial mi-cro-robots (Fig-ure 1.2[])  [[]]. 
  []
 
 <cilia.png, id=66, 492.84125pt x 201.75375pt>
 File: cilia.png Graphic file (type png)
  <use cilia.png>
-Package pdftex.def Info: cilia.png used on input line 436.
+Package pdftex.def Info: cilia.png used on input line 592.
 (pdftex.def)             Requested size: 409.7169pt x 167.73262pt.
- [2]
-<10.png, id=72, 299.1175pt x 219.82124pt>
+ [2] [3]
+<10.png, id=76, 299.1175pt x 219.82124pt>
 File: 10.png Graphic file (type png)
  <use 10.png>
-Package pdftex.def Info: 10.png used on input line 455.
+Package pdftex.def Info: 10.png used on input line 611.
 (pdftex.def)             Requested size: 227.62204pt x 167.28053pt.
- [3 <./cilia.png> <./10.png>] <HelixShapes.png, id=77, 155.58125pt x 318.18875p
+ [4 <./cilia.png> <./10.png>] <HelixShapes.png, id=82, 155.58125pt x 318.18875p
 t>
 File: HelixShapes.png Graphic file (type png)
  <use HelixShapes.png>
-Package pdftex.def Info: HelixShapes.png used on input line 507.
+Package pdftex.def Info: HelixShapes.png used on input line 663.
 (pdftex.def)             Requested size: 182.09485pt x 372.41527pt.
 
-Underfull \hbox (badness 1077) in paragraph at lines 508--508
-[]\T1/cmr/m/n/12 Figure 1.3: |Three de-sign of he-li-cal mi-
+Underfull \hbox (badness 1077) in paragraph at lines 664--664
+[]\T1/cmr/m/n/12 Figure 1.4: |Three de-sign of he-li-cal mi-
  []
 
 
-Underfull \hbox (badness 2744) in paragraph at lines 517--528
+Underfull \hbox (badness 2744) in paragraph at lines 673--684
 [][]\T1/cmr/m/n/12 There are two main fac-tors that af-
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 517--528
+Underfull \hbox (badness 1478) in paragraph at lines 673--684
 \T1/cmr/m/n/12 fect the move-ments of the mi-cro-robot
  []
 
 
-Overfull \hbox (116.49261pt too wide) in paragraph at lines 517--528
+Overfull \hbox (116.49261pt too wide) in paragraph at lines 673--684
 \T1/cmr/m/n/12 in the ex-ter-nal mag-netic field; [][][][][][]
  []
 
-<11.png, id=78, 466.74374pt x 147.55125pt>
+[5 <./HelixShapes.png>] <11.png, id=86, 466.74374pt x 147.55125pt>
 File: 11.png Graphic file (type png)
- <use 11.png>
-Package pdftex.def Info: 11.png used on input line 532.
+
+<use 11.png>
+Package pdftex.def Info: 11.png used on input line 688.
 (pdftex.def)             Requested size: 409.7169pt x 129.52803pt.
- [4 <./HelixShapes.png>] <7.png, id=83, 273.02pt x 329.23pt>
+ <7.png, id=87, 273.02pt x 329.23pt>
 File: 7.png Graphic file (type png)
  <use 7.png>
-Package pdftex.def Info: 7.png used on input line 572.
+Package pdftex.def Info: 7.png used on input line 728.
 (pdftex.def)             Requested size: 227.62204pt x 274.48659pt.
- [5 <./11.png> <./7.png>]
-[6] <8.png, id=93, 424.58624pt x 262.9825pt>
+ [6 <./11.png> <./7.png>] [7] <8.png, id=97, 424.58624pt x 262.9825pt>
 File: 8.png Graphic file (type png)
  <use 8.png>
-Package pdftex.def Info: 8.png used on input line 645.
+Package pdftex.def Info: 8.png used on input line 801.
 (pdftex.def)             Requested size: 318.66946pt x 197.38885pt.
 
-<nanoJet3.png, id=94, 286.06876pt x 212.795pt>
+<nanoJet3.png, id=98, 286.06876pt x 212.795pt>
 File: nanoJet3.png Graphic file (type png)
  <use nanoJet3.png>
-Package pdftex.def Info: nanoJet3.png used on input line 684.
+Package pdftex.def Info: nanoJet3.png used on input line 840.
 (pdftex.def)             Requested size: 227.62204pt x 169.32056pt.
- [7 <./8.png> <./nanoJet3.png>]
-Overfull \hbox (7.26501pt too wide) in paragraph at lines 699--699
+ [8 <./8.png> <./nanoJet3.png>]
+Overfull \hbox (7.26501pt too wide) in paragraph at lines 855--855
  |[]\T1/cmr/bx/n/12 Plant-based mi-cro-robots| 
  []
 
-<plants.png, id=98, 562.1pt x 250.9375pt>
+<plants.png, id=102, 562.1pt x 250.9375pt>
 File: plants.png Graphic file (type png)
  <use plants.png>
-Package pdftex.def Info: plants.png used on input line 707.
+Package pdftex.def Info: plants.png used on input line 863.
 (pdftex.def)             Requested size: 409.7169pt x 182.90715pt.
- [8 <./plants.png>]
-<plants2.png, id=102, 455.7025pt x 362.35374pt>
+ [9 <./plants.png>]
+<plants2.png, id=106, 455.7025pt x 362.35374pt>
 File: plants2.png Graphic file (type png)
  <use plants2.png>
-Package pdftex.def Info: plants2.png used on input line 743.
+Package pdftex.def Info: plants2.png used on input line 899.
 (pdftex.def)             Requested size: 227.62204pt x 180.9995pt.
 
-Overfull \hbox (16.12256pt too wide) in paragraph at lines 766--766
+Overfull \hbox (16.12256pt too wide) in paragraph at lines 922--922
  |[]\T1/cmr/bx/n/12 Jellyfish style mi-cro-robots| 
  []
 
-[9 <./plants2.png>] <tempreture.png, id=106, 380.42125pt x 293.095pt>
+[10 <./plants2.png>] <tempreture.png, id=111, 380.42125pt x 293.095pt>
 File: tempreture.png Graphic file (type png)
 
 <use tempreture.png>
-Package pdftex.def Info: tempreture.png used on input line 816.
+Package pdftex.def Info: tempreture.png used on input line 972.
 (pdftex.def)             Requested size: 227.62204pt x 175.37534pt.
 
 
-Package caption Warning: \label before \caption on input line 867.
+Package caption Warning: \label before \caption on input line 1023.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fabrication_table' on page 10 undefined on input line
- 842.
+LaTeX Warning: Reference `fabrication_table' on page 11 undefined on input line
+ 998.
 
 
-Overfull \hbox (31.81862pt too wide) in paragraph at lines 848--868
+Overfull \hbox (31.81862pt too wide) in paragraph at lines 1004--1024
  [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 885--885
+Underfull \hbox (badness 10000) in paragraph at lines 1041--1041
 []|\T1/cmr/m/n/12 propulsion
  []
 
-<screw_ta.png, id=107, 87.32625pt x 78.2925pt>
+<screw_ta.png, id=112, 87.32625pt x 78.2925pt>
 File: screw_ta.png Graphic file (type png)
  <use screw_ta.png>
-Package pdftex.def Info: screw_ta.png used on input line 890.
+Package pdftex.def Info: screw_ta.png used on input line 1046.
 (pdftex.def)             Requested size: 136.59483pt x 71.13397pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 895.
-
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 1051
+.
 
 (/usr/local/texlive/2011/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 895.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 1051.
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--896
+
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
 []\T1/cmr/m/n/12 Helical
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 895--896
+Underfull \hbox (badness 10000) in paragraph at lines 1051--1052
 \T1/cmr/m/n/12 Screw
  []
 
 
-Overfull \hbox (14.22638pt too wide) in paragraph at lines 893--899
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 1049--1055
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 902--903
+Underfull \hbox (badness 10000) in paragraph at lines 1058--1059
 []\T1/cmr/m/n/12 Direct Laser
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 903--904
+Underfull \hbox (badness 10000) in paragraph at lines 1059--1060
 []\T1/cmr/m/n/12 Two-photon
  []
 
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 916--922
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 1072--1078
 []|[]| 
  []
 
-<helical_rigid_tail.png, id=108, 123.46124pt x 62.2325pt>
+<helical_rigid_tail.png, id=113, 123.46124pt x 62.2325pt>
 File: helical_rigid_tail.png Graphic file (type png)
 
 <use helical_rigid_tail.png>
-Package pdftex.def Info: helical_rigid_tail.png used on input line 926.
+Package pdftex.def Info: helical_rigid_tail.png used on input line 1082.
 (pdftex.def)             Requested size: 136.58203pt x 71.13759pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 931--932
+Underfull \hbox (badness 10000) in paragraph at lines 1087--1088
 []\T1/cmr/m/n/12 Helical
  []
 
 
-Overfull \hbox (14.22638pt too wide) in paragraph at lines 929--935
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 1085--1091
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 939--940
+Underfull \hbox (badness 10000) in paragraph at lines 1095--1096
 []\T1/cmr/m/n/12 Direct Laser
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 940--941
+Underfull \hbox (badness 10000) in paragraph at lines 1096--1097
 []\T1/cmr/m/n/12 Two-photon
  []
 
-<Planar_flexible_tail.png, id=109, 127.47626pt x 92.345pt>
+<Planar_flexible_tail.png, id=114, 127.47626pt x 92.345pt>
 File: Planar_flexible_tail.png Graphic file (type png)
 
 <use Planar_flexible_tail.png>
-Package pdftex.def Info: Planar_flexible_tail.png used on input line 965.
+Package pdftex.def Info: Planar_flexible_tail.png used on input line 1121.
 (pdftex.def)             Requested size: 136.58107pt x 71.13263pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 970--971
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1127
 []\T1/cmr/m/n/12 Planar
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 970--971
+Underfull \hbox (badness 10000) in paragraph at lines 1126--1127
 \T1/cmr/m/n/12 flex-i-ble
  []
 
 
-Overfull \hbox (14.22638pt too wide) in paragraph at lines 968--974
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 1124--1130
 []|[]| 
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 977--978
+Underfull \hbox (badness 2334) in paragraph at lines 1133--1134
 []\T1/cmr/m/n/12 The EMA coil
  []
 
-<cilia-shape.png, id=110, 156.585pt x 99.37125pt>
+<cilia-shape.png, id=115, 156.585pt x 99.37125pt>
 File: cilia-shape.png Graphic file (type png)
  <use cilia-shape.png>
-Package pdftex.def Info: cilia-shape.png used on input line 1000.
+Package pdftex.def Info: cilia-shape.png used on input line 1156.
 (pdftex.def)             Requested size: 136.57907pt x 71.13329pt.
 
-Overfull \hbox (14.22638pt too wide) in paragraph at lines 1003--1009
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 1159--1165
 []|[]| 
  []
 
 
-Underfull \hbox (badness 1038) in paragraph at lines 1012--1013
+Underfull \hbox (badness 1038) in paragraph at lines 1168--1169
 []\T1/cmr/m/n/12 The EMA
  []
 
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 1017--1024
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 1173--1180
 []|[] 
  []
 
 
-Overfull \hbox (28.45276pt too wide) in paragraph at lines 1026--1032
+Overfull \hbox (28.45276pt too wide) in paragraph at lines 1182--1188
 []|[]| 
  []
 
-<tube_ta.png, id=111, 74.2775pt x 88.33pt>
+<tube_ta.png, id=116, 74.2775pt x 88.33pt>
 File: tube_ta.png Graphic file (type png)
  <use tube_ta.png>
-Package pdftex.def Info: tube_ta.png used on input line 1038.
+Package pdftex.def Info: tube_ta.png used on input line 1194.
 (pdftex.def)             Requested size: 136.59517pt x 71.13312pt.
 
-Overfull \hbox (14.22638pt too wide) in paragraph at lines 1041--1047
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 1197--1203
 []|[]| 
  []
 
-<plant_ta.png, id=112, 104.39pt x 84.315pt>
+<plant_ta.png, id=117, 104.39pt x 84.315pt>
 File: plant_ta.png Graphic file (type png)
  <use plant_ta.png>
-Package pdftex.def Info: plant_ta.png used on input line 1071.
+Package pdftex.def Info: plant_ta.png used on input line 1227.
 (pdftex.def)             Requested size: 136.59259pt x 71.13286pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 1076--1077
+Underfull \hbox (badness 10000) in paragraph at lines 1232--1233
 []\T1/cmr/m/n/12 Plant-
  []
 
 
-Overfull \hbox (14.22638pt too wide) in paragraph at lines 1074--1080
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 1230--1236
 []|[]| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1083--1084
+Underfull \hbox (badness 10000) in paragraph at lines 1239--1240
 []\T1/cmr/m/n/12 Macerating
  []
 
 
-Underfull \hbox (badness 2591) in paragraph at lines 1084--1085
+Underfull \hbox (badness 2591) in paragraph at lines 1240--1241
 []\T1/cmr/m/n/12 Seperating Spi-
  []
 
-<Jelly.png, id=113, 132.495pt x 124.465pt>
+<Jelly.png, id=118, 132.495pt x 124.465pt>
 File: Jelly.png Graphic file (type png)
  <use Jelly.png>
-Package pdftex.def Info: Jelly.png used on input line 1104.
+Package pdftex.def Info: Jelly.png used on input line 1260.
 (pdftex.def)             Requested size: 136.58456pt x 71.1338pt.
 
-Overfull \hbox (14.22638pt too wide) in paragraph at lines 1107--1113
+Overfull \hbox (14.22638pt too wide) in paragraph at lines 1263--1269
 []|[]| 
  []
 
 
-Underfull \hbox (badness 2334) in paragraph at lines 1116--1117
+Underfull \hbox (badness 2334) in paragraph at lines 1272--1273
 []\T1/cmr/m/n/12 The EMA coil
  []
 
 
-Overfull \hbox (27.07309pt too wide) in paragraph at lines 882--1139
+Overfull \hbox (27.07309pt too wide) in paragraph at lines 1038--1295
  [][] 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[10 <./tempreture.png>] [11] [12 <./screw_ta.png> <./helical_rigid_tail.png> <.
+[11 <./tempreture.png>] [12] [13 <./screw_ta.png> <./helical_rigid_tail.png> <.
 /Planar_flexible_tail.png> <./cilia-shape.png> <./tube_ta.png> <./plant_ta.png>
  <./Jelly.png>]
 Chapter 2.
 
-Overfull \hbox (31.81862pt too wide) in paragraph at lines 1191--1211
+Overfull \hbox (31.81862pt too wide) in paragraph at lines 1347--1367
  [][] 
  []
 
-[13
+
+LaTeX Warning: Reference `fabrication_diagram' on page 14 undefined on input li
+ne 1386.
+
+[14
 
 ]
-Missing character: There is no ] in font nullfont!
-
-Underfull \hbox (badness 1558) in paragraph at lines 1258--1258
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1259--1259
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1260--1260
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1262--1262
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1263--1263
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1266--1266
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1577) in paragraph at lines 1290--1290
- [][][][] \T1/cmr/m/it/20.74 SEM 
- []
-
-
-Overfull \hbox (64.28993pt too wide) in paragraph at lines 1304--1307
- [][] 
- []
-
 Package acronym Info: Label `acro:MBFS' newly defined as it shall be overridden
 
-although it is yet undefined on input line 1331.
+although it is yet undefined on input line 1485.
 Package acronym Info: Label `acro:FBMS' newly defined as it shall be overridden
 
-although it is yet undefined on input line 1334.
-[14] <nanoscribeWorkflow.png, id=132, 684.5575pt x 418.56375pt>
+although it is yet undefined on input line 1488.
+ [15] <nanoscribeWorkflow.png, id=134, 684.5575pt x 418.56375pt>
 File: nanoscribeWorkflow.png Graphic file (type png)
 
 <use nanoscribeWorkflow.png>
-Package pdftex.def Info: nanoscribeWorkflow.png used on input line 1341.
+Package pdftex.def Info: nanoscribeWorkflow.png used on input line 1495.
 (pdftex.def)             Requested size: 409.7169pt x 250.52066pt.
 Package acronym Info: Label `acro:stl' newly defined as it shall be overridden
-although it is yet undefined on input line 1351.
+although it is yet undefined on input line 1505.
 Package acronym Info: Label `acro:gwl' newly defined as it shall be overridden
-although it is yet undefined on input line 1353.
- [15 <./nanoscribeWorkflow.png>]
-<SEM.png, id=136, 409.53pt x 583.17876pt>
+although it is yet undefined on input line 1507.
+ [16 <./nanoscribeWorkflow.png>]
+<SEM.png, id=139, 409.53pt x 583.17876pt>
 File: SEM.png Graphic file (type png)
  <use SEM.png>
-Package pdftex.def Info: SEM.png used on input line 1402.
+Package pdftex.def Info: SEM.png used on input line 1556.
 (pdftex.def)             Requested size: 227.62204pt x 324.14856pt.
- [16 <./SEM.png>]
+ [17 <./SEM.png>]
 Missing character: There is no ] in font nullfont!
 
-Underfull \hbox (badness 1558) in paragraph at lines 1453--1453
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1454--1454
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1455--1455
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1456--1456
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1457--1457
- [][][][] 
- []
-
-
-Underfull \hbox (badness 1558) in paragraph at lines 1458--1458
- [][][][] 
- []
-
-
-Overfull \hbox (30.0pt too wide) in paragraph at lines 1489--1512
+Overfull \hbox (30.0pt too wide) in paragraph at lines 1650--1673
 $[]$ 
  []
 
-[17] <parameters.png, id=151, 285.065pt x 178.6675pt>
+[18] <parameters.png, id=153, 285.065pt x 178.6675pt>
 File: parameters.png Graphic file (type png)
  <use parameters.png>
-Package pdftex.def Info: parameters.png used on input line 1535.
+Package pdftex.def Info: parameters.png used on input line 1696.
 (pdftex.def)             Requested size: 227.62204pt x 142.66428pt.
 
-[18 <./parameters.png>] <filament.png, id=158, 225.84375pt x 158.5925pt>
+[19 <./parameters.png>] <filament.png, id=160, 225.84375pt x 158.5925pt>
 File: filament.png Graphic file (type png)
 
 <use filament.png>
-Package pdftex.def Info: filament.png used on input line 1615.
+Package pdftex.def Info: filament.png used on input line 1776.
 (pdftex.def)             Requested size: 227.62204pt x 159.85043pt.
 
 
 Package wrapfig Warning: Collision between wrapping environments on input line 
-1625.
+1786.
 
-<motion.png, id=159, 276.03125pt x 129.48375pt>
+<motion.png, id=161, 276.03125pt x 129.48375pt>
 File: motion.png Graphic file (type png)
  <use motion.png>
-Package pdftex.def Info: motion.png used on input line 1627.
+Package pdftex.def Info: motion.png used on input line 1788.
 (pdftex.def)             Requested size: 227.62204pt x 106.77995pt.
- [19]
+ [20]
 
 Package amsfonts Warning: Obsolete command \bold; \mathbf should be used instea
-d on input line 1657.
+d on input line 1818.
 
-[20 <./filament.png> <./motion.png>] [21]
-<RFT-6dof.png, id=169, 481.8pt x 131.49126pt>
+[21 <./filament.png> <./motion.png>] [22]
+<RFT-6dof.png, id=172, 481.8pt x 131.49126pt>
 File: RFT-6dof.png Graphic file (type png)
  <use RFT-6dof.png>
-Package pdftex.def Info: RFT-6dof.png used on input line 1795.
+Package pdftex.def Info: RFT-6dof.png used on input line 1956.
 (pdftex.def)             Requested size: 455.2441pt x 124.24783pt.
- [22 <./RFT-6dof.png>] [23] [24] [25] [26]
+ [23 <./RFT-6dof.png>] [24] [25] [26] [27]
 
-LaTeX Warning: Reference `magnet_torque_fina' on page 27 undefined on input lin
-e 2169.
-
-[27]
-
-LaTeX Warning: Reference `Microrobot actutation' on page 28 undefined on input 
-line 2256.
+LaTeX Warning: Reference `magnet_torque_fina' on page 28 undefined on input lin
+e 2330.
 
 [28]
-Package acronym Info: Label `acro:BST' newly defined as it shall be overridden
-although it is yet undefined on input line 2310.
 
-Overfull \hbox (18.67142pt too wide) detected at line 2354
+LaTeX Warning: Reference `Microrobot actutation' on page 29 undefined on input 
+line 2417.
+
+[29]
+Package acronym Info: Label `acro:BST' newly defined as it shall be overridden
+although it is yet undefined on input line 2471.
+
+Overfull \hbox (18.67142pt too wide) detected at line 2515
 []  []
  []
 
-[29] [30] [31] <horiz_verti_velocity.png, id=205, 365.365pt x 208.78pt>
+[30] [31] [32] <horiz_verti_velocity.png, id=207, 365.365pt x 208.78pt>
 File: horiz_verti_velocity.png Graphic file (type png)
 
 <use horiz_verti_velocity.png>
-Package pdftex.def Info: horiz_verti_velocity.png used on input line 2552.
+Package pdftex.def Info: horiz_verti_velocity.png used on input line 2713.
 (pdftex.def)             Requested size: 455.2441pt x 260.1524pt.
- [32 <./horiz_verti_velocity.png>] [33] [34]
-[35]
+ [33 <./horiz_verti_velocity.png>] [34] [35]
+[36]
 Chapter 3.
-[36
+[37
 
 ]
 Chapter 4.
-[37
+[38
 
 ]
 Chapter 5.
 
-Overfull \hbox (31.30289pt too wide) in paragraph at lines 2838--2838
+Overfull \hbox (31.30289pt too wide) in paragraph at lines 2999--2999
  |[]\T1/cmr/bx/n/24.88 Conclusion and fu-ture work| 
  []
 
-(./MRes_Indivi_Proj.bbl [38
+(./MRes_Indivi_Proj.bbl [39
 
 ]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 12.
@@ -1620,14 +1559,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 80--83
 []\T1/cmr/m/n/12 nanoscribe.  nano-scribe @ON-LINE, Febru-ary 2014.  URL
  []
 
-[39
+[40
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 172--175
 []\T1/cmr/m/n/12 Eric Weis-stein.  Eigenspace @ON-LINE, Au-gust 2014.  URL
  []
 
-[40]) [41] (./MRes_Indivi_Proj.aux)
+[41]) [42] (./MRes_Indivi_Proj.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1636,13 +1575,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19592 strings out of 493633
- 347176 string characters out of 3143377
- 473025 words of memory out of 3000000
- 22348 multiletter control sequences out of 15000+200000
- 30183 words of font info for 79 fonts, out of 3000000 for 9000
+ 19643 strings out of 493633
+ 348358 string characters out of 3143377
+ 473955 words of memory out of 3000000
+ 22401 multiletter control sequences out of 15000+200000
+ 28718 words of font info for 77 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
- 56i,17n,69p,934b,847s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,17n,69p,934b,848s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
 </usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
@@ -1675,12 +1614,11 @@ type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
 pe1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type
 1/public/cm-super/sfti1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
 public/cm-super/sfti1728.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
-blic/cm-super/sfti2074.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
-ic/cm-super/sftt1200.pfb>
-Output written on MRes_Indivi_Proj.pdf (50 pages, 1631092 bytes).
+blic/cm-super/sftt1200.pfb>
+Output written on MRes_Indivi_Proj.pdf (51 pages, 1616573 bytes).
 PDF statistics:
- 347 PDF objects out of 1000 (max. 8388607)
- 216 compressed objects within 3 object streams
+ 346 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
