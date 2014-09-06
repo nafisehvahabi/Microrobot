@@ -1,4 +1,4 @@
-\begin{thebibliography}{28}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -57,6 +57,12 @@ Youngho Ko, Sungyoung Na, Youngwoo Lee, Kyoungrae Cha, Seong~Young Ko, Jongoh
 Eric Lauga, Willow~R DiLuzio, George~M Whitesides, and Howard~A Stone.
 \newblock Swimming in circles: motion of bacteria near solid boundaries.
 \newblock \emph{Biophysical journal}, 90\penalty0 (2):\penalty0 400--412, 2006.
+
+\bibitem[Lighthill(1971)]{lighthill1971large}
+MJ~Lighthill.
+\newblock Large-amplitude elongated-body theory of fish locomotion.
+\newblock \emph{Proceedings of the Royal Society of London. Series B.
+  Biological Sciences}, 179\penalty0 (1055):\penalty0 125--138, 1971.
 
 \bibitem[Mahoney et~al.(2011)Mahoney, Sarrazin, Bamberg, and
   Abbott]{mahoney2011velocity}

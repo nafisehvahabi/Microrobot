@@ -1,0 +1,27 @@
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {1.1}{\ignorespaces System Architecture. \relax }}{3}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces The illustration of both flagellum and cilia shapes and microdevices mimicked the flagellum and cilia structures.\nobreakspace {}\citep {peyer2013bio}.\relax }}{4}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces The propulsion mechanism of the smooth flagellum and a mastigonemes flagellum. The propulsion direction of smooth flagellum (top design) is opposite of flagella'{}s propagation wave (second from the top). Their artificial design (blue structures) is based on their locomotion mechanism\nobreakspace {}\citep {gao2013bioinspired}.\relax }}{4}
+\contentsline {figure}{\numberline {1.4}{\ignorespaces Three design of helical microswimmers\nobreakspace {}\citep {peyer2013magnetic}.\relax }}{5}
+\contentsline {figure}{\numberline {1.5}{\ignorespaces The effect of the gravity on the microrobot motion direction and gravity compensation\nobreakspace {}\citep {mahoney2011velocity}.\relax }}{6}
+\contentsline {figure}{\numberline {1.6}{\ignorespaces (a) The misalignment of helical angle$\alpha $ with differnt helix angle (b) the oscillation behaviour of the microswimmer with the high and low frequencies\nobreakspace {}\citep {tottori2012magnetic}.\relax }}{7}
+\contentsline {figure}{\numberline {1.7}{\ignorespaces The prototype of microhelical device. (a) Scanning electron microscopic image of the micro polymer composite with the 2 vol.\% nanoparticle fill factor and (b) 4 vol.\% of nanoparticle fill factor. (c) The CAD model shows all the parameters required for the microhelical design \nobreakspace {}\citep {peyer2013bacteria}.\relax }}{8}
+\contentsline {figure}{\numberline {1.8}{\ignorespaces Demonstrating the drilling motion of the nanotubes under rotating magnetic field\nobreakspace {}\citep {C2NR32798H}.\relax }}{8}
+\contentsline {figure}{\numberline {1.9}{\ignorespaces The shape of the Xylem in differnt plants .\nobreakspace {}\citep {mahoney2011velocity}.\relax }}{9}
+\contentsline {figure}{\numberline {1.10}{\ignorespaces (A) The stages were required to make a plant-based microrobot. (B) A microscopic image of the a xylem helical structure\nobreakspace {}\citep {gao2013bioinspired}.\relax }}{10}
+\contentsline {figure}{\numberline {1.11}{\ignorespaces DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and Ti. \nobreakspace {}\citep {qiu2014artificial}.\relax }}{11}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Fabrication diagram. The nanoscribe technology is employed for the fabrication process and it followed by analysing structure under SEM. The final stage (yellow block in third column) has not been tried in this project. \relax }}{14}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces nanoscribe workflow. The stages are inveolved in 3D micro-printing with nanoscribe device is shown in the diagram\nobreakspace {}\citep {Doe:2014Feb:Online}.\relax }}{15}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Scanning Electron Microscop. The components of the \ac *{SEM} is shown in the diagram\nobreakspace {}\citep {Doe:2014Jan:Online}.\relax }}{16}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Simulation algorithm. The main components of implementing the simulation is shown in the diagram.\relax }}{17}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces The essential helix parameters to design a helical microrobot\nobreakspace {}\citep {rodenborn2013propulsion}.\relax }}{19}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces \nobreakspace {}\citep {edd2003biomimetic}.\relax }}{19}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces A motion of an arbitary filament\nobreakspace {}\citep {edd2003biomimetic}.\relax }}{20}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces Three dimention configration for the helical microrobot with a magnetic spherical head. The origin of the helix coordinate is denoted with $\bm {O}_h$ and $\bm {x}_{h}$ is the central axis of the helix\nobreakspace {}\citep {mahoney2011velocity}.\relax }}{22}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces \ac *{RSM} and \ac *{SBT}. In \ac *{RSM} the surface of helix filament separated by cross-sectional segmentation and each surface represents by Stokeslets (left image). In the \ac *{SBT}, the Stokeslets are arranged along the central filament line (rigth image)\nobreakspace {}\citep {rodenborn2013propulsion}.\relax }}{30}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces (a) The principle coordinate frame based on the gravity and principle componets of the matrices in equations 2.80\hbox {} and 2.79\hbox {}. (b) Construction details of direction of the microswimmer ($\bm {\mathaccentV {tilde}07E{X}}$)\nobreakspace {}\citep {mahoney2011velocity}.\relax }}{34}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsfinish 

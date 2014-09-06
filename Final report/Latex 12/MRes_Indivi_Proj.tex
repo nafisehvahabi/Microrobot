@@ -2617,19 +2617,31 @@ is converted to following equation;
 
 
 
+
 \begin{equation}
-
-
 \bm{u}_n = \frac{(I- \hat{t}_n\hat{t}_n + D_n). \bm{f}_n}{4\pi \mu}
-+ \frac{\bm{R}\bm{\Delta}\phi \csc (\theta)}{8\pi \mu} 
-
-
-
-\label{rectangular}
++ \frac{\bm{R}\bm{\Delta}\phi \csc (\theta)}{8 \pi \mu} \sum_{m \neq n}  \frac{I+\hat{r}_{nm} \hat{r}_{nm}}{r_{nm}}. \bm{f}_m
++ \Lambda (\Delta \phi)
+\label{numerical}
 \end{equation}
 
+Where $m,n = 1,2, \dots ,N$ and $\hat{t}_n=(\cos(\theta), -\sin(\theta)\sin(\phi_n), \sin(\theta)\cos(\phi_n))$.
+The position vector between spatial location is $\bm{r}_{nm} = \bm{r}(\phi_n)- \bm{r}(\phi_m)$.
 
+The components of the velocity $\bm{u}_n$ that are invariant alongside the helix can be obtained by 
+integrating over the eqation \ref{numerical} and using the frame rotated with the helical phase. Then we can
+find the linear mapping between force and velocity per unit length and calculate rotational and translation velocity
+to find the force, torque and drag.
 
+The first part of the equation \ref{numerical} is called tensor $D_n$ and it shows the helical segments that
+are centered at $\bm{r}$. $D_n$ can be expressed in the form of following integral;
+
+\begin{equation}
+\bm{u}_n = \frac{(I- \hat{t}_n\hat{t}_n + D_n). \bm{f}_n}{4\pi \mu}
++ \frac{\bm{R}\bm{\Delta}\phi \csc (\theta)}{8 \pi \mu} \sum_{m \neq n}  \frac{I+\hat{r}_{nm} \hat{r}_{nm}}{r_{nm}}. \bm{f}_m
++ \Lambda (\Delta \phi)
+\label{D-n}
+\end{equation}
 
 
 
