@@ -41,7 +41,7 @@
 \usepackage{comment}
 \usepackage[]{algorithm2e}
 \usepackage{algorithmic}
-
+\usepackage{subcaption}
 
 
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}}
@@ -916,13 +916,54 @@ advantage of this microdevice over the common microrobots%\hilight{WHY}.
 
 
 
-
-%\subsubsection{Jellyfish style microrobots}
-
-
-
 \subsection{Actuation methods} \label{actuation}
-The bacteria inspired (Page 5)~\citep{peyer2013bio}
+
+The actuation method for swimming microrobot should meet two main criteria in order to be 
+applicable. The method needs to be appropriate in the fluid environment and can be applied 
+in the micro scale. One approach was using tethered and onboard motor to an external power
+ source to actuate the microrswimmers, but this approach will not be realistic in micro scale. 
+Therefore, using the propulsion mechanism of natural swimmers such as flagellum demonstrated 
+a successful result~\citep{peyer2013bio}.
+
+Another approach is using electrochemical decomposition for microrobot locomotion. 
+The mechanism of these types of artificial microdevice is similar to bacteria as both harvesting the 
+required energy from their environment. In that case, the environment contains chemical material such 
+as hydrogen peroxide to make the electrochemical reaction. The successful application of these catalyst 
+microdevice in vitro is reported for cell transportation. However, this approach will not be suitable for in vivo 
+cases which chemical material may harm human body~\citep{peyer2013bio}.   
+
+Therefore, the idea of using magnetic field for the microrobot actuation was satisfied both requirements. 
+Applying the low strength magnetic field is harmless for human body and that can be used within fluidic 
+environment. So we can have microswimmers in the fluid environment and control them remotely. But, 
+there are still challenges with using magnetic field as an actuation method. The magnetic field will decay 
+fast by increasing the distance from the magnetic source. Thus, that factor needed to be considered 
+when preparing the set up for actuated microrobot~\citep{peyer2013bio}.   
+
+The microrobot actuation by magnetic field can be force driven or torque driven. In case of the torque 
+driven, the magnetized microrobot experiences a torque that perform to align its magnetization with the 
+external magnetic field. The magnetic torque and force are formulated as follow;
+
+
+
+\begin{equation}
+  \bm{T}_m = V\bm{M} \times \bm{B}
+\label{originalForce}
+\end{equation}
+
+
+\begin{equation}
+  \bm{F}_m = V(\bm{M\nabla}) \bm{B}
+\label{originalTorque}
+\end{equation}
+
+Where $\bm{T}_m [N.m]$ is torque, $\bm{F}_m [N]$ is force, $\bm{M} [A.m^{-1}]$ is magnetization, $V [m^3]$ is
+volume of a magnetized object and $\bm{B} [T]$ is the magnetic field. If we have a hard magnet, $\bm{M}$ becomes
+a constant or it can be a function of the geometry of the object and applied field. In the uniform magnetic field, 
+there is no force and microrobot just experiences the torque until the magnetization $\bm{M}$ is collinear with the
+magnetic field. At this point, there is no torque and microswimmer stays stationary. Thus, a magnetic field is required 
+to go through spatial or temporal changes to generate a continous actuation. This can be performed by 
+rotating the helmholtz coils or generaring dynamic magnetic fild by using AC current~\citep{peyer2013bio}.
+
 
 
 
@@ -2709,29 +2750,15 @@ Where both ${\hat{t}}\rq{}$ and ${D_n}\rq{}$ are invariant to the helical filame
 
 and 
 
-\begin{comment}
+
 \begin{equation}
-\int_{k \delta \cos \theta}^{k {\delta}\rq{} \cos \theta} \mathrm  d\phi \frac{1}{\phi} (I +\begin{pmatrix}
+\int_{k \delta \cos \theta}^{k {\delta}\rq{} \cos \theta} \mathrm  d\phi \frac{1}{\phi}(I +\begin{pmatrix}
   0 & 0 & 0 \\
   0 & \sin^2\theta  & \sin\theta\cos\theta \\
   0 & \sin\theta\cos\theta & \cos^2\theta
- \end{pmatrix})
-
+ \end{pmatrix})=\ln(\frac{\delta\rq{}}{\delta})(I + {\hat{t}}\rq{} {\hat{t}}\rq{})
 \label{FinalD}
 \end{equation}
-
-\end{comment}
-
-
-
-\begin{equation}
-{\hat{t}}\rq{}= (0, \sin \theta, \cos \theta)
-\label{invariant}
-\end{equation}
-
-
-
-
 
 
 So we obtained the mapping between the force and velocity;
@@ -2754,7 +2781,7 @@ So we obtained the mapping between the force and velocity;
 \end{equation}
 
 
-For the velocity $\bm{u}\rq{} = {\bm{u}_n}\rq{} = (0, \bm{\Omega} \bm{R}, \bm{U})^T$ we have;
+For the velocity ${\bm{u}_n}\rq{} = {\bm{u}_0} = (0, \bm{\Omega} \bm{R}, \bm{U})^T$ we have;
 
 
 
@@ -2765,10 +2792,10 @@ For the velocity $\bm{u}\rq{} = {\bm{u}_n}\rq{} = (0, \bm{\Omega} \bm{R}, \bm{U}
   \vdots  \\
    {\bm{f}_N}\rq{} 
  \end{pmatrix} = {\Delta}^{-1}. \begin{pmatrix}
-  {\bm{u}_1}\rq{}  \\
-  {\bm{u}_2}\rq{} \\
+  {\bm{u}_0}  \\
+  {\bm{u}_0} \\
   \vdots  \\
-   {\bm{u}_N}\rq{} 
+   {\bm{u}_0} 
  \end{pmatrix}
 \label{mappingInverse}
 \end{equation}
@@ -3199,17 +3226,200 @@ The step out frequency increases with the strength of the magnetic field. the ma
 %%%%%%%%%%%%%%%%%%%% Results %%%%%%%%%%%%%
 %%%%%%%%%
 \chapter{Results}\label{result}
-In this chapter all the result will be presented under two sections. In the following section the result of implementing
-three propulsion methods is demonstrated.
+
 
 
 \section{Design and propulsion methods}
 
 \section{Design and fabrication}
 
-The design of microrobot has been done by the software design c
+The design of the microrobot in this study is focused on the microswimmer with helical shape tail 
+and a possible propeller as a head that is attached to the helix body. Therefore, after studying the 
+key characteristic of the helix and identifying effective parameters a series of design were made. We started 
+by reproducing the previous design that has been made by few researchers in this field and finally proposing 
+new design for the helical shape microswimmers. The design software called Solidwork has been used for 
+designing purpose and nanoscribe technology for the fabrication stage. In the following sections we present 
+each design and the fabricated result.
+
+\paragraph{Circle base filament}
+The popular design for the helix is the one with the filament having a circle base. The design is varied in terms of 
+changing the filament radius, helix pitch, helix length and helix radius. Some of the design were successfully fabricated
+as it shows in the figure \ref{Circle base helix}. The figure \ref{Damaged structures} presented a faulty result which is as result of applying low power or 
+high power laser beam in the fabrication process. Also another type of faulty result can be seen in the figure
+which shows very small pitch length could not fabricated successfully.
 
 
+
+
+
+
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.50\textwidth}
+                \includegraphics[width=\textwidth]{simpleHelixSolid}
+                \caption{Design of circle base helix}
+                \label{simpleHelixSolid}
+        \end{subfigure}~
+       \begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]{CircleBase}
+                \caption{Fabricated circle base helix}
+                \label{CircleBase}
+        \end{subfigure}
+        \caption{Circle base helix. This is the helix with $12 \mu m$  length and $4\mu m$ pitch. (a) Helix in design
+stage and (b) shows the fabricated result.}\label{Circle base helix}
+
+   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+       
+         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+\end{figure}
+
+
+
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.40\textwidth}
+                \includegraphics[width=\textwidth]{highLaser}
+                \caption{Damaged structre}
+                \label{Damaged structre}
+        \end{subfigure}~
+       \begin{subfigure}[b]{0.595\textwidth}
+                \includegraphics[width=\textwidth]{smallPitchCircle}
+                \caption{Small pitch helix}
+                \label{smallPitchCircle}
+        \end{subfigure}
+
+  \begin{subfigure}[b]{0.45\textwidth}
+                \includegraphics[width=\textwidth]{sphereFabricated}
+                \caption{Helix with a sphere head}
+                \label{sphereFabricated}
+        \end{subfigure}~
+       \begin{subfigure}[b]{0.53\textwidth}
+                \includegraphics[width=\textwidth]{largePitch}
+                \caption{Large pitch helix}
+                \label{largePitch}
+        \end{subfigure}
+        \caption{The structure (a) is damaged as a result of high 
+laser beem and structure (b) has a small pitch $1.3 \mu m$ and the result is not satisfiable. The structure
+with the sphere head (c) is fabricated and the helix with the larger pitch (d) with proportion relative to
+rest of helix character is clearly shown,}\label{Damaged structures}
+
+   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+       
+         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+\end{figure}
+
+
+
+\paragraph{Rectangle base filament}
+
+The second design has the rectangle base filament. They can make two different helix shape depends on which side of
+the rectangle is revolved around the helix central axis in the design stage. The
+ figure \ref{Rectangle based structures} shows a variaty of design
+based on the rectangle filament with different pitch, length and helical radius.
+
+
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.49\textwidth}
+                \includegraphics[width=\textwidth]{Cursor}
+                \caption{Small pitch rectangle base filament}
+                \label{Rectangle base filament}
+        \end{subfigure}~
+       \begin{subfigure}[b]{0.505\textwidth}
+                \includegraphics[width=\textwidth]{vertical-rentanglebased}
+                \caption{Vertically fabricated ractangle based helix}
+                \label{vertical-rentanglebased}
+        \end{subfigure}
+
+  \begin{subfigure}[b]{0.59\textwidth}
+                \includegraphics[width=\textwidth]{ribbon}
+                \caption{Rectangle based helix with large length}
+                \label{ribbon}
+        \end{subfigure}~
+       \begin{subfigure}[b]{0.395\textwidth}
+                \includegraphics[width=\textwidth]{threeHelix}
+                \caption{Revolved }
+                \label{threeHelix}
+        \end{subfigure}
+
+\begin{subfigure}[b]{0.50\textwidth}
+                \includegraphics[width=\textwidth]{closeRectangle}
+                \caption{The rectangle base}
+                \label{closeRectangle}
+        \end{subfigure}~
+       \begin{subfigure}[b]{0.475\textwidth}
+                \includegraphics[width=\textwidth]{collaps}
+                \caption{Collapsed structures}
+                \label{collaps}
+        \end{subfigure}
+
+        \caption{Rectangle based structures. The structures (a) and (b) are examples of
+revolving the smaller side of the rectangle around the central axis of helix. The structure 
+can printed vertically (b). The structures with small pitch (a) will not printed ideally whilst
+the one with larger pitch (d) printed clearly. The printed structure can collapse (f)
+and result in overlapping each other. Highly zoomed image (e) shows the rectangle base of the
+helix.}\label{Rectangle based structures}
+
+   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+       
+         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+\end{figure}
+
+
+
+\paragraph{Pitch variable}
+
+In order to be able coating the structures with magnetic material, structures are preffered to printed vertically. 
+The new design is made which in helix has a variable pitch. The problem with previous design was the starting helix
+angle from the bottom of the helix was too high. Therefore, the structure had a poor surface to rely on that in a vertical
+position. The first solution was making structures with the small helix pitch so there are stronger base for vertically
+printing. However, as it is shown in the fogure \ref{collaps} part (a) the overall result of the helix with the small pitch
+is not satisfiable. Thus, the idea of designing a helix with variable pitch enable us to meet both requirements. The
+other advantage of having the variable pitch is providing the stonger base for the microhelix with any attached 
+propeller. The result of the new design is shown in figure \ref{Pitch variable}.
+
+
+
+
+
+
+\begin{figure}
+        \centering
+
+  \begin{subfigure}[b]{0.62\textwidth}
+                \includegraphics[width=\textwidth]{constant-pitch}
+                \caption{Constant pitch helix}
+                \label{constant-pitch}
+        \end{subfigure}~
+  \begin{subfigure}[b]{0.38\textwidth}
+                \includegraphics[width=\textwidth]{variable-pitch1}
+                \caption{Variable pitch helix. }
+                \label{variable-pitch1}
+        \end{subfigure}
+      
+        \caption{Pitch variable helix. The image (a) is shown the constant pitch helix which could not printed
+vertically. However, the image (b) represents the successful vertically fabricated of (a) by making its pitch
+variable.}\label{Pitch variable}
+
+   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+       
+         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+\end{figure}
 
 
 
@@ -3248,6 +3458,27 @@ interaction between flows induced by different parts of a flagellum. In particul
  smaller pitch ($\lambda$) will have smaller separation of filament segments (Figure~\ref{parameters}). Hence,
  the hydrodynamic interaction between different parts of a flagellum becomes stronger and in very small
 pitch ($\lambda \to 0$) the helix converts to a cylinder which has no thrust ($F= 0$).
+
+
+
+compare software for simulation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%
 %%%%%%%%%%%%%%%%%%%% Conclusion %%%%%%%%%%%%%
