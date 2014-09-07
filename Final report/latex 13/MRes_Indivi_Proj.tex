@@ -344,7 +344,7 @@ I would like to thank
 
 \begin{acronym}
 \addcontentsline{toc}{chapter}{\numberline{}List of Acronyms}
-\acro{SBT}{Sody Blender Theory}
+\acro{SBT}{Slender Body Theory}
 \acro{FBMS}{Fixed-beam Moving-sample}
 \acro{gwl}{General Writting Language}
 \acro{MPC}{Magnetic Polymer Composite}
@@ -2505,8 +2505,8 @@ from the centreline;
 where $a(s_q)$ is a radius of slender body and $\bm{n}(s_q)$ is a unit normal vector. Point distributions of 
 Stokeslets at any point $x = \bm{\xi}_q$ and line distribution inside the notional surface
 of the flagella are both singular. However, surface distributions of Stokeslets do not result in singular  velocity
- but it still require attentive numerical implementations~\citep{smith2009boundary}. The \lq{regularized Stokeslet}\rq{}
- introduced an exact solution for the equations \ref{stokes_reg} to overcome these issues. 
+ but it still require attentive numerical implementations \citep{smith2009boundary}. The \lq{regularized Stokeslet}\rq{}
+ introduced an exact solution for the equations \ref{$stokes_reg$} to overcome these issues. 
 This method used a cut off function ($\psi$) with a regularization parameter ($\epsilon$) to smooth point forces 
 such that $\int_{R^3} \psi_{\epsilon} (\bm{x})\, \mathrm{d}V_x = 1$.
 
@@ -2554,8 +2554,6 @@ the sum of near-field and far-field solutions could be made independent of any d
 the dipoles as follow;
 
   
-
-
 
 \begin{equation}
 -\frac{a^2 \bm{f}_\perp (s)}{4\mu}
@@ -2625,6 +2623,9 @@ is converted to following equation;
 \label{numerical}
 \end{equation}
 
+
+
+
 Where $m,n = 1,2, \dots ,N$ and $\hat{t}_n=(\cos(\theta), -\sin(\theta)\sin(\phi_n), \sin(\theta)\cos(\phi_n))$.
 The position vector between spatial location is $\bm{r}_{nm} = \bm{r}(\phi_n)- \bm{r}(\phi_m)$.
 
@@ -2638,13 +2639,94 @@ are centered at $\bm{r}$. $D_n$ can be expressed in the form of following integr
 
 
 \begin{equation}
+D_n = 1/2 \int_{|\bm{r}-\bm{r_n}| \in (\delta, \delta \rq{})} ds(\phi) \big(\frac{I}{|\bm{r}-\bm{r}_n|} + \frac{(\bm{r} -\bm{r}_m)(\bm{r} -\bm{r}_m)}{|\bm{r}-\bm{r}_n|^3} \big). \chi_z(\phi-\phi_n)
+\label{functionD}
+\end{equation}
 
 
-D_n = 1/2
+Where the rotation matrix $\chi_z$ is defined as;
 
 
 
-\label{FunctionTensor}
+\begin{equation}
+  \chi_z = \begin{bmatrix}
+       \cos(\phi)  &  -\sin(\phi) 		 & 0           \\[0.4em]
+       \sin(\phi)		 & \cos(\phi)           & 0\\[0.4em]
+       0           	& 0 		&  1
+     \end{bmatrix}
+\label{rotationOperator}
+\end{equation}
+
+We define new vectors for force and velocity to simplify the calculation;
+
+
+
+\begin{equation}
+{\bm{u}_n}\rq{}= \chi_z(-\phi_n). \bm{u}
+\label{NewVelo}
+\end{equation}
+
+\begin{equation}
+{\bm{f}_n}\rq{}= \chi_z(-\phi_n). \bm{f}
+\label{NewForce}
+\end{equation}
+
+Therefore the velocity ${\bm{u}_n}\rq{}$ is invariant to the filament and the rotational and translational velocity 
+of the helix can be written as;
+
+\begin{equation}
+{\bm{u}_n}\rq{}= (0, \bm{\Omega} \bm{R} , \bm{U})^T
+\label{NewVelo1}
+\end{equation}
+
+And the force;
+
+
+\begin{equation}
+\sum_{i=1} {\bm{f}}\rq{} \bm{R} \bm{\Delta}\phi \csc \theta = {\big(0, \bm{T}/\bm{R}, \bm{F}_x \big)}^T
+\label{Newforce1}
+\end{equation}
+
+Therefore \ac*{SBT} can be expressed as;
+
+\begin{multline}
+\qquad {\bm{u}_n}\rq{}= \frac{(I- \hat{t}_n\hat{t}_n + D_n). \bm{f}_n}{4\pi \mu}\\
++ \frac{\bm{R}\bm{\Delta}\phi \csc (\theta)}{8 \pi \mu} \sum_{m \neq n}  \frac{ \chi_z(\phi_m - \phi_n)+ \chi_z(-\phi_n).\hat{r}_{nm}\hat{r}_{nm}. \chi_z(-\phi_n)}{r_{nm}}. {\bm{f}_m}\rq{}\\
++ \Lambda (\Delta \phi) \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad \qquad
+\label{NewVelo2}
+\end{multline} 
+
+
+
+Where both ${\hat{t}}\rq{}$ and ${D_n}\rq{}$ are invariant to the helical filament,
+
+
+\begin{equation}
+{\hat{t}}\rq{}= (0, \sin \theta, \cos \theta)
+\label{invariant}
+\end{equation}
+
+
+and 
+
+\begin{comment}
+\begin{equation}
+\int_{k \delta \cos \theta}^{k {\delta}\rq{} \cos \theta} \mathrm  d\phi \frac{1}{\phi} (I +\begin{pmatrix}
+  0 & 0 & 0 \\
+  0 & \sin^2\theta  & \sin\theta\cos\theta \\
+  0 & \sin\theta\cos\theta & \cos^2\theta
+ \end{pmatrix})
+
+\label{FinalD}
+\end{equation}
+
+\end{comment}
+
+
+
+\begin{equation}
+{\hat{t}}\rq{}= (0, \sin \theta, \cos \theta)
+\label{invariant}
 \end{equation}
 
 
@@ -2652,7 +2734,54 @@ D_n = 1/2
 
 
 
+So we obtained the mapping between the force and velocity;
 
+
+
+\begin{equation}
+\begin{pmatrix}
+  {\bm{u}_1}\rq{}  \\
+  {\bm{u}_2}\rq{} \\
+  \vdots  \\
+   {\bm{u}_N}\rq{} 
+ \end{pmatrix} = \Delta . \begin{pmatrix}
+  {\bm{f}_1}\rq{}  \\
+  {\bm{f}_2}\rq{} \\
+  \vdots  \\
+   {\bm{f}_N}\rq{} 
+ \end{pmatrix}
+\label{mapping}
+\end{equation}
+
+
+For the velocity $\bm{u}\rq{} = {\bm{u}_n}\rq{} = (0, \bm{\Omega} \bm{R}, \bm{U})^T$ we have;
+
+
+
+\begin{equation}
+\begin{pmatrix}
+  {\bm{f}_1}\rq{}  \\
+  {\bm{f}_2}\rq{} \\
+  \vdots  \\
+   {\bm{f}_N}\rq{} 
+ \end{pmatrix} = {\Delta}^{-1}. \begin{pmatrix}
+  {\bm{u}_1}\rq{}  \\
+  {\bm{u}_2}\rq{} \\
+  \vdots  \\
+   {\bm{u}_N}\rq{} 
+ \end{pmatrix}
+\label{mappingInverse}
+\end{equation}
+
+
+Finally, the fluidic force and torque are;
+
+
+
+\begin{equation}
+ (0, \frac{T}{R}, F_x)^T = \sum_{i=1}^{N} \bm{f}\rq{} \bm{R} \bm{\Delta}\phi \csc \theta
+\label{torqForce}
+\end{equation}
 
 
 

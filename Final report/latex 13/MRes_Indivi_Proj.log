@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.19)  7 SEP 2014 01:19
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.19)  7 SEP 2014 04:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -927,6 +927,9 @@ LaTeX Warning: Label `total_force_torque' multiply defined.
 LaTeX Warning: Label `Oseen' multiply defined.
 
 
+LaTeX Warning: Label `invariant' multiply defined.
+
+
 LaTeX Warning: Label `total_force_torque' multiply defined.
 
 )
@@ -1461,4 +1464,151 @@ Package pdftex.def Info: RFT-6dof.png used on input line 1964.
 (pdftex.def)             Requested size: 455.2441pt x 124.24783pt.
  [22 <./RFT-6dof.png>] [23] [24] [25] [26]
 
-LaTeX Warning: Ref
+LaTeX Warning: Reference `magnet_torque_fina' on page 27 undefined on input lin
+e 2338.
+
+[27]
+
+LaTeX Warning: Reference `Microrobot actutation' on page 28 undefined on input 
+line 2425.
+
+[28]
+
+LaTeX Warning: Reference `$stokes_reg$' on page 29 undefined on input line 2509
+.
+
+
+Overfull \hbox (18.67142pt too wide) detected at line 2523
+[]  []
+ []
+
+[29] <Stoks.png, id=195, 609.27625pt x 421.575pt>
+File: Stoks.png Graphic file (type png)
+ <use Stoks.png>
+Package pdftex.def Info: Stoks.png used on input line 2574.
+(pdftex.def)             Requested size: 455.2441pt x 315.00328pt.
+ [30 <./Stoks.png>] [31] [32] [33] <horiz_verti_velocity.png, id=211, 365.365pt
+ x 208.78pt>
+File: horiz_verti_velocity.png Graphic file (type png)
+
+<use horiz_verti_velocity.png>
+Package pdftex.def Info: horiz_verti_velocity.png used on input line 2969.
+(pdftex.def)             Requested size: 455.2441pt x 260.1524pt.
+ [34] [35 <./horiz_verti_velocity.png>] [36]
+[37] [38]
+Chapter 3.
+[39
+
+]
+Chapter 4.
+[40
+
+]
+Chapter 5.
+
+Overfull \hbox (31.30289pt too wide) in paragraph at lines 3255--3255
+ |[]\T1/cmr/bx/n/24.88 Conclusion and fu-ture work| 
+ []
+
+(./MRes_Indivi_Proj.bbl [41
+
+]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 12.
+
+(/usr/local/texlive/2011/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+Underfull \hbox (badness 3386) in paragraph at lines 9--13
+[]\T1/cmr/m/n/12 Harvey Mudd Col-lege.  Eigen-vec-tors and eigen-val-ues @ON-LI
+NE, Novem-
+ []
+
+
+Underfull \hbox (badness 3579) in paragraph at lines 15--21
+[]\T1/cmr/m/n/12 George Dal-las.  Prin-ci-pal com-po-nent anal-y-sis 4 dum-mies
+: Eigen-vec-tors,
+ []
+
+
+Underfull \hbox (badness 7740) in paragraph at lines 15--21
+\T1/cmr/m/n/12 eigen-val-ues and di-men-sion re-duc-tion @ON-LINE, Oc-to-ber 20
+13.  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--21
+\T1/cmtt/m/n/12 http://georgemdallas.wordpress.com/2013/10/30/principal-compone
+nt
+ []
+
+[42
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 86--89
+[]\T1/cmr/m/n/12 nanoscribe.  nano-scribe @ON-LINE, Febru-ary 2014.  URL
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 178--181
+[]\T1/cmr/m/n/12 Eric Weis-stein.  Eigenspace @ON-LINE, Au-gust 2014.  URL
+ []
+
+[43]) [44] (./MRes_Indivi_Proj.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 19690 strings out of 493633
+ 348865 string characters out of 3143377
+ 468200 words of memory out of 3000000
+ 22447 multiletter control sequences out of 15000+200000
+ 28718 words of font info for 77 fonts, out of 3000000 for 9000
+ 831 hyphenation exceptions out of 8191
+ 56i,17n,69p,934b,848s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/local/texlive/2011/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb>
+</usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><
+/usr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></u
+sr/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr
+/local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
+ocal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/
+texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/te
+xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/local/te
+xlive/2011/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib6.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/
+local/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
+cal/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loca
+l/texlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texl
+ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
+/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/
+2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
+11/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2011
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2011/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2011/tex
+mf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2011/texmf
+-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2011/texmf-d
+ist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2011/texmf-dis
+t/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2011/texmf-dist/
+fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2011/texmf-dist/fo
+nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2011/texmf-dist/font
+s/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2011/texmf-dist/fonts/
+type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
+pe1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type
+1/public/cm-super/sfti1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
+public/cm-super/sfti1728.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
+blic/cm-super/sftt1200.pfb>
+Output written on MRes_Indivi_Proj.pdf (52 pages, 1720856 bytes).
+PDF statistics:
+ 362 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
+
