@@ -1,0 +1,36 @@
+I_current 0.2[mA] Current in the coils
+viscosity 10^(-6)[(N/m^2)][s] fluid viscosity
+r_m 0.002[mm] radius of the magnetic shpear head
+n 3 number of turns in the helix
+L 0.015[mm] length of the helix
+a 0.001[mm] filament radius
+r_h 0.002[mm] helix redius
+p_len 0.004[mm] pitch length of the helix
+theta 30[deg] pitch angle
+q (0.09*p_len)
+dragCo_parallel (2*pi*viscosity)/(log10(2*q/a)-0.5) drag coefficient parallel to the segment
+dragCo_perp (4*pi*viscosity)/(log10(2*q/a)-0.5) drag coefficient perpendicular the selected segment
+DC_vm 6*pi*viscosity*r_m
+DC_wm 8*pi*viscosity*(r_m)^3
+a_h11 (2*pi*n*(r_h)*(dragCo_parallel*(cos(theta))^2+dragCo_perp*(sin(theta))^2))/sin(theta)
+a_h22 (pi*n*r_h*(dragCo_perp+dragCo_perp*(cos(theta))^2+dragCo_parallel*(sin(theta))^2))/sin(theta)
+b_h11 2*pi*n*((r_h)^2)*(dragCo_parallel-dragCo_perp)*cos(theta)
+b_h13 (-2)*pi*n*((r_h)^2)*(dragCo_parallel-dragCo_perp)*cos(theta)/tan(theta)
+b_h22 (-3)*pi*n*((r_h)^2)*(dragCo_parallel-dragCo_perp)*cos(theta)/2
+b_h33 (-pi)*n*((r_h)^2)*(dragCo_parallel-dragCo_perp)*cos(theta)/2
+c_h11 2*pi*n*((r_h)^3)*(dragCo_perp*((cos(theta))^2)+dragCo_parallel*(sin(theta))^2)/sin(theta)
+c_h13 (-2)*pi*n*((r_h)^3)*(dragCo_perp*((cos(theta))^2)+dragCo_parallel*((sin(theta))^2))/sin(theta)*tan(theta)
+c_h22 (2*pi*n*((r_h)^3)*(dragCo_parallel*((cos(theta))^2)+dragCo_perp*((sin(theta))^2)-(dragCo_perp/2))/sin(theta))+(pi*n*((r_h)^3)*(dragCo_parallel*((cos(theta))^2)-dragCo_perp*((sin(theta))^2)-dragCo_perp)/2*((tan(theta))^2)*sin(theta))+(((pi*n*(r_h))^3)*(dragCo_parallel*((cos(theta))^2)-dragCo_perp*((sin(theta))^2)-dragCo_perp)/3*((tan(theta))^2)*sin(theta))
+c_h33 ((pi*n*((r_h)^3)*dragCo_perp)/sin(theta))-(pi*n*((r_h)^3)*(dragCo_perp*((cos(theta))^2)+dragCo_parallel*((sin(theta))^2)-dragCo_perp)/2*((tan(theta))^2)*sin(theta))+(((pi*n*(r_h))^3)*(dragCo_perp*((cos(theta))^2)+dragCo_parallel*((sin(theta))^2)+dragCo_perp)/3*((tan(theta))^2)*sin(theta))
+d_11 1/(a_h11)
+d_22 1/(a_h22)
+d_33 1/(a_h22)
+e_11 (-b_h11)/(a_h11)
+m 8.9[mg] microrobot mass
+f_nonFlu m*g_const non-fluidic force (weight)
+v_mic 0.01[m/s] microrobot translational velocity
+v_ver (v_mic)*9.8 vertical velocity
+v_hor (v_mic)-v_ver horizantal velocity
+alpha atan(v_hor/v_ver) angle to compensate gravity
+gama atan(((d_22)*(f_nonFlu)*sin(alpha))/((v_mic+(d_22)*(f_nonFlu)*sin(alpha))))
+fluid_den 1400[kg/m^3] density of the fluid

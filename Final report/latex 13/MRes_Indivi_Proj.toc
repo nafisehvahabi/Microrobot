@@ -32,12 +32,14 @@
 \contentsline {subsubsection}{\numberline {2.3.1.4}Slender body theory}{30}
 \contentsline {subsection}{\numberline {2.3.2}Microrobot actutation}{34}
 \contentsline {chapter}{\numberline {3}Results}{40}
-\contentsline {section}{\numberline {3.1}Design and propulsion methods}{40}
-\contentsline {section}{\numberline {3.2}Design and fabrication}{40}
-\contentsline {paragraph}{Circle base filament}{40}
-\contentsline {paragraph}{Rectangle base filament}{40}
-\contentsline {paragraph}{Pitch variable}{42}
-\contentsline {chapter}{\numberline {4}Discussion}{45}
-\contentsline {chapter}{\numberline {5}Conclusion and future work}{46}
-\contentsline {chapter}{References}{47}
+\contentsline {section}{\numberline {3.1}Simulation}{40}
+\contentsline {paragraph}{Simulation software}{40}
+\contentsline {paragraph}{Model components}{40}
+\contentsline {section}{\numberline {3.2}Fabrication}{42}
+\contentsline {paragraph}{Circle base filament}{42}
+\contentsline {paragraph}{Rectangle base filament}{42}
+\contentsline {paragraph}{Pitch variable helix}{42}
+\contentsline {chapter}{\numberline {4}Discussion}{46}
+\contentsline {chapter}{\numberline {5}Conclusion and future work}{47}
+\contentsline {chapter}{References}{48}
 \contentsfinish 

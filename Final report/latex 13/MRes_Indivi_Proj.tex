@@ -3227,11 +3227,111 @@ The step out frequency increases with the strength of the magnetic field. the ma
 %%%%%%%%%
 \chapter{Results}\label{result}
 
+\section{Simulation}
+The aim of implementing the simulation framework for microhelix is to analyze the effect of 
+the key parameters on microhelix\rq{}s efficiency. Also, finding the force, torque and drag act on 
+the body of the helix. As microhelix is in the fluid environments, investigating the effect of swimming
+ mechanism is another aspect of this implementation. Evaluating the outcome of using different fluid 
+environment is part of the simulation. 
+
+\paragraph{Simulation software}
+Initially Matlab was selected as simulator software. However, after exploring different aspect
+ of simulation, the limitation of the software made it impossible to make a complete simulation
+ framework. One of the limitations was failing to bind all the physics are involved in simulation 
+modeling. Furthermore, Matlab was incapable to consider all aspect of fluid environment. Therefore, 
+another simulation software called COMSOL was used to implement the model. Although, COMSOL offers 
+many build in environment that helps to make our simulation model, implementing an entire framework was 
+required many considerations. 
+
+\paragraph{Model components}
+There were two main aspects for the simulation; microhelix propulsion mechanism and its 
+actuation method. In order to simplify the model, it was broken down into three 
+sub-models; 
+
+\begin{itemize}
+  \item The three inset Helmholtz coils
+  \item The fluid box
+  \item The microhelix 
+\end{itemize}
+
+ The entire model made by combining three sub-models as shown
+ in the figure \ref{Simulation framework}.
 
 
-\section{Design and propulsion methods}
 
-\section{Design and fabrication}
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.50\textwidth}
+                \includegraphics[width=\textwidth]{simulation}
+                \caption{Simulation framework}
+                \label{simulation}
+        \end{subfigure}
+
+       \begin{subfigure}[b]{0.50\textwidth}
+                \includegraphics[width=\textwidth]{simulationDomain}
+                \caption{Simulation domain}
+                \label{simulationDomain}
+        \end{subfigure}
+
+\begin{subfigure}[b]{0.50\textwidth}
+                \includegraphics[width=\textwidth]{helix-in-box}
+                \caption{Helix in the box}
+                \label{helix-in-box}
+        \end{subfigure}
+      
+        \caption{Simulation framework. (a) The framework consists of the three inset coils,
+a fluid bux with a microhelix inside (c). The sphere domain (b) defins the solution domain
+of the system.}\label{Simulation framework}
+
+   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+       
+         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+\end{figure}
+
+The effect of microhelix design parameters such as helical angle on rotational velocity of microhelix examind
+under the simulation. The considered parameters are;
+  
+\begin{itemize}
+  \item Helix pitch angle
+  \item Helix pitch
+  \item Helix radius
+  \item Helix length
+\end{itemize}
+
+As it has shown in the figure \ref{} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Fabrication}
 
 The design of the microrobot in this study is focused on the microswimmer with helical shape tail 
 and a possible propeller as a head that is attached to the helix body. Therefore, after studying the 
@@ -3247,11 +3347,6 @@ changing the filament radius, helix pitch, helix length and helix radius. Some o
 as it shows in the figure \ref{Circle base helix}. The figure \ref{Damaged structures} presented a faulty result which is as result of applying low power or 
 high power laser beam in the fabrication process. Also another type of faulty result can be seen in the figure
 which shows very small pitch length could not fabricated successfully.
-
-
-
-
-
 
 
 \begin{figure}
@@ -3379,7 +3474,7 @@ helix.}\label{Rectangle based structures}
 
 
 
-\paragraph{Pitch variable}
+\paragraph{Pitch variable helix}
 
 In order to be able coating the structures with magnetic material, structures are preffered to printed vertically. 
 The new design is made which in helix has a variable pitch. The problem with previous design was the starting helix
@@ -3392,18 +3487,15 @@ propeller. The result of the new design is shown in figure \ref{Pitch variable}.
 
 
 
-
-
-
 \begin{figure}
         \centering
 
-  \begin{subfigure}[b]{0.62\textwidth}
+  \begin{subfigure}[b]{0.566\textwidth}
                 \includegraphics[width=\textwidth]{constant-pitch}
                 \caption{Constant pitch helix}
                 \label{constant-pitch}
         \end{subfigure}~
-  \begin{subfigure}[b]{0.38\textwidth}
+  \begin{subfigure}[b]{0.42\textwidth}
                 \includegraphics[width=\textwidth]{variable-pitch1}
                 \caption{Variable pitch helix. }
                 \label{variable-pitch1}
@@ -3420,27 +3512,6 @@ variable.}\label{Pitch variable}
           %(or a blank line to force the subfigure onto a new line)
 
 \end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
