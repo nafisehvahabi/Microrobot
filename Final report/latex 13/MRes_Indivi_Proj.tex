@@ -1357,26 +1357,21 @@ Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1e
 %%%%%%%%%%%%%%%%%%% Design %%%%%%%%%%%%%%%
 \section{Microrobot design} \label{microDesign}
 
-Novel part of design using microrobot with the variable pitch to enable it vertically fabricated.
+For the purpose of this study, the design of microrobots is narrow down to a helical 
+tail shape with possible propeller head. Therefore, the key characters of the helix were 
+identified and all the design was based on these characters. 
+The helical shape microrobot is generally copied the design of the helical 
+rigid tail flagellum which is one-dimensional structure. There are other microstructures 
+such as cilia and planar flexible tail flagellum that are copied to build a swimming microrobot. The 
+helical rigid tail flagellum is a preferred design for the micro swimmer as its simplicity makes
+ it feasible to copy in micro scale. In addition, its swimming mechanism is more efficient than 
+other type of microswimmers \citep{peyer2013bio}.The reason is, a filament needs to 
 
-%The lenght of the microrobots used by \citeauthor{qiu2014noncytotoxic}~\citep{qiu2014noncytotoxic} was
-%15.7 \mu m$ and its diameter was $5.3 \mu m$. 
 
 
+
+\begin{comment}
 %--------------- Table of all design of the microrobots------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 \begin{table}[!ht]
@@ -1407,10 +1402,8 @@ Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1e
 \end{table}
 
 
-
-
 %-------------------------------------------------------------------------------------------
-
+\end{comment}
 
 
 %%%%%%%%%%%%%%%%%% Fabrication %%%%%%%%%%%%%
@@ -3261,27 +3254,19 @@ sub-models;
 
 \begin{figure}
         \centering
-        \begin{subfigure}[b]{0.50\textwidth}
+        \begin{subfigure}[b]{0.43\textwidth}
                 \includegraphics[width=\textwidth]{simulation}
                 \caption{Simulation framework}
                 \label{simulation}
-        \end{subfigure}
-
-       \begin{subfigure}[b]{0.50\textwidth}
-                \includegraphics[width=\textwidth]{simulationDomain}
-                \caption{Simulation domain}
-                \label{simulationDomain}
-        \end{subfigure}
-
-\begin{subfigure}[b]{0.50\textwidth}
+        \end{subfigure}~~ 
+\begin{subfigure}[b]{0.565\textwidth}
                 \includegraphics[width=\textwidth]{helix-in-box}
                 \caption{Helix in the box}
                 \label{helix-in-box}
         \end{subfigure}
       
         \caption{Simulation framework. (a) The framework consists of the three inset coils,
-a fluid bux with a microhelix inside (c). The sphere domain (b) defins the solution domain
-of the system.}\label{Simulation framework}
+a fluid bux with a microhelix inside (b).}\label{Simulation framework}
 
    %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
@@ -3298,13 +3283,76 @@ under the simulation. The considered parameters are;
   \item Helix pitch angle
   \item Helix pitch
   \item Helix radius
-  \item Helix length
+  \item Helix filament radius
 \end{itemize}
 
-As it has shown in the figure \ref{} 
+As it has shown in the figure \ref{Simulation framework}. The system configration is based on the experiment setup
+run by \citeauthor{mahoney2011velocity} however they run an experiment on a mili-rorobot. The table \ref{Simultion model configration} represents the details 
+of the Helmholtz coils which generates magnetic field by usign AC current. The size of 
+fluid box is $25 (mm) \times 25(mm) \times 25 (mm)$ and the viscosity of fluid inside the box is $2000 (\frac{N}{m^2} s)$.
 
 
 
+%--------------- Table of configration model of the microrobots------------------------
+
+
+\begin{table}[!ht]
+
+\centering% used for centering table
+{\rowcolors{2}{gray!50}{gray!50!blue!13}
+\begin{tabular}{c c c }% centered columns (8 columns)
+\toprule[2.0pt]
+
+
+
+\head{Coil set} & \head{Coil radius (mm)} & \head{Number of wraps} \\
+
+%heading
+\midrule
+%\hline% inserts single horizontal line
+Inner 	& 	    	44	  & 	63		\\% inserting body of the table
+Middle	& 	69		  & 	99	\\
+Outer & 	98 		  & 	143	\\[1ex]% [1ex] adds vertical space
+
+
+
+\bottomrule[2.0pt]
+\end{tabular}
+}
+\label{tSimultion model configration}% is used to refer this table in the text
+\caption{Simultion model configration. The detail of the Helmholts setup
+\citep{mahoney2011velocity}.}\label{Simultion model configration}% title of Table
+\end{table}
+
+
+%-------------------------------------------------------------------------------------------
+
+
+
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.43\textwidth}
+                \includegraphics[width=\textwidth]{simulationDomain}
+                \caption{Simulation framework}
+                \label{simulation}
+        \end{subfigure}~~ 
+\begin{subfigure}[b]{0.565\textwidth}
+                \includegraphics[width=\textwidth]{helix-in-box}
+                \caption{Helix in the box}
+                \label{helix-in-box}
+        \end{subfigure}
+      
+        \caption{Simulation framework. (a) The framework consists of the three inset coils,
+a fluid bux with a microhelix inside (b).}\label{Simulation framework}
+
+   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+       
+         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+\end{figure}
 
 
 

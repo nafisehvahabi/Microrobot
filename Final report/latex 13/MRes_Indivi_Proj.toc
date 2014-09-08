@@ -18,9 +18,9 @@
 \contentsline {chapter}{\numberline {2}Methods}{14}
 \contentsline {section}{\numberline {2.1}Microrobot design}{14}
 \contentsline {section}{\numberline {2.2}Microrobot fabrication}{14}
-\contentsline {subsection}{\numberline {2.2.1}Nanoscribe}{15}
+\contentsline {subsection}{\numberline {2.2.1}Nanoscribe}{16}
 \contentsline {paragraph}{}{16}
-\contentsline {paragraph}{}{16}
+\contentsline {paragraph}{}{17}
 \contentsline {subsection}{\numberline {2.2.2}Scanning Electron Microscope (\ac *{SEM})}{17}
 \contentsline {paragraph}{sputter coating}{18}
 \contentsline {section}{\numberline {2.3}Simulation}{18}
@@ -29,14 +29,14 @@
 \contentsline {paragraph}{}{21}
 \contentsline {subsubsection}{\numberline {2.3.1.2}Resistive force theory for six degree of freedom}{23}
 \contentsline {subsubsection}{\numberline {2.3.1.3}Regularized Stokeslet method}{29}
-\contentsline {subsubsection}{\numberline {2.3.1.4}Slender body theory}{30}
+\contentsline {subsubsection}{\numberline {2.3.1.4}Slender body theory}{31}
 \contentsline {subsection}{\numberline {2.3.2}Microrobot actutation}{34}
 \contentsline {chapter}{\numberline {3}Results}{40}
 \contentsline {section}{\numberline {3.1}Simulation}{40}
 \contentsline {paragraph}{Simulation software}{40}
 \contentsline {paragraph}{Model components}{40}
-\contentsline {section}{\numberline {3.2}Fabrication}{42}
-\contentsline {paragraph}{Circle base filament}{42}
+\contentsline {section}{\numberline {3.2}Fabrication}{41}
+\contentsline {paragraph}{Circle base filament}{41}
 \contentsline {paragraph}{Rectangle base filament}{42}
 \contentsline {paragraph}{Pitch variable helix}{42}
 \contentsline {chapter}{\numberline {4}Discussion}{46}
