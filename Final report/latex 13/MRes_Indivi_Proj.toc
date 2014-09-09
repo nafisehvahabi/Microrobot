@@ -35,11 +35,15 @@
 \contentsline {section}{\numberline {3.1}Simulation}{40}
 \contentsline {paragraph}{Simulation software}{40}
 \contentsline {paragraph}{Model components}{40}
-\contentsline {section}{\numberline {3.2}Fabrication}{41}
-\contentsline {paragraph}{Circle base filament}{41}
-\contentsline {paragraph}{Rectangle base filament}{42}
-\contentsline {paragraph}{Pitch variable helix}{42}
-\contentsline {chapter}{\numberline {4}Discussion}{46}
-\contentsline {chapter}{\numberline {5}Conclusion and future work}{47}
-\contentsline {chapter}{References}{48}
+\contentsline {section}{\numberline {3.2}Fabrication}{42}
+\contentsline {paragraph}{Circle base filament}{42}
+\contentsline {paragraph}{Rectangle base filament}{47}
+\contentsline {paragraph}{Pitch variable helix}{47}
+\contentsline {chapter}{\numberline {4}Discussion}{51}
+\contentsline {paragraph}{}{51}
+\contentsline {paragraph}{}{51}
+\contentsline {paragraph}{}{51}
+\contentsline {chapter}{\numberline {5}Conclusion and future work}{52}
+\contentsline {paragraph}{Future work}{52}
+\contentsline {chapter}{References}{53}
 \contentsfinish 

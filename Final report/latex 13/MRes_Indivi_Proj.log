@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.19)  9 SEP 2014 00:09
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (TeX Live 2011) (format=pdflatex 2012.3.19)  9 SEP 2014 14:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -937,6 +937,18 @@ LaTeX Warning: Label `total_force_torque' multiply defined.
 
 LaTeX Warning: Label `simulation' multiply defined.
 
+
+LaTeX Warning: Label `simulation' multiply defined.
+
+
+LaTeX Warning: Label `sub@simulation' multiply defined.
+
+
+LaTeX Warning: Label `helix-in-box' multiply defined.
+
+
+LaTeX Warning: Label `sub@helix-in-box' multiply defined.
+
 )
 \openout1 = `MRes_Indivi_Proj.aux'.
 
@@ -1492,155 +1504,176 @@ Package pdftex.def Info: horiz_verti_velocity.png used on input line 2989.
  [36 <./horiz_verti_velocity.png>] [37] [38]
 [39]
 Chapter 3.
-
-Overfull \hbox (1.9016pt too wide) in paragraph at lines 3240--3243
-[] []\T1/cmr/bx/n/12 Model com-po-nents[] \T1/cmr/m/n/12 There were two main as
--pects for the sim-u-la-tion; mi-cro-he-lix propul-
- []
-
-<simulation.png, id=231, 344.28625pt x 314.17375pt>
-File: simulation.png Graphic file (type png)
- <use simulation.png>
-Package pdftex.def Info: simulation.png used on input line 3258.
-(pdftex.def)             Requested size: 195.75162pt x 178.63026pt.
-
-<helix-in-box.png, id=232, 325.96782pt x 226.59656pt>
-File: helix-in-box.png Graphic file (type png)
- <use helix-in-box.png>
-Package pdftex.def Info: helix-in-box.png used on input line 3263.
-(pdftex.def)             Requested size: 257.21402pt x 178.81567pt.
-
-Overfull \hbox (5.55301pt too wide) in paragraph at lines 3257--3267
- [][]   [] 
- []
-
 [40
 
-]
+] <simulation.png, id=234, 344.28625pt x 314.17375pt>
 File: simulation.png Graphic file (type png)
  <use simulation.png>
-Package pdftex.def Info: simulation.png used on input line 3336.
+Package pdftex.def Info: simulation.png used on input line 3341.
 (pdftex.def)             Requested size: 195.75162pt x 178.63026pt.
+
+<helix-in-box.png, id=235, 325.96782pt x 226.59656pt>
 File: helix-in-box.png Graphic file (type png)
  <use helix-in-box.png>
-Package pdftex.def Info: helix-in-box.png used on input line 3341.
+Package pdftex.def Info: helix-in-box.png used on input line 3346.
 (pdftex.def)             Requested size: 257.21402pt x 178.81567pt.
 
-Overfull \hbox (5.55301pt too wide) in paragraph at lines 3335--3345
+Overfull \hbox (5.55301pt too wide) in paragraph at lines 3340--3350
  [][]   [] 
  []
 
+<simulationDomain.png, id=237, 371.13657pt x 347.79938pt>
+File: simulationDomain.png Graphic file (type png)
+
+<use simulationDomain.png>
+Package pdftex.def Info: simulationDomain.png used on input line 3375.
+(pdftex.def)             Requested size: 218.51521pt x 204.7806pt.
+
+<arrow_magnetic.png, id=238, 366.36874pt x 365.365pt>
+File: arrow_magnetic.png Graphic file (type png)
+ <use arrow_magnetic.png>
+Package pdftex.def Info: arrow_magnetic.png used on input line 3380.
+(pdftex.def)             Requested size: 218.51521pt x 217.91614pt.
+
+<RV_pitchAngle.jpg, id=239, 562.1pt x 420.57124pt>
+File: RV_pitchAngle.jpg Graphic file (type jpg)
+ <use RV_pitchAngle.jpg>
+Package pdftex.def Info: RV_pitchAngle.jpg used on input line 3405.
+(pdftex.def)             Requested size: 455.2441pt x 340.62234pt.
+
 [41 <./simulation.png> <./helix-in-box.png>]
-<simpleHelixSolid.png, id=243, 291.33844pt x 149.05687pt>
+<RV_helixPitch.jpg, id=247, 562.1pt x 420.57124pt>
+File: RV_helixPitch.jpg Graphic file (type jpg)
+ <use RV_helixPitch.jpg>
+Package pdftex.def Info: RV_helixPitch.jpg used on input line 3420.
+(pdftex.def)             Requested size: 455.2441pt x 340.62234pt.
+
+<RV_helixRadius1.jpg, id=248, 562.1pt x 420.57124pt>
+File: RV_helixRadius1.jpg Graphic file (type jpg)
+ <use RV_helixRadius1.jpg>
+Package pdftex.def Info: RV_helixRadius1.jpg used on input line 3442.
+(pdftex.def)             Requested size: 455.2441pt x 340.62234pt.
+
+<RV_filamentRadius.jpg, id=249, 562.1pt x 420.57124pt>
+File: RV_filamentRadius.jpg Graphic file (type jpg)
+
+<use RV_filamentRadius.jpg>
+Package pdftex.def Info: RV_filamentRadius.jpg used on input line 3455.
+(pdftex.def)             Requested size: 455.2441pt x 340.62234pt.
+ [42 <./simulationDomain.png> <./arrow_magnetic.png>] [43 <./RV_pitchAngle.jpg>
+] [44 <./RV_helixPitch.jpg>] [45 <./RV_helixRadius1.jpg>] [46 <./RV_filamentRad
+ius.jpg>]
+<simpleHelixSolid.png, id=267, 291.33844pt x 149.05687pt>
 File: simpleHelixSolid.png Graphic file (type png)
 
 <use simpleHelixSolid.png>
-Package pdftex.def Info: simpleHelixSolid.png used on input line 3403.
+Package pdftex.def Info: simpleHelixSolid.png used on input line 3488.
 (pdftex.def)             Requested size: 227.62204pt x 116.45949pt.
- <CircleBase.png, id=244, 513.92pt x 275.0275pt>
+ <CircleBase.png, id=268, 513.92pt x 275.0275pt>
 File: CircleBase.png Graphic file (type png)
 
 <use CircleBase.png>
-Package pdftex.def Info: CircleBase.png used on input line 3408.
+Package pdftex.def Info: CircleBase.png used on input line 3493.
 (pdftex.def)             Requested size: 218.51521pt x 116.94179pt.
- <highLaser.png, id=245, 548.0475pt x 517.935pt>
+ <highLaser.png, id=269, 548.0475pt x 517.935pt>
 File: highLaser.png Graphic file (type png)
 
 <use highLaser.png>
-Package pdftex.def Info: highLaser.png used on input line 3429.
+Package pdftex.def Info: highLaser.png used on input line 3514.
 (pdftex.def)             Requested size: 182.09485pt x 172.08871pt.
- <smallPitchCircle.png, id=246, 505.89pt x 320.19624pt>
+ <smallPitchCircle.png, id=270, 505.89pt x 320.19624pt>
 File: smallPitchCircle.png Graphic file (type png)
 
 <use smallPitchCircle.png>
-Package pdftex.def Info: smallPitchCircle.png used on input line 3434.
+Package pdftex.def Info: smallPitchCircle.png used on input line 3519.
 (pdftex.def)             Requested size: 270.87079pt x 171.44742pt.
 
-Overfull \hbox (2.94252pt too wide) in paragraph at lines 3428--3438
+Overfull \hbox (2.94252pt too wide) in paragraph at lines 3513--3523
  [][]  [] 
  []
 
-<sphereFabricated.png, id=247, 600.2425pt x 355.3275pt>
+<sphereFabricated.png, id=271, 600.2425pt x 355.3275pt>
 File: sphereFabricated.png Graphic file (type png)
 
 <use sphereFabricated.png>
-Package pdftex.def Info: sphereFabricated.png used on input line 3440.
+Package pdftex.def Info: sphereFabricated.png used on input line 3525.
 (pdftex.def)             Requested size: 204.85844pt x 121.2706pt.
- <largePitch.png, id=248, 680.5425pt x 343.2825pt>
+ <largePitch.png, id=272, 680.5425pt x 343.2825pt>
 File: largePitch.png Graphic file (type png)
 
 <use largePitch.png>
-Package pdftex.def Info: largePitch.png used on input line 3445.
+Package pdftex.def Info: largePitch.png used on input line 3530.
 (pdftex.def)             Requested size: 241.27881pt x 121.70638pt.
- <Cursor.png, id=249, 803.0pt x 550.055pt>
+ <Cursor.png, id=273, 803.0pt x 550.055pt>
 File: Cursor.png Graphic file (type png)
 
 <use Cursor.png>
-Package pdftex.def Info: Cursor.png used on input line 3476.
+Package pdftex.def Info: Cursor.png used on input line 3561.
 (pdftex.def)             Requested size: 223.0721pt x 152.80573pt.
 
-<vertical-rentanglebased.png, id=250, 499.8675pt x 332.24126pt>
+<vertical-rentanglebased.png, id=274, 499.8675pt x 332.24126pt>
 File: vertical-rentanglebased.png Graphic file (type png)
 
 <use vertical-rentanglebased.png>
-Package pdftex.def Info: vertical-rentanglebased.png used on input line 3481.
+Package pdftex.def Info: vertical-rentanglebased.png used on input line 3566.
 (pdftex.def)             Requested size: 229.90048pt x 152.8024pt.
 
-Overfull \hbox (2.94946pt too wide) in paragraph at lines 3475--3485
+Overfull \hbox (2.94946pt too wide) in paragraph at lines 3560--3570
  [][]  [] 
  []
 
-<ribbon.png, id=251, 971.63pt x 328.22626pt>
+<ribbon.png, id=275, 971.63pt x 328.22626pt>
 File: ribbon.png Graphic file (type png)
  <use ribbon.png>
-Package pdftex.def Info: ribbon.png used on input line 3487.
+Package pdftex.def Info: ribbon.png used on input line 3572.
 (pdftex.def)             Requested size: 268.59235pt x 90.73077pt.
 
-<threeHelix.png, id=252, 980.66376pt x 497.86pt>
+<threeHelix.png, id=276, 980.66376pt x 497.86pt>
 File: threeHelix.png Graphic file (type png)
  <use threeHelix.png>
-Package pdftex.def Info: threeHelix.png used on input line 3492.
+Package pdftex.def Info: threeHelix.png used on input line 3577.
 (pdftex.def)             Requested size: 179.82335pt x 91.2898pt.
 
-<closeRectangle.png, id=253, 661.47125pt x 586.19pt>
+<closeRectangle.png, id=277, 661.47125pt x 586.19pt>
 File: closeRectangle.png Graphic file (type png)
  <use closeRectangle.png>
-Package pdftex.def Info: closeRectangle.png used on input line 3498.
+Package pdftex.def Info: closeRectangle.png used on input line 3583.
 (pdftex.def)             Requested size: 227.62204pt x 201.70804pt.
 
-<collaps.png, id=254, 619.31375pt x 580.1675pt>
+<collaps.png, id=278, 619.31375pt x 580.1675pt>
 File: collaps.png Graphic file (type png)
  <use collaps.png>
-Package pdftex.def Info: collaps.png used on input line 3503.
+Package pdftex.def Info: collaps.png used on input line 3588.
 (pdftex.def)             Requested size: 216.24371pt x 202.57475pt.
- [42 <./simpleHelixSolid.png> <./CircleBase.png>] [43 <./highLaser.png> <./smal
-lPitchCircle.png> <./sphereFabricated.png> <./largePitch.png>] [44 <./Cursor.pn
-g> <./vertical-rentanglebased.png> <./ribbon.png> <./threeHelix.png> <./closeRe
-ctangle.png> <./collaps.png>] <constant-pitch.png, id=266, 586.19pt x 542.025pt
->
+
+<constant-pitch.png, id=279, 586.19pt x 542.025pt>
 File: constant-pitch.png Graphic file (type png)
-
-<use constant-pitch.png>
-Package pdftex.def Info: constant-pitch.png used on input line 3542.
+ <use constant-pitch.png>
+Package pdftex.def Info: constant-pitch.png used on input line 3627.
 (pdftex.def)             Requested size: 257.66554pt x 238.25188pt.
- <variable-pitch1.png, id=267, 367.3725pt x 457.71pt>
-File: variable-pitch1.png Graphic file (type png)
 
-<use variable-pitch1.png>
-Package pdftex.def Info: variable-pitch1.png used on input line 3547.
+<variable-pitch1.png, id=280, 367.3725pt x 457.71pt>
+File: variable-pitch1.png Graphic file (type png)
+ <use variable-pitch1.png>
+Package pdftex.def Info: variable-pitch1.png used on input line 3632.
 (pdftex.def)             Requested size: 191.20168pt x 238.2201pt.
- [45 <./constant-pitch.png> <./variable-pitch1.png>]
+
+[47 <./simpleHelixSolid.png> <./CircleBase.png>] [48 <./highLaser.png> <./small
+PitchCircle.png> <./sphereFabricated.png> <./largePitch.png>] [49 <./Cursor.png
+> <./vertical-rentanglebased.png> <./ribbon.png> <./threeHelix.png> <./closeRec
+tangle.png> <./collaps.png>] [50 <./constant-pitch.png> <./variable-pitch1.png>
+]
 Chapter 4.
-[46
+[51
 
 ]
 Chapter 5.
 
-Overfull \hbox (31.30289pt too wide) in paragraph at lines 3605--3605
+Overfull \hbox (31.30289pt too wide) in paragraph at lines 3695--3695
  |[]\T1/cmr/bx/n/24.88 Conclusion and fu-ture work| 
  []
 
-(./MRes_Indivi_Proj.bbl [47
+(./MRes_Indivi_Proj.bbl [52
 
 ]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 12.
@@ -1671,7 +1704,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--21
 nt
  []
 
-[48
+[53
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 86--89
@@ -1683,7 +1716,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 178--181
 []\T1/cmr/m/n/12 Eric Weis-stein.  Eigenspace @ON-LINE, Au-gust 2014.  URL
  []
 
-[49]) [50] (./MRes_Indivi_Proj.aux)
+[54]) [55] (./MRes_Indivi_Proj.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -1692,10 +1725,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 19919 strings out of 493633
- 353098 string characters out of 3143377
- 468551 words of memory out of 3000000
- 22657 multiletter control sequences out of 15000+200000
+ 19961 strings out of 493633
+ 354006 string characters out of 3143377
+ 468673 words of memory out of 3000000
+ 22693 multiletter control sequences out of 15000+200000
  29487 words of font info for 78 fonts, out of 3000000 for 9000
  831 hyphenation exceptions out of 8191
  56i,17n,69p,934b,848s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1722,24 +1755,25 @@ ive/2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive
 2011/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/20
 11/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2011
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2011/t
-exmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2011/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2011/texmf
--dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2011/texmf-d
-ist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2011/texmf-dis
-t/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2011/texmf-dist/
-fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2011/texmf-dist/fo
-nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2011/texmf-dist/font
-s/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2011/texmf-dist/fonts/
-type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
-pe1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type
-1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
-public/cm-super/sfti1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/pu
-blic/cm-super/sfti1728.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/publ
-ic/cm-super/sftt1200.pfb>
-Output written on MRes_Indivi_Proj.pdf (58 pages, 5105519 bytes).
+exmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/20
+11/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb></usr/local/texlive/2011
+/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2011/t
+exmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></usr/local/texlive/2011/tex
+mf-dist/fonts/type1/public/cm-super/sfbx2074.pfb></usr/local/texlive/2011/texmf
+-dist/fonts/type1/public/cm-super/sfbx2488.pfb></usr/local/texlive/2011/texmf-d
+ist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2011/texmf-dis
+t/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2011/texmf-dist/
+fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2011/texmf-dist/fo
+nts/type1/public/cm-super/sfrm1095.pfb></usr/local/texlive/2011/texmf-dist/font
+s/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/
+type1/public/cm-super/sfsl1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/ty
+pe1/public/cm-super/sfti1200.pfb></usr/local/texlive/2011/texmf-dist/fonts/type
+1/public/cm-super/sfti1728.pfb></usr/local/texlive/2011/texmf-dist/fonts/type1/
+public/cm-super/sftt1200.pfb>
+Output written on MRes_Indivi_Proj.pdf (63 pages, 5319823 bytes).
 PDF statistics:
- 404 PDF objects out of 1000 (max. 8388607)
- 243 compressed objects within 3 object streams
+ 431 PDF objects out of 1000 (max. 8388607)
+ 257 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 331 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 361 words of extra memory for PDF output out of 10000 (max. 10000000)
 

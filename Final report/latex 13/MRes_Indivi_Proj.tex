@@ -3237,9 +3237,54 @@ many build in environment that helps to make our simulation model, implementing 
 required many considerations. 
 
 \paragraph{Model components}
+
+ The system configration (figure \ref{Simulation framework}) is based on the experiment setup
+run by \citeauthor{mahoney2011velocity} however they run an experiment on a mili-robot. The table \ref{Simultion model configration} represents the details 
+of the Helmholtz coils which generates magnetic field by usign AC current. The size of 
+fluid box is $25 (mm) \times 25(mm) \times 25 (mm)$ and the viscosity of fluid inside the box is $2000 (\frac{N}{m^2} s)$
+which is the viscosity of the corn syrup. 
+
+
+
+%--------------- Table of configration model of the microrobots------------------------
+
+
+\begin{table}[!ht]
+
+\centering% used for centering table
+{\rowcolors{2}{gray!50}{gray!50!blue!13}
+\begin{tabular}{c c c }% centered columns (8 columns)
+\toprule[2.0pt]
+
+
+
+\head{Coil set} & \head{Coil radius (mm)} & \head{Number of wraps} \\
+
+%heading
+\midrule
+%\hline% inserts single horizontal line
+Inner 	& 	    	44	  & 	63		\\% inserting body of the table
+Middle	& 	69		  & 	99	\\
+Outer & 	98 		  & 	143	\\[1ex]% [1ex] adds vertical space
+
+
+
+\bottomrule[2.0pt]
+\end{tabular}
+}
+\label{tSimultion model configration}% is used to refer this table in the text
+\caption{Simultion model configration. The detail of the Helmholt coils setup
+\citep{mahoney2011velocity}.}\label{Simultion model configration}% title of Table
+\end{table}
+
+
+%-------------------------------------------------------------------------------------------
+
+
+
+
 There were two main aspects for the simulation; microhelix propulsion mechanism and its 
-actuation method. In order to simplify the model, it was broken down into three 
-sub-models; 
+actuation method. The model formed of three main components;
 
 \begin{itemize}
   \item The three inset Helmholtz coils
@@ -3247,8 +3292,46 @@ sub-models;
   \item The microhelix 
 \end{itemize}
 
- The entire model made by combining three sub-models as shown
- in the figure \ref{Simulation framework}.
+In order to simplify the model, it was broken down into three sub-models. Each sub-model made of two 
+componets and the entire model made by combining three sub-models as shown
+ in the figure \ref{Simulation framework}. In each sub-model, we solved the physics involve in its componets
+for example in sub-model 1, the effect of the magnetic field on the fluid box without considering the microhelix
+inside the box was studied. Defining an appropriate domain for the solution is important to do modelling
+as magnetic filed decays by increasing the distance from the magnetic source. Thus, the sphere domain
+defined to solve the model as it is shown in figure \ref{Simulation domain}
+
+
+%--------------- Table of configration model of the microrobots------------------------
+
+
+\begin{table}[!ht]
+
+\centering% used for centering table
+{\rowcolors{2}{gray!50}{gray!50!blue!13}
+\begin{tabular}{c c c c}% centered columns (4 columns)
+\toprule[2.0pt]
+
+
+
+\head{Sub-models} & \head{Helmholtz coils} & \head{Fluid box} & \head{Microhelix} \\
+
+%heading
+\midrule
+%\hline% inserts single horizontal line
+1			& 	\checkmark	 		  & 	\checkmark		&				\\
+2			& 			 		  & 	\checkmark		&			\checkmark	\\
+3 			& 	\checkmark 		 		 & 			&		\checkmark		\\[1ex]% [1ex] adds vertical space
+
+
+\bottomrule[2.0pt]
+\end{tabular}
+}
+\label{Modeling Simulation Componets }% is used to refer this table in the text
+\caption{Modeling Simulation Componets. The table shows the componets of each sub-model.}
+\end{table}
+
+
+%-------------------------------------------------------------------------------------------
 
 
 
@@ -3280,71 +3363,27 @@ The effect of microhelix design parameters such as helical angle on rotational v
 under the simulation. The considered parameters are;
   
 \begin{itemize}
-  \item Helix pitch angle
+  \item Helix angle
   \item Helix pitch
   \item Helix radius
   \item Helix filament radius
 \end{itemize}
 
-As it has shown in the figure \ref{Simulation framework}. The system configration is based on the experiment setup
-run by \citeauthor{mahoney2011velocity} however they run an experiment on a mili-rorobot. The table \ref{Simultion model configration} represents the details 
-of the Helmholtz coils which generates magnetic field by usign AC current. The size of 
-fluid box is $25 (mm) \times 25(mm) \times 25 (mm)$ and the viscosity of fluid inside the box is $2000 (\frac{N}{m^2} s)$.
-
-
-
-%--------------- Table of configration model of the microrobots------------------------
-
-
-\begin{table}[!ht]
-
-\centering% used for centering table
-{\rowcolors{2}{gray!50}{gray!50!blue!13}
-\begin{tabular}{c c c }% centered columns (8 columns)
-\toprule[2.0pt]
-
-
-
-\head{Coil set} & \head{Coil radius (mm)} & \head{Number of wraps} \\
-
-%heading
-\midrule
-%\hline% inserts single horizontal line
-Inner 	& 	    	44	  & 	63		\\% inserting body of the table
-Middle	& 	69		  & 	99	\\
-Outer & 	98 		  & 	143	\\[1ex]% [1ex] adds vertical space
-
-
-
-\bottomrule[2.0pt]
-\end{tabular}
-}
-\label{tSimultion model configration}% is used to refer this table in the text
-\caption{Simultion model configration. The detail of the Helmholts setup
-\citep{mahoney2011velocity}.}\label{Simultion model configration}% title of Table
-\end{table}
-
-
-%-------------------------------------------------------------------------------------------
-
-
-
-
 \begin{figure}
         \centering
-        \begin{subfigure}[b]{0.43\textwidth}
+        \begin{subfigure}[b]{0.48\textwidth}
                 \includegraphics[width=\textwidth]{simulationDomain}
-                \caption{Simulation framework}
+                \caption{Simulation domain}
                 \label{simulation}
         \end{subfigure}~~ 
-\begin{subfigure}[b]{0.565\textwidth}
-                \includegraphics[width=\textwidth]{helix-in-box}
-                \caption{Helix in the box}
+\begin{subfigure}[b]{0.48\textwidth}
+                \includegraphics[width=\textwidth]{arrow_magnetic}
+                \caption{Magnetic flux density}
                 \label{helix-in-box}
         \end{subfigure}
       
-        \caption{Simulation framework. (a) The framework consists of the three inset coils,
-a fluid bux with a microhelix inside (b).}\label{Simulation framework}
+        \caption{Simulation domain. (a) The sphere domain is defined for solving the model so the volume of
+effective magnetic flux in the model can be obtained (b).}\label{Simulation domain}
 
    %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
@@ -3354,25 +3393,71 @@ a fluid bux with a microhelix inside (b).}\label{Simulation framework}
 
 \end{figure}
 
+The result of each parameteres\rq{}s effect on the rotational velocity of the microhelix is
+ represented as following. The curve in the figure \ref{RV_pitchAngle} describes the relationship between
+the helical angle and rotational velocity. The helix with small helix angle will not result in rotating 
+helix as the rotational velocity minor. 
+
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+%  \begin{center}
+    \includegraphics[width=1.0\textwidth]{RV_pitchAngle}
+  \caption{Rotational velocity vs. helix angle }
+  \label{RV_pitchAngle}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
 
 
 
 
 
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+%  \begin{center}
+    \includegraphics[width=1.0\textwidth]{RV_helixPitch}
+  \caption{Rotational velocity vs. helix pitch }
+  \label{RV_helixPitch}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
+
+The figure \ref{RV_helixRadius1} describes the reverse relation between the helix radius and rotational
+velocity. As the radius of the helix is increasing the rotational velocity is decreasing, the highest rotational
+velocity is just above $14 rad/s$ for the microhelix with $2 \mu m$ radius. The similar behaviour observed
+in figure \ref{RV_filamentRadius} which is dropping in rotational velocity by increasing the filament radius.
+However, the range of figurs in the otational velocity axis shows the helix filament radius does not have
+magnifisant effect on the rotational velocity. Whilst, the considerable changes in rotational velocity occurs
+by changing the helix angle and helix radius (figurs \ref{RV_helixRadius1}, \ref{RV_pitchAngle}). 
 
 
 
 
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+%  \begin{center}
+    \includegraphics[width=1.0\textwidth]{RV_helixRadius1}
+  \caption{Rotational velocity vs. helix redius }
+  \label{RV_helixRadius1}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
 
 
 
-
-
-
-
-
-
-
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+%  \begin{center}
+    \includegraphics[width=1.0\textwidth]{RV_filamentRadius}
+  \caption{Rotational velocity vs. helix filament radius }
+  \label{RV_filamentRadius}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
 
 
 
@@ -3568,28 +3653,33 @@ variable.}\label{Pitch variable}
 %%%%%%%%%
 \chapter{Discussion}\label{discussion}
 
- \hilight{Compare force driven and torque driven algorithms.}
+The propulsion models is implemented for microrobot locomotion, \ac*{RFT}, has ignored the 
+hydrodynamic interaction between the fluid flow produced by different segment of the microhelix. 
+Therefore, in the microhelix with the smaller pitch the interaction between various part of the helix
+ increased and the helix will convert to the cylinder. This issue might result in a failure for predicting
+ the force and torque in microhelix with incredible small pitch. 
+
+\paragraph{}
+
+Magnetic field is a safe power source to be used for actuating microrobot in the fluidic environment. 
+There are advantages to apply torque driven magnetic field over force driven which makes it preferable
+ approach. Torque driven method can be applied on either microrobot with the flexible tail or a rigid 
+tail. The method is more efficient than force driven as the rotation of helix leads to translational 
+movement in the fluidic environment whilst the force driven method pulls the helix to generate
+ the translational velocity. 
+
+\paragraph{}
+
+Implementing the model using simulation software is a challenge. There are not enough simulation 
+software provide all the requirements of the model. Therefore modelling the simulator for microrobot
+ navigation becomes more complex. For example the hydrodynamics property of the fluid and its 
+effect on the swimming microrohelix cannot be modelled entirely with Matlab. COMSOL software 
+is more advanced simulation in terms of solving the multiphysics model by coupling the different 
+physics. However, the modelling can be performed differently by coupling different components 
+of the system and occasionally the simulation result is not consistent.  
 
 
-\citeauthor{rodenborn2013propulsion}~\citep{rodenborn2013propulsion} demonestrated the failure of resistive force
- theory to predict thrust and drag in microrobots motion accurately. The reason of the failure was neglecting hydrodynamic
-interaction between flows induced by different parts of a flagellum. In particular, helical flagellum with
- smaller pitch ($\lambda$) will have smaller separation of filament segments (Figure~\ref{parameters}). Hence,
- the hydrodynamic interaction between different parts of a flagellum becomes stronger and in very small
-pitch ($\lambda \to 0$) the helix converts to a cylinder which has no thrust ($F= 0$).
-
-
-
-compare software for simulation
-
-
-
-
-
-
-
-
-
+\paragraph{}
 
 
 
@@ -3603,6 +3693,44 @@ compare software for simulation
 %%%%%%%%%%%%%%%%%%%% Conclusion %%%%%%%%%%%%%
 %%%%%%%%%
 \chapter{Conclusion and future work}
+
+The magnetically actuated helical shape microrobot  has an advantage of using in vivo or in 
+vitro application. The different design of microhelix has been made; some of designs were 
+reproduced from previous researchers and also new design was presented. The new design 
+is a helix with a variable pitch that makes the structure enables to stand vertically during fabrication 
+process. 
+The other advantage of the new design is providing the stronger base for the structure for the case
+ of having microrbot with attached propeller. The \ac*{RFT} used as a locomotion model for simulating 
+microrbot motion. Other propulsion models presented are \ac*{SBT} and \ac*{RSM} to describe the 
+motion of microhelix. In terms of design, helix angle is the most effective character of the helix that has 
+an effect on its swimming efficiency. The other characteristic such as helix radius has a smaller effect. 
+The fabrication process performed by nanoscribe facility and microstructures were observed 
+under \ac*{SEM}. 
+Initially Matlab used for implementing the model and towards the end of the project the 
+COMSOL Multiphysics software used because of limitation of Matlab to solve the model.  
+
+
+
+\paragraph{Future work}
+To validate the result of these study we need to run an experiment in a laboratory to compare
+ the result of simulation and experiment.To validate the result of these study we need to run an
+ experiment in a laboratory to compare the result of simulation and experiment. The simulation 
+framework is required optimisation in order to simulate microhelix in fluids with different viscosity. 
+In addition the simulation cab be focused on the magnetic materials used for coating the microhelix 
+and analysed the result of using different magnetic materials on the efficiency of swimming 
+microrhelix. The possibility of actuating a microrobot with other power source such as ultrasonic 
+can be considered. Moreover, the microrhelix can be used as a rigid tail for different propellers. 
+Therefore, there are many potential depends on the application for designing a propellers to 
+attached to the helical tail. The ideal locomotion method for microrobot is still needs more investigation. 
+
+
+
+
+
+
+
+
+
 
 
 
