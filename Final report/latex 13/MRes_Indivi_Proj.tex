@@ -18,11 +18,13 @@
 \usepackage{tocloft}
 \usepackage[nottoc]{tocbibind}
 \usepackage{afterpage}
-\usepackage[right=25mm,left=35mm,top=25mm,bottom=25mm]{geometry}
+%\usepackage[right=25mm,left=35mm,top=25mm,bottom=25mm]{geometry}
 \usepackage[parfill]{parskip}
 \usepackage{comment} 
 %\usepackage[a4paper]{geometry}
 \usepackage[numbers]{natbib}
+\usepackage[right=0.75in,left=1in,top=0.75in,bottom=0.75in]{geometry}
+
 \usepackage{balance}
 \usepackage[table]{xcolor}
 \usepackage{color}
@@ -42,7 +44,7 @@
 \usepackage[]{algorithm2e}
 \usepackage{algorithmic}
 \usepackage{subcaption}
-
+%\usepackage[colorlinks=true,linkcolor=black]{hyperref}
 
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}}
 \newcommand{\normal}[1]{\multicolumn{1}{l}{#1}}
@@ -97,7 +99,7 @@
   minimum height=5em, rounded corners, drop shadow]%(minimum height=5em) change the height of the yellow block
 \tikzstyle{texto} = [above, text width=15em, text centered]
 \tikzstyle{linepart} = [draw, thick, color=black!60, -latex', dashed]
-\tikzstyle{line} = [draw, thick, color=black!90, -latex']
+\tikzstyle{line} = [draw, thick, color=black!240, -latex']
 \tikzstyle{ur}=[draw, text centered, minimum height=0.01em]
 \usetikzlibrary{fadings}
 \usetikzlibrary{decorations}
@@ -307,7 +309,37 @@
 \thispagestyle{plain}
 \chapter*{Acknowledgements}
 
-I would like to thank 
+First and foremost, I wish to express my sincere thanks to my supervisor Prof. Yang for his valuable guidance 
+and supervision all through my MRes course.
+
+\paragraph{}
+My special gratitude to my supervisors Dr. Henry Ip and Dr.Vincenzo Curto for their assistance 
+and suggestions all throughout of the project. Thanks for helping me to improve my final presentation, 
+reading the draft of my thesis and providing me with your comment and feedback.
+
+\paragraph{}
+I would like to thank Dr. Ebubekir Avci for helping me to take images of my fabricated structures with 
+Scanning Electron Microscope.
+
+\paragraph{}
+I would like to thank the course leader Dr. Daniel Elson for all his organisation and arrangements
+ for the MRes students to make the course enjoyable.
+
+\paragraph{}
+  I am most grateful to my husband Ali for all his love, support and encouragements during 
+my study. Thanks for advising me throughout the project, for your patient to proofreading my thesis
+ and most importantly your care for our children during my pressure time. This thesis would not 
+have been possible without you.
+
+\paragraph{}
+  I would like to thanks to my daughter Parmin and my son Ario for always giving me their love and joy.
+Finally, my spatial thanks to my parent and my brother for their encouragement and support during the project.
+
+
+
+
+
+
 \pagebreak
 
 
@@ -406,47 +438,59 @@ and calculate the electric current is required to generate a dynamic magnetic fi
 \chapter{Introduction}
 
 
-The potential use of microrobots in medical applications such as minimally invasive surgery 
-has attracted scientists to work on designing microrobots ~\citep{edd2003biomimetic}. Research into swimming 
-microrobots showed two primary difficulties are the power source and suitable locomotion method, as
- there are many cells, proteins and fibres in biofluid that prevent the motion of the microrobots~\citep{peyer2013bio}. 
+Robotic surgery has demonstrated its advantages such as reduced pain and discomfort and 
+minimal scaring over invasive surgery. As robotic technolog is moving towards miniturisation, the idea of using
+microrobot for medical applications such as cardivascular surgery becomes more attractive~\citep{phil2013robotics}
+The potential application of microrobot divided into two main categories; in vivo and in vitro applications.
+Some in vivo examples are drug delivery, delivery of hyperthermia for cancer treatment and abation of material.
+In vitro applications can be microfluid control and cell characterisation and manuplation~\citep{edd2003biomimetic}.  
 
+
+\paragraph{}
+
+Magnetically actuated helical microswimmers has been reported as a safe microdevice for biomedical application
+~\citep{peyer2013magnetic}. However, there are number of challenges such the issue of biocompatibility and the material 
+used to make a microrobot needs to be considered carefully for in vivo application\citep{qiu2014noncytotoxic}.
+Research into swimming microrobots showed two primary difficulties are the power source and suitable locomotion method, as
+ there are many cells, proteins and fibres in biofluid that prevent the motion of the microrobots~\citep{peyer2013bio}. 
+vIn addition, extremely small size of the microrobots and the
+complex biofluid environment make the design aspect very challenging. 
+In addition, extremely small size of the microrobots and the
+complex biofluid environment make the design aspect very challenging.  
+The design of microrobots depends on their application and the desired task.
 Artificial bacteria flagella is most popular microrobot was inspired by nature~\citep{qiu2014noncytotoxic}. 
 They have helical shape, are composed of magnetic material and are capable to mimic three-dimensional 
 motion of the bacteria in a high viscous fluid.
 
-Magnetically actuated helical micromachines can be used
- in a variety of biomedical applications such as cell characterisation, targeted drug delivery and in vivo 
-diagnosis ~\citep{peyer2013magnetic}. However, the issue of biocompatibility and the material 
-used to make a microrobot needs to be considered carefully for in vivo application\citep{qiu2014noncytotoxic}. 
+ 
 
 
 \paragraph{}
-In addition, extremely small size of the microrobots and the
-complex biofluid environment make the design aspect very challenging. 
-The design of microrobots depends on their application and the desired task. An overview of the main
- microrobot designs are summerised in the table \ref{Micro}. A few numbers of parameters 
-has a key role on designing the helical shape microswimmer. Section \ref{microDesign} will demonstrated 
-the details of the these effective parameters and optimise them to characterise the new design for 
-helix shape microrobot. 
-
-
 The motivation for developing a simulation platform for microroswimers navigation is raised to analyse
- their characteristic and behaviour under low magnetic field.
-Therefore, the major part of this project formed by analysing and implementing simulation methods
- which is described in section \ref{simulation}. The simulation
-challenge can be divided into main part; propulsion mechanism of the microrobot and actuation method. The
+ their characteristic and behaviour under low magnetic field. A few numbers of parameters 
+has a key role on designing the helical shape microswimmer. The simulation
+challenge can be divided into two main parts; propulsion mechanism of the microrobot and actuation method. The
 popular method, \ac*{RFT}, describes the motion of the helix object in the low number regime 
 is applied by most helical microswimmers\rq{}s algorithms\citep{qiu2014noncytotoxic}. In this
-study, we implemented two more propulsion methods for the remotely controlled helical microswimmers
- in dynamic magnetic field. An actution method of magnetic microrobot can be either force driven or
-torque driven~\citep{qiunanohelices}. Whilst the mechanism of both methods are explained in the section \ref{microActuation}, we
-just implemented the torque driven actuation method in this study. 
+project, we studed two more propulsion methods for the remotely controlled helical microswimmers
+ in dynamic magnetic field, \ac*{RSM} and \ac*{SBT}. An actution method of magnetic microrobot can be either force driven or
+torque driven~\citep{qiunanohelices}. Fabrication of microdevice was a considerable challenge for a while ~\citep{qiunanohelices} that has been
+overcomed by fabrication methods such as 3D laser lithograph.
 
-Fabrication of microdevice was a considerable challenge for a while ~\citep{qiunanohelices} that has been
-overcomed by fabrication methods such as 3D laser lithograph. Section \ref{fabrication} present a
- brief history of fabrication techniques and section \ref{microFabric}
- describes the fabrication method is applied in this study. 
+
+
+\paragraph{}
+In summery, the part of algorithms were developed for the propulsion mechanism of the microswimmers
+and actuation technique is based on \citeauthor{mahoney2011velocity}\rq{}s research. The two new 
+propulsion methods for the helical microswimmers were used in the \citeauthor{rodenborn2013propulsion}\rq{}s
+work which a reversible speed-variable motor such as micro metal gear motor helps to rotate 
+microswimmer. In this study, applying those two propulsion mechanism on the microswimmers that 
+are controlled remotely with magnetic field. Therefore, the algorithm is taken the desired translational
+velocity as an input and produce the rotational velocity as an output. By knowing the rotational velocity, 
+we will be able to compute the electric current is required to produce the desired translational velocity. 
+In addition, the new design is developed and printed for the helix which shows using variable pitch
+ in helix design rather than constant pitch to satisfy the fabrication process. 
+
 
 
 %%%%%%%%%%%%
@@ -508,7 +552,7 @@ overcomed by fabrication methods such as 3D laser lithograph. Section \ref{fabri
 
 %%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
 \end{tikzpicture}									   %
-\caption{System Architecture.  }						   %
+\caption{System Architecture.}						   %
 \label{System Architecture}										   %
 \end{figure}										   %	
 												   %
@@ -516,20 +560,26 @@ overcomed by fabrication methods such as 3D laser lithograph. Section \ref{fabri
 
 
 
-
 \paragraph{}
-In summery, the part of algorithms were developed for the propulsion mechanism of the microswimmers
-and actuation technique is based on \citeauthor{mahoney2011velocity}\rq{}s research. The two new 
-propulsion methods for the helical microswimmers were used in the \citeauthor{rodenborn2013propulsion}\rq{}s
-work which a reversible speed-variable motor such as micro metal gear motor helps to rotate 
-microswimmer. In this study, applying those two propulsion mechanism on the microswimmers that 
-are controlled remotely with magnetic field. Therefore, the algorithm is taken the desired translational
-velocity as an input and produce the rotational velocity as an output. By knowing the rotational velocity, 
-we will be able to compute the electric current is required to produce the desired translational velocity. 
-In addition, the new design is developed and printed for the helix which shows using variable pitch
- in helix design rather than constant pitch to satisfy the fabrication process. The result of all simulation is
-represented in the result chapter \ref{result}. Diagram \ref{System Architecture} represents
- the structure of the project.
+
+
+We presented a literature review on different aspects of microrobots in chapter 1.
+An overview of the main microrobot designs are summerised in the table \ref{Micro}.  
+Section \ref{microDesign} demonstrated the details of the effective parameters on 
+microrobot\rq{}s design and optimise them to characterise the new design for 
+helix shape microrobot. The major part of this project formed by studying and soliving and 
+implementing simulation methods
+ which is described in section \ref{simulation}.  
+Whilst the mechanism of both methods are explained in the section \ref{microActuation}, we
+just implemented the torque driven actuation method in this study. 
+Section \ref{fabrication} present a brief history of fabrication techniques and section \ref{microFabric}
+ describes the fabrication method is applied in this study. Chater 3 provided the result of thi work in terms of either
+simulation and fabrication. Thenumber of considerable issues discussed in chapter 4 and conclusion and potential
+future work described in chapter 5. An overview of entire system showed in diagram \ref{System Architecture}
+
+
+
+
 
 
 
@@ -592,8 +642,9 @@ for motion generation in artificial microrobots  (Figure~\ref{cilia}) ~\citep{ga
 \begin{figure}
   \centering
     \includegraphics[width=0.9\textwidth]{cilia}
-  \caption{The illustration of both flagellum and cilia shapes and microdevices mimicked the flagellum and cilia 
-structures.~\citep{peyer2013bio}.}
+  \caption[Micro-structures and microdevices]{Micro-structures and microdevices. The illustration of both flagellum and cilia shapes and microdevices mimicked the flagellum and cilia 
+structures~\citep{peyer2013bio}.}
+	
   \label{cilia}
 \end{figure}
 
@@ -606,7 +657,7 @@ structures.~\citep{peyer2013bio}.}
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{10}
-  \caption{ The propulsion mechanism of the smooth flagellum and a mastigonemes flagellum.
+  \caption[Propulsion mechanism of mastigonemes flagellum]{ The propulsion mechanism of the smooth flagellum and a mastigonemes flagellum.
 The propulsion direction of smooth flagellum (top design) is opposite of flagella\rq{}s propagation 
 wave (second from the top). Their artificial design (blue structures) is based on 
 their locomotion mechanism~\citep{gao2013bioinspired}.}
@@ -650,7 +701,7 @@ the flagella~\citep{tottori2013artificial}.
 \begin{wrapfigure}{l}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.4\textwidth]{HelixShapes}
-  \caption{Three design of helical microswimmers~\citep{peyer2013magnetic}.}
+  \caption[Helical microswimmers design]{Three design of helical microswimmers~\citep{peyer2013magnetic}.}
   \label{HelixShapes}
   \end{center}
 \end{wrapfigure}
@@ -699,7 +750,8 @@ rotation speed is calculated to achieve the commanded velocity (Figure~\ref{11})
 \begin{figure}
   \centering
     \includegraphics[width=0.9\textwidth]{11}
-  \caption{The effect of the gravity on the microrobot motion direction and gravity compensation~\citep{mahoney2011velocity}.}
+  \caption[Effect of gravity on swimming microrobot]{The effect of the 
+gravity on the microrobot motion direction and gravity compensation~\citep{mahoney2011velocity}.}
   \label{11}
 \end{figure}
 
@@ -721,7 +773,7 @@ Two designs are selected to run the experiment;  the first one is a bare helical
  helical shape with the microholder attached at the end. Both designs will generate the corkscrew
  motion in a fluid environment when the magnetic filed is about few mili Tesla. The second 
 design (device with the microholder) is capable of transporting a microobject accurately to the 
-target ~\citep{tottori2012magnetic}.\hilight{size and weight of the object}
+target ~\citep{tottori2012magnetic}.
 
 
 In ~\citeauthor{tottori2012magnetic}\rq{}s study eight designs of microrobots were proposed and tested. 
@@ -736,7 +788,8 @@ set of microrobots had helical angles $\theta$ ranging from ${45^{\circ}}$ to ${
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{7}
-  \caption{(a) The misalignment of helical angle$\alpha$ with differnt helix angle (b) the oscillation behaviour
+  \caption[Effect of frequency on microswimmer\rq{}s behaviour]{(a) The misalignment of helical angle $\theta$ with a angle
+between megnetic field and helix central axis. (b) the oscillation behaviour
 of the microswimmer with the high and low frequencies~\citep{tottori2012magnetic}.}
   \label{ref7}
 \end{center}
@@ -803,7 +856,7 @@ the helix radius $R$, the pitch $p$ and the filament radius $r$ as illustrated i
 \begin{figure}
   \centering
     \includegraphics[width=0.7\textwidth]{8}
-  \caption{ The prototype of microhelical device. (a) Scanning electron microscopic image of the micro polymer composite
+  \caption[The prototype of microhelical device]{ The prototype of microhelical device. (a) Scanning electron microscopic image of the micro polymer composite
 with the 2 vol.\% nanoparticle fill factor and (b) 4 vol.\% of nanoparticle fill factor. (c) The CAD model
 shows all the parameters required for the microhelical design ~\citep{peyer2013bacteria}.}
   \label{ref8}
@@ -819,7 +872,7 @@ shows all the parameters required for the microhelical design ~\citep{peyer2013b
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{nanoJet3}
-  \caption{Demonstrating the drilling motion of the nanotubes under rotating
+  \caption[Drilling motion of a nanotube]{Demonstrating the drilling motion of the nanotubes under rotating
  magnetic field~\citep{C2NR32798H}.}
   \label{nanotube}
 \end{center}
@@ -862,7 +915,7 @@ general cilia-like feature have been designed. \citeauthor{gao2013bioinspired}
 \begin{figure}
   \centering
     \includegraphics[width=0.9\textwidth]{plants}
-  \caption{The shape of the Xylem in differnt plants .~\citep{mahoney2011velocity}.}
+  \caption[Xylem\rq{}s shape in different plants ]{The shape of the Xylem in differnt plants~\citep{mahoney2011velocity}.}
   \label{plants}
 \end{figure}
 
@@ -895,7 +948,7 @@ of helical turns are constant and tensile stretching of the plant fibre stretchi
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{plants2}
-  \caption{(A) The stages were required to make a plant-based microrobot. (B) A microscopic image of the 
+  \caption[plant-based microrobot]{(A) The stages were required to make a plant-based microrobot. (B) A microscopic image of the 
 a xylem helical structure~\citep{gao2013bioinspired}.}
   \label{plants2}
 \end{center}
@@ -994,7 +1047,7 @@ three-axis Helmholtz setup.
 %\begin{wrapfigure}{r}{0.5\textwidth}
  % \begin{center}
     \includegraphics[width=0.7\textwidth]{tempreture}
-  \caption{DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were 
+  \caption[Direct lasor writing]{DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were 
 developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and Ti. ~\citep{qiu2014artificial}.}
   \label{tempreture}
 %\end{center}
@@ -1332,7 +1385,8 @@ Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1e
 
   \end{tabular}
   
-  \caption{Different types of microrobots and their fabrication method.}\label{Micro}
+  \caption[Summery of microrobots\rq{}s desing, locomotion and fabrication]{Different types 
+of microrobots and their fabrication method.}\label{Micro}
 \end{table}
 
 
@@ -1488,7 +1542,7 @@ two sections, we will explain the mechanism of the two photon lithography techni
 
 %%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
 \end{tikzpicture}									   %
-\caption{Fabrication diagram. The nanoscribe technology is employed
+\caption[Fabrication overview]{Fabrication diagram. The nanoscribe technology is employed
 for the fabrication process and it followed by analysing structure under SEM. 
 The final stage (yellow block in third column) has not been tried in this project. }						   %
 \label{Fabrication diagram}										   %
@@ -1525,7 +1579,7 @@ precise focus trajectory. This type of implementation is know as \ac*{FBMS}~\cit
 \begin{figure}
   \centering
     \includegraphics[width=0.9\textwidth]{nanoscribeWorkflow}
-  \caption{nanoscribe workflow. The stages are inveolved in  3D micro-printing with nanoscribe
+  \caption[Nanoscribe workflow]{nanoscribe workflow. The stages are inveolved in  3D micro-printing with nanoscribe
  device is shown in the diagram~\citep{Doe:2014Feb:Online}.}
   \label{nanoscribeWorkflow}
 \end{figure}
@@ -1572,7 +1626,7 @@ chapters \ref{discussion} respectively.
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{SEM}
-  \caption{Scanning Electron Microscop. The components of the \ac*{SEM} is shown 
+  \caption[Scanning Electron Microscope]{Scanning Electron Microscop. The components of the \ac*{SEM} is shown 
 in the diagram~\citep{Doe:2014Jan:Online}.}
   \label{SEM}
 \end{center}
@@ -1670,7 +1724,7 @@ is explained in section \ref{RFT_sixDegree} and section \ref{microActuation}.
 
 %%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
 \end{tikzpicture}									   %
-\caption{Simulation algorithm. The main components of implementing the simulation is shown in 
+\caption[Simulation algorithm]{Simulation algorithm. The main components of implementing the simulation is shown in 
 the diagram.}						   
 \label{Simulation algorithm}										   %
 \end{figure}										   %	
@@ -1707,7 +1761,7 @@ the diagram.}
  Compute Magnetic field $\bm{B}$ from $\tau = \bm{V}M \times \bm{B}$\;
  Compute Electric current $i$ from $|\bm{B}| = (\frac{b^2}{(b^2+l^2)^{3/2}}){\mu}_0 i$
  }
- \caption{Simulation algorithm}
+ \caption[Simulation details]{Simulation algorithm}
 \label{PSuedocode}
 \end{algorithm}
 
@@ -1744,7 +1798,7 @@ $11R$, ($2R < \lambda < 11R$). Also the helix length ($L$) varies from $3\lambda
 %\begin{wrapfigure}{r}{0.5\textwidth}
   %\begin{center}
     \includegraphics[width=0.7\textwidth]{parameters}
-  \caption{The essential helix parameters to design a helical microrobot~\citep{rodenborn2013propulsion}.}
+  \caption[Helix parameters]{The essential helix parameters to design a helical microrobot~\citep{rodenborn2013propulsion}.}
   \label{parameters}
 %\end{center}
 %\end{wrapfigure}
@@ -1812,7 +1866,7 @@ resistive force theory, slender body theory and regularized Stokeslet theory whi
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{motion}
-  \caption{~\citep{edd2003biomimetic}.}
+  \caption[Microrobot filament motion]{Analysis of arbitary filament motion of microhelix~\citep{edd2003biomimetic}.}
   \label{motion}
 \end{center}
 \end{wrapfigure}
@@ -1832,7 +1886,7 @@ The following assumption has been made in order to use the RFT.
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{filament}
-  \caption{A motion of an arbitary filament~\citep{edd2003biomimetic}.}
+  \caption[A motion of helical segment]{A motion of an arbitary filament~\citep{edd2003biomimetic}.}
   \label{filament}
 \end{center}
 \end{wrapfigure}
@@ -1996,7 +2050,7 @@ used in this model has a helical tail with the shpere head attached to it as sho
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
     \includegraphics[width=1.0\textwidth]{RFT-6dof}
-  \caption{Three dimention configration for the helical microrobot with a magnetic spherical head. The origin
+  \caption[Helical microrobot configration with a magnetic spherical head]{Three dimention configration for the helical microrobot with a magnetic spherical head. The origin
 of the helix coordinate is denoted with $\bm{O}_h$ and $\bm{x}_{h}$ is the central axis of the
  helix~\citep{mahoney2011velocity}.}
   \label{RFT-6dof}
@@ -2606,7 +2660,7 @@ the local velocity of a segment on the $s$ location and the force per unit lengt
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
     \includegraphics[width=1.0\textwidth]{Stoks}
-  \caption{\ac*{RSM} and \ac*{SBT}. In \ac*{RSM} the surface of helix filament separated by 
+  \caption[RSM and SBT]{\ac*{RSM} and \ac*{SBT}. In \ac*{RSM} the surface of helix filament separated by 
 cross-sectional segmentation and each surface represents by 
 Stokeslets (left image). In the \ac*{SBT}, the Stokeslets are arranged along the 
 central filament line (rigth image)~\citep{rodenborn2013propulsion}.}
@@ -2987,7 +3041,8 @@ $^{w}\bm{D}$ or $^{w}\bm{E}$. This coordinate system is denoted by $p$ and can b
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
     \includegraphics[width=1.0\textwidth]{horiz_verti_velocity}
-  \caption{(a) The principle coordinate frame based on the gravity and principle componets
+  \caption[Construction details of 
+direction of the microswimmer]{(a) The principle coordinate frame based on the gravity and principle componets
 of the matrices in equations \ref{Ematrix} and \ref{Dmatrix}. (b) Construction details of 
 direction of the microswimmer ($\bm{\tilde{X}}$)~\citep{mahoney2011velocity}.}
   \label{horiz_verti_velocity}
@@ -3272,8 +3327,8 @@ Outer & 	98 		  & 	143	\\[1ex]% [1ex] adds vertical space
 \bottomrule[2.0pt]
 \end{tabular}
 }
-\label{tSimultion model configration}% is used to refer this table in the text
-\caption{Simultion model configration. The detail of the Helmholt coils setup
+\label{Simultion model configration}% is used to refer this table in the text
+\caption[Simultion model configration]{Simultion model configration. The detail of the Helmholt coils setup
 \citep{mahoney2011velocity}.}\label{Simultion model configration}% title of Table
 \end{table}
 
@@ -3327,7 +3382,7 @@ defined to solve the model as it is shown in figure \ref{Simulation domain}
 \end{tabular}
 }
 \label{Modeling Simulation Componets }% is used to refer this table in the text
-\caption{Modeling Simulation Componets. The table shows the componets of each sub-model.}
+\caption[Modeling Simulation Componets]{Modeling Simulation Componets. The table shows the componets of each sub-model.}
 \end{table}
 
 
@@ -3348,7 +3403,7 @@ defined to solve the model as it is shown in figure \ref{Simulation domain}
                 \label{helix-in-box}
         \end{subfigure}
       
-        \caption{Simulation framework. (a) The framework consists of the three inset coils,
+        \caption[Simulation framework]{Simulation framework. (a) The framework consists of the three inset coils,
 a fluid bux with a microhelix inside (b).}\label{Simulation framework}
 
    %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
@@ -3382,7 +3437,7 @@ under the simulation. The considered parameters are;
                 \label{helix-in-box}
         \end{subfigure}
       
-        \caption{Simulation domain. (a) The sphere domain is defined for solving the model so the volume of
+        \caption[Simulation domain]{Simulation domain. (a) The sphere domain is defined for solving the model so the volume of
 effective magnetic flux in the model can be obtained (b).}\label{Simulation domain}
 
    %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
@@ -3403,7 +3458,7 @@ helix as the rotational velocity minor.
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
     \includegraphics[width=1.0\textwidth]{RV_pitchAngle}
-  \caption{Rotational velocity vs. helix angle }
+  \caption[Rotational velocity vs. helix angle]{Rotational velocity vs. helix angle }
   \label{RV_pitchAngle}
 %\end{center}
 %\end{wrapfigure}
@@ -3418,7 +3473,7 @@ helix as the rotational velocity minor.
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
     \includegraphics[width=1.0\textwidth]{RV_helixPitch}
-  \caption{Rotational velocity vs. helix pitch }
+  \caption[Rotational velocity vs. helix pitch]{Rotational velocity vs. helix pitch }
   \label{RV_helixPitch}
 %\end{center}
 %\end{wrapfigure}
@@ -3440,7 +3495,7 @@ by changing the helix angle and helix radius (figurs \ref{RV_helixRadius1}, \ref
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
     \includegraphics[width=1.0\textwidth]{RV_helixRadius1}
-  \caption{Rotational velocity vs. helix redius }
+  \caption[Rotational velocity vs. helix rediu]{Rotational velocity vs. helix redius }
   \label{RV_helixRadius1}
 %\end{center}
 %\end{wrapfigure}
@@ -3453,7 +3508,7 @@ by changing the helix angle and helix radius (figurs \ref{RV_helixRadius1}, \ref
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
     \includegraphics[width=1.0\textwidth]{RV_filamentRadius}
-  \caption{Rotational velocity vs. helix filament radius }
+  \caption[Rotational velocity vs. helix filament radius]{Rotational velocity vs. helix filament radius }
   \label{RV_filamentRadius}
 %\end{center}
 %\end{wrapfigure}
@@ -3494,7 +3549,7 @@ which shows very small pitch length could not fabricated successfully.
                 \caption{Fabricated circle base helix}
                 \label{CircleBase}
         \end{subfigure}
-        \caption{Circle base helix. This is the helix with $12 \mu m$  length and $4\mu m$ pitch. (a) Helix in design
+        \caption[Circle base helix]{Circle base helix. This is the helix with $12 \mu m$  length and $4\mu m$ pitch. (a) Helix in design
 stage and (b) shows the fabricated result.}\label{Circle base helix}
 
    %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
@@ -3531,7 +3586,7 @@ stage and (b) shows the fabricated result.}\label{Circle base helix}
                 \caption{Large pitch helix}
                 \label{largePitch}
         \end{subfigure}
-        \caption{The structure (a) is damaged as a result of high 
+        \caption[Fabricated structures]{The structure (a) is damaged as a result of high 
 laser beem and structure (b) has a small pitch $1.3 \mu m$ and the result is not satisfiable. The structure
 with the sphere head (c) is fabricated and the helix with the larger pitch (d) with proportion relative to
 rest of helix character is clearly shown,}\label{Damaged structures}
@@ -3590,7 +3645,7 @@ based on the rectangle filament with different pitch, length and helical radius.
                 \label{collaps}
         \end{subfigure}
 
-        \caption{Rectangle based structures. The structures (a) and (b) are examples of
+        \caption[Rectangle based structures]{Rectangle based structures. The structures (a) and (b) are examples of
 revolving the smaller side of the rectangle around the central axis of helix. The structure 
 can printed vertically (b). The structures with small pitch (a) will not printed ideally whilst
 the one with larger pitch (d) printed clearly. The printed structure can collapse (f)
@@ -3634,7 +3689,7 @@ propeller. The result of the new design is shown in figure \ref{Pitch variable}.
                 \label{variable-pitch1}
         \end{subfigure}
       
-        \caption{Pitch variable helix. The image (a) is shown the constant pitch helix which could not printed
+        \caption[Variable pitch helix]{Variable pitch helix. The image (a) is shown the constant pitch helix which could not printed
 vertically. However, the image (b) represents the successful vertically fabricated of (a) by making its pitch
 variable.}\label{Pitch variable}
 
@@ -3740,8 +3795,9 @@ attached to the helical tail. The ideal locomotion method for microrobot is stil
 %%%%%%%%%%%%%%
 
 
-\renewcommand{\bibname}{References}
-\bibliographystyle{plainnat}
+%\renewcommand{\bibname}{References}
+\bibliographystyle{unsrtnat}
+%\bibliographystyle{plainnat}
 \bibliography{References} 
 %\addcontentsline{toc}{chapter}{\numberline{}References}
 

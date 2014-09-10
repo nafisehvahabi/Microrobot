@@ -1,49 +1,56 @@
 \renewcommand {\cftchapleader }{\bfseries \cftdotfill {\cftdotsep }}
+\contentsline {paragraph}{}{i}
+\contentsline {paragraph}{}{i}
+\contentsline {paragraph}{}{i}
+\contentsline {paragraph}{}{i}
+\contentsline {paragraph}{}{i}
 \contentsline {chapter}{List of Figures}{iii}
 \contentsline {chapter}{List of Tables}{iv}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }List of Acronyms}{v}
 \contentsline {chapter}{\numberline {1}Introduction}{1}
 \contentsline {paragraph}{}{1}
+\contentsline {paragraph}{}{1}
+\contentsline {paragraph}{}{1}
 \contentsline {paragraph}{}{2}
-\contentsline {section}{\numberline {1.1}Literature review}{2}
-\contentsline {subsection}{\numberline {1.1.1}Bioinspired microrobots}{2}
-\contentsline {paragraph}{Reynolds number}{2}
-\contentsline {subsubsection}{\numberline {1.1.1.1}Flagella style microrobots}{4}
+\contentsline {section}{\numberline {1.1}Literature review}{3}
+\contentsline {subsection}{\numberline {1.1.1}Bioinspired microrobots}{3}
+\contentsline {paragraph}{Reynolds number}{3}
+\contentsline {subsubsection}{\numberline {1.1.1.1}Flagella style microrobots}{3}
 \contentsline {paragraph}{}{4}
 \contentsline {paragraph}{}{7}
-\contentsline {subsubsection}{\numberline {1.1.1.2}Plant-based microrobots}{9}
-\contentsline {subsection}{\numberline {1.1.2}Actuation methods}{10}
-\contentsline {subsection}{\numberline {1.1.3}Fabrication methods}{11}
-\contentsline {paragraph}{}{12}
-\contentsline {chapter}{\numberline {2}Methods}{14}
-\contentsline {section}{\numberline {2.1}Microrobot design}{14}
-\contentsline {section}{\numberline {2.2}Microrobot fabrication}{14}
-\contentsline {subsection}{\numberline {2.2.1}Nanoscribe}{16}
+\contentsline {subsubsection}{\numberline {1.1.1.2}Plant-based microrobots}{8}
+\contentsline {subsection}{\numberline {1.1.2}Actuation methods}{9}
+\contentsline {subsection}{\numberline {1.1.3}Fabrication methods}{10}
+\contentsline {paragraph}{}{11}
+\contentsline {chapter}{\numberline {2}Methods}{13}
+\contentsline {section}{\numberline {2.1}Microrobot design}{13}
+\contentsline {section}{\numberline {2.2}Microrobot fabrication}{13}
+\contentsline {subsection}{\numberline {2.2.1}Nanoscribe}{15}
+\contentsline {paragraph}{}{15}
 \contentsline {paragraph}{}{16}
-\contentsline {paragraph}{}{17}
-\contentsline {subsection}{\numberline {2.2.2}Scanning Electron Microscope (\ac *{SEM})}{17}
-\contentsline {paragraph}{sputter coating}{18}
-\contentsline {section}{\numberline {2.3}Simulation}{18}
-\contentsline {subsection}{\numberline {2.3.1}Modeling helical propulsion}{19}
-\contentsline {subsubsection}{\numberline {2.3.1.1}Resistive force theory for microrobot with two degree of freedom}{20}
-\contentsline {paragraph}{}{21}
-\contentsline {subsubsection}{\numberline {2.3.1.2}Resistive force theory for six degree of freedom}{23}
-\contentsline {subsubsection}{\numberline {2.3.1.3}Regularized Stokeslet method}{29}
-\contentsline {subsubsection}{\numberline {2.3.1.4}Slender body theory}{31}
-\contentsline {subsection}{\numberline {2.3.2}Microrobot actutation}{34}
-\contentsline {chapter}{\numberline {3}Results}{40}
-\contentsline {section}{\numberline {3.1}Simulation}{40}
-\contentsline {paragraph}{Simulation software}{40}
-\contentsline {paragraph}{Model components}{40}
-\contentsline {section}{\numberline {3.2}Fabrication}{42}
-\contentsline {paragraph}{Circle base filament}{42}
-\contentsline {paragraph}{Rectangle base filament}{47}
-\contentsline {paragraph}{Pitch variable helix}{47}
-\contentsline {chapter}{\numberline {4}Discussion}{51}
-\contentsline {paragraph}{}{51}
-\contentsline {paragraph}{}{51}
-\contentsline {paragraph}{}{51}
-\contentsline {chapter}{\numberline {5}Conclusion and future work}{52}
-\contentsline {paragraph}{Future work}{52}
-\contentsline {chapter}{References}{53}
+\contentsline {subsection}{\numberline {2.2.2}Scanning Electron Microscope (\ac *{SEM})}{16}
+\contentsline {paragraph}{sputter coating}{17}
+\contentsline {section}{\numberline {2.3}Simulation}{17}
+\contentsline {subsection}{\numberline {2.3.1}Modeling helical propulsion}{18}
+\contentsline {subsubsection}{\numberline {2.3.1.1}Resistive force theory for microrobot with two degree of freedom}{19}
+\contentsline {paragraph}{}{20}
+\contentsline {subsubsection}{\numberline {2.3.1.2}Resistive force theory for six degree of freedom}{21}
+\contentsline {subsubsection}{\numberline {2.3.1.3}Regularized Stokeslet method}{27}
+\contentsline {subsubsection}{\numberline {2.3.1.4}Slender body theory}{29}
+\contentsline {subsection}{\numberline {2.3.2}Microrobot actutation}{32}
+\contentsline {chapter}{\numberline {3}Results}{37}
+\contentsline {section}{\numberline {3.1}Simulation}{37}
+\contentsline {paragraph}{Simulation software}{37}
+\contentsline {paragraph}{Model components}{37}
+\contentsline {section}{\numberline {3.2}Fabrication}{41}
+\contentsline {paragraph}{Circle base filament}{41}
+\contentsline {paragraph}{Rectangle base filament}{43}
+\contentsline {paragraph}{Pitch variable helix}{43}
+\contentsline {chapter}{\numberline {4}Discussion}{47}
+\contentsline {paragraph}{}{47}
+\contentsline {paragraph}{}{47}
+\contentsline {paragraph}{}{47}
+\contentsline {chapter}{\numberline {5}Conclusion and future work}{48}
+\contentsline {paragraph}{Future work}{48}
+\contentsline {chapter}{Bibliography}{49}
 \contentsfinish 
