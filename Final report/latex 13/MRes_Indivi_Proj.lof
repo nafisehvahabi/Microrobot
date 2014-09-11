@@ -1,7 +1,7 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces System Architecture.\relax }}{2}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Simulation framework}}{2}
 \contentsline {figure}{\numberline {1.2}{\ignorespaces Micro-structures and microdevices}}{3}
-\contentsline {figure}{\numberline {1.3}{\ignorespaces Propulsion mechanism of mastigonemes flagellum}}{4}
+\contentsline {figure}{\numberline {1.3}{\ignorespaces Propulsion mechanism of mastigonemes flagellum}}{3}
 \contentsline {figure}{\numberline {1.4}{\ignorespaces Helical microswimmers design}}{4}
 \contentsline {figure}{\numberline {1.5}{\ignorespaces Effect of gravity on swimming microrobot}}{5}
 \contentsline {figure}{\numberline {1.6}{\ignorespaces Effect of frequency on microswimmer'{}s behaviour}}{6}
@@ -11,27 +11,32 @@
 \contentsline {figure}{\numberline {1.10}{\ignorespaces plant-based microrobot}}{9}
 \contentsline {figure}{\numberline {1.11}{\ignorespaces Direct lasor writing}}{11}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Fabrication overview}}{14}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Nanoscribe workflow}}{15}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Scanning Electron Microscope}}{16}
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Simulation algorithm}}{17}
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Helix parameters}}{19}
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Microrobot filament motion}}{19}
-\contentsline {figure}{\numberline {2.7}{\ignorespaces A motion of helical segment}}{19}
-\contentsline {figure}{\numberline {2.8}{\ignorespaces Helical microrobot configration with a magnetic spherical head}}{22}
-\contentsline {figure}{\numberline {2.9}{\ignorespaces RSM and SBT}}{29}
-\contentsline {figure}{\numberline {2.10}{\ignorespaces Construction details of direction of the microswimmer}}{34}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Different helical designs}}{14}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Variable pitch helix design}}{15}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Fabrication overview}}{16}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Nanoscribe workflow}}{17}
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Scanning Electron Microscope}}{18}
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Helix parameters}}{21}
+\contentsline {figure}{\numberline {2.7}{\ignorespaces Microrobot filament motion}}{21}
+\contentsline {figure}{\numberline {2.8}{\ignorespaces A motion of helical segment}}{22}
+\contentsline {figure}{\numberline {2.9}{\ignorespaces Helical microrobot configration with a magnetic spherical head}}{24}
+\contentsline {figure}{\numberline {2.10}{\ignorespaces RSM and SBT}}{32}
+\contentsline {figure}{\numberline {2.11}{\ignorespaces Construction details of direction of the microswimmer}}{37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Simulation framework}}{38}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Simulation domain}}{39}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Rotational velocity vs. helix angle}}{39}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Rotational velocity vs. helix pitch}}{40}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Rotational velocity vs. helix rediu}}{41}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Rotational velocity vs. helix filament radius}}{42}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Circle base helix}}{43}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Fabricated structures}}{44}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Rectangle based structures}}{45}
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Variable pitch helix}}{46}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Simulation framework}}{41}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Simulation domain}}{42}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Rotational velocity vs. helix angle}}{42}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Rotational velocity vs. helix pitch}}{43}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Rotational velocity vs. helix rediu}}{44}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Rotational velocity vs. helix filament radius}}{44}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Rotational velocity vs. translational velocity}}{45}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Rotational velocity vs. translational velocity}}{45}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Rotational velocity vs. translational velocity}}{46}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Rotational velocity vs. translational velocity}}{46}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Circle base helix}}{47}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Fabricated structures}}{47}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Rectangle based structures}}{49}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Variable pitch helix}}{50}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsfinish 

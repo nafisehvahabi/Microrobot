@@ -181,7 +181,7 @@
 
 \tikzfading[name=fade out, inner color=transparent!0,
   outer color=transparent!100]
-
+\tikzset{>=latex}
 % Define distances for bordering
 \newcommand{\blockdist}{1.3}
 \newcommand{\edgedist}{1.5}
@@ -328,12 +328,14 @@ I would like to thank the course leader Dr. Daniel Elson for all his organisatio
 \paragraph{}
   I am most grateful to my husband Ali for all his love, support and encouragements during 
 my study. Thanks for advising me throughout the project, for your patient to proofreading my thesis
- and most importantly your care for our children during my pressure time. This thesis would not 
+ and most importantly your care for our children during this pressured time. This thesis would not 
 have been possible without you.
 
 \paragraph{}
   I would like to thanks to my daughter Parmin and my son Ario for always giving me their love and joy.
-Finally, my spatial thanks to my parent and my brother for their encouragement and support during the project.
+
+\paragraph{}
+Finally, my special thanks to my parents and my brother for their encouragement and support during the project.
 
 
 
@@ -438,27 +440,25 @@ and calculate the electric current is required to generate a dynamic magnetic fi
 \chapter{Introduction}
 
 
-Robotic surgery has demonstrated its advantages such as reduced pain and discomfort and 
-minimal scaring over invasive surgery. As robotic technolog is moving towards miniturisation, the idea of using
-microrobot for medical applications such as cardivascular surgery becomes more attractive~\citep{phil2013robotics}
-The potential application of microrobot divided into two main categories; in vivo and in vitro applications.
-Some in vivo examples are drug delivery, delivery of hyperthermia for cancer treatment and abation of material.
-In vitro applications can be microfluid control and cell characterisation and manuplation~\citep{edd2003biomimetic}.  
+Robotic surgery has demonstrable advantages such as reducing pain and discomfort and 
+minimising scaring after invasive surgery. As robotic technology continues to move towards miniaturisation, the idea of using
+a microrobot for medical applications such as cardiovascular  surgery, also becomes more attractive~\citep{phil2013robotics}
+The potential applications of a microrobot can be classified into two main categories; in vivo and in vitro applications.
+Some in vivo examples are drug delivery, delivery of hyperthermia for cancer treatment and ablation  of material.
+In vitro applications can be microfluid control and cell characterisation and manipulation~\citep{edd2003biomimetic}.  
 
 
 \paragraph{}
 
-Magnetically actuated helical microswimmers has been reported as a safe microdevice for biomedical application
-~\citep{peyer2013magnetic}. However, there are number of challenges such the issue of biocompatibility and the material 
-used to make a microrobot needs to be considered carefully for in vivo application\citep{qiu2014noncytotoxic}.
-Research into swimming microrobots showed two primary difficulties are the power source and suitable locomotion method, as
- there are many cells, proteins and fibres in biofluid that prevent the motion of the microrobots~\citep{peyer2013bio}. 
-vIn addition, extremely small size of the microrobots and the
-complex biofluid environment make the design aspect very challenging. 
-In addition, extremely small size of the microrobots and the
-complex biofluid environment make the design aspect very challenging.  
-The design of microrobots depends on their application and the desired task.
-Artificial bacteria flagella is most popular microrobot was inspired by nature~\citep{qiu2014noncytotoxic}. 
+Magnetically actuated helical microswimmers have been reported as a safe microdevice for biomedical applications
+~\citep{peyer2013magnetic}. However, there are number of challenges such as the issue of biocompatibility and the material 
+used to make a microrobot, which needs to be considered carefully for in vivo application\citep{qiu2014noncytotoxic}.
+Research into swimming microrobots has identified two primary difficulties, namely the power source and a suitable locomotion method, because
+there are many cells, proteins and fibres in biofluid that prevent the motion of the microrobots~\citep{peyer2013bio}. 
+The extremely small size of the microrobot and the
+complex biofluid environment makes the design aspect very challenging.   
+Furthermore, the design of a microrobot will depend on its application and the desired task to be performed.
+Artificial bacteria flagella is a popular microrobot inspired by nature~\citep{qiu2014noncytotoxic}. 
 They have helical shape, are composed of magnetic material and are capable to mimic three-dimensional 
 motion of the bacteria in a high viscous fluid.
 
@@ -466,30 +466,33 @@ motion of the bacteria in a high viscous fluid.
 
 
 \paragraph{}
-The motivation for developing a simulation platform for microroswimers navigation is raised to analyse
+The motivation for developing a simulation platform for microroswimmers navigation is raised to analyse
  their characteristic and behaviour under low magnetic field. A few numbers of parameters 
 has a key role on designing the helical shape microswimmer. The simulation
 challenge can be divided into two main parts; propulsion mechanism of the microrobot and actuation method. The
-popular method, \ac*{RFT}, describes the motion of the helix object in the low number regime 
+popular method, \ac*{RFT}, describes the motion of the helix object in a low number regime 
 is applied by most helical microswimmers\rq{}s algorithms\citep{qiu2014noncytotoxic}. In this
-project, we studed two more propulsion methods for the remotely controlled helical microswimmers
- in dynamic magnetic field, \ac*{RSM} and \ac*{SBT}. An actution method of magnetic microrobot can be either force driven or
-torque driven~\citep{qiunanohelices}. Fabrication of microdevice was a considerable challenge for a while ~\citep{qiunanohelices} that has been
-overcomed by fabrication methods such as 3D laser lithograph.
+project, we studied two more propulsion methods for the remotely controlled helical microswimmers
+ in a dynamic magnetic field, \ac*{RSM} and \ac*{SBT}. An actuation method of a magnetic  microrobot 
+can be either force driven or
+torque driven~\citep{qiunanohelices}. Fabrication of a microdevice has been a considerable challenge 
+for some time ~\citep{qiunanohelices}, which has now been
+overcome by fabrication methods such as 3D laser lithograph.
 
 
 
 \paragraph{}
-In summery, the part of algorithms were developed for the propulsion mechanism of the microswimmers
-and actuation technique is based on \citeauthor{mahoney2011velocity}\rq{}s research. The two new 
+In summary, a part of the algorithm developed for the propulsion mechanism of the microswimmers
+and their actuation technique was based on \citeauthor{mahoney2011velocity}\rq{}s research. Two new 
 propulsion methods for the helical microswimmers were used in the \citeauthor{rodenborn2013propulsion}\rq{}s
-work which a reversible speed-variable motor such as micro metal gear motor helps to rotate 
-microswimmer. In this study, applying those two propulsion mechanism on the microswimmers that 
-are controlled remotely with magnetic field. Therefore, the algorithm is taken the desired translational
-velocity as an input and produce the rotational velocity as an output. By knowing the rotational velocity, 
-we will be able to compute the electric current is required to produce the desired translational velocity. 
-In addition, the new design is developed and printed for the helix which shows using variable pitch
- in helix design rather than constant pitch to satisfy the fabrication process. 
+work. This involved a reversible speed-variable motor such as a micro metal gear motor being used to rotate 
+the microswimmer. In this study, these two propulsion mechanisms were applied to the microswimmers that 
+are then controlled remotely by a magnetic field. Therefore, the algorithm has taken the desired translational
+velocity as an input and produced the rotational velocity as an output. By knowing the rotational velocity, 
+we will be able to compute the electric current required to produce the desired translational velocity. 
+In addition, the new design is developed and printed for the helix using a variable pitch
+in the helix design rather than a constant pitch to satisfy 
+ the fabrication process. 
 
 
 
@@ -499,8 +502,40 @@ In addition, the new design is developed and printed for the helix which shows u
 
 
 \begin{figure}
+        \centering
+        \begin{subfigure}[b]{1.0\textwidth}
+                \includegraphics[width=\textwidth]{overview_Dig1}
+                \caption{Simulation framework}
+                \label{simulation}
+        \end{subfigure}~~ 
+
+    
+      
+        \caption[Simulation framework]{Simulation framework. (a) The framework consists of the three inset coils,
+a fluid bux with a microhelix inside (b).}\label{Simulation framework}
+
+   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+       
+         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+\begin{comment}
+\begin{figure}
 \centering
-\begin{tikzpicture}[scale=1.25,transform shape]
+\begin{tikzpicture}[<->,scale=1.25,transform shape]
 
   % Draw diagram elements
   \path \Step{1}{Propulsion Algorithm};
@@ -517,7 +552,9 @@ In addition, the new design is developed and printed for the helix which shows u
 
   %\path (p5.south)+(3.5,-2.0) \practica{9}{Integrating e-AR and robot};
   %\path (p9.south)+(0.0,-1.5) \practica{10}{Laparoscopy Robot};
-
+%\draw [>=stealth,red] (0,.6) -- +(1,0);
+%\draw [blue] (0,.3) -- +(1,0);
+%\draw (0,0) -- +(1,0);
 
   % Draw arrows between elements
   \path [line] (p1.south) -- node [above] {} (p2);
@@ -558,24 +595,24 @@ In addition, the new design is developed and printed for the helix which shows u
 												   %
 %%%%%%%%%%%%%% CHANGED%%%%%%%%%%%%%
 
-
+\end{comment}
 
 \paragraph{}
 
 
-We presented a literature review on different aspects of microrobots in chapter 1.
-An overview of the main microrobot designs are summerised in the table \ref{Micro}.  
-Section \ref{microDesign} demonstrated the details of the effective parameters on 
-microrobot\rq{}s design and optimise them to characterise the new design for 
-helix shape microrobot. The major part of this project formed by studying and soliving and 
-implementing simulation methods
- which is described in section \ref{simulation}.  
+A literature review on the different aspects of microrobots is presented in chapter 1.
+An overview of the main microrobot designs are summarised in the table \ref{Micro}.  
+Section \ref{microDesign} demonstrates the details of the effective parameters on 
+microrobot\rq{}s design and optimises them to characterise the new design for 
+a helix shaped microrobot. The major part of this project involves studying, solving and 
+implementing the simulation methods
+ described in section \ref{simulation}.  
 Whilst the mechanism of both methods are explained in the section \ref{microActuation}, we
-just implemented the torque driven actuation method in this study. 
-Section \ref{fabrication} present a brief history of fabrication techniques and section \ref{microFabric}
- describes the fabrication method is applied in this study. Chater 3 provided the result of thi work in terms of either
-simulation and fabrication. Thenumber of considerable issues discussed in chapter 4 and conclusion and potential
-future work described in chapter 5. An overview of entire system showed in diagram \ref{System Architecture}
+only implemented the torque driven actuation method in this study. 
+Section \ref{fabrication} presents a brief history of the fabrication techniques and section \ref{microFabric}
+ describes the fabrication method applied in this study. Chapter 3 provided the results of this work in terms of both
+simulation and fabrication. The key issues are discussed in chapter 4 and conclusion and potential
+future work is described in chapter 5. An overview of the entire system is shown in diagram \ref{System Architecture}.
 
 
 
@@ -1396,11 +1433,12 @@ of microrobots and their fabrication method.}\label{Micro}
 
 \chapter{Methods}
 
-%%%%%%%%%%%%%%%%%% Structure %%%%%%%%%%%%%
-%\section{Microrobot structure( \hilight{INCOMPLETE})}
-
-%One of the main requirement of the magnetic microrobot is using magnetic material in their structure 
-%to perform actuation task~\citep{qiu2014noncytotoxic}. 
+In this chapter the design of microhelix is described and a few number of design is presented. It followed by introducing
+the fabrication mechanism, the technology applied to fabricate microstructures and post-processing fabricated microstructres.
+The simulation is major part of this chapter which is modelling the swimming mechanism of microhelix in high viscous fluid. 
+Three models studied for describing the swimming motion of the microhelix and one model (\ac*{RFT}) is implemented to simulate
+microhelix with two and six degree of freedom. The torque driven magnetic field is selected to actuate the microhelix and
+as a result the relation between the rotational velocity and translational velocity is achieved.    
 
 
 
@@ -1411,53 +1449,88 @@ of microrobots and their fabrication method.}\label{Micro}
 %%%%%%%%%%%%%%%%%%% Design %%%%%%%%%%%%%%%
 \section{Microrobot design} \label{microDesign}
 
-For the purpose of this study, the design of microrobots is narrow down to a helical 
-tail shape with possible propeller head. Therefore, the key characters of the helix were 
-identified and all the design was based on these characters. 
-The helical shape microrobot is generally copied the design of the helical 
+For the purpose of this study, the design of microrobots is focuced on a helical 
+tail shape with possible propeller head. The helical shape microrobot is generally copied the design of the helical 
 rigid tail flagellum which is one-dimensional structure. There are other microstructures 
 such as cilia and planar flexible tail flagellum that are copied to build a swimming microrobot. The 
 helical rigid tail flagellum is a preferred design for the micro swimmer as its simplicity makes
  it feasible to copy in micro scale. In addition, its swimming mechanism is more efficient than 
-other type of microswimmers \citep{peyer2013bio}.The reason is, a filament needs to 
+other type of microswimmers \citep{peyer2013bio}. 
+Therefore, the key characters of the helix were 
+identified and all the design was based on optimising these characters. 
+
+
+ 
+\begin{figure}
+        \centering
+
+  \begin{subfigure}[b]{0.25\textwidth}
+                \includegraphics[width=\textwidth]{Design6}
+                \caption{Circle base helix with sphere head}
+                \label{Design6}
+        \end{subfigure}~
+  \begin{subfigure}[b]{0.36\textwidth}
+                \includegraphics[width=\textwidth]{Design2}
+                \caption{Rectangle base helix}
+                \label{Design2}
+        \end{subfigure}~
+  \begin{subfigure}[b]{0.32\textwidth}
+                \includegraphics[width=\textwidth]{Design3}
+                \caption{Rectangle base helix}
+                \label{Design3}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.335\textwidth}
+                \includegraphics[width=\textwidth]{Design4}
+                \caption{Rectangle base helix with sphere head}
+                \label{Design4}
+        \end{subfigure}~
+  \begin{subfigure}[b]{0.37\textwidth}
+                \includegraphics[width=\textwidth]{Design5}
+                \caption{Rectangle base helix with square head }
+                \label{Design5}
+        \end{subfigure}~
+  \begin{subfigure}[b]{0.222\textwidth}
+                \includegraphics[width=\textwidth]{Design1}
+                \caption{Circle base helix}
+                \label{Design1}
+        \end{subfigure}
+      
+        \caption[Different helical designs]{}\label{Different helical designs}
+
+   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+       
+         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+\end{figure}
+
+The figure \ref{Different helical designs} represents the
+variaty of designs have been tried in the design stage of this project. A circle base helix with (\ref{Design6}) 
+and without sphere head (\ref{Design1}) has been tried. Also their pitch, helical angle and length of the helix
+were changed to monotor its behaviour druing simulation and fabrication process. Two types of
+ rectangle base helix has designed. In the first one, the larger side of the rectangle revolves around a spiral path (\ref{Design2})
+whilst in the second one the smaller side of the rectangle revolves around the spiral path (\ref{Design3}).
+The former design advantages in the simulation process because its shape produce larger force to propell the microrswimmer.
+However, the it behave poorly in the fabrication process becase it has not provide sufficient suface area to contact with the 
+substrate. Therefore we can\rq{}t print it vertically. The latter provides strong base for printing vertically but ca\rq{}t generate 
+sufficient force to move the microswimmer forward. The new design of microhelix which has
+variable pitchrather than constant pitch is made (\ref{Design7}) and fabricated vertically. The advantage of variable pitch design 
+is providing strong base to fabricate it vertically. 
+
+%\begin{figure}
+%  \centering
+\begin{wrapfigure}{r}{0.55\textwidth}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{Design7}
+  \caption[Variable pitch helix design]{Variable pitch helix design}
+  \label{Variable pitch helix design}
+\end{center}
+\end{wrapfigure}
+%\end{figure}
 
 
 
-
-\begin{comment}
-%--------------- Table of all design of the microrobots------------------------
-
-
-\begin{table}[!ht]
-
-\centering% used for centering table
-{\rowcolors{2}{gray!100!brown!70}{gray!50!yellow!30}
-\begin{tabular}{c c c c c c c c}% centered columns (8 columns)
-\toprule[2.0pt]
-
-
-
-\head{Author} & \head{Shape} & \head{Length} & \head{Pitch} & \head{Pitch-angle} & \head{Radius} & \head{Filament-radius} & \head{Speed}\\
-
-%heading
-\midrule
-%\hline% inserts single horizontal line
-Arcene 	& 	    		  & 	1000		& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\% inserting body of the table
-Dexter 	& 	Sparse 		  & 	20000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\
-Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1ex]% [1ex] adds vertical space
-
-
-
-\bottomrule[2.0pt]
-\end{tabular}
-}
-\label{table:nonlin}% is used to refer this table in the text
-\caption{Microrobot\rq{}s design comparisons}\label{design}% title of Table
-\end{table}
-
-
-%-------------------------------------------------------------------------------------------
-\end{comment}
 
 
 %%%%%%%%%%%%%%%%%% Fabrication %%%%%%%%%%%%%
@@ -1690,7 +1763,7 @@ the algorithm \ref{PSuedocode} is provided more details in each step of the impl
 is explained in section \ref{RFT_sixDegree} and section \ref{microActuation}.    
 
 
-%\begin{comment}
+\begin{comment}
 
 \begin{figure}
 \centering
@@ -1733,7 +1806,7 @@ the diagram.}
 
 
 
-%\end{comment}
+\end{comment}
 
 
 %%%%%%%%%%%%%%%%%%%Pseudocode%%%%%%%%%%%%%
@@ -3278,15 +3351,15 @@ The step out frequency increases with the strength of the magnetic field. the ma
 \section{Simulation}
 The aim of implementing the simulation framework for microhelix is to analyze the effect of 
 the key parameters on microhelix\rq{}s efficiency. Also, finding the force, torque and drag act on 
-the body of the helix. As microhelix is in the fluid environments, investigating the effect of swimming
- mechanism is another aspect of this implementation. Evaluating the outcome of using different fluid 
+the body of the helix. As the microhelix is in a fluid environment, investigating the effect of swimming
+ mechanism is another aspect of this implementation. Evaluating the outcome of using a different fluid 
 environment is part of the simulation. 
 
 \paragraph{Simulation software}
-Initially Matlab was selected as simulator software. However, after exploring different aspect
- of simulation, the limitation of the software made it impossible to make a complete simulation
- framework. One of the limitations was failing to bind all the physics are involved in simulation 
-modeling. Furthermore, Matlab was incapable to consider all aspect of fluid environment. Therefore, 
+Initially, Matlab was selected as the simulator software. However, after exploring the different aspects
+ of the simulation, it became evident that the limitations of the software made it impossible to develop a complete simulation
+ framework. One of the limitations was the software inability to incorporate and bind all the physics involved in this simulation 
+modeling. Furthermore, Matlab was incapable of considering all aspects of a fluid environment. Therefore, 
 another simulation software called COMSOL was used to implement the model. Although, COMSOL offers 
 many build in environment that helps to make our simulation model, implementing an entire framework was 
 required many considerations. 
@@ -3449,16 +3522,17 @@ effective magnetic flux in the model can be obtained (b).}\label{Simulation doma
 \end{figure}
 
 The result of each parameteres\rq{}s effect on the rotational velocity of the microhelix is
- represented as following. The curve in the figure \ref{RV_pitchAngle} describes the relationship between
-the helical angle and rotational velocity. The helix with small helix angle will not result in rotating 
+ presented as following. The curve in the figure \ref{RV_pitchAngle} describes the relationship between
+the helical angle and rotational velocity. 
+The helix with small helix angle will not result in rotating 
 helix as the rotational velocity minor. 
 
 \begin{figure}
   \centering
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
-    \includegraphics[width=1.0\textwidth]{RV_pitchAngle}
-  \caption[Rotational velocity vs. helix angle]{Rotational velocity vs. helix angle }
+    \includegraphics[width=0.80\textwidth]{RV_pitchAngle}
+  \caption[Rotational velocity vs. helix angle]{Rotational velocity vs. helix angle}
   \label{RV_pitchAngle}
 %\end{center}
 %\end{wrapfigure}
@@ -3472,7 +3546,7 @@ helix as the rotational velocity minor.
   \centering
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
-    \includegraphics[width=1.0\textwidth]{RV_helixPitch}
+    \includegraphics[width=0.80\textwidth]{RV_helixPitch}
   \caption[Rotational velocity vs. helix pitch]{Rotational velocity vs. helix pitch }
   \label{RV_helixPitch}
 %\end{center}
@@ -3494,7 +3568,7 @@ by changing the helix angle and helix radius (figurs \ref{RV_helixRadius1}, \ref
   \centering
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
-    \includegraphics[width=1.0\textwidth]{RV_helixRadius1}
+    \includegraphics[width=0.90\textwidth]{RV_helixRadius1}
   \caption[Rotational velocity vs. helix rediu]{Rotational velocity vs. helix redius }
   \label{RV_helixRadius1}
 %\end{center}
@@ -3507,9 +3581,25 @@ by changing the helix angle and helix radius (figurs \ref{RV_helixRadius1}, \ref
   \centering
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
-    \includegraphics[width=1.0\textwidth]{RV_filamentRadius}
+    \includegraphics[width=0.90\textwidth]{RV_filamentRadius}
   \caption[Rotational velocity vs. helix filament radius]{Rotational velocity vs. helix filament radius }
   \label{RV_filamentRadius}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
+
+There is a linear relationship between rotational and translational velocity of microhelix as it is shown 
+in figure \ref{Rotational velocity vs. translational velocity}.
+
+
+
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+%  \begin{center}
+    \includegraphics[width=0.80\textwidth]{Trans_Rot_}
+  \caption[Rotational velocity vs. translational velocity]{Rotational velocity vs. translational velocity}
+  \label{Rotational velocity vs. translational velocity}
 %\end{center}
 %\end{wrapfigure}
 \end{figure}
@@ -3517,6 +3607,47 @@ by changing the helix angle and helix radius (figurs \ref{RV_helixRadius1}, \ref
 
 
 
+%simulation result
+The 
+
+
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+%  \begin{center}
+    \includegraphics[width=0.80\textwidth]{force_torque}
+  \caption[Rotational velocity vs. translational velocity]{Rotational velocity vs. translational velocity}
+  \label{Rotational velocity vs. translational velocity}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
+
+
+
+
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+%  \begin{center}
+    \includegraphics[width=0.80\textwidth]{magnetic_field.png}
+  \caption[Rotational velocity vs. translational velocity]{Rotational velocity vs. translational velocity}
+  \label{Rotational velocity vs. translational velocity}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
+
+
+
+\begin{figure}
+  \centering
+%\begin{wrapfigure}{r}{0.5\textwidth}
+%  \begin{center}
+    \includegraphics[width=0.80\textwidth]{moving_direction.png}
+  \caption[Rotational velocity vs. translational velocity]{Rotational velocity vs. translational velocity}
+  \label{Rotational velocity vs. translational velocity}
+%\end{center}
+%\end{wrapfigure}
+\end{figure}
 
 
 \section{Fabrication}
@@ -3708,11 +3839,47 @@ variable.}\label{Pitch variable}
 %%%%%%%%%
 \chapter{Discussion}\label{discussion}
 
-The propulsion models is implemented for microrobot locomotion, \ac*{RFT}, has ignored the 
+\paragraph{}
+The design of microhelix is based on the key characteristics of the helical shape. A filament base of a 
+popular helix has a circle shape. Therefore, the initial design was the helix with a circle base filament and then
+ it integrated with different propeller head such as a sphere and a square. Changing each character at a time and 
+keeping the rest of characters constant optimised characteristics of microhelix. This algorithmic process was repeated
+ for any new design such as helix with a rectangle base filament. The helix design should be optimised
+ in terms of both fabrication and simulation.
+
+
+In the fabrication process, the nanoscribe technology used for 3D printed in micro size. This
+ technology is based on lithography system to write microstructure. The result of fabricated structures
+ showed the required laser power is varies to write each microhelix design. The result of horizontally printing 
+microhelix was successful in many cases. However, few cases destroyed either because of applying high laser 
+power or under power. The amount of appropriate laser power was design dependent and couldn\rq{}t generalise for 
+all the design. A number of few cases were collapsed only during developing process. The vertically fabricating 
+microhelix was a challenge, as most of the design did not provide sufficient contact surface to support their 
+weight. The new helix design with a variable pitch made the structures with sufficient contact area with the
+ substrate. The variable pitch helix has the smaller pitch in the bottom and larger pith on the rest of the 
+body. As a result small pitch in a bottom satisfies the vertically fabricated requirement of microhelix 
+and larger pitch on the rest of the helix body helps the swimming motion of microhelix. 
+
+\paragraph{}
+
+To model the swimming motion of the microhelix three models were studied and \ac*{RFT} were
+ implemented in the simulator. \ac*{RFT} has ignored the 
 hydrodynamic interaction between the fluid flow produced by different segment of the microhelix. 
 Therefore, in the microhelix with the smaller pitch the interaction between various part of the helix
  increased and the helix will convert to the cylinder. This issue might result in a failure for predicting
- the force and torque in microhelix with incredible small pitch. 
+ the force and torque in microhelix with incredible small pitch. Thus, the variable pitch microhelix will help to avoid that issue.  
+
+To model the swimming motion of the microhelix three models were studied and \ac*{RFT} were
+ implemented in the simulator. 
+Each microhelix propulsion model was segmented the filament of a 
+microhelix differently. Then the model analyses an interaction of a small segment of
+ filament with hydrodynamic of a high viscous fluid to achieve non fluidic force, torque and drag 
+acts on a helix body. All three propulsion models apply on the microhelix with the circle base 
+filament. Therefore, we will not be able to implement the propulsion model for other designs such 
+as microhelix with a rectangle base filament.   
+
+
+
 
 \paragraph{}
 
@@ -3734,7 +3901,7 @@ physics. However, the modelling can be performed differently by coupling differe
 of the system and occasionally the simulation result is not consistent.  
 
 
-\paragraph{}
+
 
 
 
@@ -3767,18 +3934,20 @@ COMSOL Multiphysics software used because of limitation of Matlab to solve the m
 
 
 \paragraph{Future work}
-To validate the result of these study we need to run an experiment in a laboratory to compare
- the result of simulation and experiment.To validate the result of these study we need to run an
- experiment in a laboratory to compare the result of simulation and experiment. The simulation 
-framework is required optimisation in order to simulate microhelix in fluids with different viscosity. 
-In addition the simulation cab be focused on the magnetic materials used for coating the microhelix 
-and analysed the result of using different magnetic materials on the efficiency of swimming 
-microrhelix. The possibility of actuating a microrobot with other power source such as ultrasonic 
-can be considered. Moreover, the microrhelix can be used as a rigid tail for different propellers. 
-Therefore, there are many potential depends on the application for designing a propellers to 
-attached to the helical tail. The ideal locomotion method for microrobot is still needs more investigation. 
+In order to validate the result of this study we need to run an experiment in a laboratory 
+to compare the result of the simulation with the experiment. The simulation framework is
+ required optimisation in order to simulate microhelix in fluids with different viscosity. In terms 
+of fabrication, the effects of using combination of magnetic material for microhelix coating can
+ be analysed. The ideal locomotion method for microrobot is still required more investigation. 
 
 
+The possibility of actuating a microrobot with other power source such as ultrasonic can be
+ considered. The fundamental design of mcirorobot can be integrated with other tools to build 
+an advanced microrobot. The design of an advanced microrobot is an application dependent. 
+The microhelix with its transport claw is already proposed and demonstrated their result to move 
+micro objects. Therefore, researching on current medical application and limitation of the surgical
+ tools can lead to design an advanced microrobot for a specific application. The swarms of 
+microrobot and a mechanism for control them individually will improve their performance.      
 
 
 
