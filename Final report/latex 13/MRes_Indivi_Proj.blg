@@ -23,45 +23,45 @@ Warning--empty journal in phil2013robotics
 Warning--empty journal in qiunanohelices
 Warning--empty year in qiunanohelices
 Warning--empty year in qiunanohelices
-You've used 30 entries,
+You've used 29 entries,
             2481 wiz_defined-function locations,
-            734 strings with 10766 characters,
-and the built_in function-call counts, 12369 in all, are:
-= -- 963
-> -- 766
+            728 strings with 10498 characters,
+and the built_in function-call counts, 11875 in all, are:
+= -- 932
+> -- 721
 < -- 16
-+ -- 296
-- -- 232
-* -- 1060
-:= -- 2006
-add.period$ -- 91
-call.type$ -- 30
-change.case$ -- 59
-chr.to.int$ -- 26
-cite$ -- 34
-duplicate$ -- 559
-empty$ -- 1088
-format.name$ -- 266
-if$ -- 2567
++ -- 280
+- -- 218
+* -- 1009
+:= -- 1919
+add.period$ -- 88
+call.type$ -- 29
+change.case$ -- 57
+chr.to.int$ -- 25
+cite$ -- 33
+duplicate$ -- 540
+empty$ -- 1051
+format.name$ -- 251
+if$ -- 2469
 int.to.chr$ -- 5
-int.to.str$ -- 31
-missing$ -- 24
-newline$ -- 157
-num.names$ -- 90
-pop$ -- 271
+int.to.str$ -- 30
+missing$ -- 23
+newline$ -- 152
+num.names$ -- 87
+pop$ -- 264
 preamble$ -- 1
-purify$ -- 30
+purify$ -- 29
 quote$ -- 0
-skip$ -- 330
+skip$ -- 320
 stack$ -- 0
-substring$ -- 580
-swap$ -- 94
+substring$ -- 560
+swap$ -- 92
 text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 207
+type$ -- 200
 warning$ -- 4
-while$ -- 96
+while$ -- 93
 width$ -- 0
-write$ -- 386
+write$ -- 373
 (There were 12 warnings)

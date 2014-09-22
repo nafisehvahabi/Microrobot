@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{29}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -128,28 +128,20 @@ Famin Qiu, Rami Mhanna, Li~Zhang, Yun Ding, Satoshi Fujita, and Bradley~J
   temperature-sensitive liposomes for controlled release.
 \newblock \emph{Sensors and Actuators B: Chemical}, 2014{\natexlab{b}}.
 
-\bibitem[Ko et~al.(2012)Ko, Na, Lee, Cha, Ko, Park, and Park]{ko2012jellyfish}
-Youngho Ko, Sungyoung Na, Youngwoo Lee, Kyoungrae Cha, Seong~Young Ko, Jongoh
-  Park, and Sukho Park.
-\newblock A jellyfish-like swimming mini-robot actuated by an electromagnetic
-  actuation system.
-\newblock \emph{Smart Materials and Structures}, 21\penalty0 (5):\penalty0
-  057001, 2012.
-
 \bibitem[nanoscribe(2014)]{Doe:2014Feb:Online}
 nanoscribe.
 \newblock nanoscribe {@ONLINE}, February 2014.
 \newblock URL \url{http://www.nanoscribe.de/en/}.
 
-\bibitem[McFadden(2014)]{Doe:2014April:Online}
-Roger McFadden.
-\newblock A basic introduction to clean rooms {@ONLINE}, 2014.
-\newblock URL \url{http://www.coastwidelabs.com/}.
-
 \bibitem[University(2014)]{Doe:2014Jan:Online}
 Purdue University.
 \newblock Scanning electron microscope {@ONLINE}, January 2014.
 \newblock URL \url{http://www.purdue.edu/ehps/rem/rs/sem.htm}.
+
+\bibitem[McFadden(2014)]{Doe:2014April:Online}
+Roger McFadden.
+\newblock A basic introduction to clean rooms {@ONLINE}, 2014.
+\newblock URL \url{http://www.coastwidelabs.com/}.
 
 \bibitem[Smith(2009)]{smith2009boundary}
 David~J Smith.

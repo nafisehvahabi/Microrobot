@@ -46,6 +46,8 @@
 \usepackage{subcaption}
 %\usepackage[colorlinks=true,linkcolor=black]{hyperref}
 
+
+\renewcommand{\baselinestretch}{2} 
 \newcommand{\head}[1]{\textnormal{\textbf{#1}}}
 \newcommand{\normal}[1]{\multicolumn{1}{l}{#1}}
 \newcommand{\hilight}[1]{\colorbox{yellow}{#1}}	
@@ -327,7 +329,7 @@ I would like to thank the course leader Dr. Daniel Elson for all his organisatio
 
 \paragraph{}
   I am most grateful to my husband Ali for all his love, support and and help during 
-my study. Thanks for advising me advising me with my , for your patience 
+my study. Thanks for me advising me with my , for your patience 
  and most importantly caring for our children during this pressured time. This thesis would not 
 have been possible without you.
 
@@ -380,7 +382,7 @@ Finally, my special thanks to my parents and my brother for all their encouragem
 \addcontentsline{toc}{chapter}{\numberline{}List of Acronyms}
 \acro{SBT}{Slender Body Theory}
 \acro{FBMS}{Fixed-beam Moving-sample}
-\acro{gwl}{General Writting Language}
+\acro{gwl}{General Writing Language}
 \acro{MPC}{Magnetic Polymer Composite}
 \acro{MBFS}{Moving-beam Fixed-sample}
 \acro{RFT}{Resistive Force Theory}
@@ -400,24 +402,24 @@ Finally, my special thanks to my parents and my brother for all their encouragem
 %\addcontentsline{toc}{chapter}{\numberline{}Abstract}
 %abstract
 
-The structures and functions of microorganisms make them a suitable reference point for the design of
- microrobots. This is because the flagellar propulsion of microorganisms such as E.coli can be used to provide  
-an efficient approach for modelling micro swimmers locomotion method in low Reynolds number regime. 
-Microrobots demonstrated precise and controllable movements under low strength magnetic field. A system with 
-a size of bacteria, capable to swim in high viscous fluid in a controllable manner was satisfied basic principles
- for performing delicate tasks such as targeted drug delivery in medical application. Furthermore, 
+Microrobots provide the opportunity to develop a system, the size of a bacteria, capable of swimming in a controllable manner 
+in a high viscous fluid and which could perform delicate tasks such as targeted drug delivery in a medical application. Furthermore, 
 microrobots have benefited from fabrications technology, which makes them biocompatible. 
+The structures and functions of microorganisms make them a suitable reference point for the design of
+ microrobots. This is because the flagella propulsion of microorganisms such as E.coli can be used to provide  
+an efficient approach for modelling micro swimmers locomotion method in low Reynolds number regime. 
+Microrobots demonstrated precise and controllable movements under low strength magnetic field. 
 In this study we reviewed a range of bio mimetic microrobots in terms of their design, fabrication, propulsion 
 method in the fluid environment. 
 The key characteristics of the helical shape microswimmers were optimised and the new design of helical
  microrobot is presented. The new design is demonstrated the microrobot with the variable pitch that is
  satisfied the fabrication requirement. 
 
-Three propulsion methods; Resistive Force Theory, Regularised Stokeslet Method 
-and Slender Body Theory were implemented. The last two methods have not used before
- for remotely controlled microrobots. We provide the simulation platform for the 
-swimming microrobot in a high viscose fluid. The simulation algorithm takes a desired velocity of microrobot
-and calculate the electric current is required to generate a dynamic magnetic field.
+The three propulsion methods studied were; Resistive Force Theory, Regularised Stokeslet Method 
+and Slender Body Theory. The last two methods have not previously been used 
+for remotely controlled microrobots. We provide the simulation platform for the 
+swimming microrobot in a high viscose fluid. The simulation algorithm takes a desired translational velocity of a microrobot
+and calculates the electric current required to generate a dynamic magnetic field.
 
 
 
@@ -510,7 +512,7 @@ in the helix design rather than a constant pitch to satisfy
                 %\label{System architecture}
        % \end{subfigure}
         \caption[Project workflow]{Project workflow. The project started by designing microhelix and followed by parallel work on the
-fabrication and simulation. The final stuctures were analysed and optimised in terms of their desing.}\label{overview_Dig1}
+fabrication and simulation. The final structures were analysed and optimised in terms of their design.}\label{overview_Dig1}
 
    %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
@@ -785,7 +787,7 @@ based on the rotary action; a helix, a screw and a twisted ribbon shape around i
 design would be more appropriate. The rotational motion of helical micro
  swimmers is one of the most effective propulsion methods in the low Reynolds number scenarios 
 because it leads to translational motion. Microrobots with the microspheres structure perform similarly 
-to the helical swimmers and are capable of swimming in the flowing liquid within the microfluidic channel~\citep{kim2013fabrication}. 
+to the helical swimmers and are capable of swimming in the flowing liquid within the micro-fluidic channel~\citep{kim2013fabrication}. 
 
 
 
@@ -969,7 +971,7 @@ general cilia-like feature have been designed. \citeauthor{gao2013bioinspired}
 \begin{figure}
   \centering
     \includegraphics[width=0.9\textwidth]{plants}
-  \caption[Xylem\rq{}s shape in different plants ]{The shape of the Xylem in differnt plants~\citep{mahoney2011velocity}.}
+  \caption[Xylem\rq{}s shape in different plants ]{The shape of the Xylem in different plants~\citep{mahoney2011velocity}.}
   \label{plants}
 \end{figure}
 
@@ -1085,7 +1087,7 @@ a constant or it can be a function of the geometry of the object and applied fie
 there is no force and microrobot just experiences the torque until the magnetization $\bm{M}$ is collinear with the
 magnetic field. At this point, there is no torque and the microswimmer remains stationary. Thus, a magnetic field is required 
 to go through spatial or temporal changes to generate a continous actuation. This can be performed by 
-rotating the helmholtz coils or generaring a dynamic magnetic field by using AC current~\citep{peyer2013bio}.
+rotating the helmholtz coils or generating a dynamic magnetic field by using AC current~\citep{peyer2013bio}.
 
 
 
@@ -1117,7 +1119,7 @@ three-axis Helmholtz setup.
 %\begin{wrapfigure}{r}{0.5\textwidth}
  % \begin{center}
     \includegraphics[width=0.7\textwidth]{tempreture}
-  \caption[Direct lasor writing]{DLW steps. step 1 is writting helical microrobots, in step 2 microrobots were 
+  \caption[Direct lasor writing]{DLW steps. step 1 is writing helical microrobots, in step 2 microrobots were 
 developed in isopropyl alcohol and step 3 is coating them by a layer of Ni and Ti. ~\citep{qiu2014artificial}.}
   \label{tempreture}
 %\end{center}
@@ -1217,7 +1219,7 @@ Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1e
     & 
     \begin{minipage}{4cm}
       \begin{itemize}
-        \item Direct Laser Writting (DLW)
+        \item Direct Laser Writing (DLW)
 	\item Two-photon Polymerization
    
       \end{itemize}
@@ -1254,7 +1256,7 @@ Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1e
     \begin{minipage}[t]{4cm}
       \begin{itemize}
 
-        \item Direct Laser Writting (DLW)
+        \item Direct Laser Writing (DLW)
 	\item Two-photon Polymerization
    
       \end{itemize}
@@ -1432,7 +1434,7 @@ Dorothea & 	Sparse 		  & 	10000	& 	1000		& 	1000		& 	1000		& 	1000		& 	1000\\[1e
 
   \end{tabular}
   
-  \caption[Summery of microrobots\rq{}s desing, locomotion and fabrication]{Different types 
+  \caption[Summery of microrobots\rq{}s design, locomotion and fabrication]{Different types 
 of microrobots, their fabrication and propulsion method.}\label{Micro}
 \end{table}
 
@@ -1444,10 +1446,10 @@ of microrobots, their fabrication and propulsion method.}\label{Micro}
 \chapter{Methods}
 
 In this chapter the design of microhelix is described and a few number of design is presented. It followed by introducing
-the fabrication mechanism, the technology applied to fabricate microstructures and post-processing fabricated microstructres.
+the fabrication mechanism, the technology applied to fabricate microstructures and post-processing fabricated microstructures.
 The simulation is major part of this chapter which is modelling the swimming mechanism of microhelix in high viscous fluid. 
 Three models studied for describing the swimming motion of the microhelix and one model (\ac*{RFT}) is implemented to simulate
-microhelix with two and six degree of freedom. The torque driven magnetic field is selected to actuate the microhelix and
+microhelix with two and six degrees of freedom. The torque driven magnetic field is selected to actuate the microhelix and
 as a result the relation between the rotational velocity and translational velocity is achieved.    
 
 
@@ -1459,8 +1461,8 @@ as a result the relation between the rotational velocity and translational veloc
 %%%%%%%%%%%%%%%%%%% Design %%%%%%%%%%%%%%%
 \section{Microrobot design} \label{microDesign}
 
-For the purpose of this study, the design of microrobots is focuced on a helical 
-tail shape with possible propeller head. The helical shape microrobot is generally copied the design of the helical 
+For the purpose of this study, the design of microrobots is focused on a helical 
+tail shape with possible propeller head. The helical shape microrobot has generally copied the design of the helical 
 rigid tail flagellum which is a one-dimensional structure. There are other microstructures 
 such as cilia and planar flexible tail flagellum that are copied to build a swimming microrobot. The 
 helical rigid tail flagellum is a preferred design for the micro swimmer as its simplicity makes
@@ -1520,13 +1522,13 @@ head (e).}\label{Different helical designs}
 \end{figure}
 
 The figure \ref{Different helical designs} represents the
-variaty of designs have been tried in the design stage of this project. A circle base helix with (\ref{Design6}) 
-and without sphere head (\ref{Design1}) has been tried. Also their pitch, helical angle and length of the helix
-were changed to monotor its behaviour druing simulation and fabrication process. Two types of
+variaty of designs that have been undertaken in the design stage of this project. A circle base helix with (\ref{Design6}) 
+and without sphere head (\ref{Design1}) has been designed. Also their pitch, helical angle and length of the helix
+were changed to monitor its behaviour during simulation and fabrication process. Two types of
  rectangle base helix has designed. In the first one, the larger side of the rectangle revolves around a spiral path (\ref{Design2})
 whilst in the second one the smaller side of the rectangle revolves around the spiral path (\ref{Design3}).
 The former design advantages in the simulation process because its shape produce larger force to propell the microrswimmer.
-However, the it behave poorly in the fabrication process becase it has not provide sufficient suface area to contact with the 
+However, the it behave poorly in the fabrication process because it has not provide sufficient surface area to contact with the 
 substrate. Therefore we can\rq{}t print it vertically. The latter provides strong base for printing vertically but ca\rq{}t generate 
 sufficient force to move the microswimmer forward. The new design of microhelix which has
 variable pitchrather than constant pitch is made (\ref{Design7}) and fabricated vertically. The advantage of variable pitch design 
@@ -1584,13 +1586,13 @@ the pre-processing purpose. The structures file contains all the microrobots tha
 software called Solidwork. The next stage is writing the structure using nanoscribe facility, which is 
 carried out in the clean room. After the structures printed, they can be seen under 
 the \ac*{SEM}. However, the structure made of polymer and the pictures of non-metal object under 
-the \ac*{SEM} is not perfect. Thus the polymer made microrobot were coated with the layer of 
-metal (usually gold) first, this process called sputtering coating process.  At this stage, the 
-picture of microrobot were analysed under the \ac*{SEM} and if they are satisfactory, they will go t
-o the final stage which is magnetization process. However, we never try the magnetization stage 
+the \ac*{SEM} is not perfect. Thus the polymer made microrobot were first coated with a layer of 
+metal (usually gold) and this process is called sputtering coating process.  At this stage, the 
+picture of microrobot were analysed under the \ac*{SEM} and if they are satisfactory, they will go to 
+the final stage which is magnetization process. However, we the magnetization stage was not attempted
 in this project because the aim was to optimise the structures in terms of design and fabrication and 
-there was no plan to run an experiment within the short period of time. The pictures were encountered 
-to have a problem were sent to the design stage for further optimisation process. In the following 
+there was no plan to run an experiment within the short period of time. The pictures identified 
+as having a problem were sent to the design stage for further optimisation process. In the following 
 two sections, we will explain the mechanism of the two photon lithography techniques and \ac*{SEM} in
  more detail.   
 
@@ -1610,7 +1612,7 @@ two sections, we will explain the mechanism of the two photon lithography techni
 
   \path (p2.south)+(0.0,-1.5) \Step{3}{Post-processing};
   \path (p3.east)+(3.0,0.0) \Step{4}{Sputter Coating};
-  \path (p4.south)+(0.0,-1.50) \Step{5}{Image Ananlysis};
+  \path (p4.south)+(0.0,-1.50) \Step{5}{Image Analysis};
 
  \path (p5.east)+(3.0,0.0) \Step{6}{Coating Magnetic Material};
   %\path (p4.east)+(5.0,0.0) \practica{7}{Calculate forward and inverse kinematic};
@@ -1654,7 +1656,7 @@ two sections, we will explain the mechanism of the two photon lithography techni
 \end{tikzpicture}									   %
 \caption[Fabrication overview]{Fabrication diagram. The nanoscribe technology is employed
 for the fabrication process and it was followed by analysing structure under SEM. 
-The final stage (yellow block in third column) has not been tried in this project. }						   %
+The final stage (yellow block in third column) has not been attempted in this project. }						   %
 \label{Fabrication diagram}										   %
 \end{figure}										   %	
 												   %
@@ -1667,7 +1669,7 @@ The final stage (yellow block in third column) has not been tried in this projec
 
 \subsection{Nanoscribe}\label{nanoscribe}
 
-Nanoscribe is the company provide sophisticated system and device for true 3D
+Nanoscribe is a company providing a sophisticated system and device for true 3D
  micro and nanofabrication. Their system is based on the laser lithography and it 
 used two-photo polymerization technique for the fabrication. The fabrication device combines 
 two modes for writing; the high-speed galvo-mode and an ultra-precise piezo-mode. The former 
@@ -1675,12 +1677,12 @@ is for fastest fabrication and it makes the structure in a layer-by-layer proces
  printing arbitrary 3D trajectories~\citep{Doe:2014Feb:Online}. The complete nanoscribe 
 package is made up of three components, Photonic Professional GT, the software and IP Photoresists. 
 Photosensitive material is used in both modes for structuring arbitrary 3D patterns in a high-resolution. 
-The properties of the photosensitive material, the laser power and the size of the spot in the material are
+The properties of the photosensitive material, the laser power and the size of the spot in the material 
  determined the voxel size. Extremely small voxel size can be achieved when focusing optics is used with 
 a high numerical aperture. The fabrication process in each mode is based on moving the voxel relative to
- the sample. The galvo mode approach is called \ac*{MBFS} which the laser beam is scanned 
-galvanometric mirrors and piezo-actuators will control the vertical movement. However in 
-piezo-mode, piezo actuators is moving the substrate in all three dimensions to achieve a highly 
+ the sample. The galvo mode approach is called \ac*{MBFS} in which the laser beam is scanned 
+and galvanometric mirrors and piezo-actuators will control the vertical movement. However in 
+piezo-mode, piezo actuators move the substrate in all three dimensions to achieve a highly 
 precise focus trajectory. This type of implementation is know as \ac*{FBMS}~\citep{Doe:2014Feb:Online}.
 
 
@@ -1689,7 +1691,7 @@ precise focus trajectory. This type of implementation is know as \ac*{FBMS}~\cit
 \begin{figure}
   \centering
     \includegraphics[width=0.9\textwidth]{nanoscribeWorkflow}
-  \caption[Nanoscribe workflow]{nanoscribe workflow. The stages are inveolved in  3D micro-printing with nanoscribe
+  \caption[Nanoscribe workflow]{nanoscribe workflow. The stages are involved in  3D micro-printing with nanoscribe
  device is shown in the diagram~\citep{Doe:2014Feb:Online}.}
   \label{nanoscribeWorkflow}
 \end{figure}
@@ -1724,12 +1726,12 @@ in the diagram~\citep{Doe:2014Jan:Online}.}
 
 IP Photoresists is a high viscose fluid that comes as part of nanoscribe package. It is
  used to maximise the performance of the multiphoton polymerization process. It has high 
-mechanical stability and stick to different substrate very well~\citep{Doe:2014Feb:Online}. A wide
+mechanical stability and sticks very well to different substrate ~\citep{Doe:2014Feb:Online}. A wide
  range of material with different mechanical, optical or chemical properties can be used for the substrate 
-in direct laser writing. The choice of the substrate material is an application dependent. For example in 
-optical applications the transparent material such as glass is more appropriate. In the latter application 
+in direct laser writing. The choice of the substrate material is application dependent. For example in 
+optical applications the transparent material such as glass is more appropriate. In the latter application, the 
 substrate is mainly for supporting to the polymer structures. Also, we can use pre-structured substrates 
-such as transparent micro-fluidic chip that polymer structure can be printed on the substrate. In that
+such as transparent micro-fluidic chip so that polymer structure can be printed on the substrate. In that
  case, the functionality of multiphoton lithography can be improved by combining the mechanical parts 
 with substarte~\citep{Doe:2014Feb:Online}.  
 
@@ -1740,7 +1742,7 @@ In this project we used a nanoscribe device to print microswimmers using the gal
 The whole printing unit is located in the clean room\footnote{Clean room is an environment with controlled
   concentration of airborne particles to make it suitable for product manufacturing~\citep{Doe:2014April:Online}. }. 
 The fabricated structures were observed under the 
-\ac*{SEM} and all the reslulting images are presented and discussed in the result \ref{result} and discussion
+\ac*{SEM} and all the resulting images are presented and discussed in the result \ref{result} and discussion
 chapters \ref{discussion} respectively.
 
 
@@ -1771,26 +1773,26 @@ The key advantages of using \ac*{SEM} over traditional microscope is having the 
  field and the higher resolution. In addition, researchers have more control over the degree of 
 magnification because \ac*{SEM} uses electromagnets\citep{Doe:2014Jan:Online}.
 
-We need to prepared samples before using the \ac{SEM} because it using the electron in the
- vacuum condition. That means sample should not contain any water otherwise the water will 
-vaporise in the vacuum. This is high-vacuum \ac*{SEM}. If we require an image of a wet sample such 
+We need to prepare samples before using the \ac{SEM} because it uses the electron in a
+ vacuum condition. That means the sample should not contain any water as otherwise the water will 
+vaporise in the vacuum. This is a high-vacuum \ac*{SEM}. If we require an image of a wet sample such 
 as biological specimen we can use the low-vacuum \ac*{SEM}. In that case, the specimen chamber
  contains air that avoid dehydrating of samples.
 Because the produced images are based on the electron-sample interaction, if the sample is made
- of non-metal material, the final image is not very clear. Thus, they need to be covered by a metal to
+ of non-metal material, the final image is not very clear. Thus, the sample needs to be covered by a metal in order to
  make it conductive. The process of covering the sample with metal is called sputter coating\citep{Doe:2014Jan:Online}.
 
 \paragraph{sputter coating}
 In the sputter coater, there is small chamber in the vacuum to place the sample in. An electric field 
-and argon gas used in order to release the electron from the argon and convert it into positive charged 
+and argon gas is used in order to release the electron from the argon and convert it into positively charged 
 atom. Then, argon ions and negatively charged gold foil are attracted to each other and as a result gold 
-atoms fall from the surface of the gold and settle onto the surface of the specimen. Therefore a thin gold 
-layer covers the surface of the sample and make it conductive for \ac*{SEM} machine\citep{Doe:2014Jan:Online}.
+atoms fall from the surface of the gold and settle onto the surface of the specimen. Therefore, a thin gold 
+layer covers the surface of the sample and makes it conductive for \ac*{SEM} machine\citep{Doe:2014Jan:Online}.
 
-In this project, the microrobot structure is made of polymer and we made them conductive by applying the 
-sputter coating process and then analysed them under \ac*{SEM}. The images of the microrobot structures 
+In this project, the microrobot structure is made of polymer, which we conductive by applying the 
+sputter coating process and then analysing them under \ac*{SEM}. The images of the microrobot structures 
 before and after coating is presented in the result section \ref{result}. In the following section, the simulation of 
-microrbot is demonestareted in detail.
+microrbot is demonstrated in detail.
 
 
 
@@ -1819,8 +1821,8 @@ actuation is an output.}
 The simulation of the microrobot is formed by two main components; helical microrobot propulsion mechanism
  and actuation method. The complete algorithm that describes the implementation of the simulation
 system is represented in the diagram \ref{PSuedocode}. In this algorithm, the desired velocity is given to the system
-and the required electric current to make the dynamic magnetic field will be an output. The pseudocode of
-the algorithm \ref{PSuedocode} is provided more details in each step of the implementation and the complete computation
+and the required electric current to make the dynamic magnetic field will be an output of the system. The pseudocode of
+the algorithm \ref{PSuedocode} is provided in more details in each step of the implementation and the complete computation
 is explained in section \ref{RFT_sixDegree} and section \ref{microActuation}.  
 
 
@@ -1916,7 +1918,7 @@ the diagram.}
 %%%%%%%%%%%%%%%%%%%END of Pseudocode%%%%%%%%%%%%%
 
 
-\subsection{Modeling helical propulsion}\label{maths}
+\subsection{Modelling helical propulsion}\label{maths}
 
 Analysing fluid dynamic phenomena on microorganism is a fundamental approach to model
  microorganism
@@ -1948,9 +1950,9 @@ $11R$, ($2R < \lambda < 11R$). Also the helix length ($L$) varies from $3\lambda
 
 
 The flagella rotation at low Reynolds number exerts an axial thrust ($F$) and torque ($T$) related to the
-rotation rate ($\omega$) and flagellum axial velocity ($\nu$). At the same time, fluids was exerted the force
+rotation rate ($\omega$) and flagellum axial velocity ($\nu$). At the same time, fluids was exerted on the force
  ($-F$) and the torque ($-T$) on the swimming microrobots~\citep{purcell1997efficiency}. The fluid dynamic 
-govern by the Stokes equations (\ref{stokes_1}) in the low Reynolds regime;
+is governed by the Stokes equations (\ref{stokes_1}) in the low Reynolds regime;
 
 
 \begin{equation}
@@ -1975,12 +1977,12 @@ the equations \ref{stokes_1}. These linear relationship can be defined as follow
 \end{equation}
 
 
- Therfore, a matrix 
+ Therefore, a matrix 
 $\bigl(\begin{smallmatrix}
 A&B\\ C&D
 \end{smallmatrix} \bigr)$
  defined as propulsion matrix the
-model to explain the flagellar swimming motion described by following equation~\citep{rodenborn2013propulsion}
+model to explain the flagella swimming motion described by following equation~\citep{rodenborn2013propulsion}
 as mentioned in the literature review earlier;
  
 
@@ -1992,13 +1994,13 @@ C & D \end{bmatrix}  \begin{bmatrix} \nu
 \end{bmatrix}
 \]
 
-The elements in the symetric $2\times2$ matrix (propulsive matrix) in the above equation only depends on 
+The elements in the symmetric $2\times2$ matrix (propulsive matrix) in the above equation only depends on 
 flagellum geometry. The propulsive matrix elements can be computed by three methods called;
 resistive force theory, slender body theory and regularized Stokeslet theory which are described in detail in sections \ref{method3}, 
 \ref{method1} and \ref{method2} respectively. 
 
 
-\subsubsection{Resistive force theory for microrobot with two degree of freedom}\label{method3}
+\subsubsection{Resistive force theory for microrobot with two degrees of freedom}\label{method3}
 
 
 
@@ -2007,7 +2009,7 @@ resistive force theory, slender body theory and regularized Stokeslet theory whi
 %\begin{wrapfigure}{r}{0.5\textwidth}
   %begin{center}
     \includegraphics[width=0.8\textwidth]{motion}
-  \caption[Microrobot filament motion]{Analysis of arbitary filament motion of microhelix~\citep{edd2003biomimetic}.}
+  \caption[Microrobot filament motion]{Analysis of arbitrary filament motion of microhelix~\citep{edd2003biomimetic}.}
   \label{motion}
 %\end{center}
 %\end{wrapfigure}
@@ -2018,8 +2020,8 @@ resistive force theory, slender body theory and regularized Stokeslet theory whi
 The swimming velocity and efficiency of the microrobot can be predicted by Resistive force theory (RFT)~\citep{purcell1997efficiency}. 
 The force exerted on the fluid by micro swimmer were calculated initially and the micro swimmer will have a net 
 movement if the force is not zero~\citep{Doe:2013:Online}. Furthermore, the swimming velocity will decrease if the helical
-body is attached to the innert head. Figure \ref{filament} shows an arbitary filament motion which is defined by $s(l,t)$. 
-A direction of the helix velocity ($U$) is along x-axis and its rotation is symetric about the x-axis. 
+body is attached to the innert head. Figure \ref{filament} shows an arbitrary filament motion which is defined by $s(l,t)$. 
+A direction of the helix velocity ($U$) is along x-axis and its rotation is symmetric about the x-axis. 
 The following assumption has been made in order to use the RFT. 
 
 %\begin{figure}
@@ -2027,7 +2029,7 @@ The following assumption has been made in order to use the RFT.
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
     \includegraphics[width=0.5\textwidth]{filament}
-  \caption[A motion of helical segment]{A motion of an arbitary filament~\citep{edd2003biomimetic}.}
+  \caption[A motion of helical segment]{A motion of an arbitrary filament~\citep{edd2003biomimetic}.}
   \label{filament}
 \end{center}
 \end{wrapfigure}
@@ -2081,7 +2083,7 @@ Nf_xL  + C_DU  = 0
 
 Where $N$ and $A$ are number of filaments and helical amplitude of filaments respectively. Also $f_x$ and 
 $f_y$ shows the components of the force vector along x and y directions. In addition, $C_D$ and $C_{D\Omega}$
-were computed by equations \ref{Coeff1} and \ref{Coeff2} where $R$ is redius of the helix and $\mu$ is fluid velocity.
+were computed by equations \ref{Coeff1} and \ref{Coeff2} where $R$ is radius of the helix and $\mu$ is fluid velocity.
 
 
 \begin{equation}
@@ -2175,15 +2177,15 @@ Finally, the efficiency of the helical swimmers can be computed as follow;
 \end{equation}
 
  
-\subsubsection{Resistive force theory for six degree of freedom}\label{RFT_sixDegree}
+\subsubsection{Resistive force theory for six degrees of freedom}\label{RFT_sixDegree}
  
 
 
 
-The two degree of freedom microrobot (one dimention model) with \ac*{RFT} was exhibited a successful result~\citep{mahoney2011velocity}
+The two degrees of freedom microrobot (one dimension model) with \ac*{RFT} was exhibited a successful result~\citep{mahoney2011velocity}
 for studying the helical microswimmers. However, complex motion of swimming microrobot could not be 
-explained in one dimention model. Therefore, the \ac*{RFT} was needed to be implemented in three dimention
-model which means defining a microrobot with six degree of freedom. The microrobot\rq{}s is
+explained in one dimension model. Therefore, the \ac*{RFT} was needed to be implemented in three dimension
+model which means defining a microrobot with six degrees of freedom. The microrobot\rq{}s is
 used in this model has a helical tail with the sphere head attached to it as shown in \ref{RFT-6dof}.
 
 \begin{figure}
@@ -2191,7 +2193,7 @@ used in this model has a helical tail with the sphere head attached to it as sho
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
     \includegraphics[width=1.0\textwidth]{RFT-6dof}
-  \caption[Helical microrobot configration with a magnetic spherical head]{Three dimention configration for the helical microrobot with a magnetic spherical head. The origin
+  \caption[Helical microrobot configuration with a magnetic spherical head]{Three dimension configuration for the helical microrobot with a magnetic spherical head. The origin
 of the helix coordinate is denoted with $\bm{O}_h$ and $\bm{x}_{h}$ is the central axis of the
  helix~\citep{mahoney2011velocity}.}
   \label{RFT-6dof}
@@ -2200,7 +2202,7 @@ of the helix coordinate is denoted with $\bm{O}_h$ and $\bm{x}_{h}$ is the centr
 \end{figure}
 
 The \ac*{RFT} is applied with the assumption that the force and torque is applied on the helical tail and sphear
-head are independent. Therefore, the force $f_h$ and torque $\tau_h$ of the helical tail are optained by \ac*{RFT} 
+head are independent. Therefore, the force $f_h$ and torque $\tau_h$ of the helical tail are obtained by \ac*{RFT} 
 and $f_m$ and $\tau_m$ are force and torque applied on the sphear head respectively. 
 The equation \ref{total_force_torque} is the summation of two forces and torques which is the total force and torque. 
 
@@ -2209,11 +2211,11 @@ The equation \ref{total_force_torque} is the summation of two forces and torques
 \label{total_force_torque}
 \end{equation}
 
-According to the \ac*{RFT} the force on the extremely teeny segment of the helix is defined by 
+According to the \ac*{RFT} the force on the extremely minuscule segment of the helix is defined by 
 the segment velocity and drag forces acts on that segment. First \ac*{RFT} takes the
- velocity ($\bm{V}_s$) was applied on the small length
-of helix and decompound it into two vectors, one parallel ($\bm{V}_{\parallel}$) and one perpendicular ($\bm{V}_{\perp}$)
- to that segment. Also, the drag force is acting on that small length decomposed into two 
+ velocity ($\bm{V}_s$) that was applied on the small length
+of helix and decompounded it into two vectors, one parallel ($\bm{V}_{\parallel}$) and one perpendicular ($\bm{V}_{\perp}$)
+ to that segment. Also, the drag force is acting on the small length decomposed into two 
 vectors; parallel (${\xi}_{\parallel}$) and perpendicular (${\xi}_{\perp}$) to that segment.  
 Therefore, the force is applied on the small segment is formulated as follow; 
 
@@ -2228,15 +2230,15 @@ Therefore, the force is applied on the small segment is formulated as follow;
 \end{equation}
 
 Where ${\xi}_{\parallel}$ and ${\xi}_{\perp}$ are drag coefficients and they have been approximated by a number
-of scientists emprically. The fluidic force ($ \bm{f}_h$) acts on the helix is computed by integrating over these 
-differential forces along the helix length. Because the integration is performed in three dimentions
+of scientists emprically. The fluidic force ($ \bm{f}_h$) acting on the helix is computed by integrating over these 
+differential forces along the helix length. Because the integration is performed in three dimensions
  we need to define two seperate coordinate frame, one for the given
 differential segment (frame $s$) and one for the helix (frame $h$). The helix pitch angle ($\theta$) 
 and radius ($r_h$) is used to define the geometry of the helix with the assumption that the central
  axe of the helix is
 parallel to the $\bm{x}_h$. Figure \ref{RFT-6dof} presents the helix coordinate origin ($O_h$) with 
 its three axis ($\bm{x}_h , \bm{y}_h , \bm{z}_h$). The helix is represented in a cylindrical coordinate
-\footnote{The cylindrical coordinate is an extention of the polar coordinate to the three dimention space. It
+\footnote{The cylindrical coordinate is an extention of the polar coordinate to the three dimension space. It
 defines based on the radius $r$, the angle $\theta$ and the $z$ coordinate such that the following equation
 are valid
 
@@ -2271,7 +2273,7 @@ respect to the $y$ axis. The final result is a vector in the helix ($h$) frame \
 \end{equation}
 
 Hence, as appears in the equation \ref{velocity_force_segment_frame} the differential relating velocity to force can be shown with respect to the frame of 
-a random segment along the helix in the segment frame in three dimention.   
+a random segment along the helix in the segment frame in three dimension.   
 
 
 
@@ -2295,7 +2297,7 @@ the segment is represented in the segment\rq{}s own frame.
 In the segment frame, the $x_s$ axis is assumed to be parallel to that segment and two other axis 
 ($y_s$, $z_s$) are perpendicular to that segment as we can see in the \ref{drag_coeffi_matrix}.
 Hence, the relationship between forces and velocity can be expressed in the helix 
-frame (\ref{velocity_force_helix_frame}) by using the drag coeffient unity matrix \ref{drag_coeffi_matrix}.
+frame (\ref{velocity_force_helix_frame}) by using the drag coefficient unity matrix \ref{drag_coeffi_matrix}.
 
 \begin{equation}
  ^{h}d\bm{f}_s = {^{h}\bm{\Xi}}(\phi){^{h}\bm{V}_s}{ds}
@@ -2342,7 +2344,7 @@ And acording to the skew-symmetric matrix property we have:
 
 \begin{equation}
 -\Delta{\{^{h}\bm{P}(\phi)}\}^{h} = \Delta{\{^{h}\bm{P}(\phi)}\}^{Th}
-\label{skew_symetric_vector}
+\label{skew_symmetric_vector}
 \end{equation}
 
 After substituting \ref{total_velocity_helixFrame} into \ref{velocity_force_helix_frame}:
@@ -2355,7 +2357,7 @@ After substituting \ref{total_velocity_helixFrame} into \ref{velocity_force_heli
 The equation \ref{Final_force_related_RotationTranslation} manifests the relationship between differential force
 and translation and rotation velocity of the small helix segment in the helix frame. Each force is applied on 
 an infinitesimally small section of helix generates a torque around helix centre. As a result the 
-relation between the force and torque at an arbitary slice of helix (using parameter $\phi$) can be 
+relation between the force and torque at an arbitrary slice of helix (using parameter $\phi$) can be 
 represented in the helix frame:
 
 \begin{equation}
@@ -2364,7 +2366,7 @@ represented in the helix frame:
 \end{equation}
 
 Therefore the total fluidic torque and force of the helix can be figured out by integrating the small torques
-and forces that applied on the infinitestimally segments of the helix along the helix length:
+and forces that applied to the extremely small segments of the helix along the helix length:
 
 \begin{equation}
  \bm{f}_h = \int \; d\bm{f}_s  \qquad  \bm{\tau}_h = \int \; d\bm{\tau}_s 
@@ -2372,7 +2374,7 @@ and forces that applied on the infinitestimally segments of the helix along the 
 \end{equation} 
  
 The final torque and force can be obtained from the equations \ref{total_force_torque} by 
-integraling with respect to the polar angle $\phi$. As it been seen in the figure \ref{RFT-6dof} the $ds$
+integrating with respect to the polar angle $\phi$. As it been seen in the figure \ref{RFT-6dof} the $ds$
 can be written with respect to the polar angle $\phi$ as follow:
 
 
@@ -2399,9 +2401,9 @@ integrating with respect with $\phi$ from $-\pi n$ to $\pi n$ for an $n$ turn he
 \label{second_integral_torque}
 \end{multline} 
 
-Computing all four integrals in the eqations \ref{first_intergra_force} and \ref{second_integral_torque} will
+Computing all four integrals in the equations \ref{first_intergra_force} and \ref{second_integral_torque} will
 result in two eqations that is expressed force $(^{h}\bm{f}_h)$ and torque $(^{h}\bm{\tau}_h)$ in 
-terms of the anqular $(^{h}\bm{\omega})$ and translational velocity $(^{h}\bm{V})$: 
+terms of the angular $(^{h}\bm{\omega})$ and translational velocity $(^{h}\bm{V})$: 
 
 
 \[
@@ -2659,7 +2661,7 @@ Hence, the total nonfluidic force ($\bm{f}$) which produced as a result of gravi
 \subsubsection{Regularized Stokeslet method}\label{method2}
 
 A regularization parameter can be used as a proxy for the body radius to minimise numerical errors
- in modelling a flagellum as a one dimentional filament in a low Reynolds~\citep{smith2009boundary}.
+ in modelling a flagellum as a one dimensional filament in a low Reynolds~\citep{smith2009boundary}.
 number fluids. The Regularized Stokeslet method (RSM) is one of the approch to solve the zero 
 Reynolds number linear \lq{}Stokes flow\rq{} equations;
 
@@ -2677,7 +2679,7 @@ Reynolds number linear \lq{}Stokes flow\rq{} equations;
 
 where $u$ (velocity), $p$ (pressure), $\mu $ (kinematic viscosity), and $f$ (force) are measured per unit
 volume. The singular \lq{}Stokeslet\rq{} solution for the equations \ref{stokes} corresponds to the purely 
-viscous component (point force) of the flow which was determined by moving sphere. 
+viscous component (point force) of the flow, which was determined by moving sphere. 
 The \lq{}Stokeslet\rq{} solution for unit force acts in the j-direction and concentrated at $\xi $, where $f$ is;
   
 
@@ -2732,8 +2734,8 @@ from the centreline;
 
 where $a(s_q)$ is a radius of slender body and $\bm{n}(s_q)$ is a unit normal vector. Point distributions of 
 Stokeslets at any point $x = \bm{\xi}_q$ and line distribution inside the notional surface
-of the flagella are both singular. However, surface distributions of Stokeslets do not result in singular  velocity
- but it still require attentive numerical implementations \citep{smith2009boundary}. The \lq{regularized Stokeslet}\rq{}
+of the flagella are both singular. However, surface distributions of Stokeslets do not result in singular velocity
+ but still requires attentive numerical implementations \citep{smith2009boundary}. The \lq{regularized Stokeslet}\rq{}
  introduced an exact solution for the equations \ref{$stokes_reg$} to overcome these issues. 
 This method used a cut off function ($\psi$) with a regularization parameter ($\epsilon$) to smooth point forces 
 such that $\int_{R^3} \psi_{\epsilon} (\bm{x})\, \mathrm{d}V_x = 1$.
@@ -2800,7 +2802,7 @@ Slender body theory represents the helix body with an arrangement of
  doublets and Stokeslets along the filament central line (Figure \ref{Stoks}). This theory represented by 
 Lighthill for the first time and was followed by Johnson with some modification. According to \citeauthor{lighthill1971large}
 there is some distance $q$ from any given point on the helix body such that $q$ is between the radius of the
-filament $a$ and helix pitch $\lambda$. The dipoles is fallen within this distance are important to determine the flow at the
+filament $a$ and helix pitch $\lambda$. The dipoles is fallen within this distance are important in determining the flow at the
 given point. He proved for the induced fluid flow on the given segment 
 the sum of near-field and far-field solutions could be made independent of any distance ($q$) by definding
 the dipoles as follow;
@@ -2818,8 +2820,8 @@ the dipoles as follow;
 
 
 Where $s$ is a location along the central axis of the filament and $\bm{f}_\perp (s)$ is Stokeslets strength\rq{}s
-component which i perpendicular to the filament central axis. Therefore the sum of dipole and Stokeslets
-define the flow induce by each segnment of the helix body. As a result there is a relation between 
+component which is perpendicular to the filament central axis. Therefore the sum of dipole and Stokeslets
+define the flow induced by each segment of the helix body. As a result there is a relation between 
 the local velocity of a segment on the $s$ location and the force per unit length;
 
 
@@ -2841,7 +2843,7 @@ Where $\bm{r_0}$ is the vector from the point $s$ on the central axis to the poi
 \label{Oseen}
 \end{equation}
 
-The thrust, torque and drag of the helical microswimmer can be optained by applying rectangular rule of
+The thrust, torque and drag of the helical microswimmer can be obtained by applying rectangular rule of
 numerical integration and as a result we have;
 
 
@@ -2876,7 +2878,7 @@ find the linear mapping between force and velocity per unit length and calculate
 to find the force, torque and drag.
 
 The first part of the equation \ref{numerical} is called tensor $D_n$ and it shows the helical segments that
-are centered at $\bm{r}$. $D_n$ can be expressed in the form of following integral;
+are centred at $\bm{r}$. $D_n$ can be expressed in the form of following integral;
 
 
 \begin{equation}
@@ -3022,7 +3024,7 @@ Finally, the fluidic force and torque are;
 
 
 
-\subsection{Microrobot actutation}\label{microActuation}
+\subsection{Microrobot actuation}\label{microActuation}
 
 
 
@@ -3030,7 +3032,7 @@ Finally, the fluidic force and torque are;
 
 %\subsubsection{Torque driven microrobot}
 
-In this section the aim is to develop an algorithm for the microrobot velocity control. To achive this aim, we need to 
+In this section the aim is to develop an algorithm for the microrobot velocity control. To achieve this aim, we need to 
 fiqure out the direction that microrobot points out $(\bm{X}_{h})$ and then its rotational speed $(\Omega)$
  to obtain a desired velocity \cite{mahoney2011velocity}.
 In this algorithm, the only nonfluidic force is applied on the microrobot is its weight which is expressed as 
@@ -3050,11 +3052,11 @@ Flowchart for Algorithm of the actuation method
 Previous research on controlling microswimmers\rq{}s speed is evident that there is a lack
 of control if commanding microrobot with too rapid maneuvers \citep{zhang2009characterizing} \citep{zhang2009artificial}
 . Therefore, in this work we assumed
-microswimmers can turn continuously to the aimed direction in such away that the temporary behavior is been
+microswimmers can turn continuously to the aimed direction in such a way that the temporary behaviour is 
 ignored. We define $\tilde{\bm{X}}$ as the axis magnetic field should always be perpendicular to it.
-If the microrobot coordinate frame is aligned with the stationary world frame then there it does not require
+If the microrobot coordinate frame is aligned with the stationary world frame then there it does not need
 to convert vectors between these two frames. From the helical propulsion equation system, 
-we specifically considering the first equation which is the relation between non-fluidic force, angular and 
+we specifically considered the first equation which is the relationship between non-fluidic force, angular and 
 translational velocity of the microswimmer. 
 
 
@@ -3122,12 +3124,12 @@ Then by applying the similar transformation to other component \ref{Dmatrix}, \r
 \label{first_lineOf_ propulsion method5}  
 \end{equation}
 
- To obtain ${^{h}\bm{R}_w}$ the orientation of the microrobot is required to be detected 
+ To obtain ${^{h}\bm{R}_w}$ the orientation of the microrobot needs to be detected 
 whilst it is rotating during propulsion around the axis which is difficult. For that reason, the equation
-\ref{first_lineOf_ propulsion method4} is expressed in such way that it does not require to know the
+\ref{first_lineOf_ propulsion method4} is expressed in such way that does not need to know the
 microrobot orientation whilst rotating about its central axis. Since the microrobot is torque driven and the only 
 nonfoluidic force is involved in equation \ref{first_lineOf_ propulsion method} is its weight $(m \bm{g})$. The 
-velocity of microrobot can be decomposed to vertical and horizantal components:
+velocity of microrobot can be decomposed to vertical and horizontal components:
 
  \begin{equation}
 \bm{V}_{ver} = (\bm{V . \hat{g}})\bm{\hat {g}}
@@ -3150,8 +3152,8 @@ Two options can be considered for the ${\| \bm {{V}_{hor}}\|}$:
 
 The first option is a trival case, because when the microrobot is being commanded with
 $ {\| \bm {{V}_{hor}}\|}  = 0$, that means the microrobot can only swim vertically in either 
-direction according to the equasion \ref{horiantal_velo}. This is the spacial case when the six degree of
-freedom microrobot will effevtively become the microrobot with two degree of freedom which is pointing
+direction according to the equation \ref{horiantal_velo}. This is the special case when the six degrees of
+freedom microrobot will effevtively become the microrobot with two degrees of freedom which is pointing
 in the direction of the gravity acceleration and its angular velocity can be found directly from the eqation
 \ref{first_lineOf_ propulsion method4}:
 
@@ -3161,8 +3163,8 @@ in the direction of the gravity acceleration and its angular velocity can be fou
 \label{angular_velo_horiVelo=0}
 \end{equation}
 
-The second option ${\| \bm{{V}_{hor}}\|} \neq 0$ is more challenging, because it is required to set 
-the coordinate frame for microrobot which does not rotate when the it is rotating around the central axis.
+The second option ${\| \bm{{V}_{hor}}\|} \neq 0$ is more challenging, because it requires setting 
+the coordinate frame for microrobot which does not rotate when it is rotating around the central axis.
 The ideal coordinate frame can be constructed by using $\hat{\bm{g}}$ and based on the eigenvectors
 \footnote{If we have a set of data point, the set can be deconstructed into eigenvector and eigenvalue
 where eigenvector is the direction that data spread out and eigenvalue is the variance of the data in that
@@ -3206,9 +3208,9 @@ direction of the microswimmer ($\bm{\tilde{X}}$)~\citep{mahoney2011velocity}.}
 The new (principle) coordinate system will solve the problem because it is invariant to the rotation
  of the microswimer around its central axis. Therefore, the equation \ref{first_lineOf_ propulsion method4} can
 be expressed in terms of the principle coordinate frame. In the following paragraph,
-we first configure the representation for the first componet (${^{w}\bm{E}} {^{w}\bm{\omega}}$) of the 
+we first configure the representation for the first component (${^{w}\bm{E}} {^{w}\bm{\omega}}$) of the 
 equation \ref{first_lineOf_ propulsion method4} 
- and followed by a similar process on the second componet (${^{w}\bm{D}} {^{w}\bm{f}}$). The final result will express the 
+ and followed by a similar process on the second component (${^{w}\bm{D}} {^{w}\bm{f}}$). The final result will express the 
 desired velocity vector in terms of the principal coodinate system. 
 
 
@@ -3223,7 +3225,7 @@ and definition of eigenvalue and eigenvector \footnote{Assume $A $ is a square m
 $\lambda$ an eigenalue of matrix $A$ if the non-zero vector $\bm{V}$ exists such that $A\bm{V} = \lambda \bm{V}$.
 The vector $V$ is called eigenvector corresponding to eigenvalue $\lambda$.
  \citep{Doe:2013Nov:Online}.}
-the first componet of the desired velocity (${^{w}\bm{E}} {^{w}\bm{\omega}}$) can be 
+the first component of the desired velocity (${^{w}\bm{E}} {^{w}\bm{\omega}}$) can be 
 represented in the principle
 coordinate system as follow:
 
@@ -3233,8 +3235,8 @@ coordinate system as follow:
 \label{E_W}
 \end{equation}
 
-The similar reasoning has been used to represent the second componet (${^{w}\bm{D}} {^{w}\bm{f}}$) of 
-the velocity equasion (\ref{first_lineOf_ propulsion method4}) in terms of the
+The similar reasoning has been used to represent the second component (${^{w}\bm{D}} {^{w}\bm{f}}$) of 
+the velocity equation (\ref{first_lineOf_ propulsion method4}) in terms of the
 principle coordinate system. In this case, $d_{11}$ and $d_{22}$ are eigenvalues of the matrix $^{h}\bm{D}$ 
 such that $^{h}\bm{x}_h$ is the eigenvector corresponding to the $d_{11}$ and $d_{22}$ is associated with
 an eigenspace \footnote{Let $A $ be a $n \times n$ square matrix with an 
@@ -3254,11 +3256,11 @@ vectors; one parallel to the central axis of helix and the other perpendicular t
 \label{f_Component_globalAxis}
 \end{equation}
 
-If ${^{w}\bm{f}}_{\perp h}$ deos not change then both ${^{w}\bm{f}}$ and ${^{w}\bm{f}}_{\parallel h}$ will 
+If ${^{w}\bm{f}}_{\perp h}$ does not change then both ${^{w}\bm{f}}$ and ${^{w}\bm{f}}_{\parallel h}$ will 
 not change if the microrobot rotate around its central axis. In addition, $^{w}\bm{y}_p$ and $^{w}\bm{z}_p$ are 
 in the eigenspace formed by $\{ ^{w}\bm{y}_h ,   ^{w}\bm{z}_h  \}$. As a result, ${^{w}\bm{f}}_{\perp h}$ can be written in the 
 principle coordinate frame as a linear combinations of two vectors ${^{w}\bm{z}}_{p}$ and 
-${^{w}\bm{y}}_{p}$. Beacuse $d_{22}$ is the corresponding eigenvalue of any vector in the span of the
+${^{w}\bm{y}}_{p}$. Because $d_{22}$ is the corresponding eigenvalue of any vector in the span of the
  $\{ ^{w}\bm{y}_h , ^{w}\bm{z}_h  \}$, so it will be the eigenvalue associated with ${^{w}\bm{f}}_{\perp h}$.
 Using the fact that $d_{11}$ is the eigenvalue corresponding to $ {^{w}\bm{f}}_{\parallel h} $ and implying 
 the transformation matrix we can write the force based on the principle component axis:
@@ -3297,7 +3299,7 @@ the angle $\alpha$ between the vector $\bm{v}$ and the vertical axis in the worl
 \label{alpha_velocity}  
 \end{equation}
 
-The microrobot requires to be position above the desired velocity vector (upward) with the angle $\psi$ 
+The microrobot is required to be in a position above the desired velocity vector (upward) with the angle $\psi$ 
  to compensate for the gravity vector. If we project the desired velocity equation (\ref{velocity_based_principle})
 into principle coordinate axis then we have:
 
@@ -3332,7 +3334,7 @@ equation \ref{Xz_velocity} can be replaced by its equivalents:
 
 
 
-Thus, the replacing will lead to the following:
+Thus, the replaced equation will lead to the following:
 
 
 \begin{equation}
@@ -3342,7 +3344,7 @@ Thus, the replacing will lead to the following:
 
 by applying the subtraction law for $ \sin(\psi - \alpha)$ \footnote{$\sin(\psi - \alpha) = 
 \sin(\psi) \cos(\alpha) - \cos(\psi) \sin(\alpha)$},
- the angle $\psi$ can be optained from the following
+ the angle $\psi$ can be obtained from the following
 equation:
 
 
@@ -3378,7 +3380,7 @@ $(\bm{V} . \bm{x}_p) = \| {\bm{V}} \|  \cos({\psi})$ and $({\bm{f} . {\bm{x}}_p 
 \end{equation}
 
 At this point the rotational velocity of microrobot can be used to compute the magnetic torque according to
-the following equasion from propulsion equasion system;
+the following equation from propulsion equation system;
 
 
 \begin{equation}
@@ -3386,8 +3388,8 @@ the following equasion from propulsion equasion system;
 \label{finalTorque_rotation}  
 \end{equation}
 
-Where $\bm{V}$ is known and $\bm{B}$ and $\bm{C}$ are precomputed from coeffient matix. Then considering
-  magnetic torque equasion and replacing torque by its equivalent \ref{finalTorque_rotation};
+Where $\bm{V}$ is known and $\bm{B}$ and $\bm{C}$ are precomputed from coefficient matix. The torque in the 
+  magnetic torque equation is replaced by its equivalent \ref{finalTorque_rotation};
 
 \begin{equation}
  \tau = \bm{V}M \times \bm{B}
@@ -3414,11 +3416,9 @@ And the simulation algorithm is completed.
 
 % Table show the range of wireless microrobopts input frequency and their speed.
 
-Fe-ABF and FeTi-ABFs 
+Fe-ABF and FeTi-ABFs are
 two magnetic fields of strenghts 1mT and 3 mT
-The test show that forward speed is increasing with increasing input frequency below a critical value
- called (step-out frequency is the maximum magnetic field frequency that the ABFs can follow synchronously).
-The step out frequency increases with the strength of the magnetic field. The maximum speed of Fe-ABF was
+The test show that forward speed is increasing with increasing input frequency. The maximum speed of Fe-ABF was
 48.9 $\mu ms^{-1}$ at the field strength of $9 mT$ and $72 Hz$ ~\citep{qiu2014noncytotoxic}.
 
 \end{comment}
@@ -3430,8 +3430,7 @@ The step out frequency increases with the strength of the magnetic field. The ma
 
 \section{Simulation}
 The aim of implementing the simulation framework for a microhelix is to analyse the effect of 
-the key parameters on a microhelix\rq{}s efficiency, whilst also finding the force, torque and drag act on 
-the body of the helix. As the microhelix moves in a fluid environment, modeling its swimming
+the key parameters on a microhelix\rq{}s performance. As the microhelix moves in a fluid environment, modelling its swimming
 motion is one aspect of the implementation. 
 
 \paragraph{Simulation software}
@@ -3445,10 +3444,10 @@ required many considerations.
 
 \paragraph{Model components}
 
- The system configuration (figure \ref{Simulation framework}) is based on the experiment setup
-run by \citeauthor{mahoney2011velocity}. However they run an experiment on a mili-robot. They used three inset Hemholtz
+ The system configuration (figure \ref{Simulation framework}) is based on the experimental setup
+run by \citeauthor{mahoney2011velocity}. Although the experiment was run on a mili-robot, they used three inset Hemholtz
 coils to generate a magnetic field for microrobot actuation. 
-The table \ref{Simultion model configration} represents the details 
+The table \ref{Simulation model configuration} represents the details 
 of the Helmholtz coils which generates a dynamic magnetic field by using AC current. The size of 
 fluid box is $25 (mm) \times 25(mm) \times 25 (mm)$ and the viscosity of fluid inside the box is $2000 (\frac{N}{m^2} s)$
 which is the viscosity of the corn syrup. 
@@ -3481,9 +3480,9 @@ Outer & 	98 		  & 	143	\\[1ex]% [1ex] adds vertical space
 \bottomrule[2.0pt]
 \end{tabular}
 }
-\label{Simultion model configration}% is used to refer this table in the text
-\caption[Simultion model configration]{Simultion model configration. The detail of three inset Helmholt coils setup
-\citep{mahoney2011velocity}.}\label{Simultion model configration}% title of Table
+\label{Simulation model configuration}% is used to refer this table in the text
+\caption[Simulation model configuration]{Simulation model configuration. The detail of three inset Helmholt coils setup
+\citep{mahoney2011velocity}.}\label{Simulation model configuration}% title of Table
 \end{table}
 
 
@@ -3502,9 +3501,9 @@ actuation method. The model is made of three components;
 \end{itemize}
 
 In order to simplify the model, it was broken down into three sub-models. Each sub-model made of two 
-componets and the entire model made by combining three sub-models as shown
- in figure \ref{Simulation framework}. In each sub-model, we solved the physics involve in its componets
-for example in sub-model 1, we studied the effect of the magnetic field on the fluid box without considering the microhelix
+components and the entire model made by combining three sub-models as shown
+ in figure \ref{Simulation framework}. In each sub-model, the physics involve in its components were solved. 
+For example, in sub-model 1 we studied the effect of the magnetic field on the fluid box without considering the microhelix
 inside the box. Defining an appropriate domain for the solution is an important factor in modelling
 because the magnetic filed decays as the distance from the magnetic source increases. Thus, the sphere domain with the radius of $3 cm$ 
 defined to solve the model as it is shown in figure \ref{Simulation domain}
@@ -3535,8 +3534,8 @@ defined to solve the model as it is shown in figure \ref{Simulation domain}
 \bottomrule[2.0pt]
 \end{tabular}
 }
-\label{Modeling Simulation Componets }% is used to refer this table in the text
-\caption[Modeling Simulation Componets]{Modeling Simulation Componets. The table shows the componets of each sub-model.}
+\label{Modelling Simulation Components }% is used to refer this table in the text
+\caption[Modelling Simulation Componets]{Modelling Simulation Componets. The table shows the components of each sub-model.}
 \end{table}
 
 
@@ -3568,8 +3567,8 @@ a fluid bux with a microhelix inside (b).}\label{Simulation framework}
 
 \end{figure}
 
-The effect of microhelix design parameters such as helical angle on rotational velocity of microhelix examined
-under the simulation. The considered parameters are;
+The effect of microhelix design parameters such as helical angle on rotational velocity of microhelix was examined
+in a simulation. The considered parameters are;
   
 \begin{itemize}
   \item Helix angle
@@ -3602,17 +3601,25 @@ effective magnetic flux in the model can be obtained (b).}\label{Simulation doma
 
 \end{figure}
 
-The result of each parametere\rq{}s effect on the rotational velocity of the microhelix is
+The result of each parameters effect on the rotational velocity of the microhelix is
  represented as follows. The curve in the figure \ref{RV_pitchAngle} describes the relationship between
 the helical angle and rotational velocity. 
-The helix with a small helical angle will generate small 
+The helix with a small helical angle will generate a small rotational velocity as shown in the figure \ref{RPitch}.
+However, the simulator does not respond to a helical angle greater than $1 (rad)$. Interestingly, for the
+zero helical angle, the simulator shows the rotational velocity just under $12 (rad/s)$. This confirms that
+in a extremely small helical angle \ac*{RFT} treats a helix as a cylinder. and therefore calculates a 
+rotational velocity of a cylinder.
+Figure \ref{RV_helixPitch} describes the relationship between a rotational velocity of microhelix and its
+pitch. This curve shows an increase in rotational velocity by increasing a helix pitch. Figures \ref{RV_pitchAngle} and
+\ref{RV_helixPitch} demonstrate the impact of helix radius and filament radius on rotational velocity respectively.
+Therefore, helical radius is more important than the filament radius. 
  
 
 \begin{figure}
   \centering
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
-    \includegraphics[width=0.80\textwidth]{TM}
+    \includegraphics[width=1.00\textwidth]{H_Angle}
   \caption[Rotational velocity vs. helix angle]{Rotational velocity vs. helix angle}
   \label{RV_pitchAngle}
 %\end{center}
@@ -3627,7 +3634,7 @@ The helix with a small helical angle will generate small
   \centering
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
-    \includegraphics[width=0.80\textwidth]{RV_helixPitch}
+    \includegraphics[width=0.90\textwidth]{Pitch_R}
   \caption[Rotational velocity vs. helix pitch]{Rotational velocity vs. helix pitch }
   \label{RV_helixPitch}
 %\end{center}
@@ -3637,10 +3644,10 @@ The helix with a small helical angle will generate small
 The figure \ref{RV_helixRadius1} describes the reverse relation between the helix radius and rotational
 velocity. As the radius of the helix is increasing the rotational velocity is decreasing, the highest rotational
 velocity is just above $14 rad/s$ for the microhelix with $2 \mu m$ radius. A similar behaviour is observed
-in figure \ref{RV_filamentRadius} which is dropping in rotational velocity by increasing the filament radius.
-However, the range of figures in the rotational velocity axis shows the helix filament radius does not have
-magnifisant effect on the rotational velocity. Whilst, the considerable changes in rotational velocity occurs
-by changing the helix angle and helix radius (figurs \ref{RV_helixRadius1}, \ref{RV_pitchAngle}). 
+in figure \ref{RV_filamentRadius} which is decreasing in rotational velocity by increasing the filament radius.
+However, the range of figures in the rotational velocity axis shows the helix filament radius only has
+a minor impact on the rotational velocity. Whilst, the considerable changes in rotational velocity occurs
+by changing the helix angle and helix radius (figures \ref{RV_helixRadius1}, \ref{RV_pitchAngle}). 
 
 
 
@@ -3649,8 +3656,8 @@ by changing the helix angle and helix radius (figurs \ref{RV_helixRadius1}, \ref
   \centering
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
-    \includegraphics[width=0.90\textwidth]{RV_helixRadius1}
-  \caption[Rotational velocity vs. helix rediu]{Rotational velocity vs. helix redius }
+    \includegraphics[width=0.90\textwidth]{Radius_R}
+  \caption[Rotational velocity vs. helix rediu]{Rotational velocity vs. helix radius }
   \label{RV_helixRadius1}
 %\end{center}
 %\end{wrapfigure}
@@ -3662,7 +3669,7 @@ by changing the helix angle and helix radius (figurs \ref{RV_helixRadius1}, \ref
   \centering
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
-    \includegraphics[width=0.90\textwidth]{RV_filamentRadius}
+    \includegraphics[width=0.90\textwidth]{FRadius_R}
   \caption[Rotational velocity vs. helix filament radius]{Rotational velocity vs. helix filament radius }
   \label{RV_filamentRadius}
 %\end{center}
@@ -3679,7 +3686,8 @@ in figure \ref{Rotational velocity vs. translational velocity}.
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
     \includegraphics[width=0.80\textwidth]{Trans_Rot_}
-  \caption[Rotational velocity vs. translational velocity]{Rotational velocity vs. translational velocity}
+  \caption[Rotational velocity vs. translational velocity]{Rotational velocity vs. translational velocity.
+There is a linear realation between rotational and translational velocity.}
   \label{Rotational velocity vs. translational velocity}
 %\end{center}
 %\end{wrapfigure}
@@ -3689,19 +3697,6 @@ in figure \ref{Rotational velocity vs. translational velocity}.
 
 
 %simulation result
-The 
-
-
-\begin{figure}
-  \centering
-%\begin{wrapfigure}{r}{0.5\textwidth}
-%  \begin{center}
-    \includegraphics[width=0.80\textwidth]{force_torque}
-  \caption[Rotational velocity vs. translational velocity]{Rotational velocity vs. translational velocity}
-  \label{Rotational velocity vs. translational velocity}
-%\end{center}
-%\end{wrapfigure}
-\end{figure}
 
 
 
@@ -3710,43 +3705,64 @@ The
   \centering
 %\begin{wrapfigure}{r}{0.5\textwidth}
 %  \begin{center}
-    \includegraphics[width=0.80\textwidth]{magnetic_field.png}
-  \caption[Rotational velocity vs. translational velocity]{Rotational velocity vs. translational velocity}
-  \label{Rotational velocity vs. translational velocity}
+    \includegraphics[width=0.90\textwidth]{magnetic_field.png}
+  \caption[Microhelix first position]{Microhelix first position. The simulator finds and positions 
+ the microhelix at the point of the strongest magnetic flux density.}
+  \label{Microhelix first position}
 %\end{center}
 %\end{wrapfigure}
 \end{figure}
 
 
 
-\begin{figure}
-  \centering
-%\begin{wrapfigure}{r}{0.5\textwidth}
-%  \begin{center}
-    \includegraphics[width=0.80\textwidth]{moving_direction.png}
-  \caption[Rotational velocity vs. translational velocity]{Rotational velocity vs. translational velocity}
-  \label{Rotational velocity vs. translational velocity}
-%\end{center}
-%\end{wrapfigure}
-\end{figure}
 
 
 \section{Fabrication}
 
 The design of the microrobot in this study is focused on the microswimmer with helical shape tail 
-and a possible propeller as a head that is attached to the helix body. Therefore, after studying the 
-key characteristic of the helix and identifying effective parameters a series of design were made. We started 
-by reproducing the previous design that has been made by few researchers in this field and finally proposing a
-new design for the helical shape microswimmers. The design software called Solidwork has been used for 
-designing purpose and nanoscribe technology for the fabrication stage. In the following sections we present 
+and a possible propeller as the head that is attached to the helix body. Therefore, after studying the 
+key characteristic of the helix and identifying effective parameters a series of designs were produced. We started 
+by reproducing the previous design that had been made by other researchers in this field and finally proposed a
+new design for the helical shape microswimmers. The software called Solidwork has been used for 
+designing and nanoscribe technology for the fabrication stage. In the following sections we present 
 each design and the fabricated result.
 
+
+
+\begin{figure}
+        \centering
+
+  \begin{subfigure}[b]{0.566\textwidth}
+                \includegraphics[width=\textwidth]{constant-pitch}
+                \caption{Constant pitch helix}
+                \label{constant-pitch}
+        \end{subfigure}~
+  \begin{subfigure}[b]{0.42\textwidth}
+                \includegraphics[width=\textwidth]{variable-pitch1}
+                \caption{Variable pitch helix. }
+                \label{variable-pitch1}
+        \end{subfigure}
+      
+        \caption[Variable pitch helix]{Variable pitch helix. The image (a) is shown the constant pitch helix which could not printed
+vertically. However, the image (b) represents the successful vertically fabricated of (a) by making its pitch
+variable.}\label{Pitch variable}
+
+   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+       
+         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
+          %(or a blank line to force the subfigure onto a new line)
+
+\end{figure}
+
+
+
 \paragraph{Circle base filament}
-The popular design for the helix is the one with the filament having a circle base. The designs vary in terms of 
+A common design for the helix was one with a filament having a circular base. The designs vary in terms of 
 changing the filament radius, helix pitch, helix length and helix radius. Some of the designs were successfully fabricated
-as it shows in the figure \ref{Circle base helix}. The figure \ref{Damaged structures} presented a faulty result which is as result of applying low power or 
-high power laser beam in the fabrication process. Also another type of faulty result can be seen in the figure
-which shows very small pitch length could not fabricated successfully.
+as shown in figure \ref{Circle base helix}. The figure \ref{Damaged structures} presented a faulty result which is as result of either applying an insufficient or 
+excessive power laser beam in the fabrication process. Also another type of faulty result can be seen in figure \ref{smallPitchCircle}
+which is due to excessive laser power.
 
 
 \begin{figure}
@@ -3774,7 +3790,6 @@ stage and (b) shows the fabricated result.}\label{Circle base helix}
 
 
 
-
 \begin{figure}
         \centering
         \begin{subfigure}[b]{0.40\textwidth}
@@ -3799,9 +3814,8 @@ stage and (b) shows the fabricated result.}\label{Circle base helix}
                 \label{largePitch}
         \end{subfigure}
         \caption[Fabricated structures]{The structure (a) is damaged as a result of high 
-laser beam and structure (b) has a small pitch $1.3 \mu m$ and the result is not satisfiable. The structure
-with the sphere head (c) is fabricated and the helix with the larger pitch (d) with proportion relative to
-rest of helix character is clearly shown,}\label{Damaged structures}
+laser beam and structure (b) has a small pitch $1.3 \mu m$ and the result is not satsfactory. The structure
+with the sphere head (c) is fabricated and the helix with the larger pitch (d) is clearly shown,}\label{Damaged structures}
 
    %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
           %(or a blank line to force the subfigure onto a new line)
@@ -3815,8 +3829,10 @@ rest of helix character is clearly shown,}\label{Damaged structures}
 
 \paragraph{Rectangle base filament}
 
-The second design has the rectangle base filament. They can make two different helix shapes depending on which side of
-the rectangle is revolved around the helix central axis in the design stage. The
+
+
+The second design has the rectangle base filament. This design can make two different helix shapes depending on which side of
+the rectangle is revolved around the spiral path in the design stage. The
  figure \ref{Rectangle based structures} shows a variety of designs
 based on the rectangle filament with different pitch, length and helical radius.
 
@@ -3859,9 +3875,9 @@ based on the rectangle filament with different pitch, length and helical radius.
 
         \caption[Rectangle based structures]{Rectangle based structures. The structures (a) and (b) are examples of
 revolving the smaller side of the rectangle around the central axis of helix. The structure 
-can be printed vertically (b). The structures with small pitch (a) will not printed ideally whilst
-the one with larger pitch (d) printed clearly. The printed structure can collapse (f)
-and result in overlapping each other. Highly zoomed image (e) shows the rectangle base of the
+can be printed vertically (b). The structures with a small pitch (a) did not print ideally whilst
+the one with larger pitch (d) did print clearly. The printed structure can collapse on each other (f). 
+Highly zoomed image (e) shows the rectangle base of the
 helix.}\label{Rectangle based structures}
 
    %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
@@ -3876,42 +3892,17 @@ helix.}\label{Rectangle based structures}
 
 \paragraph{Pitch variable helix}
 
-In order to be able coating the structures with magnetic material, structures are preferred to printed vertically. 
-The new design is made which in helix has a variable pitch. The problem with previous design was the starting helix
-angle from the bottom of the helix was too high. Therefore, the structure had a poor surface to rely on that in a vertical
-position. The first solution was making structures with the small helix pitch so there are stronger base for vertically
+In order to be able coat the structures with magnetic material, the structures should be printed vertically. 
+The new helix design produced has a variable pitch. The problem with previous designs was that the starting helix
+angle from the bottom of the helix was too high. Therefore, the structure had a poor surface to rely on when in a vertical
+position. The first solution was producing structures with a small helix pitch to ensure a stronger base for vertical
 printing. However, as is shown in the fogure \ref{collaps} part (a) the overall result of the helix with the small pitch
-is not satisfactory. Thus, the idea of designing a helix with variable pitch enable us to meet both requirements. The
-other advantage of having the variable pitch is providing the stonger base for the microhelix with any attached 
+is not satisfactory. Thus, the idea of designing a helix with variable pitch enables us to meet both the simultaion and fabrication requirements. The
+other advantage of having the variable pitch is providing a stronger base for a microhelix with an attached 
 propeller. The result of the new design is shown in figure \ref{Pitch variable}.
 
 
 
-\begin{figure}
-        \centering
-
-  \begin{subfigure}[b]{0.566\textwidth}
-                \includegraphics[width=\textwidth]{constant-pitch}
-                \caption{Constant pitch helix}
-                \label{constant-pitch}
-        \end{subfigure}~
-  \begin{subfigure}[b]{0.42\textwidth}
-                \includegraphics[width=\textwidth]{variable-pitch1}
-                \caption{Variable pitch helix. }
-                \label{variable-pitch1}
-        \end{subfigure}
-      
-        \caption[Variable pitch helix]{Variable pitch helix. The image (a) is shown the constant pitch helix which could not printed
-vertically. However, the image (b) represents the successful vertically fabricated of (a) by making its pitch
-variable.}\label{Pitch variable}
-
-   %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-          %(or a blank line to force the subfigure onto a new line)
-       
-         %add desired spacing between images, e. g. ~, \quad, \qquad, \hfill etc.
-          %(or a blank line to force the subfigure onto a new line)
-
-\end{figure}
 
 
 
@@ -3921,41 +3912,41 @@ variable.}\label{Pitch variable}
 \chapter{Discussion}\label{discussion}
 
 \paragraph{}
-The design of microhelix is based on the key characteristics of the helical shape. A filament base of a 
-popular helix has a circle shape. Therefore, the initial design was the helix with a circle base filament and then
- it integrated with different propeller head such as a sphere and a square. Changing each character at a time and 
-keeping the rest of characters constant optimised characteristics of microhelix. This algorithmic process was repeated
- for any new design such as helix with a rectangle base filament. The helix design should be optimised
+The design of microhelix is based on the key characteristics of the helical shape. The circular shape was often used for the filament base  
+of a helix. Therefore, the initial design was a helix with a circle base filament which was then
+integrated with different propeller heads such as a sphere and a square. Changing each characteristic one at a time and 
+keeping the rest of the characteristics constant optimised the design of the microhelix. This algorithmic process was repeated
+for all new designs, such as a helix with a rectangle base filament. The helix design was optimised
  in terms of both fabrication and simulation.
 
 
-In the fabrication process, the nanoscribe technology used for 3D printed in micro size. This
- technology is based on lithography system to write microstructure. The result of fabricated structures
- showed the required laser power is varies to write each microhelix design. The result of horizontally printing 
-microhelix was successful in many cases. However, few cases destroyed either because of applying high laser 
-power or under power. The amount of appropriate laser power was design dependent and couldn\rq{}t generalise for 
-all the design. A number of few cases were collapsed only during developing process. The vertically fabricating 
+In the fabrication process, the nanoscribe technology was used for 3D printing in micro size. This
+ technology is based on lithography system to write a microstructure. The result of fabricated structures
+ showed that the required laser power varies for printing each microhelix design. The result of horizontally printing 
+microhelix was successful in many cases. However, in a few cases the microstructure collapsed because the laser power 
+applied was either too high or too low. The appropriate amount of laser power was design dependent and so had to be varied for 
+each design. In some cases the microstructure also collapsed during the developing process. The vertically fabricating 
 microhelix was a challenge, as most of the design did not provide sufficient contact surface to support their 
-weight. The new helix design with a variable pitch made the structures with sufficient contact area with the
- substrate. The variable pitch helix has the smaller pitch in the bottom and larger pith on the rest of the 
-body. As a result small pitch in a bottom satisfies the vertically fabricated requirement of microhelix 
-and larger pitch on the rest of the helix body helps the swimming motion of microhelix. 
+weight. The new helix design with a variable pitch provided the structure with sufficient contact area with the
+ substrate. The variable pitch helix has the smaller pitch at the bottom and a larger pitch over the rest of the 
+body. As a result a small pitch at the bottom satisfies the vertically fabricated requirement of microhelix 
+and larger pitch on the rest of the helix body helps the swimming motion of the microhelix. 
 
 \paragraph{}
 
-To model the swimming motion of the microhelix three models were studied and \ac*{RFT} were
+To model the swimming motion of the microhelix, three models were studied and \ac*{RFT} were
  implemented in the simulator. \ac*{RFT} has ignored the 
-hydrodynamic interaction between the fluid flow produced by different segment of the microhelix. 
-Therefore, in the microhelix with the smaller pitch the interaction between various parts of the helix
- increased and the helix will convert to the cylinder. This issue might result in a failure for predicting
- the force and torque in microhelix with incredible small pitch. Thus, the variable pitch microhelix will help to avoid that issue.  
+hydrodynamic interaction between the fluid flow produced by different segments of the microhelix. 
+Therefore, in the microhelix with the smaller pitch the interaction between various parts of the helix  
+ increased and the helix is converted into a cylinder. This issue might result in an error when predicting
+ the force and torque in a microhelix with an extremely small pitch. Thus, the variable pitch microhelix will help to avoid this issue.  
 
 To model the swimming motion of the microhelix three models were studied and \ac*{RFT} were
  implemented in the simulator. 
-Each microhelix propulsion model was segmented the filament of a 
+Each microhelix propulsion model segmented the filament of the 
 microhelix differently. Then the model analyses an interaction of a small segment of
- filament with hydrodynamic of a high viscous fluid to achieve non fluidic force, torque and drag 
-acts on a helix body. All three propulsion models apply on the microhelix with the circle base 
+the filament with the hydrodynamic characteristics of a high viscous fluid to achieve non fluidic force, torque and drag 
+acting on a helix body. All three propulsion models were only applied to the microhelix with a circle base 
 filament. Therefore, we will not be able to implement the propulsion model for other designs such 
 as microhelix with a rectangle base filament.   
 
@@ -3965,21 +3956,21 @@ as microhelix with a rectangle base filament.
 \paragraph{}
 
 Magnetic field is a safe power source to be used for actuating microrobot in the fluidic environment. 
-There are advantages to apply torque driven magnetic field over force driven which makes it preferable
+There are advantages to applying torque driven magnetic field over force driven magnetic field, which makes it a preferable
  approach. Torque driven method can be applied on either microrobot with the flexible tail or a rigid 
-tail. The method is more efficient than force driven as the rotation of helix leads to translational 
+tail. This method is more efficient than force driven as the rotation of helix leads to translational 
 movement in the fluidic environment whilst the force driven method pulls the helix to generate
  the translational velocity. 
 
 \paragraph{}
 
-Implementing the model using simulation software is a challenge. There are not enough simulation 
-software provide all the requirements of the model. Therefore, modelling the simulator for microrobot
+Implementing the model using simulation software is a challenge. There is very few simulation 
+software available that provide all the requirements of the model. Therefore, modelling the simulator for microrobot
  navigation becomes more complex. For example the hydrodynamic property of the fluid and its 
 effect on the swimming microrohelix cannot be modelled entirely with Matlab. COMSOL software 
 offers more advanced simulation in terms of solving the multiphysics model by coupling the different 
 physics. However, the modelling can be performed differently by coupling different components 
-of the system and occasionally the simulation result is not consistent.  
+of the system.  
 
 
 
@@ -3997,38 +3988,41 @@ of the system and occasionally the simulation result is not consistent.
 %%%%%%%%%
 \chapter{Conclusion and future work}
 
-The magnetically actuated helical shape microrobot  has an advantage of using in vivo or in 
-vitro application. The different design of microhelix has been made; some of designs were 
-reproduced from previous researchers and also new design was presented. The new design 
-is a helix with a variable pitch that makes the structure enables to stand vertically during fabrication 
-process. 
-The other advantage of the new design is providing the stronger base for the structure for the case
- of having microrbot with attached propeller. The \ac*{RFT} used as a locomotion model for simulating 
-microrbot motion. Other propulsion models presented are \ac*{SBT} and \ac*{RSM} to describe the 
-motion of microhelix. In terms of design, helix angle is the most effective character of the helix that has 
-an effect on its swimming efficiency. The other characteristic such as helix radius has a smaller effect. 
+The magnetically actuated helical shape microrobot has the advantage that it can be used in both  
+in vivo or in vitro applications. Different microhelix shapes were designed, which included designs 
+reproduced from previous researchers as well as new designs being presented. Of the latter group,   
+the most successful new design was a helix with a variable pitch. This was because this design provided greater  
+contact area with the substrate and this in turn enabled the structure to stand vertically during the fabrication process. 
+The stronger base also gave the variable pitch design an advantage when attaching a propeller to the microrbot. 
+The new design performed satisfactorily during the simulation process.
+The \ac*{RFT} was used as a locomotion model for simulating the motion of a remotely controlled
+microrbot. The other propulsion models presented are \ac*{SBT} and \ac*{RSM}, which also describe the 
+motion of a microhelix but were also remotely controlled for the first time.  
+According to the simulation results, the helix angle is the most important characteristic of the helix, in terms of its impact on rotational and  
+translational velocity. The other characteristic of helix radius has a lesser impact. 
 The fabrication process performed by nanoscribe facility and microstructures were observed 
 under \ac*{SEM}. 
 Initially Matlab was used for implementing the model and towards the end of the project the 
-COMSOL Multiphysics software was used because of the limitations of Matlab to solve the model.  
+COMSOL Multiphysics software was used because of the limitations of Matlab in solving the model.  
 
 
 
 \paragraph{Future work}
-In order to validate the result of this study we need to run an experiment in a laboratory 
+In order to validate the results of this study we need to run an experiment in a laboratory 
 to compare the result of the simulation with the experiment. The simulation framework is
- required optimisation in order to simulate microhelix in fluids with different viscosity. In terms 
-of fabrication, the effects of using combination of magnetic material for microhelix coating can
- be analysed. The ideal locomotion method for microrobot is still required more investigation. 
+ needs to be further optimised in order to simulate microhelix in fluids with different viscosity. In terms 
+of fabrication, the effects of using a combination of magnetic material for microhelix coating can
+be assessed. The ideal locomotion method for a microrobot requires further investigation. 
 
 
-The possibility of actuating a microrobot with other power source such as ultrasonic can be
- considered. The fundamental design of mcirorobot can be integrated with other tools to build 
-an advanced microrobot. The design of an advanced microrobot is an application dependent. 
-The microhelix with its transport claw is already proposed and demonstrated their result to move 
-micro objects. Therefore, researching on current medical application and limitation of the surgical
- tools can lead to design an advanced microrobot for a specific application. The swarms of 
-microrobot and a mechanism for control them individually will improve their performance.      
+The design of an advanced microrobot is application dependent. 
+The possibility of actuating a microrobot with other power sources such as ultrasonic can be 
+considered. Furthermore, the fundamental design of a microrobot can be integrated with other tools to build 
+an advanced microrobot. The microhelix with its transport claw is already proposed and demonstrated their 
+result in moving micro objects. A swarm of microrobots and a mechanism for controlling them individually will 
+improve their performance.
+Therefore, researching current medical applications and limitations of such surgical
+ tools can lead to more advanced microrobot designs for specific applications.      
 
 
 
